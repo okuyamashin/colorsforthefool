@@ -1,0 +1,21 @@
+CSS Color Name	HEX	用途・印象
+Gold	#FFD700	太陽そのもの。中心的な色
+GoldenRod	#DAA520	古典的な金色。装飾線に非常に合う
+DarkGoldenRod	#B8860B	金の陰影、枠、古びた装飾
+Orange	#FFA500	強い陽光、アクセント
+DarkOrange	#FF8C00	夕日のような濃い光
+Khaki	#F0E68C	柔らかな金黄色
+DarkKhaki	#BDB76B	アンティーク感のある黄土色
+LemonChiffon	#FFFACD	光を受けた淡い背景
+LightYellow	#FFFFE0	太陽のハイライト
+Cornsilk	#FFF8DC	古紙・カード地に向く
+Wheat	#F5DEB3	羊皮紙のような自然なベージュ
+Moccasin	#FFE4B5	肌や淡い金色の布
+PeachPuff	#FFDAB9	人物の肌、暖かな光
+PapayaWhip	#FFEFD5	背景の柔らかな生成り
+Ivory	#FFFFF0	カード地、衣装、光
+Olive	#808000	ヒマワリの葉や装飾植物
+OliveDrab	#6B8E23	少し落ち着いた植物色
+DarkOliveGreen	#556B2F	枠や葉の深い影
+SeaGreen	#2E8B57	アール・ヌーヴォーらしい青緑の差し色
+Sienna	#A0522D	髪、花芯、古典的な茶赤

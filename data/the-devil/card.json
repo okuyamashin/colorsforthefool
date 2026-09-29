@@ -1,0 +1,134 @@
+{
+  "id": "the-devil",
+  "name": "THE DEVIL",
+  "nameJa": "悪魔",
+  "numeral": "XV",
+  "upright": [
+    {
+      "name": "Black",
+      "hex": "#000000",
+      "nameJa": "ブラック",
+      "text": "black.txt"
+    },
+    {
+      "name": "Maroon",
+      "hex": "#800000",
+      "nameJa": "マルーン",
+      "text": "maroon.txt"
+    },
+    {
+      "name": "Gold",
+      "hex": "#FFD700",
+      "nameJa": "ゴールド",
+      "text": "gold.txt"
+    },
+    {
+      "name": "DarkGoldenRod",
+      "hex": "#B8860B",
+      "nameJa": "ダークゴールデンロッド",
+      "text": "darkgoldenrod.txt",
+      "image": "darkgoldenrod.jpg"
+    },
+    {
+      "name": "SaddleBrown",
+      "hex": "#8B4513",
+      "nameJa": "サドルブラウン",
+      "text": "saddlebrown.txt",
+      "image": "saddlebrown.jpg"
+    },
+    {
+      "name": "FireBrick",
+      "hex": "#B22222",
+      "nameJa": "ファイアブリック",
+      "text": "firebrick.txt"
+    },
+    {
+      "name": "OrangeRed",
+      "hex": "#FF4500",
+      "nameJa": "オレンジレッド",
+      "text": "orangered.txt"
+    },
+    {
+      "name": "Purple",
+      "hex": "#800080",
+      "nameJa": "パープル",
+      "text": "purple.txt"
+    },
+    {
+      "name": "Indigo",
+      "hex": "#4B0082",
+      "nameJa": "インディゴ",
+      "text": "indigo.txt"
+    },
+    {
+      "name": "Chocolate",
+      "hex": "#D2691E",
+      "nameJa": "チョコレート",
+      "text": "chocolate.txt"
+    }
+  ],
+  "reversed": [
+    {
+      "name": "White",
+      "hex": "#FFFFFF",
+      "nameJa": "ホワイト",
+      "text": "white.txt"
+    },
+    {
+      "name": "Silver",
+      "hex": "#C0C0C0",
+      "nameJa": "シルバー",
+      "text": "silver.txt"
+    },
+    {
+      "name": "LightGray",
+      "hex": "#D3D3D3",
+      "nameJa": "ライトグレイ",
+      "text": "lightgray.txt",
+      "image": "lightgray.jpg"
+    },
+    {
+      "name": "Gainsboro",
+      "hex": "#DCDCDC",
+      "nameJa": "ゲインズボロ",
+      "text": "gainsboro.txt",
+      "image": "gainsboro.jpg"
+    },
+    {
+      "name": "GhostWhite",
+      "hex": "#F8F8FF",
+      "nameJa": "ゴーストホワイト",
+      "text": "ghostwhite.txt"
+    },
+    {
+      "name": "Lavender",
+      "hex": "#E6E6FA",
+      "nameJa": "ラベンダー",
+      "text": "lavender.txt"
+    },
+    {
+      "name": "MintCream",
+      "hex": "#F5FFFA",
+      "nameJa": "ミントクリーム",
+      "text": "mintcream.txt"
+    },
+    {
+      "name": "HoneyDew",
+      "hex": "#F0FFF0",
+      "nameJa": "ハニーデュー",
+      "text": "honeydew.txt"
+    },
+    {
+      "name": "Linen",
+      "hex": "#FAF0E6",
+      "nameJa": "リネン",
+      "text": "linen.txt"
+    },
+    {
+      "name": "Ivory",
+      "hex": "#FFFFF0",
+      "nameJa": "アイボリー",
+      "text": "ivory.txt"
+    }
+  ]
+}

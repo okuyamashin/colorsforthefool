@@ -1,0 +1,134 @@
+{
+  "id": "wheel-of-fortune",
+  "name": "WHEEL OF FORTUNE",
+  "nameJa": "運命の輪",
+  "numeral": "X",
+  "upright": [
+    {
+      "name": "Gold",
+      "hex": "#FFD700",
+      "nameJa": "ゴールド",
+      "text": "gold.txt"
+    },
+    {
+      "name": "GoldenRod",
+      "hex": "#DAA520",
+      "nameJa": "ゴールデンロッド",
+      "text": "goldenrod.txt",
+      "image": "goldenrod.jpg"
+    },
+    {
+      "name": "Wheat",
+      "hex": "#F5DEB3",
+      "nameJa": "ウィート",
+      "text": "wheat.txt",
+      "image": "wheat.jpg"
+    },
+    {
+      "name": "Cornsilk",
+      "hex": "#FFF8DC",
+      "nameJa": "コーンシルク",
+      "text": "cornsilk.txt"
+    },
+    {
+      "name": "SkyBlue",
+      "hex": "#87CEEB",
+      "nameJa": "スカイブルー",
+      "text": "skyblue.txt"
+    },
+    {
+      "name": "DeepSkyBlue",
+      "hex": "#00BFFF",
+      "nameJa": "ディープスカイブルー",
+      "text": "deepskyblue.txt"
+    },
+    {
+      "name": "SpringGreen",
+      "hex": "#00FF7F",
+      "nameJa": "スプリンググリーン",
+      "text": "springgreen.txt"
+    },
+    {
+      "name": "Yellow",
+      "hex": "#FFFF00",
+      "nameJa": "イエロー",
+      "text": "yellow.txt"
+    },
+    {
+      "name": "Orange",
+      "hex": "#FFA500",
+      "nameJa": "オレンジ",
+      "text": "orange.txt"
+    },
+    {
+      "name": "Azure",
+      "hex": "#F0FFFF",
+      "nameJa": "アジュール",
+      "text": "azure.txt"
+    }
+  ],
+  "reversed": [
+    {
+      "name": "OliveDrab",
+      "hex": "#6B8E23",
+      "nameJa": "オリーブドラブ",
+      "text": "olivedrab.txt",
+      "image": "olivedrab.jpg"
+    },
+    {
+      "name": "Khaki",
+      "hex": "#F0E68C",
+      "nameJa": "カーキ",
+      "text": "khaki.txt",
+      "image": "khaki.jpg"
+    },
+    {
+      "name": "Sienna",
+      "hex": "#A0522D",
+      "nameJa": "シエナ",
+      "text": "sienna.txt"
+    },
+    {
+      "name": "DarkOliveGreen",
+      "hex": "#556B2F",
+      "nameJa": "ダークオリーブグリーン",
+      "text": "darkolivegreen.txt"
+    },
+    {
+      "name": "Gray",
+      "hex": "#808080",
+      "nameJa": "グレイ",
+      "text": "gray.txt"
+    },
+    {
+      "name": "DimGray",
+      "hex": "#696969",
+      "nameJa": "ディムグレイ",
+      "text": "dimgray.txt"
+    },
+    {
+      "name": "SlateGray",
+      "hex": "#708090",
+      "nameJa": "スレートグレイ",
+      "text": "slategray.txt"
+    },
+    {
+      "name": "Maroon",
+      "hex": "#800000",
+      "nameJa": "マルーン",
+      "text": "maroon.txt"
+    },
+    {
+      "name": "Brown",
+      "hex": "#A52A2A",
+      "nameJa": "ブラウン",
+      "text": "brown.txt"
+    },
+    {
+      "name": "Black",
+      "hex": "#000000",
+      "nameJa": "ブラック",
+      "text": "black.txt"
+    }
+  ]
+}

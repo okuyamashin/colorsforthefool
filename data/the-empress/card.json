@@ -1,0 +1,134 @@
+{
+  "id": "the-empress",
+  "name": "THE EMPRESS",
+  "nameJa": "女帝",
+  "numeral": "III",
+  "upright": [
+    {
+      "name": "Wheat",
+      "hex": "#F5DEB3",
+      "nameJa": "ウィート",
+      "text": "wheat.txt",
+      "image": "wheat.jpg"
+    },
+    {
+      "name": "Cornsilk",
+      "hex": "#FFF8DC",
+      "nameJa": "コーンシルク",
+      "text": "cornsilk.txt",
+      "image": "cornsilk.jpg"
+    },
+    {
+      "name": "GoldenRod",
+      "hex": "#DAA520",
+      "nameJa": "ゴールデンロッド",
+      "text": "goldenrod.txt"
+    },
+    {
+      "name": "ForestGreen",
+      "hex": "#228B22",
+      "nameJa": "フォレストグリーン",
+      "text": "forestgreen.txt"
+    },
+    {
+      "name": "Olive",
+      "hex": "#808000",
+      "nameJa": "オリーブ",
+      "text": "olive.txt"
+    },
+    {
+      "name": "PeachPuff",
+      "hex": "#FFDAB9",
+      "nameJa": "ピーチパフ",
+      "text": "peachpuff.txt"
+    },
+    {
+      "name": "PapayaWhip",
+      "hex": "#FFEFD5",
+      "nameJa": "パパイヤホイップ",
+      "text": "papayawhip.txt"
+    },
+    {
+      "name": "Pink",
+      "hex": "#FFC0CB",
+      "nameJa": "ピンク",
+      "text": "pink.txt"
+    },
+    {
+      "name": "LavenderBlush",
+      "hex": "#FFF0F5",
+      "nameJa": "ラベンダーブラッシュ",
+      "text": "lavenderblush.txt"
+    },
+    {
+      "name": "HoneyDew",
+      "hex": "#F0FFF0",
+      "nameJa": "ハニーデュー",
+      "text": "honeydew.txt"
+    }
+  ],
+  "reversed": [
+    {
+      "name": "DarkOliveGreen",
+      "hex": "#556B2F",
+      "nameJa": "ダークオリーブグリーン",
+      "text": "darkolivegreen.txt",
+      "image": "darkolivegreen.jpg"
+    },
+    {
+      "name": "OliveDrab",
+      "hex": "#6B8E23",
+      "nameJa": "オリーブドラブ",
+      "text": "olivedrab.txt",
+      "image": "olivedrab.jpg"
+    },
+    {
+      "name": "RosyBrown",
+      "hex": "#BC8F8F",
+      "nameJa": "ロージーブラウン",
+      "text": "rosybrown.txt"
+    },
+    {
+      "name": "Sienna",
+      "hex": "#A0522D",
+      "nameJa": "シエナ",
+      "text": "sienna.txt"
+    },
+    {
+      "name": "Khaki",
+      "hex": "#F0E68C",
+      "nameJa": "カーキ",
+      "text": "khaki.txt"
+    },
+    {
+      "name": "DarkGoldenRod",
+      "hex": "#B8860B",
+      "nameJa": "ダークゴールデンロッド",
+      "text": "darkgoldenrod.txt"
+    },
+    {
+      "name": "Brown",
+      "hex": "#A52A2A",
+      "nameJa": "ブラウン",
+      "text": "brown.txt"
+    },
+    {
+      "name": "Chocolate",
+      "hex": "#D2691E",
+      "nameJa": "チョコレート",
+      "text": "chocolate.txt"
+    },
+    {
+      "name": "BurlyWood",
+      "hex": "#DEB887",
+      "nameJa": "バーリウッド",
+      "text": "burlywood.txt"
+    },
+    {
+      "name": "Peru",
+      "hex": "#CD853F",
+      "nameJa": "ペルー",
+      "text": "peru.txt"
+    }
+  ]
+}

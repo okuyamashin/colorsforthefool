@@ -1,0 +1,134 @@
+{
+  "id": "the-world",
+  "name": "THE WORLD",
+  "nameJa": "世界",
+  "numeral": "XXI",
+  "upright": [
+    {
+      "name": "ForestGreen",
+      "hex": "#228B22",
+      "nameJa": "フォレストグリーン",
+      "text": "forestgreen.txt",
+      "image": "forestgreen.jpg"
+    },
+    {
+      "name": "Olive",
+      "hex": "#808000",
+      "nameJa": "オリーブ",
+      "text": "olive.txt"
+    },
+    {
+      "name": "Gold",
+      "hex": "#FFD700",
+      "nameJa": "ゴールド",
+      "text": "gold.txt"
+    },
+    {
+      "name": "Purple",
+      "hex": "#800080",
+      "nameJa": "パープル",
+      "text": "purple.txt"
+    },
+    {
+      "name": "Violet",
+      "hex": "#EE82EE",
+      "nameJa": "バイオレット",
+      "text": "violet.txt",
+      "image": "violet.jpg"
+    },
+    {
+      "name": "Red",
+      "hex": "#FF0000",
+      "nameJa": "レッド",
+      "text": "red.txt"
+    },
+    {
+      "name": "White",
+      "hex": "#FFFFFF",
+      "nameJa": "ホワイト",
+      "text": "white.txt"
+    },
+    {
+      "name": "Wheat",
+      "hex": "#F5DEB3",
+      "nameJa": "ウィート",
+      "text": "wheat.txt"
+    },
+    {
+      "name": "Cornsilk",
+      "hex": "#FFF8DC",
+      "nameJa": "コーンシルク",
+      "text": "cornsilk.txt"
+    },
+    {
+      "name": "SkyBlue",
+      "hex": "#87CEEB",
+      "nameJa": "スカイブルー",
+      "text": "skyblue.txt"
+    }
+  ],
+  "reversed": [
+    {
+      "name": "OliveDrab",
+      "hex": "#6B8E23",
+      "nameJa": "オリーブドラブ",
+      "text": "olivedrab.txt",
+      "image": "olivedrab.jpg"
+    },
+    {
+      "name": "DarkOliveGreen",
+      "hex": "#556B2F",
+      "nameJa": "ダークオリーブグリーン",
+      "text": "darkolivegreen.txt",
+      "image": "darkolivegreen.jpg"
+    },
+    {
+      "name": "DarkKhaki",
+      "hex": "#BDB76B",
+      "nameJa": "ダークカーキ",
+      "text": "darkkhaki.txt"
+    },
+    {
+      "name": "Khaki",
+      "hex": "#F0E68C",
+      "nameJa": "カーキ",
+      "text": "khaki.txt"
+    },
+    {
+      "name": "Tan",
+      "hex": "#D2B48C",
+      "nameJa": "タン",
+      "text": "tan.txt"
+    },
+    {
+      "name": "Sienna",
+      "hex": "#A0522D",
+      "nameJa": "シエナ",
+      "text": "sienna.txt"
+    },
+    {
+      "name": "Brown",
+      "hex": "#A52A2A",
+      "nameJa": "ブラウン",
+      "text": "brown.txt"
+    },
+    {
+      "name": "Gray",
+      "hex": "#808080",
+      "nameJa": "グレイ",
+      "text": "gray.txt"
+    },
+    {
+      "name": "DimGray",
+      "hex": "#696969",
+      "nameJa": "ディムグレイ",
+      "text": "dimgray.txt"
+    },
+    {
+      "name": "SlateGray",
+      "hex": "#708090",
+      "nameJa": "スレートグレイ",
+      "text": "slategray.txt"
+    }
+  ]
+}

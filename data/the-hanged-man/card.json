@@ -1,0 +1,134 @@
+{
+  "id": "the-hanged-man",
+  "name": "THE HANGED MAN",
+  "nameJa": "吊るされた男",
+  "numeral": "XII",
+  "upright": [
+    {
+      "name": "ForestGreen",
+      "hex": "#228B22",
+      "nameJa": "フォレストグリーン",
+      "text": "forestgreen.txt",
+      "image": "forestgreen.jpg"
+    },
+    {
+      "name": "Olive",
+      "hex": "#808000",
+      "nameJa": "オリーブ",
+      "text": "olive.txt"
+    },
+    {
+      "name": "SeaGreen",
+      "hex": "#2E8B57",
+      "nameJa": "シーグリーン",
+      "text": "seagreen.txt",
+      "image": "seagreen.jpg"
+    },
+    {
+      "name": "Teal",
+      "hex": "#008080",
+      "nameJa": "ティール",
+      "text": "teal.txt"
+    },
+    {
+      "name": "Silver",
+      "hex": "#C0C0C0",
+      "nameJa": "シルバー",
+      "text": "silver.txt"
+    },
+    {
+      "name": "Gold",
+      "hex": "#FFD700",
+      "nameJa": "ゴールド",
+      "text": "gold.txt"
+    },
+    {
+      "name": "SkyBlue",
+      "hex": "#87CEEB",
+      "nameJa": "スカイブルー",
+      "text": "skyblue.txt"
+    },
+    {
+      "name": "LightBlue",
+      "hex": "#ADD8E6",
+      "nameJa": "ライトブルー",
+      "text": "lightblue.txt"
+    },
+    {
+      "name": "Aqua",
+      "hex": "#00FFFF",
+      "nameJa": "アクア",
+      "text": "aqua.txt"
+    },
+    {
+      "name": "MediumAquaMarine",
+      "hex": "#66CDAA",
+      "nameJa": "ミディアムアクアマリン",
+      "text": "mediumaquamarine.txt"
+    }
+  ],
+  "reversed": [
+    {
+      "name": "DarkGreen",
+      "hex": "#006400",
+      "nameJa": "ダークグリーン",
+      "text": "darkgreen.txt",
+      "image": "darkgreen.jpg"
+    },
+    {
+      "name": "DarkOliveGreen",
+      "hex": "#556B2F",
+      "nameJa": "ダークオリーブグリーン",
+      "text": "darkolivegreen.txt",
+      "image": "darkolivegreen.jpg"
+    },
+    {
+      "name": "OliveDrab",
+      "hex": "#6B8E23",
+      "nameJa": "オリーブドラブ",
+      "text": "olivedrab.txt"
+    },
+    {
+      "name": "Brown",
+      "hex": "#A52A2A",
+      "nameJa": "ブラウン",
+      "text": "brown.txt"
+    },
+    {
+      "name": "SaddleBrown",
+      "hex": "#8B4513",
+      "nameJa": "サドルブラウン",
+      "text": "saddlebrown.txt"
+    },
+    {
+      "name": "Sienna",
+      "hex": "#A0522D",
+      "nameJa": "シエナ",
+      "text": "sienna.txt"
+    },
+    {
+      "name": "Gray",
+      "hex": "#808080",
+      "nameJa": "グレイ",
+      "text": "gray.txt"
+    },
+    {
+      "name": "DimGray",
+      "hex": "#696969",
+      "nameJa": "ディムグレイ",
+      "text": "dimgray.txt"
+    },
+    {
+      "name": "Black",
+      "hex": "#000000",
+      "nameJa": "ブラック",
+      "text": "black.txt"
+    },
+    {
+      "name": "Maroon",
+      "hex": "#800000",
+      "nameJa": "マルーン",
+      "text": "maroon.txt"
+    }
+  ]
+}

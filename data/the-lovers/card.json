@@ -1,0 +1,134 @@
+{
+  "id": "the-lovers",
+  "name": "THE LOVERS",
+  "nameJa": "恋人",
+  "numeral": "VI",
+  "upright": [
+    {
+      "name": "Pink",
+      "hex": "#FFC0CB",
+      "nameJa": "ピンク",
+      "text": "pink.txt"
+    },
+    {
+      "name": "LightPink",
+      "hex": "#FFB6C1",
+      "nameJa": "ライトピンク",
+      "text": "lightpink.txt",
+      "image": "lightpink.jpg"
+    },
+    {
+      "name": "LavenderBlush",
+      "hex": "#FFF0F5",
+      "nameJa": "ラベンダーブラッシュ",
+      "text": "lavenderblush.txt",
+      "image": "lavenderblush.jpg"
+    },
+    {
+      "name": "Coral",
+      "hex": "#FF7F50",
+      "nameJa": "コーラル",
+      "text": "coral.txt"
+    },
+    {
+      "name": "PeachPuff",
+      "hex": "#FFDAB9",
+      "nameJa": "ピーチパフ",
+      "text": "peachpuff.txt"
+    },
+    {
+      "name": "HoneyDew",
+      "hex": "#F0FFF0",
+      "nameJa": "ハニーデュー",
+      "text": "honeydew.txt"
+    },
+    {
+      "name": "Orchid",
+      "hex": "#DA70D6",
+      "nameJa": "オーキッド",
+      "text": "orchid.txt"
+    },
+    {
+      "name": "Violet",
+      "hex": "#EE82EE",
+      "nameJa": "バイオレット",
+      "text": "violet.txt"
+    },
+    {
+      "name": "BlanchedAlmond",
+      "hex": "#FFEBCD",
+      "nameJa": "ブランチドアーモンド",
+      "text": "blanchedalmond.txt"
+    },
+    {
+      "name": "Gold",
+      "hex": "#FFD700",
+      "nameJa": "ゴールド",
+      "text": "gold.txt"
+    }
+  ],
+  "reversed": [
+    {
+      "name": "RosyBrown",
+      "hex": "#BC8F8F",
+      "nameJa": "ロージーブラウン",
+      "text": "rosybrown.txt",
+      "image": "rosybrown.jpg"
+    },
+    {
+      "name": "Thistle",
+      "hex": "#D8BFD8",
+      "nameJa": "シスル",
+      "text": "thistle.txt",
+      "image": "thistle.jpg"
+    },
+    {
+      "name": "Maroon",
+      "hex": "#800000",
+      "nameJa": "マルーン",
+      "text": "maroon.txt"
+    },
+    {
+      "name": "MidnightBlue",
+      "hex": "#191970",
+      "nameJa": "ミッドナイトブルー",
+      "text": "midnightblue.txt"
+    },
+    {
+      "name": "DimGray",
+      "hex": "#696969",
+      "nameJa": "ディムグレイ",
+      "text": "dimgray.txt"
+    },
+    {
+      "name": "DarkRed",
+      "hex": "#8B0000",
+      "nameJa": "ダークレッド",
+      "text": "darkred.txt"
+    },
+    {
+      "name": "Gray",
+      "hex": "#808080",
+      "nameJa": "グレイ",
+      "text": "gray.txt"
+    },
+    {
+      "name": "Brown",
+      "hex": "#A52A2A",
+      "nameJa": "ブラウン",
+      "text": "brown.txt"
+    },
+    {
+      "name": "FireBrick",
+      "hex": "#B22222",
+      "nameJa": "ファイアブリック",
+      "text": "firebrick.txt"
+    },
+    {
+      "name": "Black",
+      "hex": "#000000",
+      "nameJa": "ブラック",
+      "text": "black.txt"
+    }
+  ]
+}

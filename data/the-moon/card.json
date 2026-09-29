@@ -1,0 +1,134 @@
+{
+  "id": "the-moon",
+  "name": "THE MOON",
+  "nameJa": "月",
+  "numeral": "XVIII",
+  "upright": [
+    {
+      "name": "Silver",
+      "hex": "#C0C0C0",
+      "nameJa": "シルバー",
+      "text": "silver.txt"
+    },
+    {
+      "name": "Lavender",
+      "hex": "#E6E6FA",
+      "nameJa": "ラベンダー",
+      "text": "lavender.txt",
+      "image": "lavender.jpg"
+    },
+    {
+      "name": "MidnightBlue",
+      "hex": "#191970",
+      "nameJa": "ミッドナイトブルー",
+      "text": "midnightblue.txt"
+    },
+    {
+      "name": "AliceBlue",
+      "hex": "#F0F8FF",
+      "nameJa": "アリスブルー",
+      "text": "aliceblue.txt"
+    },
+    {
+      "name": "PaleTurquoise",
+      "hex": "#AFEEEE",
+      "nameJa": "ペールターコイズ",
+      "text": "paleturquoise.txt"
+    },
+    {
+      "name": "GhostWhite",
+      "hex": "#F8F8FF",
+      "nameJa": "ゴーストホワイト",
+      "text": "ghostwhite.txt"
+    },
+    {
+      "name": "PowderBlue",
+      "hex": "#B0E0E6",
+      "nameJa": "パウダーブルー",
+      "text": "powderblue.txt"
+    },
+    {
+      "name": "SlateBlue",
+      "hex": "#6A5ACD",
+      "nameJa": "スレートブルー",
+      "text": "slateblue.txt"
+    },
+    {
+      "name": "Wheat",
+      "hex": "#F5DEB3",
+      "nameJa": "ウィート",
+      "text": "wheat.txt"
+    },
+    {
+      "name": "Linen",
+      "hex": "#FAF0E6",
+      "nameJa": "リネン",
+      "text": "linen.txt",
+      "image": "linen.jpg"
+    }
+  ],
+  "reversed": [
+    {
+      "name": "MistyRose",
+      "hex": "#FFE4E1",
+      "nameJa": "ミスティローズ",
+      "text": "mistyrose.txt",
+      "image": "mistyrose.jpg"
+    },
+    {
+      "name": "WhiteSmoke",
+      "hex": "#F5F5F5",
+      "nameJa": "ホワイトスモーク",
+      "text": "whitesmoke.txt",
+      "image": "whitesmoke.jpg"
+    },
+    {
+      "name": "DimGray",
+      "hex": "#696969",
+      "nameJa": "ディムグレイ",
+      "text": "dimgray.txt"
+    },
+    {
+      "name": "SlateGray",
+      "hex": "#708090",
+      "nameJa": "スレートグレイ",
+      "text": "slategray.txt"
+    },
+    {
+      "name": "DarkSlateGray",
+      "hex": "#2F4F4F",
+      "nameJa": "ダークスレートグレイ",
+      "text": "darkslategray.txt"
+    },
+    {
+      "name": "LightSlateGray",
+      "hex": "#778899",
+      "nameJa": "ライトスレートグレイ",
+      "text": "lightslategray.txt"
+    },
+    {
+      "name": "DarkSlateBlue",
+      "hex": "#483D8B",
+      "nameJa": "ダークスレートブルー",
+      "text": "darkslateblue.txt"
+    },
+    {
+      "name": "Indigo",
+      "hex": "#4B0082",
+      "nameJa": "インディゴ",
+      "text": "indigo.txt"
+    },
+    {
+      "name": "Black",
+      "hex": "#000000",
+      "nameJa": "ブラック",
+      "text": "black.txt"
+    },
+    {
+      "name": "Thistle",
+      "hex": "#D8BFD8",
+      "nameJa": "シスル",
+      "text": "thistle.txt"
+    }
+  ]
+}

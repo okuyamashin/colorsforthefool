@@ -1,0 +1,134 @@
+{
+  "id": "the-sun",
+  "name": "THE SUN",
+  "nameJa": "太陽",
+  "numeral": "XIX",
+  "upright": [
+    {
+      "name": "Gold",
+      "hex": "#FFD700",
+      "nameJa": "ゴールド",
+      "text": "gold.txt"
+    },
+    {
+      "name": "GoldenRod",
+      "hex": "#DAA520",
+      "nameJa": "ゴールデンロッド",
+      "text": "goldenrod.txt",
+      "image": "goldenrod.jpg"
+    },
+    {
+      "name": "Orange",
+      "hex": "#FFA500",
+      "nameJa": "オレンジ",
+      "text": "orange.txt"
+    },
+    {
+      "name": "Cornsilk",
+      "hex": "#FFF8DC",
+      "nameJa": "コーンシルク",
+      "text": "cornsilk.txt",
+      "image": "cornsilk.jpg"
+    },
+    {
+      "name": "Wheat",
+      "hex": "#F5DEB3",
+      "nameJa": "ウィート",
+      "text": "wheat.txt"
+    },
+    {
+      "name": "Khaki",
+      "hex": "#F0E68C",
+      "nameJa": "カーキ",
+      "text": "khaki.txt"
+    },
+    {
+      "name": "DarkKhaki",
+      "hex": "#BDB76B",
+      "nameJa": "ダークカーキ",
+      "text": "darkkhaki.txt"
+    },
+    {
+      "name": "Olive",
+      "hex": "#808000",
+      "nameJa": "オリーブ",
+      "text": "olive.txt"
+    },
+    {
+      "name": "Sienna",
+      "hex": "#A0522D",
+      "nameJa": "シエナ",
+      "text": "sienna.txt"
+    },
+    {
+      "name": "LemonChiffon",
+      "hex": "#FFFACD",
+      "nameJa": "レモンシフォン",
+      "text": "lemonchiffon.txt"
+    }
+  ],
+  "reversed": [
+    {
+      "name": "Tan",
+      "hex": "#D2B48C",
+      "nameJa": "タン",
+      "text": "tan.txt"
+    },
+    {
+      "name": "SandyBrown",
+      "hex": "#F4A460",
+      "nameJa": "サンディブラウン",
+      "text": "sandybrown.txt",
+      "image": "sandybrown.jpg"
+    },
+    {
+      "name": "BlanchedAlmond",
+      "hex": "#FFEBCD",
+      "nameJa": "ブランチドアーモンド",
+      "text": "blanchedalmond.txt",
+      "image": "blanchedalmond.jpg"
+    },
+    {
+      "name": "Bisque",
+      "hex": "#FFE4C4",
+      "nameJa": "ビスク",
+      "text": "bisque.txt"
+    },
+    {
+      "name": "FireBrick",
+      "hex": "#B22222",
+      "nameJa": "ファイアブリック",
+      "text": "firebrick.txt"
+    },
+    {
+      "name": "OldLace",
+      "hex": "#FDF5E6",
+      "nameJa": "オールドレース",
+      "text": "oldlace.txt"
+    },
+    {
+      "name": "AntiqueWhite",
+      "hex": "#FAEBD7",
+      "nameJa": "アンティークホワイト",
+      "text": "antiquewhite.txt"
+    },
+    {
+      "name": "Moccasin",
+      "hex": "#FFE4B5",
+      "nameJa": "モカシン",
+      "text": "moccasin.txt"
+    },
+    {
+      "name": "BurlyWood",
+      "hex": "#DEB887",
+      "nameJa": "バーリウッド",
+      "text": "burlywood.txt"
+    },
+    {
+      "name": "Peru",
+      "hex": "#CD853F",
+      "nameJa": "ペルー",
+      "text": "peru.txt"
+    }
+  ]
+}

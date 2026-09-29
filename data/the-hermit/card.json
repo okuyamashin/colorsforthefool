@@ -1,0 +1,134 @@
+{
+  "id": "the-hermit",
+  "name": "THE HERMIT",
+  "nameJa": "隠者",
+  "numeral": "IX",
+  "upright": [
+    {
+      "name": "Gold",
+      "hex": "#FFD700",
+      "nameJa": "ゴールド",
+      "text": "gold.txt"
+    },
+    {
+      "name": "LemonChiffon",
+      "hex": "#FFFACD",
+      "nameJa": "レモンシフォン",
+      "text": "lemonchiffon.txt",
+      "image": "lemonchiffon.jpg"
+    },
+    {
+      "name": "Khaki",
+      "hex": "#F0E68C",
+      "nameJa": "カーキ",
+      "text": "khaki.txt",
+      "image": "khaki.jpg"
+    },
+    {
+      "name": "DarkKhaki",
+      "hex": "#BDB76B",
+      "nameJa": "ダークカーキ",
+      "text": "darkkhaki.txt"
+    },
+    {
+      "name": "Tan",
+      "hex": "#D2B48C",
+      "nameJa": "タン",
+      "text": "tan.txt"
+    },
+    {
+      "name": "BurlyWood",
+      "hex": "#DEB887",
+      "nameJa": "バーリウッド",
+      "text": "burlywood.txt"
+    },
+    {
+      "name": "Sienna",
+      "hex": "#A0522D",
+      "nameJa": "シエナ",
+      "text": "sienna.txt"
+    },
+    {
+      "name": "AntiqueWhite",
+      "hex": "#FAEBD7",
+      "nameJa": "アンティークホワイト",
+      "text": "antiquewhite.txt"
+    },
+    {
+      "name": "NavajoWhite",
+      "hex": "#FFDEAD",
+      "nameJa": "ナバホホワイト",
+      "text": "navajowhite.txt"
+    },
+    {
+      "name": "Wheat",
+      "hex": "#F5DEB3",
+      "nameJa": "ウィート",
+      "text": "wheat.txt"
+    }
+  ],
+  "reversed": [
+    {
+      "name": "Black",
+      "hex": "#000000",
+      "nameJa": "ブラック",
+      "text": "black.txt"
+    },
+    {
+      "name": "MidnightBlue",
+      "hex": "#191970",
+      "nameJa": "ミッドナイトブルー",
+      "text": "midnightblue.txt",
+      "image": "midnightblue.jpg"
+    },
+    {
+      "name": "Navy",
+      "hex": "#000080",
+      "nameJa": "ネイビー",
+      "text": "navy.txt"
+    },
+    {
+      "name": "DimGray",
+      "hex": "#696969",
+      "nameJa": "ディムグレイ",
+      "text": "dimgray.txt",
+      "image": "dimgray.jpg"
+    },
+    {
+      "name": "SlateGray",
+      "hex": "#708090",
+      "nameJa": "スレートグレイ",
+      "text": "slategray.txt"
+    },
+    {
+      "name": "DarkSlateGray",
+      "hex": "#2F4F4F",
+      "nameJa": "ダークスレートグレイ",
+      "text": "darkslategray.txt"
+    },
+    {
+      "name": "Gray",
+      "hex": "#808080",
+      "nameJa": "グレイ",
+      "text": "gray.txt"
+    },
+    {
+      "name": "Snow",
+      "hex": "#FFFAFA",
+      "nameJa": "スノー",
+      "text": "snow.txt"
+    },
+    {
+      "name": "WhiteSmoke",
+      "hex": "#F5F5F5",
+      "nameJa": "ホワイトスモーク",
+      "text": "whitesmoke.txt"
+    },
+    {
+      "name": "Brown",
+      "hex": "#A52A2A",
+      "nameJa": "ブラウン",
+      "text": "brown.txt"
+    }
+  ]
+}

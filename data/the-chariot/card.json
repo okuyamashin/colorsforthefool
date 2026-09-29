@@ -1,0 +1,134 @@
+{
+  "id": "the-chariot",
+  "name": "THE CHARIOT",
+  "nameJa": "戦車",
+  "numeral": "VII",
+  "upright": [
+    {
+      "name": "SteelBlue",
+      "hex": "#4682B4",
+      "nameJa": "スティールブルー",
+      "text": "steelblue.txt",
+      "image": "steelblue.jpg"
+    },
+    {
+      "name": "Silver",
+      "hex": "#C0C0C0",
+      "nameJa": "シルバー",
+      "text": "silver.txt"
+    },
+    {
+      "name": "Gold",
+      "hex": "#FFD700",
+      "nameJa": "ゴールド",
+      "text": "gold.txt"
+    },
+    {
+      "name": "RoyalBlue",
+      "hex": "#4169E1",
+      "nameJa": "ロイヤルブルー",
+      "text": "royalblue.txt",
+      "image": "royalblue.jpg"
+    },
+    {
+      "name": "Navy",
+      "hex": "#000080",
+      "nameJa": "ネイビー",
+      "text": "navy.txt"
+    },
+    {
+      "name": "Crimson",
+      "hex": "#DC143C",
+      "nameJa": "クリムゾン",
+      "text": "crimson.txt"
+    },
+    {
+      "name": "White",
+      "hex": "#FFFFFF",
+      "nameJa": "ホワイト",
+      "text": "white.txt"
+    },
+    {
+      "name": "Black",
+      "hex": "#000000",
+      "nameJa": "ブラック",
+      "text": "black.txt"
+    },
+    {
+      "name": "DodgerBlue",
+      "hex": "#1E90FF",
+      "nameJa": "ドジャーブルー",
+      "text": "dodgerblue.txt"
+    },
+    {
+      "name": "CornflowerBlue",
+      "hex": "#6495ED",
+      "nameJa": "コーンフラワーブルー",
+      "text": "cornflowerblue.txt"
+    }
+  ],
+  "reversed": [
+    {
+      "name": "Red",
+      "hex": "#FF0000",
+      "nameJa": "レッド",
+      "text": "red.txt"
+    },
+    {
+      "name": "FireBrick",
+      "hex": "#B22222",
+      "nameJa": "ファイアブリック",
+      "text": "firebrick.txt",
+      "image": "firebrick.jpg"
+    },
+    {
+      "name": "OrangeRed",
+      "hex": "#FF4500",
+      "nameJa": "オレンジレッド",
+      "text": "orangered.txt",
+      "image": "orangered.jpg"
+    },
+    {
+      "name": "DarkRed",
+      "hex": "#8B0000",
+      "nameJa": "ダークレッド",
+      "text": "darkred.txt"
+    },
+    {
+      "name": "Brown",
+      "hex": "#A52A2A",
+      "nameJa": "ブラウン",
+      "text": "brown.txt"
+    },
+    {
+      "name": "SaddleBrown",
+      "hex": "#8B4513",
+      "nameJa": "サドルブラウン",
+      "text": "saddlebrown.txt"
+    },
+    {
+      "name": "DimGray",
+      "hex": "#696969",
+      "nameJa": "ディムグレイ",
+      "text": "dimgray.txt"
+    },
+    {
+      "name": "SlateGray",
+      "hex": "#708090",
+      "nameJa": "スレートグレイ",
+      "text": "slategray.txt"
+    },
+    {
+      "name": "DarkSlateGray",
+      "hex": "#2F4F4F",
+      "nameJa": "ダークスレートグレイ",
+      "text": "darkslategray.txt"
+    },
+    {
+      "name": "Maroon",
+      "hex": "#800000",
+      "nameJa": "マルーン",
+      "text": "maroon.txt"
+    }
+  ]
+}

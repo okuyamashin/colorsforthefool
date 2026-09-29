@@ -1,0 +1,134 @@
+{
+  "id": "judgement",
+  "name": "JUDGEMENT",
+  "nameJa": "審判",
+  "numeral": "XX",
+  "upright": [
+    {
+      "name": "Gold",
+      "hex": "#FFD700",
+      "nameJa": "ゴールド",
+      "text": "gold.txt"
+    },
+    {
+      "name": "White",
+      "hex": "#FFFFFF",
+      "nameJa": "ホワイト",
+      "text": "white.txt"
+    },
+    {
+      "name": "Snow",
+      "hex": "#FFFAFA",
+      "nameJa": "スノー",
+      "text": "snow.txt",
+      "image": "snow.jpg"
+    },
+    {
+      "name": "Azure",
+      "hex": "#F0FFFF",
+      "nameJa": "アジュール",
+      "text": "azure.txt",
+      "image": "azure.jpg"
+    },
+    {
+      "name": "SkyBlue",
+      "hex": "#87CEEB",
+      "nameJa": "スカイブルー",
+      "text": "skyblue.txt"
+    },
+    {
+      "name": "Crimson",
+      "hex": "#DC143C",
+      "nameJa": "クリムゾン",
+      "text": "crimson.txt"
+    },
+    {
+      "name": "Ivory",
+      "hex": "#FFFFF0",
+      "nameJa": "アイボリー",
+      "text": "ivory.txt"
+    },
+    {
+      "name": "LightYellow",
+      "hex": "#FFFFE0",
+      "nameJa": "ライトイエロー",
+      "text": "lightyellow.txt"
+    },
+    {
+      "name": "FloralWhite",
+      "hex": "#FFFAF0",
+      "nameJa": "フローラルホワイト",
+      "text": "floralwhite.txt"
+    },
+    {
+      "name": "DeepSkyBlue",
+      "hex": "#00BFFF",
+      "nameJa": "ディープスカイブルー",
+      "text": "deepskyblue.txt"
+    }
+  ],
+  "reversed": [
+    {
+      "name": "Black",
+      "hex": "#000000",
+      "nameJa": "ブラック",
+      "text": "black.txt"
+    },
+    {
+      "name": "DimGray",
+      "hex": "#696969",
+      "nameJa": "ディムグレイ",
+      "text": "dimgray.txt",
+      "image": "dimgray.jpg"
+    },
+    {
+      "name": "Gray",
+      "hex": "#808080",
+      "nameJa": "グレイ",
+      "text": "gray.txt"
+    },
+    {
+      "name": "SlateGray",
+      "hex": "#708090",
+      "nameJa": "スレートグレイ",
+      "text": "slategray.txt",
+      "image": "slategray.jpg"
+    },
+    {
+      "name": "DarkSlateGray",
+      "hex": "#2F4F4F",
+      "nameJa": "ダークスレートグレイ",
+      "text": "darkslategray.txt"
+    },
+    {
+      "name": "Brown",
+      "hex": "#A52A2A",
+      "nameJa": "ブラウン",
+      "text": "brown.txt"
+    },
+    {
+      "name": "Sienna",
+      "hex": "#A0522D",
+      "nameJa": "シエナ",
+      "text": "sienna.txt"
+    },
+    {
+      "name": "Khaki",
+      "hex": "#F0E68C",
+      "nameJa": "カーキ",
+      "text": "khaki.txt"
+    },
+    {
+      "name": "Maroon",
+      "hex": "#800000",
+      "nameJa": "マルーン",
+      "text": "maroon.txt"
+    },
+    {
+      "name": "MidnightBlue",
+      "hex": "#191970",
+      "nameJa": "ミッドナイトブルー",
+      "text": "midnightblue.txt"
+    }
+  ]
+}

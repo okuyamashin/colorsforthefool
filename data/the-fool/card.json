@@ -1,0 +1,134 @@
+{
+  "id": "the-fool",
+  "name": "THE FOOL",
+  "nameJa": "愚者",
+  "numeral": "0",
+  "upright": [
+    {
+      "name": "White",
+      "hex": "#FFFFFF",
+      "nameJa": "ホワイト",
+      "text": "white.txt"
+    },
+    {
+      "name": "Snow",
+      "hex": "#FFFAFA",
+      "nameJa": "スノー",
+      "text": "snow.txt",
+      "image": "snow.jpg"
+    },
+    {
+      "name": "MintCream",
+      "hex": "#F5FFFA",
+      "nameJa": "ミントクリーム",
+      "text": "mintcream.txt",
+      "image": "mintcream.jpg"
+    },
+    {
+      "name": "HoneyDew",
+      "hex": "#F0FFF0",
+      "nameJa": "ハニーデュー",
+      "text": "honeydew.txt"
+    },
+    {
+      "name": "SpringGreen",
+      "hex": "#00FF7F",
+      "nameJa": "スプリンググリーン",
+      "text": "springgreen.txt"
+    },
+    {
+      "name": "Azure",
+      "hex": "#F0FFFF",
+      "nameJa": "アジュール",
+      "text": "azure.txt"
+    },
+    {
+      "name": "SkyBlue",
+      "hex": "#87CEEB",
+      "nameJa": "スカイブルー",
+      "text": "skyblue.txt"
+    },
+    {
+      "name": "LawnGreen",
+      "hex": "#7CFC00",
+      "nameJa": "ローングリーン",
+      "text": "lawngreen.txt"
+    },
+    {
+      "name": "Cornsilk",
+      "hex": "#FFF8DC",
+      "nameJa": "コーンシルク",
+      "text": "cornsilk.txt"
+    },
+    {
+      "name": "LemonChiffon",
+      "hex": "#FFFACD",
+      "nameJa": "レモンシフォン",
+      "text": "lemonchiffon.txt"
+    }
+  ],
+  "reversed": [
+    {
+      "name": "GhostWhite",
+      "hex": "#F8F8FF",
+      "nameJa": "ゴーストホワイト",
+      "text": "ghostwhite.txt",
+      "image": "ghostwhite.jpg"
+    },
+    {
+      "name": "WhiteSmoke",
+      "hex": "#F5F5F5",
+      "nameJa": "ホワイトスモーク",
+      "text": "whitesmoke.txt",
+      "image": "whitesmoke.jpg"
+    },
+    {
+      "name": "MistyRose",
+      "hex": "#FFE4E1",
+      "nameJa": "ミスティローズ",
+      "text": "mistyrose.txt"
+    },
+    {
+      "name": "SlateGray",
+      "hex": "#708090",
+      "nameJa": "スレートグレイ",
+      "text": "slategray.txt"
+    },
+    {
+      "name": "DimGray",
+      "hex": "#696969",
+      "nameJa": "ディムグレイ",
+      "text": "dimgray.txt"
+    },
+    {
+      "name": "Black",
+      "hex": "#000000",
+      "nameJa": "ブラック",
+      "text": "black.txt"
+    },
+    {
+      "name": "Maroon",
+      "hex": "#800000",
+      "nameJa": "マルーン",
+      "text": "maroon.txt"
+    },
+    {
+      "name": "FireBrick",
+      "hex": "#B22222",
+      "nameJa": "ファイアブリック",
+      "text": "firebrick.txt"
+    },
+    {
+      "name": "Crimson",
+      "hex": "#DC143C",
+      "nameJa": "クリムゾン",
+      "text": "crimson.txt"
+    },
+    {
+      "name": "Tomato",
+      "hex": "#FF6347",
+      "nameJa": "トマト",
+      "text": "tomato.txt"
+    }
+  ]
+}

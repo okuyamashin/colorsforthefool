@@ -1,0 +1,134 @@
+{
+  "id": "the-tower",
+  "name": "THE TOWER",
+  "nameJa": "塔",
+  "numeral": "XVI",
+  "upright": [
+    {
+      "name": "Gold",
+      "hex": "#FFD700",
+      "nameJa": "ゴールド",
+      "text": "gold.txt"
+    },
+    {
+      "name": "Yellow",
+      "hex": "#FFFF00",
+      "nameJa": "イエロー",
+      "text": "yellow.txt"
+    },
+    {
+      "name": "White",
+      "hex": "#FFFFFF",
+      "nameJa": "ホワイト",
+      "text": "white.txt"
+    },
+    {
+      "name": "Red",
+      "hex": "#FF0000",
+      "nameJa": "レッド",
+      "text": "red.txt"
+    },
+    {
+      "name": "OrangeRed",
+      "hex": "#FF4500",
+      "nameJa": "オレンジレッド",
+      "text": "orangered.txt",
+      "image": "orangered.jpg"
+    },
+    {
+      "name": "FireBrick",
+      "hex": "#B22222",
+      "nameJa": "ファイアブリック",
+      "text": "firebrick.txt",
+      "image": "firebrick.jpg"
+    },
+    {
+      "name": "Crimson",
+      "hex": "#DC143C",
+      "nameJa": "クリムゾン",
+      "text": "crimson.txt"
+    },
+    {
+      "name": "Black",
+      "hex": "#000000",
+      "nameJa": "ブラック",
+      "text": "black.txt"
+    },
+    {
+      "name": "SlateGray",
+      "hex": "#708090",
+      "nameJa": "スレートグレイ",
+      "text": "slategray.txt"
+    },
+    {
+      "name": "Gray",
+      "hex": "#808080",
+      "nameJa": "グレイ",
+      "text": "gray.txt"
+    }
+  ],
+  "reversed": [
+    {
+      "name": "DarkRed",
+      "hex": "#8B0000",
+      "nameJa": "ダークレッド",
+      "text": "darkred.txt",
+      "image": "darkred.jpg"
+    },
+    {
+      "name": "Maroon",
+      "hex": "#800000",
+      "nameJa": "マルーン",
+      "text": "maroon.txt"
+    },
+    {
+      "name": "Brown",
+      "hex": "#A52A2A",
+      "nameJa": "ブラウン",
+      "text": "brown.txt"
+    },
+    {
+      "name": "Sienna",
+      "hex": "#A0522D",
+      "nameJa": "シエナ",
+      "text": "sienna.txt",
+      "image": "sienna.jpg"
+    },
+    {
+      "name": "SaddleBrown",
+      "hex": "#8B4513",
+      "nameJa": "サドルブラウン",
+      "text": "saddlebrown.txt"
+    },
+    {
+      "name": "Khaki",
+      "hex": "#F0E68C",
+      "nameJa": "カーキ",
+      "text": "khaki.txt"
+    },
+    {
+      "name": "Tan",
+      "hex": "#D2B48C",
+      "nameJa": "タン",
+      "text": "tan.txt"
+    },
+    {
+      "name": "AntiqueWhite",
+      "hex": "#FAEBD7",
+      "nameJa": "アンティークホワイト",
+      "text": "antiquewhite.txt"
+    },
+    {
+      "name": "DimGray",
+      "hex": "#696969",
+      "nameJa": "ディムグレイ",
+      "text": "dimgray.txt"
+    },
+    {
+      "name": "DarkSlateGray",
+      "hex": "#2F4F4F",
+      "nameJa": "ダークスレートグレイ",
+      "text": "darkslategray.txt"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "id": "strength",
+  "name": "STRENGTH",
+  "nameJa": "力",
+  "numeral": "VIII",
+  "upright": [
+    {
+      "name": "Gold",
+      "hex": "#FFD700",
+      "nameJa": "ゴールド",
+      "text": "gold.txt"
+    },
+    {
+      "name": "GoldenRod",
+      "hex": "#DAA520",
+      "nameJa": "ゴールデンロッド",
+      "text": "goldenrod.txt",
+      "image": "goldenrod.jpg"
+    },
+    {
+      "name": "Orange",
+      "hex": "#FFA500",
+      "nameJa": "オレンジ",
+      "text": "orange.txt"
+    },
+    {
+      "name": "PeachPuff",
+      "hex": "#FFDAB9",
+      "nameJa": "ピーチパフ",
+      "text": "peachpuff.txt",
+      "image": "peachpuff.jpg"
+    },
+    {
+      "name": "Moccasin",
+      "hex": "#FFE4B5",
+      "nameJa": "モカシン",
+      "text": "moccasin.txt"
+    },
+    {
+      "name": "Linen",
+      "hex": "#FAF0E6",
+      "nameJa": "リネン",
+      "text": "linen.txt"
+    },
+    {
+      "name": "ForestGreen",
+      "hex": "#228B22",
+      "nameJa": "フォレストグリーン",
+      "text": "forestgreen.txt"
+    },
+    {
+      "name": "Pink",
+      "hex": "#FFC0CB",
+      "nameJa": "ピンク",
+      "text": "pink.txt"
+    },
+    {
+      "name": "LemonChiffon",
+      "hex": "#FFFACD",
+      "nameJa": "レモンシフォン",
+      "text": "lemonchiffon.txt"
+    },
+    {
+      "name": "Wheat",
+      "hex": "#F5DEB3",
+      "nameJa": "ウィート",
+      "text": "wheat.txt"
+    }
+  ],
+  "reversed": [
+    {
+      "name": "Crimson",
+      "hex": "#DC143C",
+      "nameJa": "クリムゾン",
+      "text": "crimson.txt",
+      "image": "crimson.jpg"
+    },
+    {
+      "name": "Red",
+      "hex": "#FF0000",
+      "nameJa": "レッド",
+      "text": "red.txt"
+    },
+    {
+      "name": "DarkRed",
+      "hex": "#8B0000",
+      "nameJa": "ダークレッド",
+      "text": "darkred.txt",
+      "image": "darkred.jpg"
+    },
+    {
+      "name": "FireBrick",
+      "hex": "#B22222",
+      "nameJa": "ファイアブリック",
+      "text": "firebrick.txt"
+    },
+    {
+      "name": "Sienna",
+      "hex": "#A0522D",
+      "nameJa": "シエナ",
+      "text": "sienna.txt"
+    },
+    {
+      "name": "DarkGoldenRod",
+      "hex": "#B8860B",
+      "nameJa": "ダークゴールデンロッド",
+      "text": "darkgoldenrod.txt"
+    },
+    {
+      "name": "Brown",
+      "hex": "#A52A2A",
+      "nameJa": "ブラウン",
+      "text": "brown.txt"
+    },
+    {
+      "name": "SaddleBrown",
+      "hex": "#8B4513",
+      "nameJa": "サドルブラウン",
+      "text": "saddlebrown.txt"
+    },
+    {
+      "name": "DimGray",
+      "hex": "#696969",
+      "nameJa": "ディムグレイ",
+      "text": "dimgray.txt"
+    },
+    {
+      "name": "Black",
+      "hex": "#000000",
+      "nameJa": "ブラック",
+      "text": "black.txt"
+    }
+  ]
+}

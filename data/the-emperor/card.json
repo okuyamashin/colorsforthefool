@@ -1,0 +1,134 @@
+{
+  "id": "the-emperor",
+  "name": "THE EMPEROR",
+  "nameJa": "皇帝",
+  "numeral": "IV",
+  "upright": [
+    {
+      "name": "FireBrick",
+      "hex": "#B22222",
+      "nameJa": "ファイアブリック",
+      "text": "firebrick.txt",
+      "image": "firebrick.jpg"
+    },
+    {
+      "name": "Crimson",
+      "hex": "#DC143C",
+      "nameJa": "クリムゾン",
+      "text": "crimson.txt",
+      "image": "crimson.jpg"
+    },
+    {
+      "name": "Red",
+      "hex": "#FF0000",
+      "nameJa": "レッド",
+      "text": "red.txt"
+    },
+    {
+      "name": "Sienna",
+      "hex": "#A0522D",
+      "nameJa": "シエナ",
+      "text": "sienna.txt"
+    },
+    {
+      "name": "SaddleBrown",
+      "hex": "#8B4513",
+      "nameJa": "サドルブラウン",
+      "text": "saddlebrown.txt"
+    },
+    {
+      "name": "SteelBlue",
+      "hex": "#4682B4",
+      "nameJa": "スティールブルー",
+      "text": "steelblue.txt"
+    },
+    {
+      "name": "SlateGray",
+      "hex": "#708090",
+      "nameJa": "スレートグレイ",
+      "text": "slategray.txt"
+    },
+    {
+      "name": "Gray",
+      "hex": "#808080",
+      "nameJa": "グレイ",
+      "text": "gray.txt"
+    },
+    {
+      "name": "Silver",
+      "hex": "#C0C0C0",
+      "nameJa": "シルバー",
+      "text": "silver.txt"
+    },
+    {
+      "name": "Maroon",
+      "hex": "#800000",
+      "nameJa": "マルーン",
+      "text": "maroon.txt"
+    }
+  ],
+  "reversed": [
+    {
+      "name": "DarkRed",
+      "hex": "#8B0000",
+      "nameJa": "ダークレッド",
+      "text": "darkred.txt",
+      "image": "darkred.jpg"
+    },
+    {
+      "name": "Black",
+      "hex": "#000000",
+      "nameJa": "ブラック",
+      "text": "black.txt"
+    },
+    {
+      "name": "DimGray",
+      "hex": "#696969",
+      "nameJa": "ディムグレイ",
+      "text": "dimgray.txt",
+      "image": "dimgray.jpg"
+    },
+    {
+      "name": "DarkSlateGray",
+      "hex": "#2F4F4F",
+      "nameJa": "ダークスレートグレイ",
+      "text": "darkslategray.txt"
+    },
+    {
+      "name": "IndianRed",
+      "hex": "#CD5C5C",
+      "nameJa": "インディアンレッド",
+      "text": "indianred.txt"
+    },
+    {
+      "name": "Peru",
+      "hex": "#CD853F",
+      "nameJa": "ペルー",
+      "text": "peru.txt"
+    },
+    {
+      "name": "LightSlateGray",
+      "hex": "#778899",
+      "nameJa": "ライトスレートグレイ",
+      "text": "lightslategray.txt"
+    },
+    {
+      "name": "Brown",
+      "hex": "#A52A2A",
+      "nameJa": "ブラウン",
+      "text": "brown.txt"
+    },
+    {
+      "name": "WhiteSmoke",
+      "hex": "#F5F5F5",
+      "nameJa": "ホワイトスモーク",
+      "text": "whitesmoke.txt"
+    },
+    {
+      "name": "Snow",
+      "hex": "#FFFAFA",
+      "nameJa": "スノー",
+      "text": "snow.txt"
+    }
+  ]
+}

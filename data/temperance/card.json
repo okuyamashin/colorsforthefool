@@ -1,0 +1,134 @@
+{
+  "id": "temperance",
+  "name": "TEMPERANCE",
+  "nameJa": "節制",
+  "numeral": "XIV",
+  "upright": [
+    {
+      "name": "Aqua",
+      "hex": "#00FFFF",
+      "nameJa": "アクア",
+      "text": "aqua.txt"
+    },
+    {
+      "name": "Aquamarine",
+      "hex": "#7FFFD4",
+      "nameJa": "アクアマリン",
+      "text": "aquamarine.txt",
+      "image": "aquamarine.jpg"
+    },
+    {
+      "name": "MediumAquaMarine",
+      "hex": "#66CDAA",
+      "nameJa": "ミディアムアクアマリン",
+      "text": "mediumaquamarine.txt",
+      "image": "mediumaquamarine.jpg"
+    },
+    {
+      "name": "Turquoise",
+      "hex": "#40E0D0",
+      "nameJa": "ターコイズ",
+      "text": "turquoise.txt"
+    },
+    {
+      "name": "PaleTurquoise",
+      "hex": "#AFEEEE",
+      "nameJa": "ペールターコイズ",
+      "text": "paleturquoise.txt"
+    },
+    {
+      "name": "SkyBlue",
+      "hex": "#87CEEB",
+      "nameJa": "スカイブルー",
+      "text": "skyblue.txt"
+    },
+    {
+      "name": "Gold",
+      "hex": "#FFD700",
+      "nameJa": "ゴールド",
+      "text": "gold.txt"
+    },
+    {
+      "name": "Wheat",
+      "hex": "#F5DEB3",
+      "nameJa": "ウィート",
+      "text": "wheat.txt"
+    },
+    {
+      "name": "SeaGreen",
+      "hex": "#2E8B57",
+      "nameJa": "シーグリーン",
+      "text": "seagreen.txt"
+    },
+    {
+      "name": "Beige",
+      "hex": "#F5F5DC",
+      "nameJa": "ベージュ",
+      "text": "beige.txt"
+    }
+  ],
+  "reversed": [
+    {
+      "name": "Red",
+      "hex": "#FF0000",
+      "nameJa": "レッド",
+      "text": "red.txt"
+    },
+    {
+      "name": "OrangeRed",
+      "hex": "#FF4500",
+      "nameJa": "オレンジレッド",
+      "text": "orangered.txt",
+      "image": "orangered.jpg"
+    },
+    {
+      "name": "Crimson",
+      "hex": "#DC143C",
+      "nameJa": "クリムゾン",
+      "text": "crimson.txt",
+      "image": "crimson.jpg"
+    },
+    {
+      "name": "DeepPink",
+      "hex": "#FF1493",
+      "nameJa": "ディープピンク",
+      "text": "deeppink.txt"
+    },
+    {
+      "name": "HotPink",
+      "hex": "#FF69B4",
+      "nameJa": "ホットピンク",
+      "text": "hotpink.txt"
+    },
+    {
+      "name": "Chocolate",
+      "hex": "#D2691E",
+      "nameJa": "チョコレート",
+      "text": "chocolate.txt"
+    },
+    {
+      "name": "Tomato",
+      "hex": "#FF6347",
+      "nameJa": "トマト",
+      "text": "tomato.txt"
+    },
+    {
+      "name": "Brown",
+      "hex": "#A52A2A",
+      "nameJa": "ブラウン",
+      "text": "brown.txt"
+    },
+    {
+      "name": "FireBrick",
+      "hex": "#B22222",
+      "nameJa": "ファイアブリック",
+      "text": "firebrick.txt"
+    },
+    {
+      "name": "Black",
+      "hex": "#000000",
+      "nameJa": "ブラック",
+      "text": "black.txt"
+    }
+  ]
+}
