@@ -30,6 +30,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
+    <style>
+      .film { margin-top: 2.4rem; }
+      .film h2 {
+        margin: 0 0 0.8rem;
+        font-size: 1.15rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+      }
+      .film-frame {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+      }
+      .film-frame iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+    </style>
     <script>
       try {
         if (!new URLSearchParams(location.search).has("test") && sessionStorage.getItem("cftf-reading-en")) document.documentElement.classList.add("has-reading");
@@ -233,6 +254,12 @@
         </section>
       </div>
       <p class="error" id="error" hidden></p>
+      <section class="film">
+        <h2>The Fool's Journey</h2>
+        <div class="film-frame">
+          <iframe src="https://www.youtube.com/embed/ngl1nN2qzkI?si=DT7xBR5A0CPZu1J3" title="The Fool's Journey — Arcana 0 to XXI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </section>
     </main>
     <footer class="colophon">
       <p>© 2026 Engawa Inc.</p>
