@@ -3,6 +3,7 @@
 
 import argparse
 import base64
+import io
 import json
 import sys
 import threading
@@ -10,6 +11,8 @@ import urllib.error
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
+
+from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from generate_card import MODEL, QUALITY, ROOT, SIZE, load_key, multipart
@@ -156,7 +159,10 @@ def one(key: str, job: dict, references: list[tuple[str, bytes]]) -> str:
         try:
             scene = brief(key, job)
             image = generate_image(key, scene_prompt(job, scene), references)
-            output.write_bytes(image)
+            picture = Image.open(io.BytesIO(image))
+            if picture.mode != "RGB":
+                picture = picture.convert("RGB")
+            picture.save(output, format="JPEG", quality=85, optimize=True)
             attach(job)
             return f"DONE {job['id']} {job['orientation']} {job['color']}"
         except urllib.error.HTTPError as error:

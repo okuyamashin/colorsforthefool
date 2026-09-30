@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Colors for the Fool</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="top">
+      <p class="brand">Colors for the Fool</p>
+      <p class="count" id="count"></p>
+    </header>
+    <main>
+      <p class="notice" id="notice" hidden></p>
+      <div class="stage">
+        <button type="button" class="card" id="card" aria-label="カードを引く">
+          <span class="card-inner">
+            <span class="card-face back">
+              <img src="../data/cardback.jpg" alt="">
+            </span>
+            <span class="card-face front">
+              <img id="face" alt="">
+            </span>
+          </span>
+        </button>
+      </div>
+      <div class="sheet" id="sheet">
+        <p class="hint-wrap">
+          <button type="button" class="hint" id="hint">タップして、一枚引く</button>
+        </p>
+        <article class="reading" id="reading" hidden>
+          <h1 id="title"></h1>
+          <p class="en" id="en"></p>
+          <p class="orientation" id="orientation"></p>
+          <div id="meaning"></div>
+        </article>
+        <section class="color-panel" id="color" hidden>
+          <div class="story" id="story"></div>
+          <button type="button" class="scene" id="scene" aria-label="タップして裏に戻す"></button>
+        </section>
+      </div>
+      <p class="error" id="error" hidden></p>
+    </main>
+    <script src="meanings.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

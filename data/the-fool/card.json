@@ -28,7 +28,8 @@
       "name": "HoneyDew",
       "hex": "#F0FFF0",
       "nameJa": "ハニーデュー",
-      "text": "honeydew.txt"
+      "text": "honeydew.txt",
+      "image": "honeydew.jpg"
     },
     {
       "name": "SpringGreen",
@@ -86,7 +87,8 @@
       "name": "MistyRose",
       "hex": "#FFE4E1",
       "nameJa": "ミスティローズ",
-      "text": "mistyrose.txt"
+      "text": "mistyrose.txt",
+      "image": "mistyrose.jpg"
     },
     {
       "name": "SlateGray",

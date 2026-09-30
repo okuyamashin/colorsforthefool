@@ -28,7 +28,8 @@
       "name": "Turquoise",
       "hex": "#40E0D0",
       "nameJa": "ターコイズ",
-      "text": "turquoise.txt"
+      "text": "turquoise.txt",
+      "image": "turquoise.jpg"
     },
     {
       "name": "PaleTurquoise",
@@ -92,7 +93,8 @@
       "name": "DeepPink",
       "hex": "#FF1493",
       "nameJa": "ディープピンク",
-      "text": "deeppink.txt"
+      "text": "deeppink.txt",
+      "image": "deeppink.jpg"
     },
     {
       "name": "HotPink",

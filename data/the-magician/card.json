@@ -64,7 +64,8 @@
       "name": "Ivory",
       "hex": "#FFFFF0",
       "nameJa": "アイボリー",
-      "text": "ivory.txt"
+      "text": "ivory.txt",
+      "image": "ivory.jpg"
     }
   ],
   "reversed": [
@@ -98,7 +99,8 @@
       "name": "DarkSlateGray",
       "hex": "#2F4F4F",
       "nameJa": "ダークスレートグレイ",
-      "text": "darkslategray.txt"
+      "text": "darkslategray.txt",
+      "image": "darkslategray.jpg"
     },
     {
       "name": "Brown",

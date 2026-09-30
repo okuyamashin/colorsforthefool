@@ -34,7 +34,8 @@
       "name": "SkyBlue",
       "hex": "#87CEEB",
       "nameJa": "スカイブルー",
-      "text": "skyblue.txt"
+      "text": "skyblue.txt",
+      "image": "skyblue.jpg"
     },
     {
       "name": "Crimson",
@@ -98,7 +99,8 @@
       "name": "DarkSlateGray",
       "hex": "#2F4F4F",
       "nameJa": "ダークスレートグレイ",
-      "text": "darkslategray.txt"
+      "text": "darkslategray.txt",
+      "image": "darkslategray.jpg"
     },
     {
       "name": "Brown",

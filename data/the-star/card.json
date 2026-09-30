@@ -46,7 +46,8 @@
       "name": "Aquamarine",
       "hex": "#7FFFD4",
       "nameJa": "アクアマリン",
-      "text": "aquamarine.txt"
+      "text": "aquamarine.txt",
+      "image": "aquamarine.jpg"
     },
     {
       "name": "AliceBlue",
@@ -92,7 +93,8 @@
       "name": "DimGray",
       "hex": "#696969",
       "nameJa": "ディムグレイ",
-      "text": "dimgray.txt"
+      "text": "dimgray.txt",
+      "image": "dimgray.jpg"
     },
     {
       "name": "SlateGray",

@@ -52,7 +52,8 @@
       "name": "Ivory",
       "hex": "#FFFFF0",
       "nameJa": "アイボリー",
-      "text": "ivory.txt"
+      "text": "ivory.txt",
+      "image": "ivory.jpg"
     },
     {
       "name": "FloralWhite",
@@ -98,7 +99,8 @@
       "name": "Sienna",
       "hex": "#A0522D",
       "nameJa": "シエナ",
-      "text": "sienna.txt"
+      "text": "sienna.txt",
+      "image": "sienna.jpg"
     },
     {
       "name": "SaddleBrown",

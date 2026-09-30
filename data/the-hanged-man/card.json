@@ -46,7 +46,8 @@
       "name": "SkyBlue",
       "hex": "#87CEEB",
       "nameJa": "スカイブルー",
-      "text": "skyblue.txt"
+      "text": "skyblue.txt",
+      "image": "skyblue.jpg"
     },
     {
       "name": "LightBlue",
@@ -86,7 +87,8 @@
       "name": "OliveDrab",
       "hex": "#6B8E23",
       "nameJa": "オリーブドラブ",
-      "text": "olivedrab.txt"
+      "text": "olivedrab.txt",
+      "image": "olivedrab.jpg"
     },
     {
       "name": "Brown",

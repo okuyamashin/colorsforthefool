@@ -28,7 +28,8 @@
       "name": "OldLace",
       "hex": "#FDF5E6",
       "nameJa": "オールドレース",
-      "text": "oldlace.txt"
+      "text": "oldlace.txt",
+      "image": "oldlace.jpg"
     },
     {
       "name": "Wheat",
@@ -86,7 +87,8 @@
       "name": "Khaki",
       "hex": "#F0E68C",
       "nameJa": "カーキ",
-      "text": "khaki.txt"
+      "text": "khaki.txt",
+      "image": "khaki.jpg"
     },
     {
       "name": "SlateGray",

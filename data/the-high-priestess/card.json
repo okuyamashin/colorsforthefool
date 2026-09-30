@@ -34,7 +34,8 @@
       "name": "AliceBlue",
       "hex": "#F0F8FF",
       "nameJa": "アリスブルー",
-      "text": "aliceblue.txt"
+      "text": "aliceblue.txt",
+      "image": "aliceblue.jpg"
     },
     {
       "name": "Plum",
@@ -92,7 +93,8 @@
       "name": "Thistle",
       "hex": "#D8BFD8",
       "nameJa": "シスル",
-      "text": "thistle.txt"
+      "text": "thistle.txt",
+      "image": "thistle.jpg"
     },
     {
       "name": "SlateGray",

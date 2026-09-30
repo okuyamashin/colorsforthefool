@@ -52,7 +52,8 @@
       "name": "Wheat",
       "hex": "#F5DEB3",
       "nameJa": "ウィート",
-      "text": "wheat.txt"
+      "text": "wheat.txt",
+      "image": "wheat.jpg"
     },
     {
       "name": "Cornsilk",
@@ -86,7 +87,8 @@
       "name": "DarkKhaki",
       "hex": "#BDB76B",
       "nameJa": "ダークカーキ",
-      "text": "darkkhaki.txt"
+      "text": "darkkhaki.txt",
+      "image": "darkkhaki.jpg"
     },
     {
       "name": "Khaki",

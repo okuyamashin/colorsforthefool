@@ -28,7 +28,8 @@
       "name": "Cornsilk",
       "hex": "#FFF8DC",
       "nameJa": "コーンシルク",
-      "text": "cornsilk.txt"
+      "text": "cornsilk.txt",
+      "image": "cornsilk.jpg"
     },
     {
       "name": "SkyBlue",
@@ -86,7 +87,8 @@
       "name": "Sienna",
       "hex": "#A0522D",
       "nameJa": "シエナ",
-      "text": "sienna.txt"
+      "text": "sienna.txt",
+      "image": "sienna.jpg"
     },
     {
       "name": "DarkOliveGreen",

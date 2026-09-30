@@ -40,7 +40,8 @@
       "name": "Crimson",
       "hex": "#DC143C",
       "nameJa": "クリムゾン",
-      "text": "crimson.txt"
+      "text": "crimson.txt",
+      "image": "crimson.jpg"
     },
     {
       "name": "White",
@@ -92,7 +93,8 @@
       "name": "DarkRed",
       "hex": "#8B0000",
       "nameJa": "ダークレッド",
-      "text": "darkred.txt"
+      "text": "darkred.txt",
+      "image": "darkred.jpg"
     },
     {
       "name": "Brown",

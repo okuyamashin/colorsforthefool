@@ -28,7 +28,8 @@
       "name": "Sienna",
       "hex": "#A0522D",
       "nameJa": "シエナ",
-      "text": "sienna.txt"
+      "text": "sienna.txt",
+      "image": "sienna.jpg"
     },
     {
       "name": "SaddleBrown",
@@ -92,7 +93,8 @@
       "name": "DarkSlateGray",
       "hex": "#2F4F4F",
       "nameJa": "ダークスレートグレイ",
-      "text": "darkslategray.txt"
+      "text": "darkslategray.txt",
+      "image": "darkslategray.jpg"
     },
     {
       "name": "IndianRed",

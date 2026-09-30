@@ -40,7 +40,8 @@
       "name": "Ivory",
       "hex": "#FFFFF0",
       "nameJa": "アイボリー",
-      "text": "ivory.txt"
+      "text": "ivory.txt",
+      "image": "ivory.jpg"
     },
     {
       "name": "Linen",
@@ -104,7 +105,8 @@
       "name": "DarkRed",
       "hex": "#8B0000",
       "nameJa": "ダークレッド",
-      "text": "darkred.txt"
+      "text": "darkred.txt",
+      "image": "darkred.jpg"
     },
     {
       "name": "SlateGray",

@@ -28,7 +28,8 @@
       "name": "DarkKhaki",
       "hex": "#BDB76B",
       "nameJa": "ダークカーキ",
-      "text": "darkkhaki.txt"
+      "text": "darkkhaki.txt",
+      "image": "darkkhaki.jpg"
     },
     {
       "name": "Tan",
@@ -98,7 +99,8 @@
       "name": "SlateGray",
       "hex": "#708090",
       "nameJa": "スレートグレイ",
-      "text": "slategray.txt"
+      "text": "slategray.txt",
+      "image": "slategray.jpg"
     },
     {
       "name": "DarkSlateGray",

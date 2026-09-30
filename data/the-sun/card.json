@@ -34,7 +34,8 @@
       "name": "Wheat",
       "hex": "#F5DEB3",
       "nameJa": "ウィート",
-      "text": "wheat.txt"
+      "text": "wheat.txt",
+      "image": "wheat.jpg"
     },
     {
       "name": "Khaki",
@@ -92,7 +93,8 @@
       "name": "Bisque",
       "hex": "#FFE4C4",
       "nameJa": "ビスク",
-      "text": "bisque.txt"
+      "text": "bisque.txt",
+      "image": "bisque.jpg"
     },
     {
       "name": "FireBrick",

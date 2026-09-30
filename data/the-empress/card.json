@@ -22,7 +22,8 @@
       "name": "GoldenRod",
       "hex": "#DAA520",
       "nameJa": "ゴールデンロッド",
-      "text": "goldenrod.txt"
+      "text": "goldenrod.txt",
+      "image": "goldenrod.jpg"
     },
     {
       "name": "ForestGreen",
@@ -86,7 +87,8 @@
       "name": "RosyBrown",
       "hex": "#BC8F8F",
       "nameJa": "ロージーブラウン",
-      "text": "rosybrown.txt"
+      "text": "rosybrown.txt",
+      "image": "rosybrown.jpg"
     },
     {
       "name": "Sienna",

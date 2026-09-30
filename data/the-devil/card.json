@@ -40,7 +40,8 @@
       "name": "FireBrick",
       "hex": "#B22222",
       "nameJa": "ファイアブリック",
-      "text": "firebrick.txt"
+      "text": "firebrick.txt",
+      "image": "firebrick.jpg"
     },
     {
       "name": "OrangeRed",
@@ -98,7 +99,8 @@
       "name": "GhostWhite",
       "hex": "#F8F8FF",
       "nameJa": "ゴーストホワイト",
-      "text": "ghostwhite.txt"
+      "text": "ghostwhite.txt",
+      "image": "ghostwhite.jpg"
     },
     {
       "name": "Lavender",

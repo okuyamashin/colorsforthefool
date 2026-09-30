@@ -28,7 +28,8 @@
       "name": "Coral",
       "hex": "#FF7F50",
       "nameJa": "コーラル",
-      "text": "coral.txt"
+      "text": "coral.txt",
+      "image": "coral.jpg"
     },
     {
       "name": "PeachPuff",
@@ -92,7 +93,8 @@
       "name": "MidnightBlue",
       "hex": "#191970",
       "nameJa": "ミッドナイトブルー",
-      "text": "midnightblue.txt"
+      "text": "midnightblue.txt",
+      "image": "midnightblue.jpg"
     },
     {
       "name": "DimGray",
