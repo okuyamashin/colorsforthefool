@@ -8,64 +8,81 @@
       "name": "Gold",
       "hex": "#FFD700",
       "nameJa": "ゴールド",
-      "text": "gold.txt"
+      "text": "gold.txt",
+      "textEn": "gold.en.txt",
+      "image": "gold.jpg"
     },
     {
       "name": "GoldenRod",
       "hex": "#DAA520",
       "nameJa": "ゴールデンロッド",
       "text": "goldenrod.txt",
-      "image": "goldenrod.jpg"
+      "image": "goldenrod.jpg",
+      "textEn": "goldenrod.en.txt"
     },
     {
       "name": "Orange",
       "hex": "#FFA500",
       "nameJa": "オレンジ",
-      "text": "orange.txt"
+      "text": "orange.txt",
+      "textEn": "orange.en.txt",
+      "image": "orange.jpg"
     },
     {
       "name": "Cornsilk",
       "hex": "#FFF8DC",
       "nameJa": "コーンシルク",
       "text": "cornsilk.txt",
-      "image": "cornsilk.jpg"
+      "image": "cornsilk.jpg",
+      "textEn": "cornsilk.en.txt"
     },
     {
       "name": "Wheat",
       "hex": "#F5DEB3",
       "nameJa": "ウィート",
       "text": "wheat.txt",
-      "image": "wheat.jpg"
+      "image": "wheat.jpg",
+      "textEn": "wheat.en.txt"
     },
     {
       "name": "Khaki",
       "hex": "#F0E68C",
       "nameJa": "カーキ",
-      "text": "khaki.txt"
+      "text": "khaki.txt",
+      "textEn": "khaki.en.txt",
+      "image": "khaki.jpg"
     },
     {
       "name": "DarkKhaki",
       "hex": "#BDB76B",
       "nameJa": "ダークカーキ",
-      "text": "darkkhaki.txt"
+      "text": "darkkhaki.txt",
+      "textEn": "darkkhaki.en.txt",
+      "image": "darkkhaki.jpg"
     },
     {
       "name": "Olive",
       "hex": "#808000",
       "nameJa": "オリーブ",
-      "text": "olive.txt"
+      "text": "olive.txt",
+      "textEn": "olive.en.txt",
+      "image": "olive.jpg"
     },
     {
       "name": "Sienna",
       "hex": "#A0522D",
       "nameJa": "シエナ",
-      "text": "sienna.txt"
+      "text": "sienna.txt",
+      "textEn": "sienna.en.txt",
+      "image": "sienna.jpg"
     },
     {
       "name": "LemonChiffon",
       "hex": "#FFFACD",
       "nameJa": "レモンシフォン",
-      "text": "lemonchiffon.txt"
+      "text": "lemonchiffon.txt",
+      "textEn": "lemonchiffon.en.txt",
+      "image": "lemonchiffon.jpg"
     }
   ],
   "reversed": [
@@ -73,64 +90,81 @@
       "name": "Tan",
       "hex": "#D2B48C",
       "nameJa": "タン",
-      "text": "tan.txt"
+      "text": "tan.txt",
+      "textEn": "tan.en.txt",
+      "image": "tan.jpg"
     },
     {
       "name": "SandyBrown",
       "hex": "#F4A460",
       "nameJa": "サンディブラウン",
       "text": "sandybrown.txt",
-      "image": "sandybrown.jpg"
+      "image": "sandybrown.jpg",
+      "textEn": "sandybrown.en.txt"
     },
     {
       "name": "BlanchedAlmond",
       "hex": "#FFEBCD",
       "nameJa": "ブランチドアーモンド",
       "text": "blanchedalmond.txt",
-      "image": "blanchedalmond.jpg"
+      "image": "blanchedalmond.jpg",
+      "textEn": "blanchedalmond.en.txt"
     },
     {
       "name": "Bisque",
       "hex": "#FFE4C4",
       "nameJa": "ビスク",
       "text": "bisque.txt",
-      "image": "bisque.jpg"
+      "image": "bisque.jpg",
+      "textEn": "bisque.en.txt"
     },
     {
       "name": "FireBrick",
       "hex": "#B22222",
       "nameJa": "ファイアブリック",
-      "text": "firebrick.txt"
+      "text": "firebrick.txt",
+      "textEn": "firebrick.en.txt",
+      "image": "firebrick.jpg"
     },
     {
       "name": "OldLace",
       "hex": "#FDF5E6",
       "nameJa": "オールドレース",
-      "text": "oldlace.txt"
+      "text": "oldlace.txt",
+      "textEn": "oldlace.en.txt",
+      "image": "oldlace.jpg"
     },
     {
       "name": "AntiqueWhite",
       "hex": "#FAEBD7",
       "nameJa": "アンティークホワイト",
-      "text": "antiquewhite.txt"
+      "text": "antiquewhite.txt",
+      "textEn": "antiquewhite.en.txt",
+      "image": "antiquewhite.jpg"
     },
     {
       "name": "Moccasin",
       "hex": "#FFE4B5",
       "nameJa": "モカシン",
-      "text": "moccasin.txt"
+      "text": "moccasin.txt",
+      "textEn": "moccasin.en.txt",
+      "image": "moccasin.jpg"
     },
     {
       "name": "BurlyWood",
       "hex": "#DEB887",
       "nameJa": "バーリウッド",
-      "text": "burlywood.txt"
+      "text": "burlywood.txt",
+      "textEn": "burlywood.en.txt",
+      "image": "burlywood.jpg"
     },
     {
       "name": "Peru",
       "hex": "#CD853F",
       "nameJa": "ペルー",
-      "text": "peru.txt"
+      "text": "peru.txt",
+      "textEn": "peru.en.txt",
+      "image": "peru.jpg"
     }
   ]
 }

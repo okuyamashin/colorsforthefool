@@ -24,6 +24,7 @@ img { font: inherit; }
 
 .top {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: baseline;
   width: min(92vw, 40rem);
@@ -39,11 +40,12 @@ img { font: inherit; }
   text-transform: uppercase;
 }
 
-.count {
-  margin: 0;
+.tagline {
+  flex: 1 0 100%;
+  margin: 0.45rem 0 0;
   color: var(--muted);
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
 }
 
 main {
@@ -112,24 +114,119 @@ main {
 
 .card-face.front { transform: rotateY(180deg); }
 
-.card-face img {
+.face-turn {
+  position: relative;
   display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.face-turn.reversed { transform: rotate(180deg); }
+
+.card-face img,
+.card-face video {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   pointer-events: none;
+  background: #f4efe4;
 }
 
-.card-face.front img.reversed { transform: rotate(180deg); }
 
-.sheet {
+.sheet,
+.guide {
   overflow: hidden;
   transition: height 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.55s ease;
 }
 
-.sheet.is-folding {
+.sheet.is-folding,
+.guide.is-folding,
+.guide.is-folded {
   height: 0 !important;
   opacity: 0;
+}
+
+html.has-reading .guide {
+  height: 0;
+  opacity: 0;
+}
+
+.guide {
+  margin-top: 2.2rem;
+}
+
+.guide h2 {
+  margin: 1.6rem 0 0.7rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.guide h3 {
+  margin: 1.15rem 0 0.35rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.guide p,
+.guide li {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.95;
+}
+
+.guide ol {
+  margin: 0;
+  padding-left: 1.4rem;
+}
+
+.guide li + li { margin-top: 0.45rem; }
+
+.guide section + section {
+  margin-top: 0.4rem;
+  padding-top: 0.2rem;
+}
+
+.arcana {
+  margin: 0.3rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.guide .arcana li + li { margin-top: 1.15rem; }
+
+.arcana h3 {
+  margin: 0 0 0.15rem;
+  letter-spacing: 0.14em;
+}
+
+.arcana a,
+.arcana a:visited,
+.arcana a:hover,
+.arcana a:active {
+  color: #7a5c2e;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 0.18em;
+}
+
+.arcana a:hover { color: #5c4318; }
+
+.arcana .latin {
+  margin-left: 0.2rem;
+  font-family: Cinzel, "Palatino Linotype", Palatino, serif;
+  font-size: 0.72em;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+
+.guide .arcana p + p { margin-top: 0.15rem; }
+
+.arcana .side {
+  margin-right: 0.4rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
 }
 
 .hint-wrap { text-align: center; }
@@ -249,5 +346,6 @@ main {
 
 @media (prefers-reduced-motion: reduce) {
   .card-inner,
-  .sheet { transition: none; }
+  .sheet,
+  .guide { transition: none; }
 }

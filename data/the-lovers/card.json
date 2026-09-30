@@ -8,64 +8,81 @@
       "name": "Pink",
       "hex": "#FFC0CB",
       "nameJa": "ピンク",
-      "text": "pink.txt"
+      "text": "pink.txt",
+      "textEn": "pink.en.txt",
+      "image": "pink.jpg"
     },
     {
       "name": "LightPink",
       "hex": "#FFB6C1",
       "nameJa": "ライトピンク",
       "text": "lightpink.txt",
-      "image": "lightpink.jpg"
+      "image": "lightpink.jpg",
+      "textEn": "lightpink.en.txt"
     },
     {
       "name": "LavenderBlush",
       "hex": "#FFF0F5",
       "nameJa": "ラベンダーブラッシュ",
       "text": "lavenderblush.txt",
-      "image": "lavenderblush.jpg"
+      "image": "lavenderblush.jpg",
+      "textEn": "lavenderblush.en.txt"
     },
     {
       "name": "Coral",
       "hex": "#FF7F50",
       "nameJa": "コーラル",
       "text": "coral.txt",
-      "image": "coral.jpg"
+      "image": "coral.jpg",
+      "textEn": "coral.en.txt"
     },
     {
       "name": "PeachPuff",
       "hex": "#FFDAB9",
       "nameJa": "ピーチパフ",
-      "text": "peachpuff.txt"
+      "text": "peachpuff.txt",
+      "textEn": "peachpuff.en.txt",
+      "image": "peachpuff.jpg"
     },
     {
       "name": "HoneyDew",
       "hex": "#F0FFF0",
       "nameJa": "ハニーデュー",
-      "text": "honeydew.txt"
+      "text": "honeydew.txt",
+      "textEn": "honeydew.en.txt",
+      "image": "honeydew.jpg"
     },
     {
       "name": "Orchid",
       "hex": "#DA70D6",
       "nameJa": "オーキッド",
-      "text": "orchid.txt"
+      "text": "orchid.txt",
+      "textEn": "orchid.en.txt",
+      "image": "orchid.jpg"
     },
     {
       "name": "Violet",
       "hex": "#EE82EE",
       "nameJa": "バイオレット",
-      "text": "violet.txt"
+      "text": "violet.txt",
+      "textEn": "violet.en.txt",
+      "image": "violet.jpg"
     },
     {
       "name": "BlanchedAlmond",
       "hex": "#FFEBCD",
       "nameJa": "ブランチドアーモンド",
-      "text": "blanchedalmond.txt"
+      "text": "blanchedalmond.txt",
+      "textEn": "blanchedalmond.en.txt",
+      "image": "blanchedalmond.jpg"
     },
     {
       "name": "Gold",
       "hex": "#FFD700",
       "nameJa": "ゴールド",
-      "text": "gold.txt"
+      "text": "gold.txt",
+      "textEn": "gold.en.txt",
+      "image": "gold.jpg"
     }
   ],
   "reversed": [
@@ -74,63 +91,80 @@
       "hex": "#BC8F8F",
       "nameJa": "ロージーブラウン",
       "text": "rosybrown.txt",
-      "image": "rosybrown.jpg"
+      "image": "rosybrown.jpg",
+      "textEn": "rosybrown.en.txt"
     },
     {
       "name": "Thistle",
       "hex": "#D8BFD8",
       "nameJa": "シスル",
       "text": "thistle.txt",
-      "image": "thistle.jpg"
+      "image": "thistle.jpg",
+      "textEn": "thistle.en.txt"
     },
     {
       "name": "Maroon",
       "hex": "#800000",
       "nameJa": "マルーン",
-      "text": "maroon.txt"
+      "text": "maroon.txt",
+      "textEn": "maroon.en.txt",
+      "image": "maroon.jpg"
     },
     {
       "name": "MidnightBlue",
       "hex": "#191970",
       "nameJa": "ミッドナイトブルー",
       "text": "midnightblue.txt",
-      "image": "midnightblue.jpg"
+      "image": "midnightblue.jpg",
+      "textEn": "midnightblue.en.txt"
     },
     {
       "name": "DimGray",
       "hex": "#696969",
       "nameJa": "ディムグレイ",
-      "text": "dimgray.txt"
+      "text": "dimgray.txt",
+      "textEn": "dimgray.en.txt",
+      "image": "dimgray.jpg"
     },
     {
       "name": "DarkRed",
       "hex": "#8B0000",
       "nameJa": "ダークレッド",
-      "text": "darkred.txt"
+      "text": "darkred.txt",
+      "textEn": "darkred.en.txt",
+      "image": "darkred.jpg"
     },
     {
       "name": "Gray",
       "hex": "#808080",
       "nameJa": "グレイ",
-      "text": "gray.txt"
+      "text": "gray.txt",
+      "textEn": "gray.en.txt",
+      "image": "gray.jpg"
     },
     {
       "name": "Brown",
       "hex": "#A52A2A",
       "nameJa": "ブラウン",
-      "text": "brown.txt"
+      "text": "brown.txt",
+      "textEn": "brown.en.txt",
+      "image": "brown.jpg"
     },
     {
       "name": "FireBrick",
       "hex": "#B22222",
       "nameJa": "ファイアブリック",
-      "text": "firebrick.txt"
+      "text": "firebrick.txt",
+      "textEn": "firebrick.en.txt",
+      "image": "firebrick.jpg"
     },
     {
       "name": "Black",
       "hex": "#000000",
       "nameJa": "ブラック",
-      "text": "black.txt"
+      "text": "black.txt",
+      "textEn": "black.en.txt",
+      "image": "black.jpg"
     }
   ]
 }

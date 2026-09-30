@@ -3,69 +3,87 @@
   "name": "THE FOOL",
   "nameJa": "愚者",
   "numeral": "0",
+  "video": "face.mp4",
   "upright": [
     {
       "name": "White",
       "hex": "#FFFFFF",
       "nameJa": "ホワイト",
-      "text": "white.txt"
+      "text": "white.txt",
+      "textEn": "white.en.txt",
+      "image": "white.jpg"
     },
     {
       "name": "Snow",
       "hex": "#FFFAFA",
       "nameJa": "スノー",
       "text": "snow.txt",
-      "image": "snow.jpg"
+      "image": "snow.jpg",
+      "textEn": "snow.en.txt"
     },
     {
       "name": "MintCream",
       "hex": "#F5FFFA",
       "nameJa": "ミントクリーム",
       "text": "mintcream.txt",
-      "image": "mintcream.jpg"
+      "image": "mintcream.jpg",
+      "textEn": "mintcream.en.txt"
     },
     {
       "name": "HoneyDew",
       "hex": "#F0FFF0",
       "nameJa": "ハニーデュー",
       "text": "honeydew.txt",
-      "image": "honeydew.jpg"
+      "image": "honeydew.jpg",
+      "textEn": "honeydew.en.txt"
     },
     {
       "name": "SpringGreen",
       "hex": "#00FF7F",
       "nameJa": "スプリンググリーン",
-      "text": "springgreen.txt"
+      "text": "springgreen.txt",
+      "textEn": "springgreen.en.txt",
+      "image": "springgreen.jpg"
     },
     {
       "name": "Azure",
       "hex": "#F0FFFF",
       "nameJa": "アジュール",
-      "text": "azure.txt"
+      "text": "azure.txt",
+      "textEn": "azure.en.txt",
+      "image": "azure.jpg"
     },
     {
       "name": "SkyBlue",
       "hex": "#87CEEB",
       "nameJa": "スカイブルー",
-      "text": "skyblue.txt"
+      "text": "skyblue.txt",
+      "textEn": "skyblue.en.txt",
+      "image": "skyblue.jpg"
     },
     {
       "name": "LawnGreen",
       "hex": "#7CFC00",
       "nameJa": "ローングリーン",
-      "text": "lawngreen.txt"
+      "text": "lawngreen.txt",
+      "textEn": "lawngreen.en.txt",
+      "image": "lawngreen.jpg"
     },
     {
       "name": "Cornsilk",
       "hex": "#FFF8DC",
       "nameJa": "コーンシルク",
-      "text": "cornsilk.txt"
+      "text": "cornsilk.txt",
+      "textEn": "cornsilk.en.txt",
+      "image": "cornsilk.jpg"
     },
     {
       "name": "LemonChiffon",
       "hex": "#FFFACD",
       "nameJa": "レモンシフォン",
-      "text": "lemonchiffon.txt"
+      "text": "lemonchiffon.txt",
+      "textEn": "lemonchiffon.en.txt",
+      "image": "lemonchiffon.jpg"
     }
   ],
   "reversed": [
@@ -74,63 +92,80 @@
       "hex": "#F8F8FF",
       "nameJa": "ゴーストホワイト",
       "text": "ghostwhite.txt",
-      "image": "ghostwhite.jpg"
+      "image": "ghostwhite.jpg",
+      "textEn": "ghostwhite.en.txt"
     },
     {
       "name": "WhiteSmoke",
       "hex": "#F5F5F5",
       "nameJa": "ホワイトスモーク",
       "text": "whitesmoke.txt",
-      "image": "whitesmoke.jpg"
+      "image": "whitesmoke.jpg",
+      "textEn": "whitesmoke.en.txt"
     },
     {
       "name": "MistyRose",
       "hex": "#FFE4E1",
       "nameJa": "ミスティローズ",
       "text": "mistyrose.txt",
-      "image": "mistyrose.jpg"
+      "image": "mistyrose.jpg",
+      "textEn": "mistyrose.en.txt"
     },
     {
       "name": "SlateGray",
       "hex": "#708090",
       "nameJa": "スレートグレイ",
-      "text": "slategray.txt"
+      "text": "slategray.txt",
+      "textEn": "slategray.en.txt",
+      "image": "slategray.jpg"
     },
     {
       "name": "DimGray",
       "hex": "#696969",
       "nameJa": "ディムグレイ",
-      "text": "dimgray.txt"
+      "text": "dimgray.txt",
+      "textEn": "dimgray.en.txt",
+      "image": "dimgray.jpg"
     },
     {
       "name": "Black",
       "hex": "#000000",
       "nameJa": "ブラック",
-      "text": "black.txt"
+      "text": "black.txt",
+      "textEn": "black.en.txt",
+      "image": "black.jpg"
     },
     {
       "name": "Maroon",
       "hex": "#800000",
       "nameJa": "マルーン",
-      "text": "maroon.txt"
+      "text": "maroon.txt",
+      "textEn": "maroon.en.txt",
+      "image": "maroon.jpg"
     },
     {
       "name": "FireBrick",
       "hex": "#B22222",
       "nameJa": "ファイアブリック",
-      "text": "firebrick.txt"
+      "text": "firebrick.txt",
+      "textEn": "firebrick.en.txt",
+      "image": "firebrick.jpg"
     },
     {
       "name": "Crimson",
       "hex": "#DC143C",
       "nameJa": "クリムゾン",
-      "text": "crimson.txt"
+      "text": "crimson.txt",
+      "textEn": "crimson.en.txt",
+      "image": "crimson.jpg"
     },
     {
       "name": "Tomato",
       "hex": "#FF6347",
       "nameJa": "トマト",
-      "text": "tomato.txt"
+      "text": "tomato.txt",
+      "textEn": "tomato.en.txt",
+      "image": "tomato.jpg"
     }
   ]
 }

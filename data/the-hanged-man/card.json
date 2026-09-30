@@ -9,63 +9,80 @@
       "hex": "#228B22",
       "nameJa": "フォレストグリーン",
       "text": "forestgreen.txt",
-      "image": "forestgreen.jpg"
+      "image": "forestgreen.jpg",
+      "textEn": "forestgreen.en.txt"
     },
     {
       "name": "Olive",
       "hex": "#808000",
       "nameJa": "オリーブ",
-      "text": "olive.txt"
+      "text": "olive.txt",
+      "textEn": "olive.en.txt",
+      "image": "olive.jpg"
     },
     {
       "name": "SeaGreen",
       "hex": "#2E8B57",
       "nameJa": "シーグリーン",
       "text": "seagreen.txt",
-      "image": "seagreen.jpg"
+      "image": "seagreen.jpg",
+      "textEn": "seagreen.en.txt"
     },
     {
       "name": "Teal",
       "hex": "#008080",
       "nameJa": "ティール",
-      "text": "teal.txt"
+      "text": "teal.txt",
+      "textEn": "teal.en.txt",
+      "image": "teal.jpg"
     },
     {
       "name": "Silver",
       "hex": "#C0C0C0",
       "nameJa": "シルバー",
-      "text": "silver.txt"
+      "text": "silver.txt",
+      "textEn": "silver.en.txt",
+      "image": "silver.jpg"
     },
     {
       "name": "Gold",
       "hex": "#FFD700",
       "nameJa": "ゴールド",
-      "text": "gold.txt"
+      "text": "gold.txt",
+      "textEn": "gold.en.txt",
+      "image": "gold.jpg"
     },
     {
       "name": "SkyBlue",
       "hex": "#87CEEB",
       "nameJa": "スカイブルー",
       "text": "skyblue.txt",
-      "image": "skyblue.jpg"
+      "image": "skyblue.jpg",
+      "textEn": "skyblue.en.txt"
     },
     {
       "name": "LightBlue",
       "hex": "#ADD8E6",
       "nameJa": "ライトブルー",
-      "text": "lightblue.txt"
+      "text": "lightblue.txt",
+      "textEn": "lightblue.en.txt",
+      "image": "lightblue.jpg"
     },
     {
       "name": "Aqua",
       "hex": "#00FFFF",
       "nameJa": "アクア",
-      "text": "aqua.txt"
+      "text": "aqua.txt",
+      "textEn": "aqua.en.txt",
+      "image": "aqua.jpg"
     },
     {
       "name": "MediumAquaMarine",
       "hex": "#66CDAA",
       "nameJa": "ミディアムアクアマリン",
-      "text": "mediumaquamarine.txt"
+      "text": "mediumaquamarine.txt",
+      "textEn": "mediumaquamarine.en.txt",
+      "image": "mediumaquamarine.jpg"
     }
   ],
   "reversed": [
@@ -74,63 +91,80 @@
       "hex": "#006400",
       "nameJa": "ダークグリーン",
       "text": "darkgreen.txt",
-      "image": "darkgreen.jpg"
+      "image": "darkgreen.jpg",
+      "textEn": "darkgreen.en.txt"
     },
     {
       "name": "DarkOliveGreen",
       "hex": "#556B2F",
       "nameJa": "ダークオリーブグリーン",
       "text": "darkolivegreen.txt",
-      "image": "darkolivegreen.jpg"
+      "image": "darkolivegreen.jpg",
+      "textEn": "darkolivegreen.en.txt"
     },
     {
       "name": "OliveDrab",
       "hex": "#6B8E23",
       "nameJa": "オリーブドラブ",
       "text": "olivedrab.txt",
-      "image": "olivedrab.jpg"
+      "image": "olivedrab.jpg",
+      "textEn": "olivedrab.en.txt"
     },
     {
       "name": "Brown",
       "hex": "#A52A2A",
       "nameJa": "ブラウン",
-      "text": "brown.txt"
+      "text": "brown.txt",
+      "textEn": "brown.en.txt",
+      "image": "brown.jpg"
     },
     {
       "name": "SaddleBrown",
       "hex": "#8B4513",
       "nameJa": "サドルブラウン",
-      "text": "saddlebrown.txt"
+      "text": "saddlebrown.txt",
+      "textEn": "saddlebrown.en.txt",
+      "image": "saddlebrown.jpg"
     },
     {
       "name": "Sienna",
       "hex": "#A0522D",
       "nameJa": "シエナ",
-      "text": "sienna.txt"
+      "text": "sienna.txt",
+      "textEn": "sienna.en.txt",
+      "image": "sienna.jpg"
     },
     {
       "name": "Gray",
       "hex": "#808080",
       "nameJa": "グレイ",
-      "text": "gray.txt"
+      "text": "gray.txt",
+      "textEn": "gray.en.txt",
+      "image": "gray.jpg"
     },
     {
       "name": "DimGray",
       "hex": "#696969",
       "nameJa": "ディムグレイ",
-      "text": "dimgray.txt"
+      "text": "dimgray.txt",
+      "textEn": "dimgray.en.txt",
+      "image": "dimgray.jpg"
     },
     {
       "name": "Black",
       "hex": "#000000",
       "nameJa": "ブラック",
-      "text": "black.txt"
+      "text": "black.txt",
+      "textEn": "black.en.txt",
+      "image": "black.jpg"
     },
     {
       "name": "Maroon",
       "hex": "#800000",
       "nameJa": "マルーン",
-      "text": "maroon.txt"
+      "text": "maroon.txt",
+      "textEn": "maroon.en.txt",
+      "image": "maroon.jpg"
     }
   ]
 }

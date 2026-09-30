@@ -28,8 +28,8 @@ const DECK = [
 const ORIENTATION = { upright: "正位置", reversed: "逆位置" };
 
 const cardButton = document.querySelector("#card");
+const faceTurn = document.querySelector("#face-turn");
 const face = document.querySelector("#face");
-const count = document.querySelector("#count");
 const notice = document.querySelector("#notice");
 const hint = document.querySelector("#hint");
 const reading = document.querySelector("#reading");
@@ -38,6 +38,7 @@ const en = document.querySelector("#en");
 const orientationEl = document.querySelector("#orientation");
 const meaning = document.querySelector("#meaning");
 const sheet = document.querySelector("#sheet");
+const guide = document.querySelector("#guide");
 const colorPanel = document.querySelector("#color");
 const scene = document.querySelector("#scene");
 const story = document.querySelector("#story");
@@ -101,10 +102,6 @@ function pick(list) {
   return list[Math.floor(Math.random() * list.length)];
 }
 
-function renderCount() {
-  count.textContent = `残り ${DECK.length - readDrawn().length} 枚`;
-}
-
 function fillProse(parent, text, dropTitle) {
   parent.replaceChildren();
   const lines = text.replace(/\r\n/g, "\n").split("\n");
@@ -161,14 +158,42 @@ function showScene() {
   scene.append(image);
 }
 
+function clearFaceVideo() {
+  faceTurn.querySelector("video")?.remove();
+  faceTurn.classList.remove("reversed");
+}
+
+function showFace(playVideo) {
+  const drawnLabel = ORIENTATION[state.orientation];
+  const jpg = `${DATA}/${state.card.id}/face.jpg`;
+  face.hidden = false;
+  face.src = jpg;
+  face.alt = `${state.card.nameJa}、${drawnLabel}`;
+  faceTurn.classList.toggle("reversed", state.orientation === "reversed");
+  const existing = faceTurn.querySelector("video");
+  const videoFile = state.card.video;
+  const canPlay = playVideo && typeof videoFile === "string" && videoFile.toLowerCase().endsWith(".mp4") && !reduceMotion();
+  if (!canPlay || existing) return;
+  const video = document.createElement("video");
+  video.muted = true;
+  video.defaultMuted = true;
+  video.playsInline = true;
+  video.setAttribute("playsinline", "");
+  video.preload = "auto";
+  video.src = `${DATA}/${state.card.id}/${videoFile}`;
+  const drop = () => video.remove();
+  video.addEventListener("ended", drop);
+  video.addEventListener("error", drop);
+  faceTurn.append(video);
+  video.play().catch(drop);
+}
+
 function paint(animated) {
   const drawnLabel = ORIENTATION[state.orientation];
   cardButton.classList.toggle("no-motion", !animated);
   cardButton.classList.add("is-flipped");
   cardButton.classList.toggle("is-open", state.phase === "revealed");
-  face.src = `${DATA}/${state.card.id}/face.jpg`;
-  face.alt = `${state.card.nameJa}、${drawnLabel}`;
-  face.classList.toggle("reversed", state.orientation === "reversed");
+  showFace(animated);
   title.textContent = state.card.nameJa;
   en.textContent = state.card.name;
   orientationEl.textContent = drawnLabel;
@@ -186,13 +211,72 @@ function paint(animated) {
     showScene();
     fillProse(story, state.story || "", true);
   }
-  renderCount();
   requestAnimationFrame(() => cardButton.classList.remove("no-motion"));
+}
+
+let guideMotion = 0;
+
+function reduceMotion() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+function hideGuide() {
+  guide.classList.remove("is-folding");
+  guide.classList.add("is-folded");
+  guide.style.height = "";
+  guide.setAttribute("aria-hidden", "true");
+}
+
+function foldGuide() {
+  if (guide.classList.contains("is-folded") || guide.classList.contains("is-folding")) return;
+  const motion = ++guideMotion;
+  if (reduceMotion()) {
+    hideGuide();
+    return;
+  }
+  guide.style.height = `${guide.scrollHeight}px`;
+  guide.offsetHeight;
+  guide.classList.add("is-folding");
+  let finished = false;
+  const done = () => {
+    if (finished || motion !== guideMotion) return;
+    finished = true;
+    hideGuide();
+  };
+  guide.addEventListener("transitionend", (event) => {
+    if (event.target === guide && event.propertyName === "height") done();
+  }, { once: true });
+  window.setTimeout(done, 900);
+}
+
+function showGuide() {
+  document.documentElement.classList.remove("has-reading");
+  if (!guide.classList.contains("is-folded") && !guide.classList.contains("is-folding")) return;
+  const motion = ++guideMotion;
+  guide.classList.remove("is-folding", "is-folded");
+  guide.removeAttribute("aria-hidden");
+  if (reduceMotion()) {
+    guide.style.height = "";
+    return;
+  }
+  guide.style.height = "0px";
+  const target = guide.scrollHeight;
+  guide.offsetHeight;
+  guide.style.height = `${target}px`;
+  const done = () => {
+    if (motion !== guideMotion) return;
+    guide.style.height = "";
+  };
+  guide.addEventListener("transitionend", (event) => {
+    if (event.target === guide && event.propertyName === "height") done();
+  }, { once: true });
+  window.setTimeout(done, 900);
 }
 
 function returnToDeck() {
   state = null;
   saveSession();
+  clearFaceVideo();
   cardButton.classList.remove("is-flipped", "is-open");
   cardButton.setAttribute("aria-label", "カードを引く");
   reading.hidden = true;
@@ -201,7 +285,7 @@ function returnToDeck() {
   hint.hidden = false;
   hint.textContent = "タップして、一枚引く";
   showError("");
-  renderCount();
+  showGuide();
 }
 
 function foldAway() {
@@ -218,7 +302,7 @@ function foldAway() {
     sheet.style.height = "";
     busy = false;
   };
-  if (reduce) {
+  if (reduce || reduceMotion()) {
     window.scrollTo({ top: 0 });
     done();
     return;
@@ -254,6 +338,7 @@ async function draw() {
     state = { card, orientation, color: pick(colors), phase: "reading", renewed, story: "" };
     writeDrawn([...drawn, id]);
     saveSession();
+    foldGuide();
     paint(true);
     lock(750);
   } catch {
@@ -292,7 +377,6 @@ hint.addEventListener("click", onTap);
 scene.addEventListener("click", foldAway);
 
 async function restore() {
-  renderCount();
   const saved = sessionStorage.getItem(SESSION);
   if (!saved) return;
   try {
@@ -315,6 +399,7 @@ async function restore() {
       state.story = await response.text();
     }
     paint(false);
+    hideGuide();
   } catch {
     sessionStorage.removeItem(SESSION);
     returnToDeck();

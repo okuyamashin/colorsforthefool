@@ -9,63 +9,80 @@
       "hex": "#228B22",
       "nameJa": "フォレストグリーン",
       "text": "forestgreen.txt",
-      "image": "forestgreen.jpg"
+      "image": "forestgreen.jpg",
+      "textEn": "forestgreen.en.txt"
     },
     {
       "name": "Olive",
       "hex": "#808000",
       "nameJa": "オリーブ",
-      "text": "olive.txt"
+      "text": "olive.txt",
+      "textEn": "olive.en.txt",
+      "image": "olive.jpg"
     },
     {
       "name": "Gold",
       "hex": "#FFD700",
       "nameJa": "ゴールド",
-      "text": "gold.txt"
+      "text": "gold.txt",
+      "textEn": "gold.en.txt",
+      "image": "gold.jpg"
     },
     {
       "name": "Purple",
       "hex": "#800080",
       "nameJa": "パープル",
-      "text": "purple.txt"
+      "text": "purple.txt",
+      "textEn": "purple.en.txt",
+      "image": "purple.jpg"
     },
     {
       "name": "Violet",
       "hex": "#EE82EE",
       "nameJa": "バイオレット",
       "text": "violet.txt",
-      "image": "violet.jpg"
+      "image": "violet.jpg",
+      "textEn": "violet.en.txt"
     },
     {
       "name": "Red",
       "hex": "#FF0000",
       "nameJa": "レッド",
-      "text": "red.txt"
+      "text": "red.txt",
+      "textEn": "red.en.txt",
+      "image": "red.jpg"
     },
     {
       "name": "White",
       "hex": "#FFFFFF",
       "nameJa": "ホワイト",
-      "text": "white.txt"
+      "text": "white.txt",
+      "textEn": "white.en.txt",
+      "image": "white.jpg"
     },
     {
       "name": "Wheat",
       "hex": "#F5DEB3",
       "nameJa": "ウィート",
       "text": "wheat.txt",
-      "image": "wheat.jpg"
+      "image": "wheat.jpg",
+      "textEn": "wheat.en.txt"
     },
     {
       "name": "Cornsilk",
       "hex": "#FFF8DC",
       "nameJa": "コーンシルク",
-      "text": "cornsilk.txt"
+      "text": "cornsilk.txt",
+      "textEn": "cornsilk.en.txt",
+      "image": "cornsilk.jpg"
     },
     {
       "name": "SkyBlue",
       "hex": "#87CEEB",
       "nameJa": "スカイブルー",
-      "text": "skyblue.txt"
+      "text": "skyblue.txt",
+      "textEn": "skyblue.en.txt",
+      "image": "skyblue.jpg"
     }
   ],
   "reversed": [
@@ -74,63 +91,80 @@
       "hex": "#6B8E23",
       "nameJa": "オリーブドラブ",
       "text": "olivedrab.txt",
-      "image": "olivedrab.jpg"
+      "image": "olivedrab.jpg",
+      "textEn": "olivedrab.en.txt"
     },
     {
       "name": "DarkOliveGreen",
       "hex": "#556B2F",
       "nameJa": "ダークオリーブグリーン",
       "text": "darkolivegreen.txt",
-      "image": "darkolivegreen.jpg"
+      "image": "darkolivegreen.jpg",
+      "textEn": "darkolivegreen.en.txt"
     },
     {
       "name": "DarkKhaki",
       "hex": "#BDB76B",
       "nameJa": "ダークカーキ",
       "text": "darkkhaki.txt",
-      "image": "darkkhaki.jpg"
+      "image": "darkkhaki.jpg",
+      "textEn": "darkkhaki.en.txt"
     },
     {
       "name": "Khaki",
       "hex": "#F0E68C",
       "nameJa": "カーキ",
-      "text": "khaki.txt"
+      "text": "khaki.txt",
+      "textEn": "khaki.en.txt",
+      "image": "khaki.jpg"
     },
     {
       "name": "Tan",
       "hex": "#D2B48C",
       "nameJa": "タン",
-      "text": "tan.txt"
+      "text": "tan.txt",
+      "textEn": "tan.en.txt",
+      "image": "tan.jpg"
     },
     {
       "name": "Sienna",
       "hex": "#A0522D",
       "nameJa": "シエナ",
-      "text": "sienna.txt"
+      "text": "sienna.txt",
+      "textEn": "sienna.en.txt",
+      "image": "sienna.jpg"
     },
     {
       "name": "Brown",
       "hex": "#A52A2A",
       "nameJa": "ブラウン",
-      "text": "brown.txt"
+      "text": "brown.txt",
+      "textEn": "brown.en.txt",
+      "image": "brown.jpg"
     },
     {
       "name": "Gray",
       "hex": "#808080",
       "nameJa": "グレイ",
-      "text": "gray.txt"
+      "text": "gray.txt",
+      "textEn": "gray.en.txt",
+      "image": "gray.jpg"
     },
     {
       "name": "DimGray",
       "hex": "#696969",
       "nameJa": "ディムグレイ",
-      "text": "dimgray.txt"
+      "text": "dimgray.txt",
+      "textEn": "dimgray.en.txt",
+      "image": "dimgray.jpg"
     },
     {
       "name": "SlateGray",
       "hex": "#708090",
       "nameJa": "スレートグレイ",
-      "text": "slategray.txt"
+      "text": "slategray.txt",
+      "textEn": "slategray.en.txt",
+      "image": "slategray.jpg"
     }
   ]
 }
