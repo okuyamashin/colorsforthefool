@@ -5,3 +5,5 @@ __pycache__/
 *.webp
 *.gif
 *.heic
+video/*.mp4
+video/ffmpeg

@@ -1,6 +1,38 @@
-const DATA = "../data";
-const COOKIE = "cftf";
-const SESSION = "cftf-reading";
+const EN = document.documentElement.lang === "en";
+const DATA = EN ? "/data" : "../data";
+const COOKIE = EN ? "cftf-en" : "cftf";
+const SESSION = EN ? "cftf-reading-en" : "cftf-reading";
+const COPY = EN
+  ? {
+      upright: "Upright",
+      reversed: "Reversed",
+      meaningFallback: "The picture on this card is today's sign.",
+      renewed: "All twenty-two cards have been drawn, so the deck is whole again.",
+      hintReveal: "Tap again, and today's color opens",
+      hintDraw: "Tap to draw a card",
+      drawLabel: "Draw a card",
+      openLabel: "Tap again to open the color",
+      mirror: "A mirror holding the color",
+      scene: "A picture with a mirror holding the color",
+      cardError: "The card did not open. Tap once more.",
+      colorError: "Today's color did not open. Tap once more.",
+      testError: "test looks like 4-10. Cards run from 1 to 22. Colors 1 to 10 are upright, 11 to 20 reversed.",
+    }
+  : {
+      upright: "正位置",
+      reversed: "逆位置",
+      meaningFallback: "このカードの絵が、今日の象徴です。",
+      renewed: "二十二枚を引き終えたので、山を戻しました。",
+      hintReveal: "もう一度タップすると、今日の色が開きます",
+      hintDraw: "タップして、一枚引く",
+      drawLabel: "カードを引く",
+      openLabel: "もう一度タップして色を開く",
+      mirror: "中央に色を映す鏡",
+      scene: "中央に色を映す鏡の絵",
+      cardError: "カードを開けませんでした。もう一度タップしてください。",
+      colorError: "今日の色を開けませんでした。もう一度タップしてください。",
+      testError: "test は 4-10 の形です。カードは1から22、色は正位置が1から10、逆位置が11から20です。",
+    };
 const DECK = [
   "the-fool",
   "the-magician",
@@ -25,7 +57,15 @@ const DECK = [
   "judgement",
   "the-world",
 ];
-const ORIENTATION = { upright: "正位置", reversed: "逆位置" };
+const ORIENTATION = { upright: COPY.upright, reversed: COPY.reversed };
+
+function colorFile(color) {
+  return EN ? color.textEn : color.text;
+}
+
+function cardTitle(card) {
+  return EN ? card.name : card.nameJa;
+}
 const FRESH = "v=3";
 const FACE_VIDEO = {
   "the-fool": "face.mp4",
@@ -113,7 +153,7 @@ function pick(list) {
 function fillProse(parent, text, dropTitle) {
   parent.replaceChildren();
   const lines = text.replace(/\r\n/g, "\n").split("\n");
-  if (dropTitle && /[―—-]\s*(正位置|逆位置)\s*$/.test(lines[0] || "")) lines.shift();
+  if (dropTitle && /[―—-]\s*(正位置|逆位置|Upright|Reversed)\s*$/.test(lines[0] || "")) lines.shift();
   const blocks = [];
   let buffer = [];
   const flush = () => {
@@ -128,7 +168,7 @@ function fillProse(parent, text, dropTitle) {
   let seenReveal = false;
   for (const block of blocks) {
     const paragraph = document.createElement("p");
-    const reveal = block.some((line) => line.startsWith("今日のラッキーカラー") || line.startsWith("Lucky Color:"));
+    const reveal = block.some((line) => line.startsWith("今日のラッキーカラー") || line.startsWith("Today's lucky color") || line.startsWith("Lucky Color:"));
     if (reveal) {
       paragraph.className = "reveal";
       seenReveal = true;
@@ -149,7 +189,7 @@ function showMirror(hex) {
   mirror.className = "mirror";
   mirror.style.setProperty("--mirror", hex);
   mirror.setAttribute("role", "img");
-  mirror.setAttribute("aria-label", "中央に色を映す鏡");
+  mirror.setAttribute("aria-label", COPY.mirror);
   scene.append(mirror);
 }
 
@@ -160,7 +200,7 @@ function showScene() {
     return;
   }
   const image = document.createElement("img");
-  image.alt = "中央に色を映す鏡の絵";
+  image.alt = COPY.scene;
   image.src = `${DATA}/${state.card.id}/${state.color.image}?${FRESH}`;
   image.addEventListener("error", () => showMirror(state.color.hex));
   scene.append(image);
@@ -226,7 +266,7 @@ function showFace(playVideo) {
   const jpg = `${DATA}/${state.card.id}/face.jpg`;
   face.hidden = false;
   if (!face.src.endsWith(`${state.card.id}/face.jpg`)) face.src = jpg;
-  face.alt = `${state.card.nameJa}、${drawnLabel}`;
+  face.alt = `${cardTitle(state.card)}, ${drawnLabel}`;
   faceTurn.classList.toggle("reversed", state.orientation === "reversed");
   const videoFile = state.card.video;
   const canPlay = playVideo && typeof videoFile === "string" && videoFile.toLowerCase().endsWith(".mp4") && !reduceMotion();
@@ -278,23 +318,23 @@ function paint(animated) {
   cardButton.classList.toggle("no-motion", !animated);
   cardButton.classList.toggle("is-open", state.phase === "revealed");
   showFace(animated);
-  title.textContent = state.card.nameJa;
-  en.textContent = state.card.name;
+  title.textContent = cardTitle(state.card);
+  en.textContent = EN ? state.card.nameJa : state.card.name;
   orientationEl.textContent = drawnLabel;
   const text = window.MEANINGS?.[state.card.id]?.[state.orientation];
-  fillProse(meaning, text || "このカードの絵が、今日の象徴です。", false);
+  fillProse(meaning, text || COPY.meaningFallback, false);
   reading.hidden = false;
   notice.hidden = !state.renewed;
-  notice.textContent = state.renewed ? "二十二枚を引き終えたので、山を戻しました。" : "";
+  notice.textContent = state.renewed ? COPY.renewed : "";
   const revealed = state.phase === "revealed";
   hint.hidden = revealed;
-  hint.textContent = "もう一度タップすると、今日の色が開きます";
+  hint.textContent = COPY.hintReveal;
   colorPanel.hidden = !revealed;
-  cardButton.setAttribute("aria-label", revealed ? `${state.card.nameJa}、${drawnLabel}` : "もう一度タップして色を開く");
+  cardButton.setAttribute("aria-label", revealed ? `${cardTitle(state.card)}, ${drawnLabel}` : COPY.openLabel);
   if (revealed) {
     showScene();
     fillProse(story, state.story || "", true);
-    const slug = String(state.color.text || "").replace(/\.txt$/i, "");
+    const slug = String(colorFile(state.color) || "").replace(/\.en\.txt$/i, "").replace(/\.txt$/i, "");
     libraryLink.href = `cards/${state.card.id}/${slug}/index.html`;
     library.hidden = false;
   } else {
@@ -378,12 +418,12 @@ function returnToDeck() {
   saveSession();
   clearFaceVideo();
   cardButton.classList.remove("is-flipped", "is-open");
-  cardButton.setAttribute("aria-label", "カードを引く");
+  cardButton.setAttribute("aria-label", COPY.drawLabel);
   reading.hidden = true;
   colorPanel.hidden = true;
   notice.hidden = true;
   hint.hidden = false;
-  hint.textContent = "タップして、一枚引く";
+  hint.textContent = COPY.hintDraw;
   showError("");
   showGuide();
 }
@@ -432,7 +472,7 @@ function parseTestQueue() {
   return specs;
 }
 
-const TEST_ERROR = "test は 4-10 の形です。カードは1から22、色は正位置が1から10、逆位置が11から20です。";
+const TEST_ERROR = COPY.testError;
 let testQueue = parseTestQueue();
 
 async function draw() {
@@ -474,7 +514,7 @@ async function draw() {
     await loadImage(jpg);
     state = { card, orientation, color, phase: "reading", renewed, story: "" };
     face.src = jpg;
-    face.alt = `${card.nameJa}、${ORIENTATION[orientation]}`;
+    face.alt = `${cardTitle(card)}, ${ORIENTATION[orientation]}`;
     faceTurn.classList.toggle("reversed", orientation === "reversed");
     if (face.decode) await face.decode().catch(() => {});
     cardButton.classList.remove("is-waiting");
@@ -489,7 +529,7 @@ async function draw() {
     pendingVideo?.remove();
     pendingVideo = null;
     cardButton.classList.remove("is-waiting");
-    showError("カードを開けませんでした。もう一度タップしてください。");
+    showError(COPY.cardError);
   } finally {
     busy = false;
   }
@@ -500,7 +540,9 @@ async function reveal() {
   busy = true;
   showError("");
   try {
-    const response = await fetch(`${DATA}/${state.card.id}/${state.color.text}`);
+    const file = colorFile(state.color);
+    if (!file) throw new Error("text");
+    const response = await fetch(`${DATA}/${state.card.id}/${file}`);
     if (!response.ok) throw new Error("text");
     state.story = await response.text();
     state.phase = "revealed";
@@ -508,7 +550,7 @@ async function reveal() {
     paint(false);
     story.scrollIntoView({ behavior: "smooth", block: "nearest" });
   } catch {
-    showError("今日の色を開けませんでした。もう一度タップしてください。");
+    showError(COPY.colorError);
   } finally {
     busy = false;
   }
@@ -541,7 +583,9 @@ async function restore() {
       story: "",
     };
     if (state.phase === "revealed") {
-      const response = await fetch(`${DATA}/${card.id}/${color.text}`);
+      const file = colorFile(color);
+      if (!file) throw new Error("text");
+      const response = await fetch(`${DATA}/${card.id}/${file}`);
       if (!response.ok) throw new Error("text");
       state.story = await response.text();
     }

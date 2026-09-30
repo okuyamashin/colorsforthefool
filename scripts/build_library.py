@@ -32,11 +32,14 @@ def esc(value):
     return html.escape(str(value), quote=True)
 
 
-def first_sentence(text, limit=90):
+def first_sentence(text, limit=90, lang="ja"):
     text = re.sub(r"\s+", " ", text).strip()
-    cut = text.find("。")
+    mark = "。" if lang == "ja" else ". "
+    cut = text.find(mark)
     if cut != -1:
-        text = text[: cut + 1]
+        text = text[: cut + (1 if lang == "ja" else 1)]
+        if lang == "en":
+            text = text[: cut + 1]
     if len(text) > limit:
         text = text[: limit - 1] + "…"
     return text
@@ -49,10 +52,10 @@ def clip(text, limit=120):
     return text[: limit - 1] + "…"
 
 
-def load_meanings():
+def load_meanings(lang="ja"):
     import subprocess
 
-    source = (PUBLIC / "meanings.js").read_text()
+    source = (PUBLIC / ("meanings.js" if lang == "ja" else "meanings.en.js")).read_text()
     result = subprocess.run(
         ["node", "-e", "let window={}; eval(require('fs').readFileSync(0,'utf8')); process.stdout.write(JSON.stringify(window.MEANINGS))"],
         input=source,
@@ -63,9 +66,10 @@ def load_meanings():
     return json.loads(result.stdout)
 
 
-def paragraphs(text):
+def paragraphs(text, lang="ja"):
     lines = text.replace("\r\n", "\n").split("\n")
-    if lines and re.search(r"[―—-]\s*(正位置|逆位置)\s*$", lines[0] or ""):
+    title = r"[―—-]\s*(正位置|逆位置)\s*$" if lang == "ja" else r"[―—-]\s*(Upright|Reversed)\s*$"
+    if lines and re.search(title, lines[0] or ""):
         lines = lines[1:]
     blocks = []
     buffer = []
@@ -82,10 +86,8 @@ def paragraphs(text):
     close = []
     seen = False
     for block in blocks:
-        reveal = any(
-            line.startswith("今日のラッキーカラー") or line.startswith("Lucky Color:")
-            for line in block
-        )
+        prefixes = ("今日のラッキーカラー", "Lucky Color:") if lang == "ja" else ("Today's lucky color", "Lucky Color:")
+        reveal = any(line.startswith(prefixes) for line in block)
         if reveal or seen:
             seen = True
             close.extend(block)
@@ -110,22 +112,27 @@ def story_html(body, close):
     return "\n".join(chunks)
 
 
-def color_line(close, body):
-    lines = [
-        line
-        for line in close
-        if not line.startswith("今日のラッキーカラー") and not line.startswith("Lucky Color:")
-    ]
+def color_line(close, body, lang="ja"):
+    prefixes = ("今日のラッキーカラー", "Lucky Color:") if lang == "ja" else ("Today's lucky color", "Lucky Color:")
+    lines = [line for line in close if not line.startswith(prefixes)]
     source = " ".join(lines).strip()
     if not source and body:
         source = body[0][0]
-    sentence = first_sentence(source, 48)
-    if sentence in {"", "。"}:
+    sentence = first_sentence(source, 48 if lang == "ja" else 90, lang)
+    if sentence in {"", "。", "."}:
         return ""
     return sentence
 
 
-def page(title, description, canonical, image, css, json_ld, body, icon):
+def hreflang(ja_url, en_url):
+    return (
+        f'    <link rel="alternate" hreflang="ja" href="{esc(ja_url)}">\n'
+        f'    <link rel="alternate" hreflang="en" href="{esc(en_url)}">\n'
+        f'    <link rel="alternate" hreflang="x-default" href="{esc(ja_url)}">'
+    )
+
+
+def page(title, description, canonical, image, css, json_ld, body, icon, lang="ja", alternates=""):
     ld = ""
     if json_ld:
         ld = (
@@ -134,7 +141,7 @@ def page(title, description, canonical, image, css, json_ld, body, icon):
             + "\n    </script>\n"
         )
     return f"""<!DOCTYPE html>
-<html lang="ja">
+<html lang="{lang}">
   <head>
 {GA}
     <meta charset="utf-8">
@@ -142,8 +149,9 @@ def page(title, description, canonical, image, css, json_ld, body, icon):
     <title>{esc(title)}</title>
     <meta name="description" content="{esc(description)}">
     <link rel="canonical" href="{esc(canonical)}">
+{alternates}
     <meta property="og:type" content="article">
-    <meta property="og:locale" content="ja_JP">
+    <meta property="og:locale" content="{"ja_JP" if lang == "ja" else "en_US"}">
     <meta property="og:title" content="{esc(title.split(' — ')[0])}">
     <meta property="og:description" content="{esc(description)}">
     <meta property="og:url" content="{esc(canonical)}">
@@ -154,6 +162,10 @@ def page(title, description, canonical, image, css, json_ld, body, icon):
 {ld}  </head>
   <body>
 {body}
+    <footer class="colophon">
+      <p>© 2026 Engawa Inc.</p>
+      <p>{"連絡先" if lang == "ja" else "Contact"} <a href="https://github.com/okuyamashin/colorsforthefool">GitHub</a></p>
+    </footer>
   </body>
 </html>
 """
@@ -187,12 +199,22 @@ def load_cards():
                 image_path = path.parent / color["image"]
                 if not text_path.is_file():
                     raise SystemExit(f"missing {text_path}")
+                en_name = color.get("textEn") or ""
+                en_path = path.parent / en_name
+                if Path(en_name).stem != f"{slug}.en" or not en_path.is_file():
+                    raise SystemExit(f"missing English text for {card['id']} {slug}")
                 if not image_path.is_file():
                     raise SystemExit(f"missing {image_path}")
                 ensure_thumb(image_path)
                 color["_slug"] = slug
-                color["_body"], color["_close"] = paragraphs(text_path.read_text())
-                color["_line"] = color_line(color["_close"], color["_body"])
+                color["_texts"] = {
+                    "ja": paragraphs(text_path.read_text(), "ja"),
+                    "en": paragraphs(en_path.read_text(), "en"),
+                }
+                color["_lines"] = {}
+                for lang in ("ja", "en"):
+                    body, close = color["_texts"][lang]
+                    color["_lines"][lang] = color_line(close, body, lang)
         if not (path.parent / "face.jpg").is_file():
             raise SystemExit(f"missing face {card['id']}")
         cards.append(card)
@@ -223,42 +245,89 @@ def ensure_thumb(image_path):
     return dest
 
 
-def color_item(color):
+def bind(color, lang):
+    color["_body"], color["_close"] = color["_texts"][lang]
+    color["_line"] = color["_lines"][lang]
+
+
+def visible_name(color, lang):
+    return color["nameJa"] if lang == "ja" else color["name"]
+
+
+def color_item(color, lang):
+    bind(color, lang)
     line = f'\n            <span class="line">{esc(color["_line"])}</span>' if color["_line"] else ""
     thumb = thumb_name(color["image"])
+    if lang == "ja":
+        alt = f"{color['_card_ja']}の{color['nameJa']}。中央の鏡に色が映る絵"
+        visible = color["nameJa"]
+        meta = f"{color['name']} · {color['hex']}"
+    else:
+        alt = f"{color['_card_en']}, {color['name']}. The color appears in the mirror at the center."
+        visible = color["name"]
+        meta = f"{color['nameJa']} · {color['hex']}"
     return f"""        <li>
           <a href="{color['_slug']}/index.html">
-            <img src="/data/{color['_card']}/{esc(thumb)}" alt="{esc(color['_card_ja'])}の{esc(color['nameJa'])}。中央の鏡に色が映る絵">
-            <span class="name"><span class="swatch" style="background:{esc(color['hex'])}"></span>{esc(color['nameJa'])}</span>
-            <span class="meta">{esc(color['name'])} · {esc(color['hex'])}</span>{line}
+            <img src="/data/{color['_card']}/{esc(thumb)}" alt="{esc(alt)}">
+            <span class="name"><span class="swatch" style="background:{esc(color['hex'])}"></span>{esc(visible)}</span>
+            <span class="meta">{esc(meta)}</span>{line}
           </a>
         </li>"""
 
 
-def write_card(card, meanings):
+def pair(canonical, other, lang):
+    return hreflang(canonical if lang == "ja" else other, other if lang == "ja" else canonical)
+
+
+def write_card(card, meanings, lang, root):
     upright = meanings[card["id"]]["upright"]
     reversed_text = meanings[card["id"]]["reversed"]
-    intro = first_sentence(upright.split("\n\n", 1)[0], 70)
-    description = clip(f"大アルカナの{card['nameJa']}。正位置と逆位置、それぞれ十のラッキーカラー。{intro}")
-    canonical = f"{ORIGIN}/cards/{card['id']}/index.html"
+    prefix = "" if lang == "ja" else "en/"
+    canonical = f"{ORIGIN}/{prefix}cards/{card['id']}/index.html"
+    other = f"{ORIGIN}/en/cards/{card['id']}/index.html" if lang == "ja" else f"{ORIGIN}/cards/{card['id']}/index.html"
     image = f"{ORIGIN}/data/{card['id']}/face.jpg"
     for side in ("upright", "reversed"):
         for color in card[side]:
             color["_card"] = card["id"]
             color["_card_ja"] = card["nameJa"]
-    upright_items = "\n".join(color_item(color) for color in card["upright"])
-    reversed_items = "\n".join(color_item(color) for color in card["reversed"])
+            color["_card_en"] = card["name"]
+    upright_items = "\n".join(color_item(color, lang) for color in card["upright"])
+    reversed_items = "\n".join(color_item(color, lang) for color in card["reversed"])
+    if lang == "ja":
+        intro = first_sentence(upright.split("\n\n", 1)[0], 70, "ja")
+        description = clip(f"大アルカナの{card['nameJa']}。正位置と逆位置、それぞれ十のラッキーカラー。{intro}")
+        title = f"{card['nameJa']}のラッキーカラー — Colors for the Fool"
+        tagline = "タロットで占う、今日のラッキーカラー"
+        draw = "カードを引く"
+        heading = card["nameJa"]
+        secondary = f"{card['name']} · {card['numeral']}"
+        upright_label, reversed_label = "正位置", "逆位置"
+        face_alt = f"{card['nameJa']}、正位置"
+        face_alt_reversed = f"{card['nameJa']}、逆位置"
+        css = "../library.css"
+    else:
+        intro = first_sentence(upright.split("\n\n", 1)[0], 110, "en")
+        description = clip(f"{card['name']}. Ten lucky colors for upright, and ten for reversed. {intro}", 160)
+        title = f"Lucky colors for {card['name']} — Colors for the Fool"
+        tagline = "Today's lucky color, drawn from the tarot"
+        draw = "Draw a card"
+        heading = card["name"]
+        secondary = f"{card['nameJa']} · {card['numeral']}"
+        upright_label, reversed_label = "Upright", "Reversed"
+        face_alt = f"{card['name']}, upright"
+        face_alt_reversed = f"{card['name']}, reversed"
+        css = "../../../cards/library.css"
     body = f"""    <header class="top">
       <p class="brand"><a href="../../">Colors for the Fool</a></p>
-      <p class="tagline">タロットで占う、今日のラッキーカラー</p>
+      <p class="tagline">{tagline}</p>
     </header>
     <main>
-      <p class="crumb"><a href="../../">カードを引く</a></p>
-      <img class="face" src="/data/{esc(card['id'])}/face.jpg" alt="{esc(card['nameJa'])}、正位置">
-      <h1>{esc(card['nameJa'])}</h1>
-      <p class="en">{esc(card['name'])} · {esc(card['numeral'])}</p>
+      <p class="crumb"><a href="../../">{draw}</a></p>
+      <img class="face" src="/data/{esc(card['id'])}/face.jpg" alt="{esc(face_alt)}">
+      <h1>{esc(heading)}</h1>
+      <p class="en">{esc(secondary)}</p>
       <section>
-        <h2>正位置</h2>
+        <h2>{upright_label}</h2>
         <div class="meaning">
 {meaning_html(upright)}
         </div>
@@ -267,8 +336,8 @@ def write_card(card, meanings):
         </ul>
       </section>
       <section>
-        <h2>逆位置</h2>
-        <img class="face reversed" src="/data/{esc(card['id'])}/face.jpg" alt="{esc(card['nameJa'])}、逆位置">
+        <h2>{reversed_label}</h2>
+        <img class="face reversed" src="/data/{esc(card['id'])}/face.jpg" alt="{esc(face_alt_reversed)}">
         <div class="meaning">
 {meaning_html(reversed_text)}
         </div>
@@ -277,71 +346,101 @@ def write_card(card, meanings):
         </ul>
       </section>
     </main>"""
-    target = CARDS / card["id"] / "index.html"
+    target = root / card["id"] / "index.html"
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(
         page(
-            f"{card['nameJa']}のラッキーカラー — Colors for the Fool",
+            title,
             description,
             canonical,
             image,
-            "../library.css",
+            css,
             None,
             body,
             f"/data/{card['id']}/circle.jpg",
+            lang,
+            pair(canonical, other, lang),
         )
     )
     return target
 
 
-def write_color(card, side, color):
-    label = ORIENTATION[side]
+def write_color(card, side, color, lang, root):
+    bind(color, lang)
+    label = ORIENTATION[side] if lang == "ja" else {"upright": "Upright", "reversed": "Reversed"}[side]
     body, close = color["_body"], color["_close"]
-    opening = first_sentence(body[0][0], 70) if body else ""
-    description = clip(f"{card['nameJa']}の{label}、{color['nameJa']}。{opening}")
-    canonical = f"{ORIGIN}/cards/{card['id']}/{color['_slug']}/index.html"
+    prefix = "" if lang == "ja" else "en/"
+    canonical = f"{ORIGIN}/{prefix}cards/{card['id']}/{color['_slug']}/index.html"
+    other = (
+        f"{ORIGIN}/en/cards/{card['id']}/{color['_slug']}/index.html"
+        if lang == "ja"
+        else f"{ORIGIN}/cards/{card['id']}/{color['_slug']}/index.html"
+    )
     image = f"{ORIGIN}/data/{card['id']}/{color['image']}"
+    if lang == "ja":
+        opening = first_sentence(body[0][0], 70, "ja") if body else ""
+        description = clip(f"{card['nameJa']}の{label}、{color['nameJa']}。{opening}")
+        title_name = card["nameJa"]
+        tagline = "タロットで占う、今日のラッキーカラー"
+        draw = "カードを引く"
+        heading = color["nameJa"]
+        secondary = f"{card['name']} · {color['name']}"
+        alt = f"{card['nameJa']}の{color['nameJa']}。中央の鏡に色が映る絵"
+        back = f"{card['nameJa']}へ戻る"
+        css = "../../library.css"
+        headline = f"{card['nameJa']}のラッキーカラー、{color['nameJa']}"
+    else:
+        opening = first_sentence(body[0][0], 110, "en") if body else ""
+        description = clip(f"{card['name']}, {label.lower()}. {color['name']}. {opening}", 160)
+        title_name = card["name"]
+        tagline = "Today's lucky color, drawn from the tarot"
+        draw = "Draw a card"
+        heading = color["name"]
+        secondary = f"{card['nameJa']} · {color['nameJa']}"
+        alt = f"{card['name']}, {color['name']}. The color appears in the mirror at the center."
+        back = f"Back to {card['name']}"
+        css = "../../../../cards/library.css"
+        headline = f"Lucky color for {card['name']}: {color['name']}"
     siblings = []
-    for other in card[side]:
-        if other is color:
+    for other_color in card[side]:
+        if other_color is color:
             continue
         siblings.append(
-            f'        <li><a href="../{other["_slug"]}/index.html"><span class="swatch" style="background:{esc(other["hex"])}"></span>{esc(other["nameJa"])}</a></li>'
+            f'        <li><a href="../{other_color["_slug"]}/index.html"><span class="swatch" style="background:{esc(other_color["hex"])}"></span>{esc(visible_name(other_color, lang))}</a></li>'
         )
     sibling_html = "\n".join(siblings)
     body_html = f"""    <header class="top">
       <p class="brand"><a href="../../../">Colors for the Fool</a></p>
-      <p class="tagline">タロットで占う、今日のラッキーカラー</p>
+      <p class="tagline">{tagline}</p>
     </header>
     <main>
-      <p class="crumb"><a href="../../../">カードを引く</a> / <a href="../index.html">{esc(card['nameJa'])}</a></p>
-      <img class="scene" src="/data/{esc(card['id'])}/{esc(color['image'])}" alt="{esc(card['nameJa'])}の{esc(color['nameJa'])}。中央の鏡に色が映る絵">
-      <h1>{esc(color['nameJa'])}</h1>
-      <p class="en">{esc(card['name'])} · {esc(color['name'])}</p>
+      <p class="crumb"><a href="../../../">{draw}</a> / <a href="../index.html">{esc(title_name)}</a></p>
+      <img class="scene" src="/data/{esc(card['id'])}/{esc(color['image'])}" alt="{esc(alt)}">
+      <h1>{esc(heading)}</h1>
+      <p class="en">{esc(secondary)}</p>
       <p class="orientation">{esc(label)} · {esc(color['hex'])}</p>
       <article class="story">
 {story_html(body, close)}
       </article>
-      <a class="back" href="../index.html">{esc(card['nameJa'])}へ戻る</a>
+      <a class="back" href="../index.html">{esc(back)}</a>
       <ul class="siblings">
 {sibling_html}
       </ul>
     </main>"""
-    target = CARDS / card["id"] / color["_slug"] / "index.html"
+    target = root / card["id"] / color["_slug"] / "index.html"
     target.parent.mkdir(parents=True, exist_ok=True)
-    headline = f"{card['nameJa']}のラッキーカラー、{color['nameJa']}"
     target.write_text(
         page(
             f"{headline} — Colors for the Fool",
             description,
             canonical,
             image,
-            "../../library.css",
+            css,
             {
                 "@context": "https://schema.org",
                 "@type": "Article",
                 "headline": headline,
-                "inLanguage": "ja",
+                "inLanguage": "ja" if lang == "ja" else "en",
                 "image": image,
                 "description": description,
                 "mainEntityOfPage": canonical,
@@ -349,6 +448,8 @@ def write_color(card, side, color):
             },
             body_html,
             f"/data/{card['id']}/circle.jpg",
+            lang,
+            pair(canonical, other, lang),
         )
     )
     return target
@@ -372,7 +473,7 @@ def link_top(cards):
 
 
 def write_sitemap(paths):
-    urls = [f"{ORIGIN}/"]
+    urls = [f"{ORIGIN}/", f"{ORIGIN}/en/"]
     urls.extend(f"{ORIGIN}/{path.relative_to(PUBLIC).as_posix()}" for path in paths)
     body = "\n".join(f"  <url><loc>{esc(url)}</loc></url>" for url in urls)
     (PUBLIC / "sitemap.xml").write_text(
@@ -388,30 +489,34 @@ def write_sitemap(paths):
     )
 
 
-def remove_stale(written):
-    for path in CARDS.rglob("index.html"):
+def remove_stale(written, root):
+    if not root.is_dir():
+        return
+    for path in root.rglob("index.html"):
         if path not in written:
             path.unlink()
-    for path in sorted(CARDS.rglob("*"), reverse=True):
+    for path in sorted(root.rglob("*"), reverse=True):
         if path.is_dir() and not any(path.iterdir()):
             path.rmdir()
 
 
 def main():
-    meanings = load_meanings()
+    meanings = {lang: load_meanings(lang) for lang in ("ja", "en")}
     cards = load_cards()
     if len(cards) != 22:
         raise SystemExit(f"expected 22 cards, found {len(cards)}")
-    missing = [card["id"] for card in cards if card["id"] not in meanings]
-    if missing:
-        raise SystemExit(f"missing meanings {missing}")
+    for lang, table in meanings.items():
+        missing = [card["id"] for card in cards if card["id"] not in table]
+        if missing:
+            raise SystemExit(f"missing {lang} meanings {missing}")
     written = set()
-    for card in cards:
-        written.add(write_card(card, meanings))
-        for side in ("upright", "reversed"):
-            for color in card[side]:
-                written.add(write_color(card, side, color))
-    remove_stale(written)
+    for lang, root in (("ja", CARDS), ("en", PUBLIC / "en" / "cards")):
+        for card in cards:
+            written.add(write_card(card, meanings[lang], lang, root))
+            for side in ("upright", "reversed"):
+                for color in card[side]:
+                    written.add(write_color(card, side, color, lang, root))
+        remove_stale(written, root)
     link_top(cards)
     write_sitemap(sorted(written))
     print(f"cards {len(cards)} pages {len(written)}")

@@ -40,6 +40,16 @@ img { font: inherit; }
   text-transform: uppercase;
 }
 
+.lang {
+  margin: 0;
+  color: var(--gold);
+  font-family: Cinzel, "Palatino Linotype", Palatino, serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 .tagline {
   flex: 1 0 100%;
   margin: 0.45rem 0 0;
@@ -392,6 +402,30 @@ html.has-reading .guide {
     0 0 0 15px #e6d3a2,
     inset 0 0 28px rgba(255, 255, 255, 0.28);
 }
+
+.colophon {
+  width: min(92vw, 40rem);
+  margin: 0 auto;
+  padding: 2.4rem 0 2.8rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.colophon p { margin: 0.35rem 0; }
+
+.colophon a,
+.colophon a:link,
+.colophon a:visited,
+.colophon a:hover,
+.colophon a:active {
+  color: #7a5c2e;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 0.18em;
+}
+
+.colophon a:hover { color: #5c4318; }
 
 @media (prefers-reduced-motion: reduce) {
   .card-inner,
