@@ -1,0 +1,9 @@
+Create a square site icon, 1024 by 1024 pixels. It will be shown at 32 pixels and at 16 pixels, so use one symbol only, drawn large, with a clear edge.
+
+Transparent background outside a single circle. The circle nearly fills the square, with a small even margin of empty transparency.
+
+Inside the circle: warm cream paper, about #f7f1e4. A thin gold ring, #a6843d, with a few short Art Deco notches. Not a dense floral frame. Centered, one white rose seen from the front, a small gold center, and two simple gold-green leaves. Watercolor with fine ink, the same craft as an Art Deco tarot illustration. Flat enough to read as a badge.
+
+No person, no cliff, no dog, no staff, no banner, no numeral, no letters, no words, no watermark, no drop shadow.
+
+Do not copy a full tarot card. Do not use Art Nouveau whiplash vines, photography, 3D rendering, or a glossy app-icon look.

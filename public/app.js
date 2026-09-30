@@ -26,6 +26,12 @@ const DECK = [
   "the-world",
 ];
 const ORIENTATION = { upright: "正位置", reversed: "逆位置" };
+const FRESH = "v=3";
+const FACE_VIDEO = {
+  "the-fool": "face.mp4",
+  justice: "face.mp4",
+  judgement: "face.mp4",
+};
 
 const cardButton = document.querySelector("#card");
 const faceTurn = document.querySelector("#face-turn");
@@ -42,6 +48,8 @@ const guide = document.querySelector("#guide");
 const colorPanel = document.querySelector("#color");
 const scene = document.querySelector("#scene");
 const story = document.querySelector("#story");
+const library = document.querySelector("#library");
+const libraryLink = document.querySelector("#library-link");
 const error = document.querySelector("#error");
 
 let state = null;
@@ -93,7 +101,7 @@ function showError(message) {
 }
 
 async function fetchCard(id) {
-  const response = await fetch(`${DATA}/${id}/card.json`);
+  const response = await fetch(`${DATA}/${id}/card.json?${FRESH}`, { cache: "no-cache" });
   if (!response.ok) throw new Error("card");
   return response.json();
 }
@@ -153,45 +161,121 @@ function showScene() {
   }
   const image = document.createElement("img");
   image.alt = "中央に色を映す鏡の絵";
-  image.src = `${DATA}/${state.card.id}/${state.color.image}`;
+  image.src = `${DATA}/${state.card.id}/${state.color.image}?${FRESH}`;
   image.addEventListener("error", () => showMirror(state.color.hex));
   scene.append(image);
 }
 
+let pendingVideo = null;
+
 function clearFaceVideo() {
+  faceMotion += 1;
+  pendingVideo?.remove();
+  pendingVideo = null;
   faceTurn.querySelector("video")?.remove();
   faceTurn.classList.remove("reversed");
+}
+
+function loadImage(url) {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    let settled = false;
+    const finish = () => {
+      if (settled) return;
+      settled = true;
+      resolve(image);
+    };
+    image.onload = finish;
+    image.onerror = () => {
+      if (settled) return;
+      settled = true;
+      reject(new Error("image"));
+    };
+    image.src = url;
+    if (image.complete && image.naturalWidth > 0) finish();
+  });
+}
+
+function openFaceVideo(id, file) {
+  faceMotion += 1;
+  const video = document.createElement("video");
+  video.muted = true;
+  video.defaultMuted = true;
+  video.setAttribute("muted", "");
+  video.playsInline = true;
+  video.setAttribute("playsinline", "");
+  video.preload = "auto";
+  video.style.cssText = "position:fixed;left:-9999px;width:320px;height:480px;opacity:0;pointer-events:none";
+  const motion = faceMotion;
+  const drop = () => {
+    if (motion !== faceMotion) return;
+    if (pendingVideo === video) pendingVideo = null;
+    video.remove();
+  };
+  video.addEventListener("ended", drop);
+  video.addEventListener("error", drop);
+  video.dataset.face = `${id}/${file}`;
+  video.src = `${DATA}/${id}/${file}?${FRESH}`;
+  pendingVideo = video;
+  document.body.append(video);
+  video.play().catch(() => {});
 }
 
 function showFace(playVideo) {
   const drawnLabel = ORIENTATION[state.orientation];
   const jpg = `${DATA}/${state.card.id}/face.jpg`;
   face.hidden = false;
-  face.src = jpg;
+  if (!face.src.endsWith(`${state.card.id}/face.jpg`)) face.src = jpg;
   face.alt = `${state.card.nameJa}、${drawnLabel}`;
   faceTurn.classList.toggle("reversed", state.orientation === "reversed");
-  const existing = faceTurn.querySelector("video");
   const videoFile = state.card.video;
   const canPlay = playVideo && typeof videoFile === "string" && videoFile.toLowerCase().endsWith(".mp4") && !reduceMotion();
-  if (!canPlay || existing) return;
-  const video = document.createElement("video");
-  video.muted = true;
-  video.defaultMuted = true;
-  video.playsInline = true;
-  video.setAttribute("playsinline", "");
-  video.preload = "auto";
-  video.src = `${DATA}/${state.card.id}/${videoFile}`;
-  const drop = () => video.remove();
-  video.addEventListener("ended", drop);
-  video.addEventListener("error", drop);
+  const primed = pendingVideo
+    && pendingVideo.isConnected
+    && pendingVideo.dataset.face === `${state.card.id}/${videoFile}`;
+  if (!canPlay) {
+    if (!faceTurn.querySelector("video")) {
+      pendingVideo?.remove();
+      pendingVideo = null;
+    }
+    return;
+  }
+  if (faceTurn.querySelector("video") || primed) return;
+  openFaceVideo(state.card.id, videoFile);
+}
+
+function mountFaceVideo() {
+  const video = pendingVideo;
+  if (!video || !video.isConnected) return;
+  pendingVideo = null;
+  video.style.cssText = "";
   faceTurn.append(video);
-  video.play().catch(drop);
+  const start = () => video.play().catch(() => {});
+  if (video.readyState >= 2) start();
+  else video.addEventListener("loadeddata", start, { once: true });
+}
+
+function armVideoAfterFlip(motion) {
+  const inner = cardButton.querySelector(".card-inner");
+  let finished = false;
+  const done = () => {
+    if (finished || motion !== faceMotion) return;
+    if (!cardButton.classList.contains("is-flipped")) return;
+    finished = true;
+    inner.removeEventListener("transitionend", onEnd);
+    mountFaceVideo();
+  };
+  const onEnd = (event) => {
+    if (event.target !== inner || event.propertyName !== "transform") return;
+    done();
+  };
+  inner.addEventListener("transitionend", onEnd);
+  window.setTimeout(done, 800);
 }
 
 function paint(animated) {
   const drawnLabel = ORIENTATION[state.orientation];
   cardButton.classList.toggle("no-motion", !animated);
-  cardButton.classList.add("is-flipped");
   cardButton.classList.toggle("is-open", state.phase === "revealed");
   showFace(animated);
   title.textContent = state.card.nameJa;
@@ -210,11 +294,27 @@ function paint(animated) {
   if (revealed) {
     showScene();
     fillProse(story, state.story || "", true);
+    const slug = String(state.color.text || "").replace(/\.txt$/i, "");
+    libraryLink.href = `cards/${state.card.id}/${slug}/index.html`;
+    library.hidden = false;
+  } else {
+    library.hidden = true;
   }
-  requestAnimationFrame(() => cardButton.classList.remove("no-motion"));
+  const flip = () => {
+    cardButton.classList.add("is-flipped");
+    if (animated) {
+      requestAnimationFrame(() => cardButton.classList.remove("no-motion"));
+      if (pendingVideo) armVideoAfterFlip(faceMotion);
+    } else {
+      cardButton.classList.remove("no-motion");
+    }
+  };
+  if (animated) requestAnimationFrame(() => requestAnimationFrame(flip));
+  else flip();
 }
 
 let guideMotion = 0;
+let faceMotion = 0;
 
 function reduceMotion() {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -317,31 +417,78 @@ function foldAway() {
   window.setTimeout(done, 900);
 }
 
+function parseTestQueue() {
+  const raw = new URLSearchParams(location.search).get("test");
+  if (!raw) return [];
+  const specs = [];
+  for (const part of raw.split(",")) {
+    const match = part.trim().match(/^(\d+)-(\d+)$/);
+    if (!match) return null;
+    const card = Number(match[1]);
+    const color = Number(match[2]);
+    if (card < 1 || card > DECK.length || color < 1 || color > 20) return null;
+    specs.push({ card, color });
+  }
+  return specs;
+}
+
+const TEST_ERROR = "test は 4-10 の形です。カードは1から22、色は正位置が1から10、逆位置が11から20です。";
+let testQueue = parseTestQueue();
+
 async function draw() {
   if (isLocked()) return;
   busy = true;
   showError("");
+  if (testQueue === null) {
+    showError(TEST_ERROR);
+    busy = false;
+    return;
+  }
+  const spec = testQueue[0] || null;
   let drawn = readDrawn();
   let pool = DECK.filter((id) => !drawn.includes(id));
   let renewed = false;
-  if (pool.length === 0) {
+  if (!spec && pool.length === 0) {
     drawn = [];
     pool = DECK.slice();
     renewed = true;
   }
-  const id = pick(pool);
+  const id = spec ? DECK[spec.card - 1] : pick(pool);
+  if (FACE_VIDEO[id] && !reduceMotion()) openFaceVideo(id, FACE_VIDEO[id]);
+  cardButton.classList.add("is-waiting");
   try {
     const card = await fetchCard(id);
-    const orientation = Math.random() < 0.5 ? "upright" : "reversed";
-    const colors = card[orientation];
-    if (!Array.isArray(colors) || colors.length === 0) throw new Error("colors");
-    state = { card, orientation, color: pick(colors), phase: "reading", renewed, story: "" };
-    writeDrawn([...drawn, id]);
+    let orientation;
+    let color;
+    if (spec) {
+      orientation = spec.color <= 10 ? "upright" : "reversed";
+      color = card[orientation]?.[spec.color <= 10 ? spec.color - 1 : spec.color - 11];
+      if (!color) throw new Error("colors");
+    } else {
+      orientation = Math.random() < 0.5 ? "upright" : "reversed";
+      const colors = card[orientation];
+      if (!Array.isArray(colors) || colors.length === 0) throw new Error("colors");
+      color = pick(colors);
+    }
+    const jpg = `${DATA}/${id}/face.jpg`;
+    await loadImage(jpg);
+    state = { card, orientation, color, phase: "reading", renewed, story: "" };
+    face.src = jpg;
+    face.alt = `${card.nameJa}、${ORIENTATION[orientation]}`;
+    faceTurn.classList.toggle("reversed", orientation === "reversed");
+    if (face.decode) await face.decode().catch(() => {});
+    cardButton.classList.remove("is-waiting");
+    if (spec) testQueue.shift();
+    else writeDrawn([...drawn, id]);
     saveSession();
     foldGuide();
     paint(true);
     lock(750);
   } catch {
+    faceMotion += 1;
+    pendingVideo?.remove();
+    pendingVideo = null;
+    cardButton.classList.remove("is-waiting");
     showError("カードを開けませんでした。もう一度タップしてください。");
   } finally {
     busy = false;
@@ -406,4 +553,11 @@ async function restore() {
   }
 }
 
-restore();
+if (testQueue === null) {
+  showError(TEST_ERROR);
+  showGuide();
+} else if (testQueue.length) {
+  showGuide();
+} else {
+  restore();
+}

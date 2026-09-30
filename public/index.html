@@ -12,21 +12,31 @@
     </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Colors for the Fool</title>
+    <title>タロットで占う、今日のラッキーカラー — Colors for the Fool</title>
+    <meta name="description" content="大アルカナ二十二枚から一枚を引きます。正位置か逆位置の象徴を読んだあと、物語の終わりに今日のラッキーカラーが開きます。">
+    <link rel="canonical" href="https://colorsofthefool.engawa5656.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:site_name" content="Colors for the Fool">
+    <meta property="og:title" content="タロットで占う、今日のラッキーカラー">
+    <meta property="og:description" content="大アルカナ二十二枚から一枚を引きます。正位置か逆位置の象徴を読んだあと、物語の終わりに今日のラッキーカラーが開きます。">
+    <meta property="og:url" content="https://colorsofthefool.engawa5656.com/">
+    <meta property="og:image" content="https://colorsofthefool.engawa5656.com/data/the-fool/face.jpg">
+    <link rel="icon" href="favicon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script>
       try {
-        if (sessionStorage.getItem("cftf-reading")) document.documentElement.classList.add("has-reading");
+        if (!new URLSearchParams(location.search).has("test") && sessionStorage.getItem("cftf-reading")) document.documentElement.classList.add("has-reading");
       } catch (error) {}
     </script>
   </head>
   <body>
     <header class="top">
       <p class="brand">Colors for the Fool</p>
-      <p class="tagline">タロットで占う、今日のラッキーカラー</p>
+      <h1 class="tagline">タロットで占う、今日のラッキーカラー</h1>
     </header>
     <main>
       <p class="notice" id="notice" hidden></p>
@@ -49,13 +59,14 @@
           <button type="button" class="hint" id="hint">タップして、一枚引く</button>
         </p>
         <article class="reading" id="reading" hidden>
-          <h1 id="title"></h1>
+          <h2 id="title"></h2>
           <p class="en" id="en"></p>
           <p class="orientation" id="orientation"></p>
           <div id="meaning"></div>
         </article>
         <section class="color-panel" id="color" hidden>
           <div class="story" id="story"></div>
+          <p class="library" id="library" hidden><a id="library-link" href="">この色のページ</a></p>
           <button type="button" class="scene" id="scene" aria-label="タップして裏に戻す"></button>
         </section>
       </div>
@@ -76,112 +87,134 @@
           <h2>大アルカナ二十二枚</h2>
           <ul class="arcana">
             <li>
+              <a href="cards/the-fool/index.html"><img class="arcana-thumb" src="/data/the-fool/circle.jpg" alt="" width="72" height="72"></a>
               <h3><a href="cards/the-fool/index.html">愚者<span class="latin">(The Fool)</span></a></h3>
               <p><span class="side">正位置</span>崖の縁に、荷物の少ない人が立っています。足元には犬。手には薔薇。後ろを見ず、次の一歩だけを見ています。</p>
               <p><span class="side">逆位置</span>同じ崖ですが、足が地面を信用していません。振り向かずに落ちていくか、縁で立ち尽くしているか。どちらも、一歩の置き場所を見ていません。</p>
             </li>
             <li>
-              <h3>魔術師<span class="latin">(The Magician)</span></h3>
+              <a href="cards/the-magician/index.html"><img class="arcana-thumb" src="/data/the-magician/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-magician/index.html">魔術師<span class="latin">(The Magician)</span></a></h3>
               <p><span class="side">正位置</span>机の上に、杖と杯と剣と貨幣。片手は天、片手は地。魔術師は、すでに手元にあるものを一つの意図へ通す人です。</p>
               <p><span class="side">逆位置</span>机の上の道具が、見せるためだけに並んでいます。手は動いているのに、天と地がつながっていません。言葉が先に走り、材料が追いつかない。あるいは材料は揃っているのに、手をつけない。</p>
             </li>
             <li>
-              <h3>女教皇<span class="latin">(The High Priestess)</span></h3>
+              <a href="cards/the-high-priestess/index.html"><img class="arcana-thumb" src="/data/the-high-priestess/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-high-priestess/index.html">女教皇<span class="latin">(The High Priestess)</span></a></h3>
               <p><span class="side">正位置</span>二本の柱のあいだに座る人。膝の上の巻物は、まだ半分しか開いていません。女教皇は、知っていることを急いで渡さないカードです。</p>
               <p><span class="side">逆位置</span>巻物が閉じたままか、開かれすぎて中身が散らばっています。沈黙が秘密の抱え込みになり、直感が根拠のない断定になります。</p>
             </li>
             <li>
-              <h3>女帝<span class="latin">(The Empress)</span></h3>
+              <a href="cards/the-empress/index.html"><img class="arcana-thumb" src="/data/the-empress/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-empress/index.html">女帝<span class="latin">(The Empress)</span></a></h3>
               <p><span class="side">正位置</span>豊かな席、麦、森、流れる水。女帝は、育つものに場所を与えるカードです。支配して実らせるのではありません。土と時期と手間を揃えて、実りが自分で来るのを助けます。</p>
               <p><span class="side">逆位置</span>畑が疲れているか、実りを急いで摘みすぎています。世話が抱擁ではなく、囲い込みになる。与えることが、自分の枯渇を隠す仕事になります。</p>
             </li>
             <li>
-              <h3>皇帝<span class="latin">(The Emperor)</span></h3>
+              <a href="cards/the-emperor/index.html"><img class="arcana-thumb" src="/data/the-emperor/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-emperor/index.html">皇帝<span class="latin">(The Emperor)</span></a></h3>
               <p><span class="side">正位置</span>石の玉座、硬い背もたれ、遠くを見る顔。皇帝は、境界を引くことで人が休めるようにするカードです。</p>
               <p><span class="side">逆位置</span>玉座が体に合っていません。規則が人を守るのをやめ、人を小さくするために残っています。あるいは、境界が消えて、決めるべき人が席を空けています。</p>
             </li>
             <li>
-              <h3>法王<span class="latin">(The Hierophant)</span></h3>
+              <a href="cards/the-hierophant/index.html"><img class="arcana-thumb" src="/data/the-hierophant/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-hierophant/index.html">法王<span class="latin">(The Hierophant)</span></a></h3>
               <p><span class="side">正位置</span>二人の学び手の前に座る人。鍵、仕来たり、手から手へ渡される型。法王は、一人で発明しなくてよい知恵のカードです。</p>
               <p><span class="side">逆位置</span>型が中身より重くなっています。鍵は扉を開けるためではなく、扉を占有するために握られています。あるいは、どんな師の言葉も届かず、自分一人の流儀だけが正しい席になっています。</p>
             </li>
             <li>
-              <h3>恋人<span class="latin">(The Lovers)</span></h3>
+              <a href="cards/the-lovers/index.html"><img class="arcana-thumb" src="/data/the-lovers/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-lovers/index.html">恋人<span class="latin">(The Lovers)</span></a></h3>
               <p><span class="side">正位置</span>二人の人と、その上の使い。恋人は、甘い一致だけを描いたカードではありません。選ぶこと、その選択で自分が誰になるかを引き受けるカードです。</p>
               <p><span class="side">逆位置</span>選択が半分のまま残っています。両方を持とうとして、どちらとも約束していない。あるいは、一度決めたことを、決めた覚えがないふりで揺らしています。</p>
             </li>
             <li>
-              <h3>戦車<span class="latin">(The Chariot)</span></h3>
+              <a href="cards/the-chariot/index.html"><img class="arcana-thumb" src="/data/the-chariot/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-chariot/index.html">戦車<span class="latin">(The Chariot)</span></a></h3>
               <p><span class="side">正位置</span>二頭の生き物に引かせた車。御者は手綱を握り、町の門を出ます。戦車は、意志がばらばらの力を一つの方向へ運ぶカードです。</p>
               <p><span class="side">逆位置</span>車は動いているのに、門を出ていません。あるいは、速すぎて車輪が道を忘れた。二頭が左右に引っ張り、御者は手綱を見せるために握っています。</p>
             </li>
             <li>
-              <h3>力<span class="latin">(Strength)</span></h3>
+              <a href="cards/strength/index.html"><img class="arcana-thumb" src="/data/strength/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/strength/index.html">力<span class="latin">(Strength)</span></a></h3>
               <p><span class="side">正位置</span>獅子に手を置く人。力は、押さえつけた量ではありません。口を開いた獣のそばで、自分の手を柔らかく保つことです。</p>
               <p><span class="side">逆位置</span>手が硬い。獅子を御したように見えて、実は恐れが指を閉じさせています。あるいは、優しさの形をしながら、自分の熱を信じられず、獣から目をそらしています。</p>
             </li>
             <li>
-              <h3>隠者<span class="latin">(The Hermit)</span></h3>
+              <a href="cards/the-hermit/index.html"><img class="arcana-thumb" src="/data/the-hermit/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-hermit/index.html">隠者<span class="latin">(The Hermit)</span></a></h3>
               <p><span class="side">正位置</span>山の上の一人、掲げた灯。隠者は、世を捨てた人ではなく、灯を高くするために一度人混みを降りた人です。</p>
               <p><span class="side">逆位置</span>灯が内側に向きすぎて、道を照らしていません。孤独が知恵ではなく、隠れ場所になっています。あるいは、山を降りる時期なのに、まだ峰に席を占有しています。</p>
             </li>
             <li>
-              <h3>運命の輪<span class="latin">(Wheel of Fortune)</span></h3>
+              <a href="cards/wheel-of-fortune/index.html"><img class="arcana-thumb" src="/data/wheel-of-fortune/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/wheel-of-fortune/index.html">運命の輪<span class="latin">(Wheel of Fortune)</span></a></h3>
               <p><span class="side">正位置</span>回る輪。上にいるものと、下へ向かうもの。運命の輪は、努力の外側で世界が位置を入れ替えるカードです。</p>
               <p><span class="side">逆位置</span>輪が同じ場所で空転しているように感じます。変化が来ているのに、前の位置へ戻ろうとする。あるいは、悪い回転だけを運命と呼び、自分の位置から目を離します。</p>
             </li>
             <li>
-              <h3>正義<span class="latin">(Justice)</span></h3>
+              <a href="cards/justice/index.html"><img class="arcana-thumb" src="/data/justice/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/justice/index.html">正義<span class="latin">(Justice)</span></a></h3>
               <p><span class="side">正位置</span>剣と秤。正義は、感情を消した冷たさではありません。両側に同じ光を当て、偏りを量として見ることです。</p>
               <p><span class="side">逆位置</span>秤が傾いたまま、傾いていないと言われています。判決が先にあり、事実が後から並び替えられる。あるいは、公平を求めるあまり、決める剣を鞘に戻したままです。</p>
             </li>
             <li>
-              <h3>吊るされた男<span class="latin">(The Hanged Man)</span></h3>
+              <a href="cards/the-hanged-man/index.html"><img class="arcana-thumb" src="/data/the-hanged-man/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-hanged-man/index.html">吊るされた男<span class="latin">(The Hanged Man)</span></a></h3>
               <p><span class="side">正位置</span>逆さに吊るされた人。苦しそうで、顔は静かです。吊るされた男は、止まって見える時間が、見方を反転させる時間だというカードです。</p>
               <p><span class="side">逆位置</span>吊られた姿勢が、見方の転換ではなく、停滞の習慣になっています。手放すふりをして、実は結ばれた足を自分で締めている。あるいは、待つべき時間を、動かないことの美徳で覆っています。</p>
             </li>
             <li>
-              <h3>死神<span class="latin">(Death)</span></h3>
+              <a href="cards/death/index.html"><img class="arcana-thumb" src="/data/death/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/death/index.html">死神<span class="latin">(Death)</span></a></h3>
               <p><span class="side">正位置</span>終わりを運ぶ人。田は刈られ、旗は朝の方を向いています。死神は、消滅そのものより、終わった形が場所を空けるカードです。</p>
               <p><span class="side">逆位置</span>終わりが来ているのに、同じ形を保つことに力を使っています。枯れた枝を、まだ季節の途中だと説明する。変化を、いつかやる整理として棚へ上げます。</p>
             </li>
             <li>
-              <h3>節制<span class="latin">(Temperance)</span></h3>
+              <a href="cards/temperance/index.html"><img class="arcana-thumb" src="/data/temperance/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/temperance/index.html">節制<span class="latin">(Temperance)</span></a></h3>
               <p><span class="side">正位置</span>二つの杯のあいだで水を移す人。節制は、我慢のカードではなく、配合のカードです。</p>
               <p><span class="side">逆位置</span>水が杯の外にこぼれています。配合が、中途半端な保留になっている。あるいは、一つの味だけを濃くして、もう片方の杯を棚の奥へ隠しています。</p>
             </li>
             <li>
-              <h3>悪魔<span class="latin">(The Devil)</span></h3>
+              <a href="cards/the-devil/index.html"><img class="arcana-thumb" src="/data/the-devil/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-devil/index.html">悪魔<span class="latin">(The Devil)</span></a></h3>
               <p><span class="side">正位置</span>鎖につながれた二人。鎖は太く見え、輪は緩い。悪魔は、自分で外せる輪を、外せないものと信じている状態のカードです。</p>
               <p><span class="side">逆位置</span>鎖が見え始めます。あるいは、外したはずの輪を、まだ首の形のまま歩いています。束縛に気づいたあとの混乱が来ます。自由が急に広すぎて、もう一度檻の方を懐かしく思います。</p>
             </li>
             <li>
-              <h3>塔<span class="latin">(The Tower)</span></h3>
+              <a href="cards/the-tower/index.html"><img class="arcana-thumb" src="/data/the-tower/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-tower/index.html">塔<span class="latin">(The Tower)</span></a></h3>
               <p><span class="side">正位置</span>雷に打たれた高い建物。塔は、高く積みすぎた確実さが、一瞬で開くカードです。</p>
               <p><span class="side">逆位置</span>落雷のあとに、同じ高さの塔をもう一度積もうとしています。あるいは、崩れを恐れすぎて、必要なひびまで塗り込めてしまいます。</p>
             </li>
             <li>
-              <h3>星<span class="latin">(The Star)</span></h3>
+              <a href="cards/the-star/index.html"><img class="arcana-thumb" src="/data/the-star/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-star/index.html">星<span class="latin">(The Star)</span></a></h3>
               <p><span class="side">正位置</span>水辺に跪き、二つの瓶から水を注ぐ人。頭上の大きな星。星は、災難のあとに残る静かな希望のカードです。</p>
               <p><span class="side">逆位置</span>瓶が傾き、水が同じ場所にしか落ちていません。星が見えないのではなく、星を見るために夜そのものを拒んでいます。希望が、今すぐ全部が良くなるという要求に変わっています。</p>
             </li>
             <li>
-              <h3>月<span class="latin">(The Moon)</span></h3>
+              <a href="cards/the-moon/index.html"><img class="arcana-thumb" src="/data/the-moon/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-moon/index.html">月<span class="latin">(The Moon)</span></a></h3>
               <p><span class="side">正位置</span>二本の塔、そのあいだの道、犬と狼、水から上がってくるもの。月は、道が半分だけ見えるカードです。</p>
               <p><span class="side">逆位置</span>霧が道ごと隠すか、不安がすべての影に名前をつけてしまいます。想像が事実の席に座ります。狼の声を危険だけとして聞くか、犬の声を無視して野へ入ります。</p>
             </li>
             <li>
-              <h3>太陽<span class="latin">(The Sun)</span></h3>
+              <a href="cards/the-sun/index.html"><img class="arcana-thumb" src="/data/the-sun/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-sun/index.html">太陽<span class="latin">(The Sun)</span></a></h3>
               <p><span class="side">正位置</span>開いた光、花、率直な子ども。太陽は、隠していたものが日向で乾くカードです。</p>
               <p><span class="side">逆位置</span>光が強すぎて、影の仕事まで照らしてしまいます。喜ばなくてはならないという強制。あるいは、光を信用できず、晴れの日にカーテンを閉じる。</p>
             </li>
             <li>
-              <h3>審判<span class="latin">(Judgement)</span></h3>
+              <a href="cards/judgement/index.html"><img class="arcana-thumb" src="/data/judgement/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/judgement/index.html">審判<span class="latin">(Judgement)</span></a></h3>
               <p><span class="side">正位置</span>喇叭と、棺から起き上がる人々。審判は、裁かれて終わるカードではなく、古い自分の名を呼ばれて立ち上がるカードです。</p>
               <p><span class="side">逆位置</span>喇叭は鳴っているのに、棺の蓋を内側から押さえています。呼ばれていることを、まだその時期ではないと説明する。あるいは、過去の自分を裁く声だけが残り、立ち上がる音が届きません。</p>
             </li>
             <li>
-              <h3>世界<span class="latin">(The World)</span></h3>
+              <a href="cards/the-world/index.html"><img class="arcana-thumb" src="/data/the-world/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-world/index.html">世界<span class="latin">(The World)</span></a></h3>
               <p><span class="side">正位置</span>輪の中で踊る人。四隅に見守り。世界は、一つの周期が実を結んだカードです。</p>
               <p><span class="side">逆位置</span>輪の手前で足が止まっています。完成に必要な最後の一歩を、完全でないという理由で保留する。あるいは、一つの周期を閉じられず、同じ円周を回り続けます。</p>
             </li>

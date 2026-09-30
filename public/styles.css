@@ -45,6 +45,7 @@ img { font: inherit; }
   margin: 0.45rem 0 0;
   color: var(--muted);
   font-size: 0.95rem;
+  font-weight: 500;
   letter-spacing: 0.06em;
 }
 
@@ -113,6 +114,12 @@ main {
 }
 
 .card-face.front { transform: rotateY(180deg); }
+
+.card-face.back img { transition: filter 0.35s ease; }
+
+.card.is-waiting .card-face.back img {
+  filter: sepia(0.55) saturate(0.72) brightness(0.84);
+}
 
 .face-turn {
   position: relative;
@@ -195,11 +202,36 @@ html.has-reading .guide {
   list-style: none;
 }
 
+.arcana li {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  column-gap: 0.85rem;
+  align-items: start;
+}
+
+.arcana li > a:first-child {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.arcana li > h3,
+.arcana li > p { grid-column: 2; }
+
 .guide .arcana li + li { margin-top: 1.15rem; }
 
 .arcana h3 {
   margin: 0 0 0.15rem;
   letter-spacing: 0.14em;
+}
+
+.arcana-thumb {
+  display: block;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .arcana a,
@@ -212,6 +244,23 @@ html.has-reading .guide {
 }
 
 .arcana a:hover { color: #5c4318; }
+
+.library {
+  margin: 1.4rem 0 0;
+  text-align: center;
+  letter-spacing: 0.08em;
+}
+
+.library a,
+.library a:visited,
+.library a:hover,
+.library a:active {
+  color: #7a5c2e;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 0.18em;
+}
+
+.library a:hover { color: #5c4318; }
 
 .arcana .latin {
   margin-left: 0.2rem;
@@ -244,7 +293,7 @@ html.has-reading .guide {
 .reading,
 .color-panel { margin-top: 1.6rem; }
 
-.reading h1 {
+.reading h2 {
   margin: 0;
   text-align: center;
   font-size: 1.85rem;

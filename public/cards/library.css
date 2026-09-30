@@ -57,6 +57,8 @@ main {
 .crumb a { text-decoration: none; }
 .crumb a:hover { text-decoration: underline; }
 
+.face.reversed { transform: rotate(180deg); }
+
 .face,
 .scene {
   width: min(78vw, 380px);
