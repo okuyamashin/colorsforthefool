@@ -181,7 +181,7 @@ def page(title, description, canonical, image, css, json_ld, body, icon, lang="j
 {body}
     <footer class="colophon">
       <p>© 2026 Engawa Inc.</p>
-      <p>{"連絡先" if lang == "ja" else "Contact"} <a href="https://github.com/okuyamashin/colorsforthefool">GitHub</a></p>
+      <p><a href="{"/contact/" if lang == "ja" else "/en/contact/"}">{"問い合わせ" if lang == "ja" else "Contact"}</a> <a href="https://github.com/okuyamashin/colorsforthefool">GitHub</a></p>
     </footer>
   </body>
 </html>

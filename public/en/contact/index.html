@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQ38VZSM7B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NQ38VZSM7B');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact — Colors for the Fool</title>
+    <meta name="description" content="Write to Colors for the Fool.">
+    <link rel="canonical" href="https://colorsofthefool.engawa5656.com/en/contact/">
+    <link rel="alternate" hreflang="ja" href="https://colorsofthefool.engawa5656.com/contact/">
+    <link rel="alternate" hreflang="en" href="https://colorsofthefool.engawa5656.com/en/contact/">
+    <link rel="alternate" hreflang="x-default" href="https://colorsofthefool.engawa5656.com/contact/">
+    <link rel="icon" href="../../favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <style>
+      .inquiry h1 {
+        margin: 1.4rem 0 1.2rem;
+        font-size: 1.35rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-align: center;
+      }
+      .inquiry label { display: block; margin: 1.15rem 0 0.35rem; }
+      .inquiry input,
+      .inquiry textarea {
+        width: 100%;
+        padding: 0.55rem 0.7rem;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.35);
+        color: var(--ink);
+        font: inherit;
+      }
+      .inquiry textarea { min-height: 9rem; resize: vertical; }
+      .inquiry button {
+        margin-top: 1.3rem;
+        padding: 0.45rem 1.3rem;
+        border: 1px solid var(--gold);
+        background: transparent;
+        color: var(--ink);
+        font: inherit;
+        letter-spacing: 0.12em;
+        cursor: pointer;
+      }
+      .inquiry button:disabled { cursor: default; opacity: 0.55; }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <p class="brand"><a href="../">Colors for the Fool</a></p>
+      <a class="lang" href="../../contact/">日本語</a>
+    </header>
+    <main class="guide inquiry">
+      <h1>Contact</h1>
+      <form id="inquiry">
+        <label for="name">Name</label>
+        <input id="name" name="name" required maxlength="80" autocomplete="name">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required maxlength="200" autocomplete="email">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required maxlength="4000"></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <p class="notice" id="notice" hidden></p>
+    </main>
+    <footer class="colophon">
+      <p>© 2026 Engawa Inc.</p>
+      <p><a href="../../privacy/">Privacy policy</a></p>
+    </footer>
+    <script>
+      const form = document.querySelector("#inquiry");
+      const notice = document.querySelector("#notice");
+      const button = form.querySelector("button");
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        notice.hidden = true;
+        button.disabled = true;
+        const body = {
+          name: form.name.value,
+          email: form.email.value,
+          message: form.message.value,
+          lang: "en",
+        };
+        try {
+          const result = await fetch("https://colorsofthefool.engawa5656.com/inquiries", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(body),
+          });
+          if (result.status === 429) {
+            notice.textContent = "That address has sent several notes. Please wait before sending another.";
+          } else if (!result.ok) {
+            notice.textContent = "The message did not send. Please try once more.";
+          } else {
+            form.hidden = true;
+            notice.textContent = "Sent. If a reply is needed, it will come to the address you wrote.";
+          }
+        } catch (error) {
+          notice.textContent = "The message did not send. Please try once more.";
+        }
+        notice.hidden = false;
+        button.disabled = false;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>問い合わせ — Colors for the Fool</title>
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+      .desk h1 {
+        margin: 1.4rem 0 1rem;
+        font-size: 1.35rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-align: center;
+      }
+      #login {
+        display: block;
+        margin: 1.4rem auto 0;
+        padding: 0.45rem 1.3rem;
+        border: 1px solid var(--gold);
+        background: transparent;
+        color: var(--ink);
+        font: inherit;
+        letter-spacing: 0.12em;
+        cursor: pointer;
+      }
+      .pick {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.75rem;
+        margin: 0 0 0.8rem;
+      }
+      .pick select {
+        font: inherit;
+        color: var(--ink);
+        background: rgba(255, 255, 255, 0.45);
+        border: 1px solid var(--line);
+        padding: 0.35rem 0.55rem;
+      }
+      .pager {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        gap: 1.1rem;
+        margin: 0 0 0.4rem;
+      }
+      .pager button {
+        padding: 0;
+        border: 0;
+        background: none;
+        color: #7a5c2e;
+        font: inherit;
+        letter-spacing: 0.06em;
+        text-decoration: underline;
+        text-decoration-color: var(--gold);
+        text-underline-offset: 0.18em;
+        cursor: pointer;
+      }
+      .pager button:disabled {
+        opacity: 0.4;
+        cursor: default;
+        text-decoration: none;
+      }
+      .pager span { color: var(--muted); font-size: 0.92rem; }
+      .note {
+        margin: 0;
+        list-style: none;
+        padding: 0;
+      }
+      .note li {
+        margin: 0 0 1.4rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--line);
+      }
+      .note time,
+      .note .who {
+        display: block;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+      .note p {
+        margin: 0.55rem 0 0;
+        white-space: pre-wrap;
+        line-height: 1.9;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <p class="brand">Colors for the Fool</p>
+    </header>
+    <main class="guide desk">
+      <h1>問い合わせ</h1>
+      <p class="notice" id="notice">読み込み中です。</p>
+      <button type="button" id="login" hidden>Google で開く</button>
+      <label class="pick" id="pick" hidden>日付
+        <select id="day"></select>
+      </label>
+      <nav class="pager" id="pager" hidden></nav>
+      <ul class="note" id="list" hidden></ul>
+    </main>
+    <script>
+      const domain = "https://colorsofthefool.auth.ap-northeast-1.amazoncognito.com";
+      const clientId = "52us0puolhlpjqk14jbbg3apkq";
+      const redirect = "https://colorsofthefool.engawa5656.com/admin/";
+      const api = "https://colorsofthefool.engawa5656.com/inquiries";
+      const notice = document.querySelector("#notice");
+      const login = document.querySelector("#login");
+      const pick = document.querySelector("#pick");
+      const daySelect = document.querySelector("#day");
+      const pager = document.querySelector("#pager");
+      const list = document.querySelector("#list");
+      const pageSize = 100;
+      let inquiries = [];
+      let selectedDay = "";
+      let archivePage = 1;
+
+      function japan(iso) {
+        const date = new Date(iso);
+        const key = new Intl.DateTimeFormat("en-CA", {
+          timeZone: "Asia/Tokyo",
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+        }).format(date);
+        const parts = Object.fromEntries(
+          new Intl.DateTimeFormat("ja-JP", {
+            timeZone: "Asia/Tokyo",
+            year: "numeric",
+            month: "numeric",
+            day: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+            hourCycle: "h23",
+          }).formatToParts(date).filter((part) => part.type !== "literal").map((part) => [part.type, part.value])
+        );
+        return {
+          key,
+          label: `${parts.year}年${parts.month}月${parts.day}日`,
+          clock: `${parts.hour}:${parts.minute}`,
+        };
+      }
+
+      function yearAgoKey() {
+        const today = new Intl.DateTimeFormat("en-CA", {
+          timeZone: "Asia/Tokyo",
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+        }).format(new Date());
+        const [year, month, day] = today.split("-").map(Number);
+        return new Date(Date.UTC(year - 1, month - 1, day)).toISOString().slice(0, 10);
+      }
+
+      function writeHash() {
+        const hash = selectedDay === "archive"
+          ? (archivePage > 1 ? `#archive-${archivePage}` : "#archive")
+          : (selectedDay ? `#${selectedDay}` : "");
+        history.replaceState(null, "", redirect + hash);
+      }
+
+      function render() {
+        const cutoff = yearAgoKey();
+        const ordered = inquiries.slice().sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+        const recent = [];
+        const archive = [];
+        for (const item of ordered) {
+          if (item.day <= cutoff) archive.push(item);
+          else recent.push(item);
+        }
+        const counts = new Map();
+        for (const item of recent) counts.set(item.day, (counts.get(item.day) || 0) + 1);
+        const options = [...counts.keys()].map((key) => {
+          const sample = recent.find((item) => item.day === key);
+          return { value: key, label: `${sample.label}（${counts.get(key)}）` };
+        });
+        if (archive.length) options.push({ value: "archive", label: `アーカイブ（${archive.length}）` });
+        if (!options.some((option) => option.value === selectedDay)) {
+          selectedDay = options[0] ? options[0].value : "";
+          archivePage = 1;
+        }
+        pick.hidden = options.length === 0;
+        daySelect.replaceChildren();
+        for (const option of options) {
+          const node = document.createElement("option");
+          node.value = option.value;
+          node.textContent = option.label;
+          daySelect.append(node);
+        }
+        daySelect.value = selectedDay;
+        const pages = Math.max(1, Math.ceil(archive.length / pageSize));
+        if (archivePage > pages) archivePage = pages;
+        if (archivePage < 1) archivePage = 1;
+        const archived = selectedDay === "archive";
+        pager.hidden = !archived || archive.length <= pageSize;
+        pager.replaceChildren();
+        if (!pager.hidden) {
+          const start = (archivePage - 1) * pageSize;
+          const prev = document.createElement("button");
+          prev.type = "button";
+          prev.textContent = "前の100件";
+          prev.disabled = archivePage <= 1;
+          prev.addEventListener("click", () => {
+            archivePage -= 1;
+            writeHash();
+            render();
+          });
+          const place = document.createElement("span");
+          place.textContent = `${start + 1}–${Math.min(start + pageSize, archive.length)} / ${archive.length}`;
+          const next = document.createElement("button");
+          next.type = "button";
+          next.textContent = "次の100件";
+          next.disabled = archivePage >= pages;
+          next.addEventListener("click", () => {
+            archivePage += 1;
+            writeHash();
+            render();
+          });
+          pager.append(prev, place, next);
+        }
+        list.hidden = false;
+        list.replaceChildren();
+        const shown = archived
+          ? archive.slice((archivePage - 1) * pageSize, archivePage * pageSize)
+          : recent.filter((item) => item.day === selectedDay);
+        if (!shown.length) {
+          notice.hidden = false;
+          notice.textContent = "まだありません。";
+          return;
+        }
+        notice.hidden = true;
+        for (const item of shown) {
+          const row = document.createElement("li");
+          const time = document.createElement("time");
+          time.dateTime = item.createdAt;
+          time.textContent = `${item.label} ${item.clock}`;
+          const who = document.createElement("span");
+          who.className = "who";
+          who.textContent = item.name + "  " + item.email;
+          const message = document.createElement("p");
+          message.textContent = item.message;
+          row.append(time, who, message);
+          list.append(row);
+        }
+      }
+
+      function b64url(bytes) {
+        return btoa(String.fromCharCode(...bytes)).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/g, "");
+      }
+
+      async function challenge(verifier) {
+        const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(verifier));
+        return b64url(new Uint8Array(digest));
+      }
+
+      function keepVerifier(verifier) {
+        localStorage.setItem("cftf-admin-verifier", verifier);
+        document.cookie = "cftf_admin_verifier=" + encodeURIComponent(verifier) + "; Path=/; Secure; SameSite=Lax; Max-Age=600";
+      }
+
+      function readVerifier() {
+        const saved = localStorage.getItem("cftf-admin-verifier");
+        if (saved) return saved;
+        const match = document.cookie.match(/(?:^|; )cftf_admin_verifier=([^;]*)/);
+        return match ? decodeURIComponent(match[1]) : "";
+      }
+
+      async function signIn() {
+        const verifier = b64url(crypto.getRandomValues(new Uint8Array(32)));
+        keepVerifier(verifier);
+        const url = new URL(domain + "/oauth2/authorize");
+        url.searchParams.set("client_id", clientId);
+        url.searchParams.set("response_type", "code");
+        url.searchParams.set("scope", "openid email profile");
+        url.searchParams.set("redirect_uri", redirect);
+        url.searchParams.set("identity_provider", "Google");
+        url.searchParams.set("code_challenge", await challenge(verifier));
+        url.searchParams.set("code_challenge_method", "S256");
+        location.href = url.toString();
+      }
+
+      async function tokenFromCode(code) {
+        const verifier = readVerifier();
+        const body = new URLSearchParams({
+          grant_type: "authorization_code",
+          client_id: clientId,
+          code,
+          redirect_uri: redirect,
+          code_verifier: verifier,
+        });
+        const result = await fetch(domain + "/oauth2/token", {
+          method: "POST",
+          headers: { "content-type": "application/x-www-form-urlencoded" },
+          body,
+        });
+        const data = await result.json().catch(() => ({}));
+        if (!result.ok) {
+          const reason = data.error_description || data.error || "token";
+          throw new Error(reason);
+        }
+        localStorage.setItem("cftf-admin-token", data.id_token);
+        localStorage.removeItem("cftf-admin-verifier");
+        document.cookie = "cftf_admin_verifier=; Path=/; Secure; SameSite=Lax; Max-Age=0";
+        history.replaceState(null, "", redirect);
+      }
+
+      function showLogin(text) {
+        notice.hidden = false;
+        notice.textContent = text;
+        login.hidden = false;
+        pick.hidden = true;
+        pager.hidden = true;
+        list.hidden = true;
+      }
+
+      async function load(token) {
+        const result = await fetch(api, { headers: { authorization: "Bearer " + token } });
+        if (result.status === 401 || result.status === 403) {
+          localStorage.removeItem("cftf-admin-token");
+          showLogin("この Google アカウントでは開けません。");
+          return;
+        }
+        if (!result.ok) throw new Error("load");
+        const data = await result.json();
+        login.hidden = true;
+        inquiries = data.items.map((item) => {
+          const when = japan(item.createdAt);
+          return { ...item, day: when.key, label: when.label, clock: when.clock };
+        });
+        const hash = decodeURIComponent(location.hash.replace("#", ""));
+        if (hash === "archive" || hash.startsWith("archive-")) {
+          selectedDay = "archive";
+          const page = Number(hash.slice("archive-".length));
+          archivePage = Number.isFinite(page) && page > 0 ? page : 1;
+        } else {
+          selectedDay = hash;
+          archivePage = 1;
+        }
+        render();
+      }
+
+      daySelect.addEventListener("change", () => {
+        selectedDay = daySelect.value;
+        archivePage = 1;
+        writeHash();
+        render();
+      });
+
+      login.addEventListener("click", () => {
+        signIn().catch(() => showLogin("開けませんでした。もう一度お試しください。"));
+      });
+
+      const params = new URLSearchParams(location.search);
+      const code = params.get("code");
+      const returnedError = params.get("error_description") || params.get("error");
+      const saved = localStorage.getItem("cftf-admin-token");
+      const start = returnedError
+        ? Promise.reject(new Error(returnedError))
+        : code
+          ? tokenFromCode(code).then(() => load(localStorage.getItem("cftf-admin-token")))
+          : saved
+            ? load(saved)
+            : Promise.reject(Object.assign(new Error("login"), { login: true }));
+      start.catch((error) => {
+        if (error && error.login) showLogin("@engawa.jp の Google アカウントで開きます。");
+        else showLogin("開けませんでした。" + (error && error.message ? " " + error.message : ""));
+      });
+    </script>
+  </body>
+</html>
