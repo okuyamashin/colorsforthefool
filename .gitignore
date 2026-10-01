@@ -1,4 +1,6 @@
 .env
+client_secret*.json
+functions/
 __pycache__/
 *.pyc
 *.png
