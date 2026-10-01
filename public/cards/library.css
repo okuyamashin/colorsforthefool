@@ -111,6 +111,16 @@ h1 {
   letter-spacing: 0.04em;
 }
 
+.story .color-chip {
+  display: block;
+  width: min(17.5rem, 76%);
+  height: 3.15rem;
+  margin: 1rem auto 0.95rem;
+  border: 2px solid #c6a45a;
+  border-radius: 999px;
+  box-shadow: 0 12px 26px rgba(62, 44, 22, 0.22);
+}
+
 h2 {
   margin: 2.4rem 0 0.8rem;
   font-size: 1.15rem;

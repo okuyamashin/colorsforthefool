@@ -115,14 +115,29 @@ def meaning_html(text):
     return "\n".join(f"        <p>{esc(part)}</p>" for part in parts)
 
 
+def close_paragraph(close):
+    parts = []
+    skip_break = False
+    for index, line in enumerate(close):
+        if index and not skip_break:
+            parts.append("<br>")
+        skip_break = False
+        parts.append(esc(line))
+        matched = re.match(r"^Lucky Color:\s*.*(#[0-9A-Fa-f]{6})\s*$", line)
+        if matched:
+            parts.append(
+                f'<span class="color-chip" style="background-color:{matched.group(1)}" aria-hidden="true"></span>'
+            )
+            skip_break = True
+    return '        <p class="close">' + "".join(parts) + "</p>"
+
+
 def story_html(body, close):
     chunks = []
     for block in body:
         chunks.append("        <p>" + "<br>".join(esc(line) for line in block) + "</p>")
     if close:
-        chunks.append(
-            '        <p class="close">' + "<br>".join(esc(line) for line in close) + "</p>"
-        )
+        chunks.append(close_paragraph(close))
     return "\n".join(chunks)
 
 
