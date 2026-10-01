@@ -161,12 +161,12 @@ h2 {
 
 .swatch {
   display: inline-block;
-  width: 0.75rem;
-  height: 0.75rem;
-  margin-right: 0.4rem;
+  width: 0.95rem;
+  height: 0.95rem;
+  margin-right: 0.45rem;
   border: 1px solid var(--gold);
   border-radius: 50%;
-  vertical-align: -0.05rem;
+  vertical-align: -0.12rem;
 }
 
 .siblings {
@@ -178,7 +178,59 @@ h2 {
   list-style: none;
 }
 
-.siblings a { letter-spacing: 0.06em; }
+.siblings a {
+  letter-spacing: 0.06em;
+  text-decoration: none;
+}
+
+.share {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 1.6rem 0 0;
+}
+
+.share a,
+.share a:link,
+.share a:visited,
+.share button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  background: rgba(251, 246, 236, 0.7);
+  color: #5c4318;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.share svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  display: block;
+}
+
+.share a:hover,
+.share button:hover {
+  background: #f3e6cc;
+  color: #2a2118;
+}
+
+.copied {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.copied[hidden] { display: none; }
 
 .back {
   display: inline-block;

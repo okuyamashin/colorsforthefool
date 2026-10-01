@@ -5,6 +5,7 @@ import html
 import json
 import re
 from pathlib import Path
+from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -12,6 +13,19 @@ PUBLIC = ROOT / "public"
 CARDS = PUBLIC / "cards"
 ORIGIN = "https://colorsofthefool.engawa5656.com"
 ORIENTATION = {"upright": "正位置", "reversed": "逆位置"}
+
+SHARE_ICON = """          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="18" cy="5" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="6" cy="12" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="18" cy="19" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M8.2 13.1 15.7 17.4M15.7 6.6 8.2 10.9" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          </svg>"""
+X_ICON = """          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M14.2 10.4 21.5 2h-1.7l-6.3 7.2L8.4 2H2.2l7.6 11L2.2 22h1.7l6.7-7.6L15.3 22h6.2l-7.3-11.6Zm-2.4 2.7-.8-1.1L4.7 3.5h2.7l5 7.1.8 1.1 6.5 9.2h-2.7l-5.2-7.8Z"/>
+          </svg>"""
+LINE_ICON = """          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#06C755" d="M12 3.2C6.8 3.2 2.6 6.7 2.6 11c0 3.8 3.4 7 8 7.7.3.1.7.2.8.5.1.3.1.7 0 1l-.3 1.6c-.1.4.3.7.7.5l2.2-1.3c.2-.1.4-.1.6-.1 4.8-.2 8.8-3.6 8.8-7.9 0-4.3-4.2-7.8-9.4-7.8Z"/>
+          </svg>"""
 
 GA = """    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQ38VZSM7B"></script>
@@ -156,6 +170,9 @@ def page(title, description, canonical, image, css, json_ld, body, icon, lang="j
     <meta property="og:description" content="{esc(description)}">
     <meta property="og:url" content="{esc(canonical)}">
     <meta property="og:image" content="{esc(image)}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="{esc(icon)}" type="image/jpeg">
 {HEAD_LINKS}
     <link rel="stylesheet" href="{css}">
@@ -205,6 +222,9 @@ def load_cards():
                     raise SystemExit(f"missing English text for {card['id']} {slug}")
                 if not image_path.is_file():
                     raise SystemExit(f"missing {image_path}")
+                share_path = image_path.with_name(f"{image_path.stem}.share.jpg")
+                if not share_path.is_file():
+                    raise SystemExit(f"missing {share_path}")
                 ensure_thumb(image_path)
                 color["_slug"] = slug
                 color["_texts"] = {
@@ -217,6 +237,8 @@ def load_cards():
                     color["_lines"][lang] = color_line(close, body, lang)
         if not (path.parent / "face.jpg").is_file():
             raise SystemExit(f"missing face {card['id']}")
+        if not (path.parent / "share.jpg").is_file():
+            raise SystemExit(f"missing share image {card['id']}")
         cards.append(card)
     return cards
 
@@ -285,7 +307,7 @@ def write_card(card, meanings, lang, root):
     prefix = "" if lang == "ja" else "en/"
     canonical = f"{ORIGIN}/{prefix}cards/{card['id']}/index.html"
     other = f"{ORIGIN}/en/cards/{card['id']}/index.html" if lang == "ja" else f"{ORIGIN}/cards/{card['id']}/index.html"
-    image = f"{ORIGIN}/data/{card['id']}/face.jpg"
+    image = f"{ORIGIN}/data/{card['id']}/share.jpg"
     for side in ("upright", "reversed"):
         for color in card[side]:
             color["_card"] = card["id"]
@@ -365,6 +387,40 @@ def write_card(card, meanings, lang, root):
     return target
 
 
+def share_html(card, color, lang):
+    prefix = "" if lang == "ja" else "en/"
+    page_url = f"{ORIGIN}/{prefix}cards/{card['id']}/{color['_slug']}/"
+    if lang == "ja":
+        text = f"今日のラッキーカラーは、{color['nameJa']}です。"
+        copy_label = "リンクをコピー"
+        x_label = "Xでシェア"
+        line_label = "LINEでシェア"
+        notice = "クリップボードにコピーしました"
+        script = "../../share.js"
+    else:
+        text = f"Today's lucky color is {color['name']}."
+        copy_label = "Copy link"
+        x_label = "Share on X"
+        line_label = "Share on LINE"
+        notice = "Copied to the clipboard"
+        script = "../../../../cards/share.js"
+    tweet = "https://twitter.com/intent/tweet?text=" + quote(text, safe="") + "&url=" + quote(page_url, safe="")
+    line = "https://social-plugins.line.me/lineit/share?url=" + quote(page_url, safe="")
+    return f"""      <p class="share" data-url="{esc(page_url)}">
+        <button type="button" id="share-copy" aria-label="{esc(copy_label)}">
+{SHARE_ICON}
+        </button>
+        <a id="share-x" href="{esc(tweet)}" target="_blank" rel="noopener noreferrer" aria-label="{esc(x_label)}">
+{X_ICON}
+        </a>
+        <a id="share-line" href="{esc(line)}" target="_blank" rel="noopener noreferrer" aria-label="{esc(line_label)}">
+{LINE_ICON}
+        </a>
+      </p>
+      <p class="copied" id="copied" hidden role="status">{esc(notice)}</p>
+      <script src="{script}"></script>"""
+
+
 def write_color(card, side, color, lang, root):
     bind(color, lang)
     label = ORIENTATION[side] if lang == "ja" else {"upright": "Upright", "reversed": "Reversed"}[side]
@@ -376,7 +432,8 @@ def write_color(card, side, color, lang, root):
         if lang == "ja"
         else f"{ORIGIN}/cards/{card['id']}/{color['_slug']}/index.html"
     )
-    image = f"{ORIGIN}/data/{card['id']}/{color['image']}"
+    scene = f"{ORIGIN}/data/{card['id']}/{color['image']}"
+    image = f"{ORIGIN}/data/{card['id']}/{Path(color['image']).stem}.share.jpg"
     if lang == "ja":
         opening = first_sentence(body[0][0], 70, "ja") if body else ""
         description = clip(f"{card['nameJa']}の{label}、{color['nameJa']}。{opening}")
@@ -422,6 +479,7 @@ def write_color(card, side, color, lang, root):
       <article class="story">
 {story_html(body, close)}
       </article>
+{share_html(card, color, lang)}
       <a class="back" href="../index.html">{esc(back)}</a>
       <ul class="siblings">
 {sibling_html}
@@ -441,7 +499,7 @@ def write_color(card, side, color, lang, root):
                 "@type": "Article",
                 "headline": headline,
                 "inLanguage": "ja" if lang == "ja" else "en",
-                "image": image,
+                "image": scene,
                 "description": description,
                 "mainEntityOfPage": canonical,
                 "publisher": {"@type": "Organization", "name": "Colors for the Fool"},
