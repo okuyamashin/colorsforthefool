@@ -1,0 +1,67 @@
+.shop {
+  margin: 0.4rem 0 1.4rem;
+}
+
+.shop h1 {
+  margin: 0.2rem 0 0.8rem;
+  font-size: 1.55rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-align: center;
+}
+
+.shop-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 1rem;
+  border-radius: 1.05rem;
+  box-shadow: 0 18px 40px rgba(62, 44, 22, 0.18);
+}
+
+.shop p {
+  margin: 0.35rem 0;
+  text-align: center;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+}
+
+.shop a,
+.shop a:link,
+.shop a:visited,
+.shop a:hover,
+.shop a:active {
+  color: #7a5c2e;
+  text-underline-offset: 0.18em;
+}
+
+.shop a:hover { color: #5c4318; }
+
+.latte {
+  display: block;
+  width: min(78vw, 380px);
+  height: auto;
+  margin: 1.6rem auto 0;
+  border-radius: 1.05rem;
+  box-shadow: 0 18px 40px rgba(62, 44, 22, 0.18);
+}
+
+.close-wrap { text-align: center; }
+
+.close {
+  margin: 1.4rem 0 0;
+  padding: 0.45rem 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  letter-spacing: 0.16em;
+}
+
+.close:hover { color: #5c4318; }
+
+.close:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}

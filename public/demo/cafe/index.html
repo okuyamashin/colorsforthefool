@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>カフェ・タロット — Colors for the Fool</title>
+    <meta name="description" content="カフェ・タロット。正位置だけを一枚引き、読みの最後はカフェラテです。">
+    <link rel="canonical" href="https://colorsofthefool.engawa5656.com/demo/cafe/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:site_name" content="Colors for the Fool">
+    <meta property="og:title" content="カフェ・タロット">
+    <meta property="og:description" content="メニューはカフェラテしかありません。悪い結果は出ません。">
+    <meta property="og:url" content="https://colorsofthefool.engawa5656.com/demo/cafe/">
+    <meta property="og:image" content="https://colorsofthefool.engawa5656.com/demo/cafe/img/cafe.jpg">
+    <link rel="icon" href="../../favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="demo.css">
+  </head>
+  <body>
+    <header class="top">
+      <p class="brand">Colors for the Fool</p>
+    </header>
+    <main>
+      <section class="shop">
+        <h1>カフェ・タロット</h1>
+        <img class="shop-photo" src="img/cafe.jpg" alt="カフェ・タロットの店内。テラスの向こうに夕暮れの街が見える">
+        <p>メニューはカフェラテしかありません</p>
+        <p><a href="/contact/">あなたのお店のオリジナル、タロット占いを作ることができます。</a></p>
+        <p>悪い結果は出ません</p>
+      </section>
+      <p class="notice" id="notice" hidden></p>
+      <div class="stage">
+        <button type="button" class="card" id="card" aria-label="カードを引く">
+          <span class="card-inner">
+            <span class="card-face back">
+              <img src="img/back.jpg" alt="">
+            </span>
+            <span class="card-face front">
+              <span class="face-turn" id="face-turn">
+                <img id="face" alt="">
+              </span>
+            </span>
+          </span>
+        </button>
+      </div>
+      <p class="hint-wrap" id="hint-wrap">
+        <button type="button" class="hint" id="hint">タップして、一枚引く</button>
+      </p>
+      <article class="reading" id="reading" hidden>
+        <h2 id="title"></h2>
+        <p class="en" id="en"></p>
+        <p class="orientation">正位置</p>
+        <p id="meaning"></p>
+        <img class="latte" src="img/cafe-latte.jpg" alt="カフェラテ">
+        <p class="close-wrap">
+          <button type="button" class="close" id="close">閉じる</button>
+        </p>
+      </article>
+    </main>
+    <script src="demo.js"></script>
+  </body>
+</html>

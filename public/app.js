@@ -63,13 +63,25 @@ function colorFile(color) {
   return EN ? color.textEn : color.text;
 }
 
+function colorShare() {
+  const slug = String(colorFile(state.color) || "").replace(/\.en\.txt$/i, "").replace(/\.txt$/i, "");
+  const pageUrl = `${SITE}${EN ? "/en" : ""}/cards/${state.card.id}/${slug}/index.html`;
+  const shareText = EN
+    ? `Today's lucky color is ${state.color.name}.`
+    : `今日のラッキーカラーは、${state.color.nameJa}です。`;
+  return { slug, pageUrl, shareText };
+}
+
 function cardTitle(card) {
   return EN ? card.name : card.nameJa;
 }
 const FRESH = "v=3";
 const FACE_VIDEO = {
   "the-fool": "face.mp4",
+  "the-chariot": "face.mp4",
+  strength: "face.mp4",
   justice: "face.mp4",
+  temperance: "face.mp4",
   judgement: "face.mp4",
 };
 
@@ -90,7 +102,13 @@ const scene = document.querySelector("#scene");
 const story = document.querySelector("#story");
 const library = document.querySelector("#library");
 const libraryLink = document.querySelector("#library-link");
+const shareCopy = document.querySelector("#share-copy");
+const shareX = document.querySelector("#share-x");
+const shareLine = document.querySelector("#share-line");
+const copied = document.querySelector("#copied");
 const error = document.querySelector("#error");
+const SITE = "https://colorsofthefool.engawa5656.com";
+let copiedTimer = 0;
 
 let state = null;
 let lockedUntil = 0;
@@ -175,9 +193,19 @@ function fillProse(parent, text, dropTitle) {
     } else if (seenReveal) {
       paragraph.className = "afterword";
     }
+    let chipJustAdded = false;
     block.forEach((line, index) => {
-      if (index) paragraph.append(document.createElement("br"));
+      if (index && !chipJustAdded) paragraph.append(document.createElement("br"));
+      chipJustAdded = false;
       paragraph.append(document.createTextNode(line));
+      const matched = line.match(/^Lucky Color:\s*.*(#[0-9A-Fa-f]{6})\s*$/);
+      if (!matched) return;
+      const chip = document.createElement("span");
+      chip.className = "color-chip";
+      chip.style.backgroundColor = matched[1];
+      chip.setAttribute("aria-hidden", "true");
+      paragraph.append(chip);
+      chipJustAdded = true;
     });
     parent.append(paragraph);
   }
@@ -319,7 +347,8 @@ function paint(animated) {
   cardButton.classList.toggle("is-open", state.phase === "revealed");
   showFace(animated);
   title.textContent = cardTitle(state.card);
-  en.textContent = EN ? state.card.nameJa : state.card.name;
+  en.hidden = EN;
+  en.textContent = EN ? "" : state.card.name;
   orientationEl.textContent = drawnLabel;
   const text = window.MEANINGS?.[state.card.id]?.[state.orientation];
   fillProse(meaning, text || COPY.meaningFallback, false);
@@ -334,8 +363,11 @@ function paint(animated) {
   if (revealed) {
     showScene();
     fillProse(story, state.story || "", true);
-    const slug = String(colorFile(state.color) || "").replace(/\.en\.txt$/i, "").replace(/\.txt$/i, "");
-    libraryLink.href = `cards/${state.card.id}/${slug}/index.html`;
+    const shared = colorShare();
+    libraryLink.href = `cards/${state.card.id}/${shared.slug}/index.html`;
+    shareX.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shared.shareText)}&url=${encodeURIComponent(shared.pageUrl)}`;
+    shareLine.href = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shared.pageUrl)}`;
+    copied.hidden = true;
     library.hidden = false;
   } else {
     library.hidden = true;
@@ -564,6 +596,36 @@ function onTap() {
 cardButton.addEventListener("click", onTap);
 hint.addEventListener("click", onTap);
 scene.addEventListener("click", foldAway);
+async function copyUrl(url) {
+  try {
+    await navigator.clipboard.writeText(url);
+    return;
+  } catch {}
+  const area = document.createElement("textarea");
+  area.value = url;
+  area.setAttribute("readonly", "");
+  area.style.position = "fixed";
+  area.style.left = "-9999px";
+  document.body.appendChild(area);
+  area.select();
+  const ok = document.execCommand("copy");
+  area.remove();
+  if (!ok) throw new Error("copy failed");
+}
+
+shareCopy.addEventListener("click", async () => {
+  if (!state || state.phase !== "revealed") return;
+  try {
+    await copyUrl(colorShare().pageUrl);
+  } catch {
+    return;
+  }
+  copied.hidden = false;
+  clearTimeout(copiedTimer);
+  copiedTimer = setTimeout(() => {
+    copied.hidden = true;
+  }, 2200);
+});
 
 async function restore() {
   const saved = sessionStorage.getItem(SESSION);

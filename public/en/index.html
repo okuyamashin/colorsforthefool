@@ -31,13 +31,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
     <style>
-      .film { margin-top: 2.4rem; }
-      .film h2 {
-        margin: 0 0 0.8rem;
-        font-size: 1.15rem;
-        font-weight: 600;
-        letter-spacing: 0.12em;
-      }
       .film-frame {
         position: relative;
         width: 100%;
@@ -91,8 +84,31 @@
         </article>
         <section class="color-panel" id="color" hidden>
           <div class="story" id="story"></div>
-          <p class="library" id="library" hidden><a id="library-link" href="">Read this color</a></p>
           <button type="button" class="scene" id="scene" aria-label="Tap to turn the card face down"></button>
+          <div class="library" id="library" hidden>
+            <a id="library-link" href="">Read this color</a>
+            <p class="share">
+              <button type="button" id="share-copy" aria-label="Copy link">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="18" cy="5" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <circle cx="6" cy="12" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <circle cx="18" cy="19" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M8.2 13.1 15.7 17.4M15.7 6.6 8.2 10.9" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                </svg>
+              </button>
+              <a id="share-x" href="" target="_blank" rel="noopener noreferrer" aria-label="Share on X">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" d="M14.2 10.4 21.5 2h-1.7l-6.3 7.2L8.4 2H2.2l7.6 11L2.2 22h1.7l6.7-7.6L15.3 22h6.2l-7.3-11.6Zm-2.4 2.7-.8-1.1L4.7 3.5h2.7l5 7.1.8 1.1 6.5 9.2h-2.7l-5.2-7.8Z"/>
+                </svg>
+              </a>
+              <a id="share-line" href="" target="_blank" rel="noopener noreferrer" aria-label="Share on LINE">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#06C755" d="M12 3.2C6.8 3.2 2.6 6.7 2.6 11c0 3.8 3.4 7 8 7.7.3.1.7.2.8.5.1.3.1.7 0 1l-.3 1.6c-.1.4.3.7.7.5l2.2-1.3c.2-.1.4-.1.6-.1 4.8-.2 8.8-3.6 8.8-7.9 0-4.3-4.2-7.8-9.4-7.8Z"/>
+                </svg>
+              </a>
+            </p>
+            <p class="copied" id="copied" hidden role="status">Copied to the clipboard</p>
+          </div>
         </section>
       </div>
       <div class="guide" id="guide">
@@ -108,138 +124,144 @@
           <h2>About this site</h2>
           <p>Each major arcana card is tied to a color. The story moves through myth, history, a place, or a tool, and lands on today's lucky color.</p>
         </section>
+        <section class="film">
+          <h2>The Fool's Journey</h2>
+          <div class="film-frame">
+            <iframe src="https://www.youtube.com/embed/ngl1nN2qzkI?si=DT7xBR5A0CPZu1J3" title="The Fool's Journey — Arcana 0 to XXI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </section>
         <section>
           <h2>The twenty-two major arcana</h2>
           <ul class="arcana">
             <li>
               <a href="cards/the-fool/index.html"><img class="arcana-thumb" src="/data/the-fool/circle.jpg" alt="" width="72" height="72"></a>
-              <h3><a href="cards/the-fool/index.html">The Fool<span class="latin">(愚者)</span></a></h3>
+              <h3><a href="cards/the-fool/index.html">The Fool</a></h3>
               <p><span class="side">Upright</span>A solitary figure stands at the very edge of a cliff, travel pack light, a white rose in hand, and a loyal dog close by.</p>
               <p><span class="side">Reversed</span>The same figure now hesitates at the cliff, unsure if the ground beneath is safe.</p>
             </li>
             <li>
               <a href="cards/the-magician/index.html"><img class="arcana-thumb" src="/data/the-magician/circle.jpg" alt="" width="72" height="72"></a>
-              <h3><a href="cards/the-magician/index.html">The Magician<span class="latin">(魔術師)</span></a></h3>
+              <h3><a href="cards/the-magician/index.html">The Magician</a></h3>
               <p><span class="side">Upright</span>A table stands ready with a wand, a cup, a sword, and a coin—each a tool for shaping the day.</p>
               <p><span class="side">Reversed</span>The tools on the table are arranged only for display, not for use.</p>
             </li>
             <li>
               <a href="cards/the-high-priestess/index.html"><img class="arcana-thumb" src="/data/the-high-priestess/circle.jpg" alt="" width="72" height="72"></a>
-              <h3><a href="cards/the-high-priestess/index.html">The High Priestess<span class="latin">(女教皇)</span></a></h3>
+              <h3><a href="cards/the-high-priestess/index.html">The High Priestess</a></h3>
               <p><span class="side">Upright</span>A woman sits quietly between two pillars, her scroll only half-unfolded on her lap.</p>
               <p><span class="side">Reversed</span>The scroll is either unopened, its secrets withheld, or thrown wide, its contents scattered and misunderstood.</p>
             </li>
             <li>
               <a href="cards/the-empress/index.html"><img class="arcana-thumb" src="/data/the-empress/circle.jpg" alt="" width="72" height="72"></a>
-              <h3><a href="cards/the-empress/index.html">The Empress<span class="latin">(女帝)</span></a></h3>
+              <h3><a href="cards/the-empress/index.html">The Empress</a></h3>
               <p><span class="side">Upright</span>The Empress is a place of abundance, where grain ripens, forests shelter, and clear water flows.</p>
               <p><span class="side">Reversed</span>The ground may be tired, or you may be rushing to harvest before the fruit is truly ready.</p>
             </li>
             <li>
               <a href="cards/the-emperor/index.html"><img class="arcana-thumb" src="/data/the-emperor/circle.jpg" alt="" width="72" height="72"></a>
-              <h3><a href="cards/the-emperor/index.html">The Emperor<span class="latin">(皇帝)</span></a></h3>
+              <h3><a href="cards/the-emperor/index.html">The Emperor</a></h3>
               <p><span class="side">Upright</span>The Emperor sits on a throne of stone, his gaze fixed far beyond the present.</p>
               <p><span class="side">Reversed</span>The throne no longer fits the Emperor.</p>
             </li>
             <li>
               <a href="cards/the-hierophant/index.html"><img class="arcana-thumb" src="/data/the-hierophant/circle.jpg" alt="" width="72" height="72"></a>
-              <h3><a href="cards/the-hierophant/index.html">The Hierophant<span class="latin">(法王)</span></a></h3>
+              <h3><a href="cards/the-hierophant/index.html">The Hierophant</a></h3>
               <p><span class="side">Upright</span>A figure sits before two seekers, embodying the transfer of knowledge through tradition and established forms.</p>
               <p><span class="side">Reversed</span>The forms have become heavier than their purpose; ritual outweighs meaning.</p>
             </li>
             <li>
               <a href="cards/the-lovers/index.html"><img class="arcana-thumb" src="/data/the-lovers/circle.jpg" alt="" width="72" height="72"></a>
-              <h3><a href="cards/the-lovers/index.html">The Lovers<span class="latin">(恋人)</span></a></h3>
+              <h3><a href="cards/the-lovers/index.html">The Lovers</a></h3>
               <p><span class="side">Upright</span>The Lovers card represents the moment where two distinct forces meet, asking you to make a conscious and heartfelt choice.</p>
               <p><span class="side">Reversed</span>The Lovers reversed points to indecision and the discomfort of leaving choices unfinished.</p>
             </li>
             <li>
               <a href="cards/the-chariot/index.html"><img class="arcana-thumb" src="/data/the-chariot/circle.jpg" alt="" width="72" height="72"></a>
-              <h3><a href="cards/the-chariot/index.html">The Chariot<span class="latin">(戦車)</span></a></h3>
+              <h3><a href="cards/the-chariot/index.html">The Chariot</a></h3>
               <p><span class="side">Upright</span>A charioteer grips the reins, guiding a vehicle drawn by two distinct creatures.</p>
               <p><span class="side">Reversed</span>The chariot is in motion, but it has not crossed the threshold.</p>
             </li>
             <li>
               <a href="cards/strength/index.html"><img class="arcana-thumb" src="/data/strength/circle.jpg" alt="" width="72" height="72"></a>
-              <h3><a href="cards/strength/index.html">Strength<span class="latin">(力)</span></a></h3>
+              <h3><a href="cards/strength/index.html">Strength</a></h3>
               <p><span class="side">Upright</span>Strength is not about how tightly you hold or how much you can suppress.</p>
               <p><span class="side">Reversed</span>When reversed, Strength reveals a hand gone rigid, fingers clenched not out of mastery but out of fear.</p>
             </li>
             <li>
               <a href="cards/the-hermit/index.html"><img class="arcana-thumb" src="/data/the-hermit/circle.jpg" alt="" width="72" height="72"></a>
-              <h3><a href="cards/the-hermit/index.html">The Hermit<span class="latin">(隠者)</span></a></h3>
+              <h3><a href="cards/the-hermit/index.html">The Hermit</a></h3>
               <p><span class="side">Upright</span>The Hermit stands alone on a quiet mountain, lantern raised just enough to show his next steps.</p>
               <p><span class="side">Reversed</span>The Hermit’s lantern now shines only inward, failing to light the path ahead.</p>
             </li>
             <li>
               <a href="cards/wheel-of-fortune/index.html"><img class="arcana-thumb" src="/data/wheel-of-fortune/circle.jpg" alt="" width="72" height="72"></a>
-              <h3><a href="cards/wheel-of-fortune/index.html">Wheel of Fortune<span class="latin">(運命の輪)</span></a></h3>
+              <h3><a href="cards/wheel-of-fortune/index.html">Wheel of Fortune</a></h3>
               <p><span class="side">Upright</span>The Wheel of Fortune turns, exchanging positions between those who ascend and those who descend.</p>
               <p><span class="side">Reversed</span>It can seem as though the wheel is spinning in place, giving the illusion of movement without progress.</p>
             </li>
             <li>
               <a href="cards/justice/index.html"><img class="arcana-thumb" src="/data/justice/circle.jpg" alt="" width="72" height="72"></a>
-              <h3><a href="cards/justice/index.html">Justice<span class="latin">(正義)</span></a></h3>
+              <h3><a href="cards/justice/index.html">Justice</a></h3>
               <p><span class="side">Upright</span>Justice is the meeting point of decision and discernment, guided by both the sword and the scales.</p>
               <p><span class="side">Reversed</span>Reversed, Justice warns of imbalance or self-justification.</p>
             </li>
             <li>
               <a href="cards/the-hanged-man/index.html"><img class="arcana-thumb" src="/data/the-hanged-man/circle.jpg" alt="" width="72" height="72"></a>
-              <h3><a href="cards/the-hanged-man/index.html">The Hanged Man<span class="latin">(吊るされた男)</span></a></h3>
+              <h3><a href="cards/the-hanged-man/index.html">The Hanged Man</a></h3>
               <p><span class="side">Upright</span>A man hangs upside-down, one foot bound and his arms open, embodying stillness amidst discomfort.</p>
               <p><span class="side">Reversed</span>Hanging upside down has lost its purpose, turning from a search for insight into a habit of delay.</p>
             </li>
             <li>
               <a href="cards/death/index.html"><img class="arcana-thumb" src="/data/death/circle.jpg" alt="" width="72" height="72"></a>
-              <h3><a href="cards/death/index.html">Death<span class="latin">(死神)</span></a></h3>
+              <h3><a href="cards/death/index.html">Death</a></h3>
               <p><span class="side">Upright</span>Death arrives as the silent harbinger of completion.</p>
               <p><span class="side">Reversed</span>Despite the approach of an ending, effort is spent maintaining the familiar shape.</p>
             </li>
             <li>
               <a href="cards/temperance/index.html"><img class="arcana-thumb" src="/data/temperance/circle.jpg" alt="" width="72" height="72"></a>
-              <h3><a href="cards/temperance/index.html">Temperance<span class="latin">(節制)</span></a></h3>
+              <h3><a href="cards/temperance/index.html">Temperance</a></h3>
               <p><span class="side">Upright</span>Temperance invites you to blend opposing elements with care, like water flowing gently between two cups.</p>
               <p><span class="side">Reversed</span>Temperance reversed shows water spilling outside the cups, signaling imbalance or a failed attempt to combine.</p>
             </li>
             <li>
               <a href="cards/the-devil/index.html"><img class="arcana-thumb" src="/data/the-devil/circle.jpg" alt="" width="72" height="72"></a>
-              <h3><a href="cards/the-devil/index.html">The Devil<span class="latin">(悪魔)</span></a></h3>
+              <h3><a href="cards/the-devil/index.html">The Devil</a></h3>
               <p><span class="side">Upright</span>Two figures stand chained, the links thick and heavy at first glance, yet the collars around their necks are loose enough to remove.</p>
               <p><span class="side">Reversed</span>The chains, once hidden, come into view.</p>
             </li>
             <li>
               <a href="cards/the-tower/index.html"><img class="arcana-thumb" src="/data/the-tower/circle.jpg" alt="" width="72" height="72"></a>
-              <h3><a href="cards/the-tower/index.html">The Tower<span class="latin">(塔)</span></a></h3>
+              <h3><a href="cards/the-tower/index.html">The Tower</a></h3>
               <p><span class="side">Upright</span>A tall structure, once steadfast, is struck by sudden force, exposing its vulnerabilities.</p>
               <p><span class="side">Reversed</span>After the lightning, there is a temptation to rebuild the tower exactly as it was, restoring every stone to its previous, precarious height.</p>
             </li>
             <li>
               <a href="cards/the-star/index.html"><img class="arcana-thumb" src="/data/the-star/circle.jpg" alt="" width="72" height="72"></a>
-              <h3><a href="cards/the-star/index.html">The Star<span class="latin">(星)</span></a></h3>
+              <h3><a href="cards/the-star/index.html">The Star</a></h3>
               <p><span class="side">Upright</span>By calm waters, a figure kneels and pours water from two jars—one into the earth, one into the stream.</p>
               <p><span class="side">Reversed</span>The jars tilt, and water spills into just one spot, stagnating rather than flowing.</p>
             </li>
             <li>
               <a href="cards/the-moon/index.html"><img class="arcana-thumb" src="/data/the-moon/circle.jpg" alt="" width="72" height="72"></a>
-              <h3><a href="cards/the-moon/index.html">The Moon<span class="latin">(月)</span></a></h3>
+              <h3><a href="cards/the-moon/index.html">The Moon</a></h3>
               <p><span class="side">Upright</span>Under the uncertain glow of the moon, only part of the path is visible between two silent towers.</p>
               <p><span class="side">Reversed</span>The path disappears beneath fog, or else every shadow feels threatening, shaped by anxious imagination.</p>
             </li>
             <li>
               <a href="cards/the-sun/index.html"><img class="arcana-thumb" src="/data/the-sun/circle.jpg" alt="" width="72" height="72"></a>
-              <h3><a href="cards/the-sun/index.html">The Sun<span class="latin">(太陽)</span></a></h3>
+              <h3><a href="cards/the-sun/index.html">The Sun</a></h3>
               <p><span class="side">Upright</span>The Sun signals a time when light gently illuminates what was hidden, allowing things to be seen without shame or confusion.</p>
               <p><span class="side">Reversed</span>The reversed Sun warns of too much brightness, where even the shadows are forced into view and nothing can rest.</p>
             </li>
             <li>
               <a href="cards/judgement/index.html"><img class="arcana-thumb" src="/data/judgement/circle.jpg" alt="" width="72" height="72"></a>
-              <h3><a href="cards/judgement/index.html">Judgement<span class="latin">(審判)</span></a></h3>
+              <h3><a href="cards/judgement/index.html">Judgement</a></h3>
               <p><span class="side">Upright</span>A clear call echoes, stirring figures from their long rest.</p>
               <p><span class="side">Reversed</span>The trumpet sounds, but you press down the lid from inside your own enclosure.</p>
             </li>
             <li>
               <a href="cards/the-world/index.html"><img class="arcana-thumb" src="/data/the-world/circle.jpg" alt="" width="72" height="72"></a>
-              <h3><a href="cards/the-world/index.html">The World<span class="latin">(世界)</span></a></h3>
+              <h3><a href="cards/the-world/index.html">The World</a></h3>
               <p><span class="side">Upright</span>A figure dances gracefully within a ring, watched over from all corners.</p>
               <p><span class="side">Reversed</span>The dance pauses just before the ring is closed.</p>
             </li>
@@ -254,16 +276,10 @@
         </section>
       </div>
       <p class="error" id="error" hidden></p>
-      <section class="film">
-        <h2>The Fool's Journey</h2>
-        <div class="film-frame">
-          <iframe src="https://www.youtube.com/embed/ngl1nN2qzkI?si=DT7xBR5A0CPZu1J3" title="The Fool's Journey — Arcana 0 to XXI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-      </section>
     </main>
     <footer class="colophon">
       <p>© 2026 Engawa Inc.</p>
-      <p><a href="contact/">Contact</a> <a href="https://github.com/okuyamashin/colorsforthefool">GitHub</a></p>
+      <p><a href="contact/">Contact</a> <a href="/privacy/">Privacy policy</a> <a href="https://github.com/okuyamashin/colorsforthefool">GitHub</a></p>
     </footer>
     <script src="../meanings.en.js"></script>
     <script src="../app.js"></script>
