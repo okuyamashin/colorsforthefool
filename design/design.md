@@ -1,6 +1,6 @@
 # デザイン
 
-THE DEVIL（XV）で試したスタイルの一覧。画像のファイル名がスタイルIDで、小文字・数字・ハイフンだけにしてある。
+THE DEVIL（XV）で試したスタイルの一覧。フォルダ名がスタイルIDで、見本は the-devil.png。
 
 各プロンプトは、そのスタイルでカードを1枚出すときにそのまま使える。`Scene for XV, THE DEVIL:` より前が様式、それ以降が見本の情景。ほかのカードでは情景の段落だけを差し替え、番号と英語タイトルをそのカードのものに変える。
 
@@ -49,7 +49,7 @@ THE DEVIL（XV）で試したスタイルの一覧。画像のファイル名が
 
 現代ファッション誌風。
 
-![editorial-luxury](editorial-luxury.png)
+![editorial-luxury](editorial-luxury/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title on a banner at the bottom center. No extra words, no watermark, no signature.
@@ -65,7 +65,7 @@ Scene for XV, THE DEVIL: A horned woman in black velvet and a gold corset sits o
 
 幾何学ミニマル。
 
-![minimal-geometric](minimal-geometric.png)
+![minimal-geometric](minimal-geometric/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title on a banner at the bottom center. No extra words, no watermark, no signature.
@@ -81,7 +81,7 @@ Scene for XV, THE DEVIL: A black horned torso, an inverted red triangle, and gol
 
 現代アール・デコ。
 
-![neo-deco](neo-deco.png)
+![neo-deco](neo-deco/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title on a banner at the bottom center. No extra words, no watermark, no signature.
@@ -97,7 +97,7 @@ Scene for XV, THE DEVIL: A ram-horned man in red velvet and gold sits on a stepp
 
 サイバー神秘主義。
 
-![cyber-mysticism](cyber-mysticism.png)
+![cyber-mysticism](cyber-mysticism/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title on a banner at the bottom center. No extra words, no watermark, no signature.
@@ -113,7 +113,7 @@ Scene for XV, THE DEVIL: A pale horned figure sits on a throne, the body wrapped
 
 ブルータリズム系グラフィック。
 
-![brutalist-graphic](brutalist-graphic.png)
+![brutalist-graphic](brutalist-graphic/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center. The English title is oversized poster type across the bottom, part of the picture, not a small caption. No extra words, no watermark, no signature.
@@ -129,7 +129,7 @@ Scene for XV, THE DEVIL: Huge block letters spell THE DEVIL, with DEVIL in red. 
 
 現代シュルレアリスム写真。
 
-![surreal-photography](surreal-photography.png)
+![surreal-photography](surreal-photography/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title on a banner at the bottom center. No extra words, no watermark, no signature.
@@ -145,7 +145,7 @@ Scene for XV, THE DEVIL: A horned man in black and crimson velvet sits on a ston
 
 ガラス・クローム彫刻。
 
-![glass-and-chrome](glass-and-chrome.png)
+![glass-and-chrome](glass-and-chrome/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title on a banner at the bottom center. No extra words, no watermark, no signature.
@@ -161,7 +161,7 @@ Scene for XV, THE DEVIL: Three black-chrome sculptures stand in a smoked-glass g
 
 日本の現代ポスター。
 
-![japanese-contemporary-poster](japanese-contemporary-poster.png)
+![japanese-contemporary-poster](japanese-contemporary-poster/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title on a banner at the bottom center. No extra words, no watermark, no signature.
@@ -177,7 +177,7 @@ Scene for XV, THE DEVIL: A horned profile in black sits against a red sun. A few
 
 現代象徴主義。
 
-![neo-symbolism](neo-symbolism.png)
+![neo-symbolism](neo-symbolism/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title on a banner at the bottom center. No extra words, no watermark, no signature.
@@ -193,7 +193,7 @@ Scene for XV, THE DEVIL: A winged, horned figure sits above two kneeling figures
 
 デジタル・オラクル風。
 
-![luxury-ui](luxury-ui.png)
+![luxury-ui](luxury-ui/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title on a banner at the bottom center. No extra words, no watermark, no signature.
@@ -211,7 +211,7 @@ Scene for XV, THE DEVIL: A horned face emerges from black glass, a red disc behi
 
 インドネシアの影絵。
 
-![wayang-kulit](wayang-kulit.png)
+![wayang-kulit](wayang-kulit/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title on a banner at the bottom center. No extra words, no watermark, no signature.
@@ -225,7 +225,7 @@ Scene for XV, THE DEVIL: A tall horned puppet stands holding control rods and ch
 
 ギリシャ彫刻。
 
-![greek-sculpture](greek-sculpture.png)
+![greek-sculpture](greek-sculpture/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title on a banner at the bottom center. No extra words, no watermark, no signature.
@@ -239,7 +239,7 @@ Scene for XV, THE DEVIL: A seated, bearded, winged, horned figure carved in marb
 
 キュビスム。
 
-![cubism](cubism.png)
+![cubism](cubism/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title on a banner at the bottom center. No extra words, no watermark, no signature.
@@ -253,7 +253,7 @@ Scene for XV, THE DEVIL: A frontal horned face is split into opposing color plan
 
 プラモデルで作ったジオラマ。
 
-![plastic-model-diorama](plastic-model-diorama.png)
+![plastic-model-diorama](plastic-model-diorama/the-devil.png)
 
 ```
 Vertical photograph of a physical scale diorama, not a flat illustrated card. Shallow depth of field. The model sits on a modeler's desk, with a cutting mat, brushes, and paint bottles in the foreground and workshop shelves behind. Built from plastic model kits, gears, rod, and paint, with glue seams and a wooden base. The numeral and the English title are printed on a metal nameplate on that base. No extra words, no watermark, no signature.
@@ -265,7 +265,7 @@ Scene for XV, THE DEVIL: A seated gear-and-armor devil with glowing red eyes, la
 
 フランス人形。
 
-![french-doll](french-doll.png)
+![french-doll](french-doll/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title on a banner at the bottom center. No extra words, no watermark, no signature.
@@ -279,7 +279,7 @@ Scene for XV, THE DEVIL: A large horned doll in a black and burgundy gown sits o
 
 ボタニカルアート。
 
-![botanical-art](botanical-art.png)
+![botanical-art](botanical-art/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title on a banner at the bottom center. No extra words, no watermark, no signature.
@@ -293,7 +293,7 @@ Scene for XV, THE DEVIL: A black goat head with a gold star on the brow is cente
 
 歯車とエンジンと鉄でできたロボティクス。
 
-![gear-engine-robotics](gear-engine-robotics.png)
+![gear-engine-robotics](gear-engine-robotics/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title on a banner at the bottom center. No extra words, no watermark, no signature.
@@ -307,7 +307,7 @@ Scene for XV, THE DEVIL: A seated robot with a horned gear skull, a glowing core
 
 ロールシャッハテスト。
 
-![rorschach](rorschach.png)
+![rorschach](rorschach/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title at the bottom center, small and quiet. No extra words, no watermark, no signature.
@@ -321,7 +321,7 @@ Scene for XV, THE DEVIL: Horns, wings, and a body appear only as one mirrored bl
 
 定規とコンパスとペンだけで描いた作図。
 
-![ruler-compass-pen](ruler-compass-pen.png)
+![ruler-compass-pen](ruler-compass-pen/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title on a banner at the bottom center. No extra words, no watermark, no signature.
@@ -335,7 +335,7 @@ Scene for XV, THE DEVIL: A horned winged figure and two kneeling figures are red
 
 現代のスーツとドレス。
 
-![suit-and-dress](suit-and-dress.png)
+![suit-and-dress](suit-and-dress/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title on a banner at the bottom center. No extra words, no watermark, no signature.
@@ -349,7 +349,7 @@ Scene for XV, THE DEVIL: A man in a black three-piece suit sits on a throne, wit
 
 運慶・快慶が作った木の仏像。
 
-![unkei-kaikei](unkei-kaikei.png)
+![unkei-kaikei](unkei-kaikei/the-devil.png)
 
 ```
 Vertical photograph of a temple sculpture, presented as a tarot card. The numeral is carved at the top center and the English title is carved on the wooden base. No extra words, no watermark, no signature.
@@ -363,7 +363,7 @@ Scene for XV, THE DEVIL: A furious horned deity sits holding iron chains. Two ca
 
 ステンドグラス。
 
-![stained-glass](stained-glass.png)
+![stained-glass](stained-glass/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title on a banner at the bottom center. No extra words, no watermark, no signature.
@@ -377,7 +377,7 @@ Scene for XV, THE DEVIL: A red horned figure with bat wings sits on a throne, on
 
 タイルのモザイク。
 
-![tile-mosaic](tile-mosaic.png)
+![tile-mosaic](tile-mosaic/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title on a banner at the bottom center. No extra words, no watermark, no signature.
@@ -391,7 +391,7 @@ Scene for XV, THE DEVIL: A goat-headed, bat-winged figure squats on a pedestal, 
 
 チェスのような駒。
 
-![chess-pieces](chess-pieces.png)
+![chess-pieces](chess-pieces/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title on a banner at the bottom center. No extra words, no watermark, no signature.
@@ -405,7 +405,7 @@ Scene for XV, THE DEVIL: A tall black king has a horned, winged devil head, a cr
 
 アール・ヌーヴォー。
 
-![art-nouveau](art-nouveau.png)
+![art-nouveau](art-nouveau/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title on a banner at the bottom center. No extra words, no watermark, no signature.
@@ -419,7 +419,7 @@ Scene for XV, THE DEVIL: A horned figure with long curling hair sits on a throne
 
 古い古典的なタロット。
 
-![classic-tarot](classic-tarot.png)
+![classic-tarot](classic-tarot/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title at the bottom center. No extra words, no watermark, no signature.
@@ -433,7 +433,7 @@ Scene for XV, THE DEVIL: A horned, bat-winged figure with a long tongue sits on 
 
 古代エジプト。
 
-![ancient-egypt](ancient-egypt.png)
+![ancient-egypt](ancient-egypt/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title on a banner at the bottom center. No extra words, no watermark, no signature.
@@ -449,7 +449,7 @@ Scene for XV, THE DEVIL: A goat-headed pharaoh sits on a throne, an ankh in one 
 
 エングレービング。
 
-![engraving](engraving.png)
+![engraving](engraving/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title on a banner at the bottom center. No extra words, no watermark, no signature.
@@ -463,7 +463,7 @@ Scene for XV, THE DEVIL: A goat-headed, bat-winged figure with a pentagram on th
 
 メゾチント。
 
-![mezzotint](mezzotint.png)
+![mezzotint](mezzotint/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title on a dark band at the bottom center. No extra words, no watermark, no signature.
@@ -477,7 +477,7 @@ Scene for XV, THE DEVIL: A horned, bearded, bat-winged figure sits on a stone bl
 
 色鉛筆。
 
-![colored-pencil](colored-pencil.png)
+![colored-pencil](colored-pencil/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title on a banner at the bottom center. No extra words, no watermark, no signature.
@@ -491,7 +491,7 @@ Scene for XV, THE DEVIL: A red horned figure with a beard sits on a stone throne
 
 水彩画。
 
-![watercolor](watercolor.png)
+![watercolor](watercolor/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title on a banner at the bottom center. No extra words, no watermark, no signature.
@@ -505,7 +505,7 @@ Scene for XV, THE DEVIL: A horned, bearded figure sits with a flame in one raise
 
 水墨画。
 
-![sumi-e](sumi-e.png)
+![sumi-e](sumi-e/the-devil.png)
 
 ```
 Vertical tarot card. Place the numeral at the top center and the English title at the bottom center. No extra words, no watermark, no signature.
