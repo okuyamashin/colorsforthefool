@@ -1,6 +1,14 @@
+body:has(main.catalog) .top {
+  width: min(92vw, 56rem);
+}
+
 header .lang a {
   color: var(--gold);
   text-decoration: none;
+}
+
+main.catalog {
+  width: min(92vw, 56rem);
 }
 
 .catalog h1 {
@@ -16,6 +24,28 @@ header .lang a {
   color: var(--muted);
   text-align: center;
   letter-spacing: 0.06em;
+}
+
+.catalog .use {
+  margin: -0.55rem 0 1.5rem;
+  text-align: center;
+}
+
+.catalog .use button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--gold);
+  font: inherit;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+}
+
+.catalog .use button:hover { color: #5c4318; }
+
+.catalog .use button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
 }
 
 .catalog .index {
@@ -60,7 +90,7 @@ header .lang a {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 1.8rem 1.2rem;
-  width: min(92vw, 56rem);
+  width: 100%;
   margin: 0 auto 1rem;
 }
 

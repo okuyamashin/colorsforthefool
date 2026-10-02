@@ -316,6 +316,25 @@ html.has-reading .guide {
 
 .guide .today { margin: 1.6rem 0 0.2rem; }
 
+.guide .designs {
+  margin: 1.45rem 0 0.15rem;
+  text-align: center;
+  letter-spacing: 0.08em;
+}
+
+.guide .designs a,
+.guide .designs a:link,
+.guide .designs a:visited,
+.guide .designs a:hover,
+.guide .designs a:active {
+  color: #7a5c2e;
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 0.18em;
+}
+
+.guide .designs a:hover { color: #5c4318; }
+
 .arcana {
   margin: 0.3rem 0 0;
   padding: 0;
