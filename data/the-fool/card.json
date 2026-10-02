@@ -2,6 +2,7 @@
   "id": "the-fool",
   "name": "THE FOOL",
   "nameJa": "愚者",
+  "nameZh": "愚者",
   "numeral": "0",
   "video": "face.mp4",
   "upright": [
@@ -9,80 +10,100 @@
       "name": "White",
       "hex": "#FFFFFF",
       "nameJa": "ホワイト",
+      "nameZh": "白色",
       "text": "white.txt",
       "textEn": "white.en.txt",
+      "textZh": "white.zh.txt",
       "image": "white.jpg"
     },
     {
       "name": "Snow",
       "hex": "#FFFAFA",
       "nameJa": "スノー",
+      "nameZh": "雪白",
       "text": "snow.txt",
       "image": "snow.jpg",
-      "textEn": "snow.en.txt"
+      "textEn": "snow.en.txt",
+      "textZh": "snow.zh.txt"
     },
     {
       "name": "MintCream",
       "hex": "#F5FFFA",
       "nameJa": "ミントクリーム",
+      "nameZh": "薄荷奶油",
       "text": "mintcream.txt",
       "image": "mintcream.jpg",
-      "textEn": "mintcream.en.txt"
+      "textEn": "mintcream.en.txt",
+      "textZh": "mintcream.zh.txt"
     },
     {
       "name": "HoneyDew",
       "hex": "#F0FFF0",
       "nameJa": "ハニーデュー",
+      "nameZh": "蜜露",
       "text": "honeydew.txt",
       "image": "honeydew.jpg",
-      "textEn": "honeydew.en.txt"
+      "textEn": "honeydew.en.txt",
+      "textZh": "honeydew.zh.txt"
     },
     {
       "name": "SpringGreen",
       "hex": "#00FF7F",
       "nameJa": "スプリンググリーン",
+      "nameZh": "春綠",
       "text": "springgreen.txt",
       "textEn": "springgreen.en.txt",
+      "textZh": "springgreen.zh.txt",
       "image": "springgreen.jpg"
     },
     {
       "name": "Azure",
       "hex": "#F0FFFF",
       "nameJa": "アジュール",
+      "nameZh": "蔚藍",
       "text": "azure.txt",
       "textEn": "azure.en.txt",
+      "textZh": "azure.zh.txt",
       "image": "azure.jpg"
     },
     {
       "name": "SkyBlue",
       "hex": "#87CEEB",
       "nameJa": "スカイブルー",
+      "nameZh": "天藍",
       "text": "skyblue.txt",
       "textEn": "skyblue.en.txt",
+      "textZh": "skyblue.zh.txt",
       "image": "skyblue.jpg"
     },
     {
       "name": "LawnGreen",
       "hex": "#7CFC00",
       "nameJa": "ローングリーン",
+      "nameZh": "草坪綠",
       "text": "lawngreen.txt",
       "textEn": "lawngreen.en.txt",
+      "textZh": "lawngreen.zh.txt",
       "image": "lawngreen.jpg"
     },
     {
       "name": "Cornsilk",
       "hex": "#FFF8DC",
       "nameJa": "コーンシルク",
+      "nameZh": "玉米絲色",
       "text": "cornsilk.txt",
       "textEn": "cornsilk.en.txt",
+      "textZh": "cornsilk.zh.txt",
       "image": "cornsilk.jpg"
     },
     {
       "name": "LemonChiffon",
       "hex": "#FFFACD",
       "nameJa": "レモンシフォン",
+      "nameZh": "檸檬綢",
       "text": "lemonchiffon.txt",
       "textEn": "lemonchiffon.en.txt",
+      "textZh": "lemonchiffon.zh.txt",
       "image": "lemonchiffon.jpg"
     }
   ],
@@ -91,80 +112,100 @@
       "name": "GhostWhite",
       "hex": "#F8F8FF",
       "nameJa": "ゴーストホワイト",
+      "nameZh": "幽靈白",
       "text": "ghostwhite.txt",
       "image": "ghostwhite.jpg",
-      "textEn": "ghostwhite.en.txt"
+      "textEn": "ghostwhite.en.txt",
+      "textZh": "ghostwhite.zh.txt"
     },
     {
       "name": "WhiteSmoke",
       "hex": "#F5F5F5",
       "nameJa": "ホワイトスモーク",
+      "nameZh": "白煙色",
       "text": "whitesmoke.txt",
       "image": "whitesmoke.jpg",
-      "textEn": "whitesmoke.en.txt"
+      "textEn": "whitesmoke.en.txt",
+      "textZh": "whitesmoke.zh.txt"
     },
     {
       "name": "MistyRose",
       "hex": "#FFE4E1",
       "nameJa": "ミスティローズ",
+      "nameZh": "霧玫瑰",
       "text": "mistyrose.txt",
       "image": "mistyrose.jpg",
-      "textEn": "mistyrose.en.txt"
+      "textEn": "mistyrose.en.txt",
+      "textZh": "mistyrose.zh.txt"
     },
     {
       "name": "SlateGray",
       "hex": "#708090",
       "nameJa": "スレートグレイ",
+      "nameZh": "石板灰",
       "text": "slategray.txt",
       "textEn": "slategray.en.txt",
+      "textZh": "slategray.zh.txt",
       "image": "slategray.jpg"
     },
     {
       "name": "DimGray",
       "hex": "#696969",
       "nameJa": "ディムグレイ",
+      "nameZh": "暗灰",
       "text": "dimgray.txt",
       "textEn": "dimgray.en.txt",
+      "textZh": "dimgray.zh.txt",
       "image": "dimgray.jpg"
     },
     {
       "name": "Black",
       "hex": "#000000",
       "nameJa": "ブラック",
+      "nameZh": "黑色",
       "text": "black.txt",
       "textEn": "black.en.txt",
+      "textZh": "black.zh.txt",
       "image": "black.jpg"
     },
     {
       "name": "Maroon",
       "hex": "#800000",
       "nameJa": "マルーン",
+      "nameZh": "栗色",
       "text": "maroon.txt",
       "textEn": "maroon.en.txt",
+      "textZh": "maroon.zh.txt",
       "image": "maroon.jpg"
     },
     {
       "name": "FireBrick",
       "hex": "#B22222",
       "nameJa": "ファイアブリック",
+      "nameZh": "磚紅",
       "text": "firebrick.txt",
       "textEn": "firebrick.en.txt",
+      "textZh": "firebrick.zh.txt",
       "image": "firebrick.jpg"
     },
     {
       "name": "Crimson",
       "hex": "#DC143C",
       "nameJa": "クリムゾン",
+      "nameZh": "緋紅",
       "text": "crimson.txt",
       "textEn": "crimson.en.txt",
+      "textZh": "crimson.zh.txt",
       "image": "crimson.jpg"
     },
     {
       "name": "Tomato",
       "hex": "#FF6347",
       "nameJa": "トマト",
+      "nameZh": "番茄色",
       "text": "tomato.txt",
       "textEn": "tomato.en.txt",
+      "textZh": "tomato.zh.txt",
       "image": "tomato.jpg"
     }
   ]

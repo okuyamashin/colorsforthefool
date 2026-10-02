@@ -15,9 +15,12 @@
     <title>Today's lucky color, drawn from the tarot — Colors for the Fool</title>
     <meta name="description" content="Draw one card from the twenty-two major arcana. Read what it stands for, upright or reversed, then open today's lucky color at the end of the story.">
     <link rel="canonical" href="https://colorsofthefool.engawa5656.com/en/">
+    <!-- hreflang -->
     <link rel="alternate" hreflang="ja" href="https://colorsofthefool.engawa5656.com/">
     <link rel="alternate" hreflang="en" href="https://colorsofthefool.engawa5656.com/en/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://colorsofthefool.engawa5656.com/zh/">
     <link rel="alternate" hreflang="x-default" href="https://colorsofthefool.engawa5656.com/">
+    <!-- /hreflang -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Colors for the Fool">
@@ -53,7 +56,15 @@
   <body>
     <header class="top">
       <p class="brand">Colors for the Fool</p>
-      <a class="lang" href="../">日本語</a>
+      <nav class="mast" aria-label="Languages">
+        <div class="lang-menu">
+          <button type="button" class="lang" aria-expanded="false" aria-haspopup="true" aria-controls="lang-list">English<span class="lang-mark" aria-hidden="true"></span></button>
+          <ul class="lang-list" id="lang-list" hidden>
+            <li><a href="../">日本語</a></li>
+            <li><a href="../zh/">中文</a></li>
+          </ul>
+        </div>
+      </nav>
       <h1 class="tagline">Today's lucky color, drawn from the tarot</h1>
     </header>
     <main>
@@ -282,6 +293,7 @@
       <p><a href="contact/">Contact</a> <a href="/privacy/">Privacy policy</a> <a href="https://github.com/okuyamashin/colorsforthefool">GitHub</a></p>
     </footer>
     <script src="../meanings.en.js"></script>
+    <script src="../languages.js"></script>
     <script src="../app.js"></script>
   </body>
 </html>

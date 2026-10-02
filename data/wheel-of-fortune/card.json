@@ -2,86 +2,107 @@
   "id": "wheel-of-fortune",
   "name": "WHEEL OF FORTUNE",
   "nameJa": "運命の輪",
+  "nameZh": "命運之輪",
   "numeral": "X",
   "upright": [
     {
       "name": "Gold",
       "hex": "#FFD700",
       "nameJa": "ゴールド",
+      "nameZh": "金色",
       "text": "gold.txt",
       "textEn": "gold.en.txt",
+      "textZh": "gold.zh.txt",
       "image": "gold.jpg"
     },
     {
       "name": "GoldenRod",
       "hex": "#DAA520",
       "nameJa": "ゴールデンロッド",
+      "nameZh": "金桿色",
       "text": "goldenrod.txt",
       "image": "goldenrod.jpg",
-      "textEn": "goldenrod.en.txt"
+      "textEn": "goldenrod.en.txt",
+      "textZh": "goldenrod.zh.txt"
     },
     {
       "name": "Wheat",
       "hex": "#F5DEB3",
       "nameJa": "ウィート",
+      "nameZh": "小麥色",
       "text": "wheat.txt",
       "image": "wheat.jpg",
-      "textEn": "wheat.en.txt"
+      "textEn": "wheat.en.txt",
+      "textZh": "wheat.zh.txt"
     },
     {
       "name": "Cornsilk",
       "hex": "#FFF8DC",
       "nameJa": "コーンシルク",
+      "nameZh": "玉米絲色",
       "text": "cornsilk.txt",
       "image": "cornsilk.jpg",
-      "textEn": "cornsilk.en.txt"
+      "textEn": "cornsilk.en.txt",
+      "textZh": "cornsilk.zh.txt"
     },
     {
       "name": "SkyBlue",
       "hex": "#87CEEB",
       "nameJa": "スカイブルー",
+      "nameZh": "天藍",
       "text": "skyblue.txt",
       "textEn": "skyblue.en.txt",
+      "textZh": "skyblue.zh.txt",
       "image": "skyblue.jpg"
     },
     {
       "name": "DeepSkyBlue",
       "hex": "#00BFFF",
       "nameJa": "ディープスカイブルー",
+      "nameZh": "深天藍",
       "text": "deepskyblue.txt",
       "textEn": "deepskyblue.en.txt",
+      "textZh": "deepskyblue.zh.txt",
       "image": "deepskyblue.jpg"
     },
     {
       "name": "SpringGreen",
       "hex": "#00FF7F",
       "nameJa": "スプリンググリーン",
+      "nameZh": "春綠",
       "text": "springgreen.txt",
       "textEn": "springgreen.en.txt",
+      "textZh": "springgreen.zh.txt",
       "image": "springgreen.jpg"
     },
     {
       "name": "Yellow",
       "hex": "#FFFF00",
       "nameJa": "イエロー",
+      "nameZh": "黃色",
       "text": "yellow.txt",
       "textEn": "yellow.en.txt",
+      "textZh": "yellow.zh.txt",
       "image": "yellow.jpg"
     },
     {
       "name": "Orange",
       "hex": "#FFA500",
       "nameJa": "オレンジ",
+      "nameZh": "橙色",
       "text": "orange.txt",
       "textEn": "orange.en.txt",
+      "textZh": "orange.zh.txt",
       "image": "orange.jpg"
     },
     {
       "name": "Azure",
       "hex": "#F0FFFF",
       "nameJa": "アジュール",
+      "nameZh": "蔚藍",
       "text": "azure.txt",
       "textEn": "azure.en.txt",
+      "textZh": "azure.zh.txt",
       "image": "azure.jpg"
     }
   ],
@@ -90,80 +111,100 @@
       "name": "OliveDrab",
       "hex": "#6B8E23",
       "nameJa": "オリーブドラブ",
+      "nameZh": "橄欖褐",
       "text": "olivedrab.txt",
       "image": "olivedrab.jpg",
-      "textEn": "olivedrab.en.txt"
+      "textEn": "olivedrab.en.txt",
+      "textZh": "olivedrab.zh.txt"
     },
     {
       "name": "Khaki",
       "hex": "#F0E68C",
       "nameJa": "カーキ",
+      "nameZh": "卡其",
       "text": "khaki.txt",
       "image": "khaki.jpg",
-      "textEn": "khaki.en.txt"
+      "textEn": "khaki.en.txt",
+      "textZh": "khaki.zh.txt"
     },
     {
       "name": "Sienna",
       "hex": "#A0522D",
       "nameJa": "シエナ",
+      "nameZh": "赭色",
       "text": "sienna.txt",
       "image": "sienna.jpg",
-      "textEn": "sienna.en.txt"
+      "textEn": "sienna.en.txt",
+      "textZh": "sienna.zh.txt"
     },
     {
       "name": "DarkOliveGreen",
       "hex": "#556B2F",
       "nameJa": "ダークオリーブグリーン",
+      "nameZh": "暗橄欖綠",
       "text": "darkolivegreen.txt",
       "textEn": "darkolivegreen.en.txt",
+      "textZh": "darkolivegreen.zh.txt",
       "image": "darkolivegreen.jpg"
     },
     {
       "name": "Gray",
       "hex": "#808080",
       "nameJa": "グレイ",
+      "nameZh": "灰色",
       "text": "gray.txt",
       "textEn": "gray.en.txt",
+      "textZh": "gray.zh.txt",
       "image": "gray.jpg"
     },
     {
       "name": "DimGray",
       "hex": "#696969",
       "nameJa": "ディムグレイ",
+      "nameZh": "暗灰",
       "text": "dimgray.txt",
       "textEn": "dimgray.en.txt",
+      "textZh": "dimgray.zh.txt",
       "image": "dimgray.jpg"
     },
     {
       "name": "SlateGray",
       "hex": "#708090",
       "nameJa": "スレートグレイ",
+      "nameZh": "石板灰",
       "text": "slategray.txt",
       "textEn": "slategray.en.txt",
+      "textZh": "slategray.zh.txt",
       "image": "slategray.jpg"
     },
     {
       "name": "Maroon",
       "hex": "#800000",
       "nameJa": "マルーン",
+      "nameZh": "栗色",
       "text": "maroon.txt",
       "textEn": "maroon.en.txt",
+      "textZh": "maroon.zh.txt",
       "image": "maroon.jpg"
     },
     {
       "name": "Brown",
       "hex": "#A52A2A",
       "nameJa": "ブラウン",
+      "nameZh": "棕色",
       "text": "brown.txt",
       "textEn": "brown.en.txt",
+      "textZh": "brown.zh.txt",
       "image": "brown.jpg"
     },
     {
       "name": "Black",
       "hex": "#000000",
       "nameJa": "ブラック",
+      "nameZh": "黑色",
       "text": "black.txt",
       "textEn": "black.en.txt",
+      "textZh": "black.zh.txt",
       "image": "black.jpg"
     }
   ]

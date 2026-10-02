@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-01",
+  "source": "https://api.frankfurter.dev/v2/providers/ecb",
+  "provider": "ECB",
+  "note": "欧州中央銀行の公示レート。東京の仲値ではない。",
+  "rates": [
+    {
+      "base": "USD",
+      "quote": "JPY",
+      "rate": 157.98
+    },
+    {
+      "base": "EUR",
+      "quote": "JPY",
+      "rate": 178.49
+    },
+    {
+      "base": "EUR",
+      "quote": "USD",
+      "rate": 1.1298
+    }
+  ]
+}

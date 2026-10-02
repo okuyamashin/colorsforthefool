@@ -1,0 +1,42 @@
+{
+  "fetchedAt": "2026-10-02T09:57+09:00",
+  "source": "https://news.web.nhk/n-data/conf/na/rss/cat0.xml",
+  "provider": "NHK",
+  "items": [
+    {
+      "publishedAt": "2026-10-02T09:15:29+09:00",
+      "title": "東京23区の9月の消費者物価指数 前年同月比2.7％上昇",
+      "link": "https://news.web.nhk/newsweb/na/nd-20261002de53786"
+    },
+    {
+      "publishedAt": "2026-10-02T09:25:00+09:00",
+      "title": "完全失業率 8月は2.5％ 前月より0.1ポイント悪化 総務省",
+      "link": "https://news.web.nhk/newsweb/na/nd-20261002de53785"
+    },
+    {
+      "publishedAt": "2026-10-02T08:23:14+09:00",
+      "title": "プーチン大統領 日ロは困難を乗り越えたあと互恵的関係に",
+      "link": "https://news.web.nhk/newsweb/na/nd-20261002de53774"
+    },
+    {
+      "publishedAt": "2026-10-01T22:05:49+09:00",
+      "title": "イスラエル行き旅客機 緊急着陸 副操縦士が機長を刺したか",
+      "link": "https://news.web.nhk/newsweb/na/nd-20261001de53581"
+    },
+    {
+      "publishedAt": "2026-10-02T02:30:40+09:00",
+      "title": "「副首都」要件案判明 人口全国の1.2％以上など 4市満たす",
+      "link": "https://news.web.nhk/newsweb/na/nd-20261002de53765"
+    },
+    {
+      "publishedAt": "2026-10-02T07:16:20+09:00",
+      "title": "台風27号 4日には小笠原近海へ進む見込み 今後の情報に注意",
+      "link": "https://news.web.nhk/newsweb/na/nd-20261002de53779"
+    },
+    {
+      "publishedAt": "2026-10-02T06:42:44+09:00",
+      "title": "イスラエル首相「副操縦士はイスラム過激思想に洗脳」主張",
+      "link": "https://news.web.nhk/newsweb/na/nd-20261002de53772"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-01",
+  "place": "東京",
+  "index": "日経平均",
+  "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EN225",
+  "note": "日次の足は空だったため、10月1日15時の時間足の終値を終値とした。指数の水準であり、約定価格の平均ではない。",
+  "open": 67106.52,
+  "high": 68995.30,
+  "low": 67081.66,
+  "close": 68986.97,
+  "previousDate": "2026-09-30",
+  "previousClose": 66753.72,
+  "change": 2233.25,
+  "changePercent": 3.35,
+  "direction": "あがった"
+}

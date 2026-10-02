@@ -2,87 +2,108 @@
   "id": "the-moon",
   "name": "THE MOON",
   "nameJa": "月",
+  "nameZh": "月亮",
   "numeral": "XVIII",
   "upright": [
     {
       "name": "Silver",
       "hex": "#C0C0C0",
       "nameJa": "シルバー",
+      "nameZh": "銀色",
       "text": "silver.txt",
       "textEn": "silver.en.txt",
+      "textZh": "silver.zh.txt",
       "image": "silver.jpg"
     },
     {
       "name": "Lavender",
       "hex": "#E6E6FA",
       "nameJa": "ラベンダー",
+      "nameZh": "薰衣草",
       "text": "lavender.txt",
       "image": "lavender.jpg",
-      "textEn": "lavender.en.txt"
+      "textEn": "lavender.en.txt",
+      "textZh": "lavender.zh.txt"
     },
     {
       "name": "MidnightBlue",
       "hex": "#191970",
       "nameJa": "ミッドナイトブルー",
+      "nameZh": "午夜藍",
       "text": "midnightblue.txt",
       "image": "midnightblue.jpg",
-      "textEn": "midnightblue.en.txt"
+      "textEn": "midnightblue.en.txt",
+      "textZh": "midnightblue.zh.txt"
     },
     {
       "name": "AliceBlue",
       "hex": "#F0F8FF",
       "nameJa": "アリスブルー",
+      "nameZh": "愛麗絲藍",
       "text": "aliceblue.txt",
       "textEn": "aliceblue.en.txt",
+      "textZh": "aliceblue.zh.txt",
       "image": "aliceblue.jpg"
     },
     {
       "name": "PaleTurquoise",
       "hex": "#AFEEEE",
       "nameJa": "ペールターコイズ",
+      "nameZh": "淡綠松石",
       "text": "paleturquoise.txt",
       "textEn": "paleturquoise.en.txt",
+      "textZh": "paleturquoise.zh.txt",
       "image": "paleturquoise.jpg"
     },
     {
       "name": "GhostWhite",
       "hex": "#F8F8FF",
       "nameJa": "ゴーストホワイト",
+      "nameZh": "幽靈白",
       "text": "ghostwhite.txt",
       "textEn": "ghostwhite.en.txt",
+      "textZh": "ghostwhite.zh.txt",
       "image": "ghostwhite.jpg"
     },
     {
       "name": "PowderBlue",
       "hex": "#B0E0E6",
       "nameJa": "パウダーブルー",
+      "nameZh": "粉藍",
       "text": "powderblue.txt",
       "textEn": "powderblue.en.txt",
+      "textZh": "powderblue.zh.txt",
       "image": "powderblue.jpg"
     },
     {
       "name": "SlateBlue",
       "hex": "#6A5ACD",
       "nameJa": "スレートブルー",
+      "nameZh": "石板藍",
       "text": "slateblue.txt",
       "textEn": "slateblue.en.txt",
+      "textZh": "slateblue.zh.txt",
       "image": "slateblue.jpg"
     },
     {
       "name": "Wheat",
       "hex": "#F5DEB3",
       "nameJa": "ウィート",
+      "nameZh": "小麥色",
       "text": "wheat.txt",
       "textEn": "wheat.en.txt",
+      "textZh": "wheat.zh.txt",
       "image": "wheat.jpg"
     },
     {
       "name": "Linen",
       "hex": "#FAF0E6",
       "nameJa": "リネン",
+      "nameZh": "亞麻色",
       "text": "linen.txt",
       "image": "linen.jpg",
-      "textEn": "linen.en.txt"
+      "textEn": "linen.en.txt",
+      "textZh": "linen.zh.txt"
     }
   ],
   "reversed": [
@@ -90,80 +111,100 @@
       "name": "MistyRose",
       "hex": "#FFE4E1",
       "nameJa": "ミスティローズ",
+      "nameZh": "霧玫瑰",
       "text": "mistyrose.txt",
       "image": "mistyrose.jpg",
-      "textEn": "mistyrose.en.txt"
+      "textEn": "mistyrose.en.txt",
+      "textZh": "mistyrose.zh.txt"
     },
     {
       "name": "WhiteSmoke",
       "hex": "#F5F5F5",
       "nameJa": "ホワイトスモーク",
+      "nameZh": "白煙色",
       "text": "whitesmoke.txt",
       "image": "whitesmoke.jpg",
-      "textEn": "whitesmoke.en.txt"
+      "textEn": "whitesmoke.en.txt",
+      "textZh": "whitesmoke.zh.txt"
     },
     {
       "name": "DimGray",
       "hex": "#696969",
       "nameJa": "ディムグレイ",
+      "nameZh": "暗灰",
       "text": "dimgray.txt",
       "image": "dimgray.jpg",
-      "textEn": "dimgray.en.txt"
+      "textEn": "dimgray.en.txt",
+      "textZh": "dimgray.zh.txt"
     },
     {
       "name": "SlateGray",
       "hex": "#708090",
       "nameJa": "スレートグレイ",
+      "nameZh": "石板灰",
       "text": "slategray.txt",
       "textEn": "slategray.en.txt",
+      "textZh": "slategray.zh.txt",
       "image": "slategray.jpg"
     },
     {
       "name": "DarkSlateGray",
       "hex": "#2F4F4F",
       "nameJa": "ダークスレートグレイ",
+      "nameZh": "暗石板灰",
       "text": "darkslategray.txt",
       "textEn": "darkslategray.en.txt",
+      "textZh": "darkslategray.zh.txt",
       "image": "darkslategray.jpg"
     },
     {
       "name": "LightSlateGray",
       "hex": "#778899",
       "nameJa": "ライトスレートグレイ",
+      "nameZh": "淺石板灰",
       "text": "lightslategray.txt",
       "textEn": "lightslategray.en.txt",
+      "textZh": "lightslategray.zh.txt",
       "image": "lightslategray.jpg"
     },
     {
       "name": "DarkSlateBlue",
       "hex": "#483D8B",
       "nameJa": "ダークスレートブルー",
+      "nameZh": "暗石板藍",
       "text": "darkslateblue.txt",
       "textEn": "darkslateblue.en.txt",
+      "textZh": "darkslateblue.zh.txt",
       "image": "darkslateblue.jpg"
     },
     {
       "name": "Indigo",
       "hex": "#4B0082",
       "nameJa": "インディゴ",
+      "nameZh": "靛藍",
       "text": "indigo.txt",
       "textEn": "indigo.en.txt",
+      "textZh": "indigo.zh.txt",
       "image": "indigo.jpg"
     },
     {
       "name": "Black",
       "hex": "#000000",
       "nameJa": "ブラック",
+      "nameZh": "黑色",
       "text": "black.txt",
       "textEn": "black.en.txt",
+      "textZh": "black.zh.txt",
       "image": "black.jpg"
     },
     {
       "name": "Thistle",
       "hex": "#D8BFD8",
       "nameJa": "シスル",
+      "nameZh": "薊色",
       "text": "thistle.txt",
       "textEn": "thistle.en.txt",
+      "textZh": "thistle.zh.txt",
       "image": "thistle.jpg"
     }
   ]

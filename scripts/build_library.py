@@ -12,7 +12,21 @@ DATA = ROOT / "data"
 PUBLIC = ROOT / "public"
 CARDS = PUBLIC / "cards"
 ORIGIN = "https://colorsofthefool.engawa5656.com"
-ORIENTATION = {"upright": "正位置", "reversed": "逆位置"}
+LANGUAGES = json.loads((DATA / "languages.json").read_text())
+REQUIRED = (
+    "id", "htmlLang", "hreflang", "prefix", "switchLabel", "cookie", "session",
+    "ogLocale", "data", "meanings", "cardName", "colorName", "textField", "textSuffix",
+    "punctuation", "lineLimit", "introLimit", "descriptionLimit", "titlePattern",
+    "revealPrefixes", "fonts", "shareText", "footer", "share", "copy", "pages",
+)
+for language in LANGUAGES:
+    missing = [key for key in REQUIRED if key not in language]
+    if missing:
+        raise SystemExit(f"language {language.get('id', '?')} missing {missing}")
+if sum(1 for language in LANGUAGES if language.get("default")) != 1:
+    raise SystemExit("languages.json needs exactly one default language")
+if sum(1 for language in LANGUAGES if language["prefix"] == "") != 1:
+    raise SystemExit("languages.json needs exactly one language at the site root")
 
 SHARE_ICON = """          <svg viewBox="0 0 24 24" aria-hidden="true">
             <circle cx="18" cy="5" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
@@ -37,23 +51,45 @@ GA = """    <!-- Google tag (gtag.js) -->
       gtag('config', 'G-NQ38VZSM7B');
     </script>"""
 
-HEAD_LINKS = """    <link rel="preconnect" href="https://fonts.googleapis.com">
+def head_links(lang):
+    return f"""    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">"""
+    <link href="https://fonts.googleapis.com/css2?{lang['fonts']}&display=swap" rel="stylesheet">"""
 
 
 def esc(value):
     return html.escape(str(value), quote=True)
 
 
-def first_sentence(text, limit=90, lang="ja"):
+def fill(template, **values):
+    text = str(template)
+    for key, value in values.items():
+        text = text.replace("{" + key + "}", str(value))
+    return text
+
+
+def nested(lang):
+    return bool(lang["prefix"])
+
+
+def card_root(lang):
+    return CARDS if not nested(lang) else PUBLIC / lang["prefix"] / "cards"
+
+
+def home_path(lang):
+    return PUBLIC / "index.html" if not nested(lang) else PUBLIC / lang["prefix"] / "index.html"
+
+
+def home_url(lang):
+    return f"{ORIGIN}/" if not nested(lang) else f"{ORIGIN}/{lang['prefix']}/"
+
+
+def first_sentence(text, limit, lang):
     text = re.sub(r"\s+", " ", text).strip()
-    mark = "。" if lang == "ja" else ". "
+    mark = lang["punctuation"]
     cut = text.find(mark)
     if cut != -1:
-        text = text[: cut + (1 if lang == "ja" else 1)]
-        if lang == "en":
-            text = text[: cut + 1]
+        text = text[: cut + 1]
     if len(text) > limit:
         text = text[: limit - 1] + "…"
     return text
@@ -66,10 +102,10 @@ def clip(text, limit=120):
     return text[: limit - 1] + "…"
 
 
-def load_meanings(lang="ja"):
+def load_meanings(lang):
     import subprocess
 
-    source = (PUBLIC / ("meanings.js" if lang == "ja" else "meanings.en.js")).read_text()
+    source = (PUBLIC / lang["meanings"]).read_text()
     result = subprocess.run(
         ["node", "-e", "let window={}; eval(require('fs').readFileSync(0,'utf8')); process.stdout.write(JSON.stringify(window.MEANINGS))"],
         input=source,
@@ -80,9 +116,9 @@ def load_meanings(lang="ja"):
     return json.loads(result.stdout)
 
 
-def paragraphs(text, lang="ja"):
+def paragraphs(text, lang):
     lines = text.replace("\r\n", "\n").split("\n")
-    title = r"[―—-]\s*(正位置|逆位置)\s*$" if lang == "ja" else r"[―—-]\s*(Upright|Reversed)\s*$"
+    title = lang["titlePattern"]
     if lines and re.search(title, lines[0] or ""):
         lines = lines[1:]
     blocks = []
@@ -100,7 +136,7 @@ def paragraphs(text, lang="ja"):
     close = []
     seen = False
     for block in blocks:
-        prefixes = ("今日のラッキーカラー", "Lucky Color:") if lang == "ja" else ("Today's lucky color", "Lucky Color:")
+        prefixes = tuple(lang["revealPrefixes"])
         reveal = any(line.startswith(prefixes) for line in block)
         if reveal or seen:
             seen = True
@@ -141,27 +177,46 @@ def story_html(body, close):
     return "\n".join(chunks)
 
 
-def color_line(close, body, lang="ja"):
-    prefixes = ("今日のラッキーカラー", "Lucky Color:") if lang == "ja" else ("Today's lucky color", "Lucky Color:")
+def color_line(close, body, lang):
+    prefixes = tuple(lang["revealPrefixes"])
     lines = [line for line in close if not line.startswith(prefixes)]
     source = " ".join(lines).strip()
     if not source and body:
         source = body[0][0]
-    sentence = first_sentence(source, 48 if lang == "ja" else 90, lang)
+    sentence = first_sentence(source, lang["lineLimit"], lang)
     if sentence in {"", "。", "."}:
         return ""
     return sentence
 
 
-def hreflang(ja_url, en_url):
-    return (
-        f'    <link rel="alternate" hreflang="ja" href="{esc(ja_url)}">\n'
-        f'    <link rel="alternate" hreflang="en" href="{esc(en_url)}">\n'
-        f'    <link rel="alternate" hreflang="x-default" href="{esc(ja_url)}">'
+def library_url(card_id, slug=""):
+    tail = f"cards/{card_id}/" + (f"{slug}/" if slug else "")
+    urls = {}
+    for lang in LANGUAGES:
+        prefix = f"{lang['prefix']}/" if nested(lang) else ""
+        urls[lang["id"]] = f"{ORIGIN}/{prefix}{tail}index.html"
+    return urls
+
+
+def hreflang(urls):
+    default = next(lang for lang in LANGUAGES if lang.get("default"))
+    lines = [
+        f'    <link rel="alternate" hreflang="{lang["hreflang"]}" href="{esc(urls[lang["id"]])}">'
+        for lang in LANGUAGES
+    ]
+    lines.append(f'    <link rel="alternate" hreflang="x-default" href="{esc(urls[default["id"]])}">')
+    return "\n".join(lines)
+
+
+def footer_links(lang):
+    links = " ".join(
+        f'<a href="{esc(item["href"])}">{esc(item["label"])}</a>' for item in lang["footer"]
     )
+    github = '<a href="https://github.com/okuyamashin/colorsforthefool">GitHub</a>'
+    return f"{links} {github}"
 
 
-def page(title, description, canonical, image, css, json_ld, body, icon, lang="ja", alternates=""):
+def page(title, description, canonical, image, css, json_ld, body, icon, lang, alternates=""):
     ld = ""
     if json_ld:
         ld = (
@@ -170,7 +225,7 @@ def page(title, description, canonical, image, css, json_ld, body, icon, lang="j
             + "\n    </script>\n"
         )
     return f"""<!DOCTYPE html>
-<html lang="{lang}">
+<html lang="{lang['htmlLang']}">
   <head>
 {GA}
     <meta charset="utf-8">
@@ -180,7 +235,7 @@ def page(title, description, canonical, image, css, json_ld, body, icon, lang="j
     <link rel="canonical" href="{esc(canonical)}">
 {alternates}
     <meta property="og:type" content="article">
-    <meta property="og:locale" content="{"ja_JP" if lang == "ja" else "en_US"}">
+    <meta property="og:locale" content="{lang['ogLocale']}">
     <meta property="og:title" content="{esc(title.split(' — ')[0])}">
     <meta property="og:description" content="{esc(description)}">
     <meta property="og:url" content="{esc(canonical)}">
@@ -189,14 +244,14 @@ def page(title, description, canonical, image, css, json_ld, body, icon, lang="j
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="{esc(icon)}" type="image/jpeg">
-{HEAD_LINKS}
+{head_links(lang)}
     <link rel="stylesheet" href="{css}">
 {ld}  </head>
   <body>
 {body}
     <footer class="colophon">
       <p>© 2026 Engawa Inc.</p>
-      <p><a href="{"/contact/" if lang == "ja" else "/en/contact/"}">{"問い合わせ" if lang == "ja" else "Contact"}</a>{" <a href=\"/design/\">デザイン</a> <a href=\"/demo/cafe/\">カフェ・タロット</a>" if lang == "ja" else ""} <a href="/privacy/">{"プライバシーポリシー" if lang == "ja" else "Privacy policy"}</a> <a href="https://github.com/okuyamashin/colorsforthefool">GitHub</a></p>
+      <p>{footer_links(lang)}</p>
     </footer>
   </body>
 </html>
@@ -217,6 +272,9 @@ def load_cards():
     for path in sorted(DATA.glob("*/card.json")):
         card = json.loads(path.read_text())
         card["_dir"] = path.parent
+        for lang in LANGUAGES:
+            if lang["cardName"] not in card:
+                raise SystemExit(f"{card['id']} missing {lang['cardName']}")
         seen = {}
         for side in ("upright", "reversed"):
             colors = card[side]
@@ -227,14 +285,16 @@ def load_cards():
                 if slug in seen:
                     raise SystemExit(f"{card['id']} reuses {slug} on both sides")
                 seen[slug] = side
-                text_path = path.parent / color["text"]
                 image_path = path.parent / color["image"]
-                if not text_path.is_file():
-                    raise SystemExit(f"missing {text_path}")
-                en_name = color.get("textEn") or ""
-                en_path = path.parent / en_name
-                if Path(en_name).stem != f"{slug}.en" or not en_path.is_file():
-                    raise SystemExit(f"missing English text for {card['id']} {slug}")
+                stories = {}
+                for lang in LANGUAGES:
+                    if lang["colorName"] not in color:
+                        raise SystemExit(f"{card['id']} {slug} missing {lang['colorName']}")
+                    name = color.get(lang["textField"]) or ""
+                    story_path = path.parent / name
+                    if Path(name).stem != f"{slug}{lang['textSuffix']}" or not story_path.is_file():
+                        raise SystemExit(f"missing {lang['textField']} for {card['id']} {slug}")
+                    stories[lang["id"]] = story_path
                 if not image_path.is_file():
                     raise SystemExit(f"missing {image_path}")
                 share_path = image_path.with_name(f"{image_path.stem}.share.jpg")
@@ -243,13 +303,12 @@ def load_cards():
                 ensure_thumb(image_path)
                 color["_slug"] = slug
                 color["_texts"] = {
-                    "ja": paragraphs(text_path.read_text(), "ja"),
-                    "en": paragraphs(en_path.read_text(), "en"),
+                    lang["id"]: paragraphs(stories[lang["id"]].read_text(), lang) for lang in LANGUAGES
                 }
                 color["_lines"] = {}
-                for lang in ("ja", "en"):
-                    body, close = color["_texts"][lang]
-                    color["_lines"][lang] = color_line(close, body, lang)
+                for lang in LANGUAGES:
+                    body, close = color["_texts"][lang["id"]]
+                    color["_lines"][lang["id"]] = color_line(close, body, lang)
         if not (path.parent / "face.jpg").is_file():
             raise SystemExit(f"missing face {card['id']}")
         if not (path.parent / "share.jpg").is_file():
@@ -283,8 +342,8 @@ def ensure_thumb(image_path):
 
 
 def bind(color, lang):
-    color["_body"], color["_close"] = color["_texts"][lang]
-    color["_line"] = color["_lines"][lang]
+    color["_body"], color["_close"] = color["_texts"][lang["id"]]
+    color["_line"] = color["_lines"][lang["id"]]
 
 
 def subtitle_html(secondary):
@@ -293,93 +352,94 @@ def subtitle_html(secondary):
     return f'      <p class="en">{esc(secondary)}</p>\n'
 
 
+def fields(card, color, lang, **extra):
+    label = extra.get("label", "")
+    values = {
+        "card": card[lang["cardName"]],
+        "color": color[lang["colorName"]] if color else "",
+        "label": label,
+        "labelLower": label.lower(),
+        "latin": card["name"],
+        "latinColor": color["name"] if color else "",
+        "numeral": card["numeral"],
+        "hex": color["hex"] if color else "",
+        "intro": extra.get("intro", ""),
+        "opening": extra.get("opening", ""),
+    }
+    return {key: fill(value, **values) for key, value in lang["pages"].items()}
+
+
 def visible_name(color, lang):
-    return color["nameJa"] if lang == "ja" else color["name"]
+    return color[lang["colorName"]]
 
 
 def color_item(color, lang):
     bind(color, lang)
     line = f'\n            <span class="line">{esc(color["_line"])}</span>' if color["_line"] else ""
     thumb = thumb_name(color["image"])
-    if lang == "ja":
-        alt = f"{color['_card_ja']}の{color['nameJa']}。中央の鏡に色が映る絵"
-        visible = color["nameJa"]
-        meta = f"{color['name']} · {color['hex']}"
-    else:
-        alt = f"{color['_card_en']}, {color['name']}. The color appears in the mirror at the center."
-        visible = color["name"]
-        meta = color["hex"]
+    text = fields(color["_card_obj"], color, lang)
     return f"""        <li>
           <a href="{color['_slug']}/index.html">
-            <img src="/data/{color['_card']}/{esc(thumb)}" alt="{esc(alt)}">
-            <span class="name"><span class="swatch" style="background:{esc(color['hex'])}"></span>{esc(visible)}</span>
-            <span class="meta">{esc(meta)}</span>{line}
+            <img src="/data/{color['_card']}/{esc(thumb)}" alt="{esc(text['colorAlt'])}">
+            <span class="name"><span class="swatch" style="background:{esc(color['hex'])}"></span>{esc(color[lang['colorName']])}</span>
+            <span class="meta">{esc(text['colorMeta'])}</span>{line}
           </a>
         </li>"""
-
-
-def pair(canonical, other, lang):
-    return hreflang(canonical if lang == "ja" else other, other if lang == "ja" else canonical)
 
 
 def write_card(card, meanings, lang, root):
     upright = meanings[card["id"]]["upright"]
     reversed_text = meanings[card["id"]]["reversed"]
-    prefix = "" if lang == "ja" else "en/"
-    canonical = f"{ORIGIN}/{prefix}cards/{card['id']}/index.html"
-    other = f"{ORIGIN}/en/cards/{card['id']}/index.html" if lang == "ja" else f"{ORIGIN}/cards/{card['id']}/index.html"
+    urls = library_url(card["id"])
+    canonical = urls[lang["id"]]
     image = f"{ORIGIN}/data/{card['id']}/share.jpg"
     for side in ("upright", "reversed"):
         for color in card[side]:
             color["_card"] = card["id"]
-            color["_card_ja"] = card["nameJa"]
-            color["_card_en"] = card["name"]
+            color["_card_obj"] = card
     upright_items = "\n".join(color_item(color, lang) for color in card["upright"])
     reversed_items = "\n".join(color_item(color, lang) for color in card["reversed"])
-    if lang == "ja":
-        intro = first_sentence(upright.split("\n\n", 1)[0], 70, "ja")
-        description = clip(f"大アルカナの{card['nameJa']}。正位置と逆位置、それぞれ十のラッキーカラー。{intro}")
-        title = f"{card['nameJa']}のラッキーカラー — Colors for the Fool"
-        tagline = "タロットで占う、今日のラッキーカラー"
-        draw = "カードを引く"
-        heading = card["nameJa"]
-        secondary = f"{card['name']} · {card['numeral']}"
-        upright_label, reversed_label = "正位置", "逆位置"
-        face_alt = f"{card['nameJa']}、正位置"
-        face_alt_reversed = f"{card['nameJa']}、逆位置"
-        css = "../library.css"
-    else:
-        intro = first_sentence(upright.split("\n\n", 1)[0], 110, "en")
-        description = clip(f"{card['name']}. Ten lucky colors for upright, and ten for reversed. {intro}", 160)
-        title = f"Lucky colors for {card['name']} — Colors for the Fool"
-        tagline = "Today's lucky color, drawn from the tarot"
-        draw = "Draw a card"
-        heading = card["name"]
-        secondary = card["numeral"]
-        upright_label, reversed_label = "Upright", "Reversed"
-        face_alt = f"{card['name']}, upright"
-        face_alt_reversed = f"{card['name']}, reversed"
-        css = "../../../cards/library.css"
+    films = {
+        "the-devil": ("vQpHR7ydbIQ?si=YiSh7kW68tVFco0D", "The Chain Is Loose"),
+        "the-fool": ("a3v-rALmRnU?si=br1pwZZYi3QcWCSI", "No Map, No Name"),
+    }
+    film = ""
+    if card["id"] in films:
+        src, title = films[card["id"]]
+        film = f"""        <div class="film-frame">
+          <iframe src="https://www.youtube.com/embed/{src}" title="{title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>"""
+    intro = first_sentence(upright.split("\n\n", 1)[0], lang["introLimit"], lang)
+    text = fields(card, None, lang, intro=intro)
+    description = clip(text["cardDescription"], lang["descriptionLimit"])
+    upright_label = lang["copy"]["upright"]
+    reversed_label = lang["copy"]["reversed"]
+    face_alt = fill(lang["pages"]["faceAlt"], card=card[lang["cardName"]], label=upright_label, labelLower=upright_label.lower())
+    face_alt_reversed = fill(lang["pages"]["faceAlt"], card=card[lang["cardName"]], label=reversed_label, labelLower=reversed_label.lower())
+    css = "../library.css" if not nested(lang) else "../../../cards/library.css"
+    if card["id"] in films:
+        css += "?v=2"
+    secondary = subtitle_html(text["cardSecondary"])
     body = f"""    <header class="top">
       <p class="brand"><a href="../../">Colors for the Fool</a></p>
-      <p class="tagline">{tagline}</p>
+      <p class="tagline">{esc(text['tagline'])}</p>
     </header>
     <main>
-      <p class="crumb"><a href="../../">{draw}</a></p>
+      <p class="crumb"><a href="../../">{esc(text['draw'])}</a></p>
       <img class="face" src="/data/{esc(card['id'])}/face.jpg" alt="{esc(face_alt)}">
-      <h1>{esc(heading)}</h1>
-      <p class="en">{esc(secondary)}</p>
-      <section>
-        <h2>{upright_label}</h2>
+      <h1>{esc(card[lang['cardName']])}</h1>
+{secondary}      <section>
+        <h2>{esc(upright_label)}</h2>
         <div class="meaning">
 {meaning_html(upright)}
         </div>
+{film}
         <ul class="colors">
 {upright_items}
         </ul>
       </section>
       <section>
-        <h2>{reversed_label}</h2>
+        <h2>{esc(reversed_label)}</h2>
         <img class="face reversed" src="/data/{esc(card['id'])}/face.jpg" alt="{esc(face_alt_reversed)}">
         <div class="meaning">
 {meaning_html(reversed_text)}
@@ -393,7 +453,7 @@ def write_card(card, meanings, lang, root):
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(
         page(
-            title,
+            text["cardTitle"],
             description,
             canonical,
             image,
@@ -402,83 +462,46 @@ def write_card(card, meanings, lang, root):
             body,
             f"/data/{card['id']}/circle.jpg",
             lang,
-            pair(canonical, other, lang),
+            hreflang(urls),
         )
     )
     return target
 
 
 def share_html(card, color, lang):
-    prefix = "" if lang == "ja" else "en/"
-    page_url = f"{ORIGIN}/{prefix}cards/{card['id']}/{color['_slug']}/"
-    if lang == "ja":
-        text = f"今日のラッキーカラーは、{color['nameJa']}です。"
-        copy_label = "リンクをコピー"
-        x_label = "Xでシェア"
-        line_label = "LINEでシェア"
-        notice = "クリップボードにコピーしました"
-        script = "../../share.js"
-    else:
-        text = f"Today's lucky color is {color['name']}."
-        copy_label = "Copy link"
-        x_label = "Share on X"
-        line_label = "Share on LINE"
-        notice = "Copied to the clipboard"
-        script = "../../../../cards/share.js"
+    page_url = library_url(card["id"], color["_slug"])[lang["id"]].removesuffix("index.html")
+    text = fill(lang["shareText"], color=color[lang["colorName"]])
+    script = "../../share.js" if not nested(lang) else "../../../../cards/share.js"
     tweet = "https://twitter.com/intent/tweet?text=" + quote(text, safe="") + "&url=" + quote(page_url, safe="")
     line = "https://social-plugins.line.me/lineit/share?url=" + quote(page_url, safe="")
+    labels = lang["share"]
     return f"""      <p class="share" data-url="{esc(page_url)}">
-        <button type="button" id="share-copy" aria-label="{esc(copy_label)}">
+        <button type="button" id="share-copy" aria-label="{esc(labels['copy'])}">
 {SHARE_ICON}
         </button>
-        <a id="share-x" href="{esc(tweet)}" target="_blank" rel="noopener noreferrer" aria-label="{esc(x_label)}">
+        <a id="share-x" href="{esc(tweet)}" target="_blank" rel="noopener noreferrer" aria-label="{esc(labels['x'])}">
 {X_ICON}
         </a>
-        <a id="share-line" href="{esc(line)}" target="_blank" rel="noopener noreferrer" aria-label="{esc(line_label)}">
+        <a id="share-line" href="{esc(line)}" target="_blank" rel="noopener noreferrer" aria-label="{esc(labels['line'])}">
 {LINE_ICON}
         </a>
       </p>
-      <p class="copied" id="copied" hidden role="status">{esc(notice)}</p>
+      <p class="copied" id="copied" hidden role="status">{esc(labels['notice'])}</p>
       <script src="{script}"></script>"""
 
 
 def write_color(card, side, color, lang, root):
     bind(color, lang)
-    label = ORIENTATION[side] if lang == "ja" else {"upright": "Upright", "reversed": "Reversed"}[side]
+    label = lang["copy"][side]
     body, close = color["_body"], color["_close"]
-    prefix = "" if lang == "ja" else "en/"
-    canonical = f"{ORIGIN}/{prefix}cards/{card['id']}/{color['_slug']}/index.html"
-    other = (
-        f"{ORIGIN}/en/cards/{card['id']}/{color['_slug']}/index.html"
-        if lang == "ja"
-        else f"{ORIGIN}/cards/{card['id']}/{color['_slug']}/index.html"
-    )
+    urls = library_url(card["id"], color["_slug"])
+    canonical = urls[lang["id"]]
     scene = f"{ORIGIN}/data/{card['id']}/{color['image']}"
     image = f"{ORIGIN}/data/{card['id']}/{Path(color['image']).stem}.share.jpg"
-    if lang == "ja":
-        opening = first_sentence(body[0][0], 70, "ja") if body else ""
-        description = clip(f"{card['nameJa']}の{label}、{color['nameJa']}。{opening}")
-        title_name = card["nameJa"]
-        tagline = "タロットで占う、今日のラッキーカラー"
-        draw = "カードを引く"
-        heading = color["nameJa"]
-        secondary = f"{card['name']} · {color['name']}"
-        alt = f"{card['nameJa']}の{color['nameJa']}。中央の鏡に色が映る絵"
-        back = f"{card['nameJa']}へ戻る"
-        css = "../../library.css"
-        headline = f"{card['nameJa']}のラッキーカラー、{color['nameJa']}"
-    else:
-        opening = first_sentence(body[0][0], 110, "en") if body else ""
-        description = clip(f"{card['name']}, {label.lower()}. {color['name']}. {opening}", 160)
-        title_name = card["name"]
-        tagline = "Today's lucky color, drawn from the tarot"
-        draw = "Draw a card"
-        heading = color["name"]
-        secondary = ""
-        alt = f"{card['name']}, {color['name']}. The color appears in the mirror at the center."
-        back = f"Back to {card['name']}"
-        css = "../../../../cards/library.css"
-        headline = f"Lucky color for {card['name']}: {color['name']}"
+    opening = first_sentence(body[0][0], lang["introLimit"], lang) if body else ""
+    text = fields(card, color, lang, label=label, opening=opening)
+    description = clip(text["colorDescription"], lang["descriptionLimit"])
+    css = "../../library.css" if not nested(lang) else "../../../../cards/library.css"
     siblings = []
     for other_color in card[side]:
         if other_color is color:
@@ -488,24 +511,24 @@ def write_color(card, side, color, lang, root):
         )
     sibling_html = "\n".join(siblings)
     day_html = ""
-    if lang == "ja":
+    if lang.get("days"):
         for item in day_links():
             if item["card"] == card["id"] and item["color"] == color["_slug"]:
                 day_html += f'      <p class="day"><a href="../../../days/{item["date"]}/">西暦{item["label"]}</a></p>\n'
     body_html = f"""    <header class="top">
       <p class="brand"><a href="../../../">Colors for the Fool</a></p>
-      <p class="tagline">{tagline}</p>
+      <p class="tagline">{esc(text['tagline'])}</p>
     </header>
     <main>
-      <p class="crumb"><a href="../../../">{draw}</a> / <a href="../index.html">{esc(title_name)}</a></p>
-      <img class="scene" src="/data/{esc(card['id'])}/{esc(color['image'])}" alt="{esc(alt)}">
-      <h1>{esc(heading)}</h1>
-{subtitle_html(secondary)}      <p class="orientation">{esc(label)} · {esc(color['hex'])}</p>
+      <p class="crumb"><a href="../../../">{esc(text['draw'])}</a> / <a href="../index.html">{esc(card[lang['cardName']])}</a></p>
+      <img class="scene" src="/data/{esc(card['id'])}/{esc(color['image'])}" alt="{esc(text['colorAlt'])}">
+      <h1>{esc(color[lang['colorName']])}</h1>
+{subtitle_html(text['colorSecondary'])}      <p class="orientation">{esc(label)} · {esc(color['hex'])}</p>
 {day_html}      <article class="story">
 {story_html(body, close)}
       </article>
 {share_html(card, color, lang)}
-      <a class="back" href="../index.html">{esc(back)}</a>
+      <a class="back" href="../index.html">{esc(text['back'])}</a>
       <ul class="siblings">
 {sibling_html}
       </ul>
@@ -514,7 +537,7 @@ def write_color(card, side, color, lang, root):
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(
         page(
-            f"{headline} — Colors for the Fool",
+            f"{text['colorTitle']} — Colors for the Fool",
             description,
             canonical,
             image,
@@ -522,8 +545,8 @@ def write_color(card, side, color, lang, root):
             {
                 "@context": "https://schema.org",
                 "@type": "Article",
-                "headline": headline,
-                "inLanguage": "ja" if lang == "ja" else "en",
+                "headline": text["colorTitle"],
+                "inLanguage": lang["htmlLang"],
                 "image": scene,
                 "description": description,
                 "mainEntityOfPage": canonical,
@@ -532,26 +555,28 @@ def write_color(card, side, color, lang, root):
             body_html,
             f"/data/{card['id']}/circle.jpg",
             lang,
-            pair(canonical, other, lang),
+            hreflang(urls),
         )
     )
     return target
 
 
 def link_top(cards):
-    path = PUBLIC / "index.html"
+    root_lang = next(lang for lang in LANGUAGES if not nested(lang))
+    path = home_path(root_lang)
     text = path.read_text()
     for card in cards:
+        name = card[root_lang["cardName"]]
         pattern = re.compile(
-            rf'<h3>(?:<a href="cards/{re.escape(card["id"])}/index.html">)?{re.escape(card["nameJa"])}<span class="latin">([^<]*)</span>(?:</a>)?</h3>'
+            rf'<h3>(?:<a href="cards/{re.escape(card["id"])}/index.html">)?{re.escape(name)}<span class="latin">([^<]*)</span>(?:</a>)?</h3>'
         )
         replacement = (
-            f'<h3><a href="cards/{card["id"]}/index.html">{card["nameJa"]}'
+            f'<h3><a href="cards/{card["id"]}/index.html">{name}'
             r'<span class="latin">\1</span></a></h3>'
         )
         text, count = pattern.subn(replacement, text, count=1)
         if count != 1:
-            raise SystemExit(f"top heading not found for {card['nameJa']}")
+            raise SystemExit(f"top heading not found for {name}")
     path.write_text(text)
 
 
@@ -563,9 +588,8 @@ def day_links():
 
 
 def write_sitemap(paths):
-    urls = [
-        f"{ORIGIN}/",
-        f"{ORIGIN}/en/",
+    urls = [home_url(lang) for lang in LANGUAGES]
+    urls.extend([
         f"{ORIGIN}/design/",
         f"{ORIGIN}/design/ancient-egypt/",
         f"{ORIGIN}/design/botanical-art/",
@@ -576,7 +600,7 @@ def write_sitemap(paths):
         f"{ORIGIN}/design/gear-engine-robotics/",
         f"{ORIGIN}/design/greek-sculpture/",
         f"{ORIGIN}/design/rorschach/",
-    ]
+    ])
     urls.extend(f"{ORIGIN}/{path.relative_to(PUBLIC).as_posix()}" for path in paths)
     urls.extend(f"{ORIGIN}/days/{item['date']}/" for item in day_links())
     body = "\n".join(f"  <url><loc>{esc(url)}</loc></url>" for url in urls)
@@ -604,26 +628,141 @@ def remove_stale(written, root):
             path.rmdir()
 
 
+CLIENT_KEYS = (
+    "id", "htmlLang", "prefix", "cookie", "session", "data", "cardName", "colorName",
+    "textField", "textSuffix", "latinSubtitle", "titlePattern", "shareText", "copy",
+)
+
+
+def write_client():
+    packs = []
+    for lang in LANGUAGES:
+        pack = {key: lang[key] for key in CLIENT_KEYS if key in lang}
+        pack.setdefault("latinSubtitle", True)
+        packs.append(pack)
+    (PUBLIC / "languages.js").write_text(
+        "window.LANG_PACKS = "
+        + json.dumps(packs, ensure_ascii=False, indent=2)
+        + ";\n"
+    )
+
+
+def write_fonts():
+    rules = [
+        f'html[lang="{lang["htmlLang"]}"] body {{\n  font-family: {lang["fontFamily"]};\n}}'
+        for lang in LANGUAGES
+        if lang.get("fontFamily")
+    ]
+    (PUBLIC / "lang.css").write_text(
+        "/* Generated from data/languages.json. */\n" + "\n\n".join(rules) + ("\n" if rules else "")
+    )
+
+
+def switch_href(here, other):
+    if not nested(here):
+        return f"{other['prefix']}/"
+    if not nested(other):
+        return "../"
+    return f"../{other['prefix']}/"
+
+
+def language_switch(lang):
+    items = "\n".join(
+        f'            <li><a href="{switch_href(lang, other)}">{esc(other["switchLabel"])}</a></li>'
+        for other in LANGUAGES
+        if other["id"] != lang["id"]
+    )
+    label = esc(lang["switchLabel"])
+    return (
+        '        <div class="lang-menu">\n'
+        f'          <button type="button" class="lang" aria-expanded="false" aria-haspopup="true" aria-controls="lang-list">{label}<span class="lang-mark" aria-hidden="true"></span></button>\n'
+        '          <ul class="lang-list" id="lang-list" hidden>\n'
+        f"{items}\n"
+        "          </ul>\n"
+        "        </div>"
+    )
+
+
+def refresh_homes():
+    urls = {lang["id"]: home_url(lang) for lang in LANGUAGES}
+    block = "    <!-- hreflang -->\n" + hreflang(urls) + "\n    <!-- /hreflang -->"
+    for lang in LANGUAGES:
+        path = home_path(lang)
+        if not path.is_file():
+            print(f"skip home {lang['id']}: {path}")
+            continue
+        text = path.read_text()
+        if "<!-- hreflang -->" in text:
+            text = re.sub(
+                r"    <!-- hreflang -->.*?    <!-- /hreflang -->",
+                block,
+                text,
+                count=1,
+                flags=re.S,
+            )
+        else:
+            text, count = re.subn(
+                r'(?:    <link rel="alternate" hreflang="[^"]+" href="[^"]+">\n)+',
+                block + "\n",
+                text,
+                count=1,
+            )
+            if count != 1:
+                raise SystemExit(f"hreflang block not found in {path}")
+        text = re.sub(r'\n[ \t]*<div class="lang-menu">.*?</div>', "", text, count=1, flags=re.S)
+        text = re.sub(r'\n[ \t]*<a class="lang" href="[^"]*">[^<]*</a>', "", text)
+        text, count = re.subn(
+            r"\n[ \t]*</nav>",
+            "\n" + language_switch(lang) + "\n      </nav>",
+            text,
+            count=1,
+        )
+        if count != 1:
+            raise SystemExit(f"nav not found in {path}")
+        script = "languages.js" if not nested(lang) else "../languages.js"
+        app = "app.js" if not nested(lang) else "../app.js"
+        if "languages.js" not in text:
+            text = text.replace(
+                f'<script src="{app}"></script>',
+                f'<script src="{script}"></script>\n    <script src="{app}"></script>',
+                1,
+            )
+        font_href = f"https://fonts.googleapis.com/css2?{lang['fonts']}&display=swap"
+        text, count = re.subn(
+            r"https://fonts\.googleapis\.com/css2\?[^\"']+",
+            font_href,
+            text,
+            count=1,
+        )
+        if count != 1:
+            raise SystemExit(f"font link not found in {path}")
+        path.write_text(text)
+
+
 def main():
-    meanings = {lang: load_meanings(lang) for lang in ("ja", "en")}
+    meanings = {lang["id"]: load_meanings(lang) for lang in LANGUAGES}
     cards = load_cards()
     if len(cards) != 22:
         raise SystemExit(f"expected 22 cards, found {len(cards)}")
-    for lang, table in meanings.items():
-        missing = [card["id"] for card in cards if card["id"] not in table]
+    for lang in LANGUAGES:
+        missing = [card["id"] for card in cards if card["id"] not in meanings[lang["id"]]]
         if missing:
-            raise SystemExit(f"missing {lang} meanings {missing}")
+            raise SystemExit(f"missing {lang['id']} meanings {missing}")
     written = set()
-    for lang, root in (("ja", CARDS), ("en", PUBLIC / "en" / "cards")):
+    for lang in LANGUAGES:
+        root = card_root(lang)
         for card in cards:
-            written.add(write_card(card, meanings[lang], lang, root))
+            written.add(write_card(card, meanings[lang["id"]], lang, root))
             for side in ("upright", "reversed"):
                 for color in card[side]:
                     written.add(write_color(card, side, color, lang, root))
         remove_stale(written, root)
     link_top(cards)
     write_sitemap(sorted(written))
-    print(f"cards {len(cards)} pages {len(written)}")
+    write_client()
+    write_fonts()
+    refresh_homes()
+    print(f"cards {len(cards)} pages {len(written)} languages {len(LANGUAGES)}")
 
 
 if __name__ == "__main__":
