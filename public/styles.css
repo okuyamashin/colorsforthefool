@@ -40,6 +40,27 @@ img { font: inherit; }
   text-transform: uppercase;
 }
 
+.mast {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin: 0;
+}
+
+.mast .instagram {
+  display: flex;
+  color: var(--gold);
+  line-height: 0;
+  text-decoration: none;
+}
+
+.mast .instagram svg {
+  width: 1.45rem;
+  height: 1.45rem;
+}
+
+.mast .instagram:hover { color: #5c4318; }
+
 .lang {
   margin: 0;
   color: var(--gold);
@@ -205,6 +226,27 @@ html.has-reading .guide {
   margin-top: 0.4rem;
   padding-top: 0.2rem;
 }
+
+.today {
+  margin: 0.9rem 0 0;
+  text-align: center;
+  letter-spacing: 0.08em;
+}
+
+.today a,
+.today a:link,
+.today a:visited,
+.today a:hover,
+.today a:active {
+  color: #7a5c2e;
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 0.18em;
+}
+
+.today a:hover { color: #5c4318; }
+
+.guide .today { margin: 1.6rem 0 0.2rem; }
 
 .arcana {
   margin: 0.3rem 0 0;

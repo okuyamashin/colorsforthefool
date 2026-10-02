@@ -347,7 +347,8 @@ function paint(animated) {
   cardButton.classList.toggle("is-open", state.phase === "revealed");
   showFace(animated);
   title.textContent = cardTitle(state.card);
-  en.textContent = EN ? state.card.nameJa : state.card.name;
+  en.hidden = EN;
+  en.textContent = EN ? "" : state.card.name;
   orientationEl.textContent = drawnLabel;
   const text = window.MEANINGS?.[state.card.id]?.[state.orientation];
   fillProse(meaning, text || COPY.meaningFallback, false);

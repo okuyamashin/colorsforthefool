@@ -287,6 +287,12 @@ def bind(color, lang):
     color["_line"] = color["_lines"][lang]
 
 
+def subtitle_html(secondary):
+    if not secondary:
+        return ""
+    return f'      <p class="en">{esc(secondary)}</p>\n'
+
+
 def visible_name(color, lang):
     return color["nameJa"] if lang == "ja" else color["name"]
 
@@ -302,7 +308,7 @@ def color_item(color, lang):
     else:
         alt = f"{color['_card_en']}, {color['name']}. The color appears in the mirror at the center."
         visible = color["name"]
-        meta = f"{color['nameJa']} · {color['hex']}"
+        meta = color["hex"]
     return f"""        <li>
           <a href="{color['_slug']}/index.html">
             <img src="/data/{color['_card']}/{esc(thumb)}" alt="{esc(alt)}">
@@ -349,7 +355,7 @@ def write_card(card, meanings, lang, root):
         tagline = "Today's lucky color, drawn from the tarot"
         draw = "Draw a card"
         heading = card["name"]
-        secondary = f"{card['nameJa']} · {card['numeral']}"
+        secondary = card["numeral"]
         upright_label, reversed_label = "Upright", "Reversed"
         face_alt = f"{card['name']}, upright"
         face_alt_reversed = f"{card['name']}, reversed"
@@ -468,7 +474,7 @@ def write_color(card, side, color, lang, root):
         tagline = "Today's lucky color, drawn from the tarot"
         draw = "Draw a card"
         heading = color["name"]
-        secondary = f"{card['nameJa']} · {color['nameJa']}"
+        secondary = ""
         alt = f"{card['name']}, {color['name']}. The color appears in the mirror at the center."
         back = f"Back to {card['name']}"
         css = "../../../../cards/library.css"
@@ -481,6 +487,11 @@ def write_color(card, side, color, lang, root):
             f'        <li><a href="../{other_color["_slug"]}/index.html"><span class="swatch" style="background:{esc(other_color["hex"])}"></span>{esc(visible_name(other_color, lang))}</a></li>'
         )
     sibling_html = "\n".join(siblings)
+    day_html = ""
+    if lang == "ja":
+        for item in day_links():
+            if item["card"] == card["id"] and item["color"] == color["_slug"]:
+                day_html += f'      <p class="day"><a href="../../../days/{item["date"]}/">西暦{item["label"]}</a></p>\n'
     body_html = f"""    <header class="top">
       <p class="brand"><a href="../../../">Colors for the Fool</a></p>
       <p class="tagline">{tagline}</p>
@@ -489,9 +500,8 @@ def write_color(card, side, color, lang, root):
       <p class="crumb"><a href="../../../">{draw}</a> / <a href="../index.html">{esc(title_name)}</a></p>
       <img class="scene" src="/data/{esc(card['id'])}/{esc(color['image'])}" alt="{esc(alt)}">
       <h1>{esc(heading)}</h1>
-      <p class="en">{esc(secondary)}</p>
-      <p class="orientation">{esc(label)} · {esc(color['hex'])}</p>
-      <article class="story">
+{subtitle_html(secondary)}      <p class="orientation">{esc(label)} · {esc(color['hex'])}</p>
+{day_html}      <article class="story">
 {story_html(body, close)}
       </article>
 {share_html(card, color, lang)}
@@ -545,9 +555,17 @@ def link_top(cards):
     path.write_text(text)
 
 
+def day_links():
+    path = ROOT / "data" / "day-links.json"
+    if not path.is_file():
+        return []
+    return json.loads(path.read_text())
+
+
 def write_sitemap(paths):
     urls = [f"{ORIGIN}/", f"{ORIGIN}/en/"]
     urls.extend(f"{ORIGIN}/{path.relative_to(PUBLIC).as_posix()}" for path in paths)
+    urls.extend(f"{ORIGIN}/days/{item['date']}/" for item in day_links())
     body = "\n".join(f"  <url><loc>{esc(url)}</loc></url>" for url in urls)
     (PUBLIC / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'

@@ -31,13 +31,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-      .film { margin-top: 2.4rem; }
-      .film h2 {
-        margin: 0 0 0.8rem;
-        font-size: 1.15rem;
-        font-weight: 600;
-        letter-spacing: 0.12em;
-      }
       .film-frame {
         position: relative;
         width: 100%;
@@ -60,7 +53,10 @@
   <body>
     <header class="top">
       <p class="brand">Colors for the Fool</p>
-      <a class="lang" href="en/">English</a>
+      <nav class="mast" aria-label="サイト">
+        <a class="instagram" href="https://www.instagram.com/colors.for.the.fool/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.2" cy="6.8" r="1.05" fill="currentColor"/></svg></a>
+        <a class="lang" href="en/">English</a>
+      </nav>
       <h1 class="tagline">タロットで占う、今日のラッキーカラー</h1>
     </header>
     <main>
@@ -130,6 +126,13 @@
         <section>
           <h2>このサイトについて</h2>
           <p>大アルカナの一枚に、色を結びつけています。神話や歴史、土地や道具の話をたどり、物語の終わりに、今日のラッキーカラーへ着地します。</p>
+        </section>
+        <p class="today"><a href="days/2026-10-02/">西暦2026年10月2日。東京のラッキーカラー</a></p>
+        <section class="film">
+          <h2>愚者の旅</h2>
+          <div class="film-frame">
+            <iframe src="https://www.youtube.com/embed/ocyc9W4nV3I?si=VA4qMTTNn2t8SYIZ" title="愚者から世界へ、もう一度愚者へ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
         </section>
         <section>
           <h2>大アルカナ二十二枚</h2>
@@ -274,12 +277,6 @@
           <p>同じ絵でも、向きで象徴が変わります。正位置はそのカードの開いた意味、逆位置は滞りや過剰や裏返った意味です。逆位置の絵は、カードを180度回して表します。</p>
           <h3>毎日引いてもよいですか。</h3>
           <p>一日に一枚でも、続けて引いても、どちらでもかまいません。山が空になれば、また最初から引けます。</p>
-        </section>
-        <section class="film">
-          <h2>愚者の旅</h2>
-          <div class="film-frame">
-            <iframe src="https://www.youtube.com/embed/ocyc9W4nV3I?si=VA4qMTTNn2t8SYIZ" title="愚者から世界へ、もう一度愚者へ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
         </section>
       </div>
       <p class="error" id="error" hidden></p>

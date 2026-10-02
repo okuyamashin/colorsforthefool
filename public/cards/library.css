@@ -90,6 +90,15 @@ h1 {
 
 .orientation { font-size: 0.95rem; }
 
+.day {
+  margin: 0.9rem 0 0;
+  text-align: center;
+  letter-spacing: 0.08em;
+}
+
+.day a { text-decoration: none; }
+.day a:hover { text-decoration: underline; }
+
 .meaning,
 .story {
   margin-top: 1.8rem;
