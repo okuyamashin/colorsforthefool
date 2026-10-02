@@ -563,7 +563,20 @@ def day_links():
 
 
 def write_sitemap(paths):
-    urls = [f"{ORIGIN}/", f"{ORIGIN}/en/", f"{ORIGIN}/design/"]
+    urls = [
+        f"{ORIGIN}/",
+        f"{ORIGIN}/en/",
+        f"{ORIGIN}/design/",
+        f"{ORIGIN}/design/ancient-egypt/",
+        f"{ORIGIN}/design/botanical-art/",
+        f"{ORIGIN}/design/brutalist-graphic/",
+        f"{ORIGIN}/design/editorial-luxury/",
+        f"{ORIGIN}/design/engraving/",
+        f"{ORIGIN}/design/french-doll/",
+        f"{ORIGIN}/design/gear-engine-robotics/",
+        f"{ORIGIN}/design/greek-sculpture/",
+        f"{ORIGIN}/design/rorschach/",
+    ]
     urls.extend(f"{ORIGIN}/{path.relative_to(PUBLIC).as_posix()}" for path in paths)
     urls.extend(f"{ORIGIN}/days/{item['date']}/" for item in day_links())
     body = "\n".join(f"  <url><loc>{esc(url)}</loc></url>" for url in urls)

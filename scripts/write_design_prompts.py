@@ -92,7 +92,7 @@ CARDS = [
         "the-hanged-man",
         "XII",
         "THE HANGED MAN",
-        "{who} hangs upside down by one ankle from a living wooden tau, the other leg crossed, the hands behind the back. A halo circles the head. The face is peaceful. The pause is chosen.",
+        "{who} is shown head-down in a chosen, peaceful pause, one foot resting on a living wooden tau, the other leg crossed, the hands behind the back. A halo circles the head. The face is calm. No injury, no blood, no distress, no rope.",
     ),
     (
         "death",
@@ -216,7 +216,7 @@ SPECIAL = {
         "the-hermit": "A hooded vertical on a stepped peak. A lantern is a small square holding one star, lighting only the next horizontal. The rest of the sheet stays empty.",
         "wheel-of-fortune": "A circle on the grid, no person. A sphinx mark at the top, a jackal mark climbing, a snake as an S. Four corner glyphs: angel, eagle, lion, bull. Letters become small ticks around the rim.",
         "justice": "A frontal seated block between two pillars. A vertical sword and a level pair of scales. A crown is three short bars.",
-        "the-hanged-man": "A tau of two lines. A figure inverted from one ankle, the other leg a crossing stroke, a circle halo. The face is a blank oval.",
+        "the-hanged-man": "A tau of two lines. A figure shown head-down, one foot on the upright, the other leg a crossing stroke, a circle halo. The face is a blank oval. A chosen, peaceful pause. No injury and no rope.",
         "death": "A horse reduced to an arc, a rider as a vertical, a banner with one rose circle. A fallen crown, a standing bar, a small kneeling mark, and a rising sun between two towers.",
         "temperance": "One figure as a narrow vertical pouring a single arc between two cups. One foot on a water line, one on a ground line. Irises are three strokes. A path is a ruled line to a triangle mountain.",
         "the-tower": "A tall rectangle hit by a zigzag. A crown shape leaves the top. Two small figures are falling marks. Windows are squares, two of them solid.",
@@ -239,7 +239,7 @@ SPECIAL = {
         "the-hermit": "A smoked-glass hooded figure on a dark plinth, a staff, and a small lantern that lights only the next step. The rest of the gallery falls off into black. No face.",
         "wheel-of-fortune": "No human figure. A large gold-and-glass wheel stands in the gallery. A chrome sphinx at the top, a jackal form and a snake of tubing, and four small corner sculptures. Mirrored floor.",
         "justice": "A chrome seated figure between two glass pillars, a vertical glass sword and level gold scales. No face.",
-        "the-hanged-man": "A featureless glass figure hangs by one ankle from a dark metal tau, the other leg crossed, a thin gold halo. Soft light, mirrored floor, no face.",
+        "the-hanged-man": "A featureless glass figure is shown head-down, one foot resting on a dark metal tau, the other leg crossed, a thin gold halo. Soft light, mirrored floor, no face. A chosen, peaceful pause. No injury and no rope.",
         "death": "A black-chrome rider on a clear glass horse, a dark banner with one white glass rose. A fallen crown, a standing figure, a small kneeling figure, and a low gold sun between two glass towers.",
         "temperance": "A tall clear figure pours a stream between two glass cups. One foot in a shallow pool, one on stone. A few iris blades. A path of light to a glass mountain.",
         "the-tower": "A smoked-glass tower, a gold crown struck off by a white bolt. Two featureless figures fall. Fire is a small red glow in the windows, the only warm note. Mirrored floor.",
@@ -262,7 +262,7 @@ SPECIAL = {
         "the-hermit": "A lone hooded engine on a high gantry, a staff, and a lantern that lights only the next tread. A small star filament inside. The rest of the cathedral of machines is dark. No skin.",
         "wheel-of-fortune": "No human form. A great gear turns, a sphinx-engine with a sword at the top, a jackal-machine climbing, a snake of cable descending. Four corner engines: angel, eagle, lion, bull.",
         "justice": "A seated engine between two columns, a vertical blade and level scales. The crown is a ring of bolts. No skin.",
-        "the-hanged-man": "An engine hangs by one ankle from a tau of beams, the other leg crossed, a halo ring of brass. The pose is still. No skin.",
+        "the-hanged-man": "An engine is shown head-down, one foot resting on a tau of beams, the other leg crossed, a halo ring of brass. The pose is a chosen, still pause. No skin. No injury and no rope.",
         "death": "A black engine rides a white-metal horse and carries a dark banner with one brass rose. A fallen crown gear, a standing machine, a small kneeling machine, and a rising sun gear between two towers. No skin.",
         "temperance": "A winged engine pours a stream of oil between two cups. One foot in a channel, one on plate. Iris-shaped vanes. A path to a mountain of housings. No skin.",
         "the-tower": "Lightning splits the crown gear from a tower of boilers. Two machines fall. Fire in the ports. Rivets and smoke. No skin.",
@@ -285,7 +285,7 @@ SPECIAL = {
         "the-hermit": "A narrow hooded blot on a peak, a tiny lantern star lighting one step. Most of the sheet is untouched.",
         "wheel-of-fortune": "A ring-shaped blot. A mass at the top, a climbing shape, a descending S. Four corner blots. No body in the middle.",
         "justice": "A frontal blot with a vertical sword-drip and a level pair of pans. Two pillar stains.",
-        "the-hanged-man": "An inverted blot hung from a tau, one leg crossed, a round halo that is only a thinner ring of ink.",
+        "the-hanged-man": "A head-down blot, one foot resting on a tau, one leg crossed, a round halo that is only a thinner ring of ink. A chosen, peaceful pause. No injury and no rope.",
         "death": "A horse blot and a rider, a banner reduced to a bar with one rose spot. A fallen shape, a standing shape, a small kneeling shape, a pale sun.",
         "temperance": "A tall blot pouring one bridge of ink between two cups. A water line and a land line. A path is a thin tail of wash.",
         "the-tower": "A vertical blot split by a lightning drip. A crown shape breaks off. Two small blots fall. Windows are holes in the ink.",
@@ -308,7 +308,7 @@ SPECIAL = {
         "the-hermit": "A hooded figure on a triangle peak. The lantern is a square around a star, and only the next step is drawn firmly. The rest is faint construction.",
         "wheel-of-fortune": "A circle with its center left visible. No person. A sphinx, a jackal, and a snake reduced to arcs, and four corner constructions. Ticks around the rim stand in for letters.",
         "justice": "A frontal seated construction between two pillars. The sword is a ruled vertical. The scales are two equal arcs on a level line.",
-        "the-hanged-man": "A tau of two ruled lines. An inverted figure hung by one ankle, the free leg a crossing line, the halo a circle. Every center mark remains.",
+        "the-hanged-man": "A tau of two ruled lines. A head-down figure, one foot on the upright, the free leg a crossing line, the halo a circle. A chosen, peaceful pause. Every center mark remains. No injury and no rope.",
         "death": "A horse of arcs and a rider of straight lines, a banner with one rose drawn by the compass. A fallen crown, a standing figure, a small kneeling figure, and a rising circle between two towers.",
         "temperance": "A standing figure pouring a single arc between two cups. One foot on a water line, one on a ground line. A path of ruled segments to a triangle mountain.",
         "the-tower": "A tall rectangle, a lightning path of straight segments, a crown of arcs leaving the top. Two small falling constructions. Windows are squares.",
@@ -331,7 +331,7 @@ SPECIAL = {
         "the-hermit": "An older man in a black overcoat stands on a dark stair with a cane. His small lantern lights only the next step. The rest of the hall is out of the light.",
         "wheel-of-fortune": "No person. A large gold wheel stands in a marble gallery. A sphinx sculpture with a sword at the top, a jackal and a snake as metal reliefs, and four corner reliefs: angel, eagle, lion, bull.",
         "justice": "A woman in a black suit sits between two marble pillars, a dress sword upright in one hand and level scales in the other. Even studio light.",
-        "the-hanged-man": "A man in a black suit hangs by one ankle from a wooden beam, the other leg crossed, hands behind him, expression calm. A thin gold ring behind the head. No distress.",
+        "the-hanged-man": "A man in a black suit is shown head-down in a chosen, peaceful pause, one foot resting on a wooden beam, the other leg crossed, hands behind him, expression calm. A thin gold ring behind the head. No distress, no injury, no rope.",
         "death": "A pale person in a black suit rides a white horse and carries a black banner with one white rose. A crown lies on the marble, an older man in a suit stands, a child kneels, and a low sun shows between two towers.",
         "temperance": "A woman in a white gown pours from one glass into another in a steady stream. One foot is in a shallow pool, the other on stone. Irises, and a path toward a bright doorway.",
         "the-tower": "Lightning knocks a gold crown-like finial off a stone tower. A man in a black suit and a woman in a dark dress fall. Fire in the windows. No costume beyond the clothes.",
@@ -354,7 +354,7 @@ SPECIAL = {
         "the-hermit": "A lone gray pawn on a high rank, a staff, and a lantern token that lights only the next square. The rest of the board falls into dark. No human bodies.",
         "wheel-of-fortune": "A wheel inlaid in the center of the board. A sphinx piece with a sword at the top, a jackal piece climbing, a snake piece descending. Four corner pieces: angel, eagle, lion, bull. No human bodies.",
         "justice": "A white queen between two rook pillars, a sword and level scales carved on the stem. No human bodies.",
-        "the-hanged-man": "A pawn hangs upside down by one ankle from a tau-shaped piece, the other leg crossed, a halo ring. No human bodies.",
+        "the-hanged-man": "A pawn is shown head-down, one foot resting on a tau-shaped piece, the other leg crossed, a halo ring. A chosen, still pause. No human bodies. No injury and no rope.",
         "death": "A black knight on a white horse-base carries a banner with one rose. A fallen king, a standing bishop, a small pawn, and a sun token between two rooks. No human bodies.",
         "temperance": "An angel-piece pours between two cup tokens. One foot on a pale water square, one on stone. A path of squares runs to a far piece topped with light. No human bodies.",
         "the-tower": "A tall rook is struck by a lightning token and loses a crown. Two pawns lie toppled in front. A red curtain behind the board. No human bodies.",
@@ -442,8 +442,164 @@ def scene_for(style: str, card_id: str, template: str, title: str) -> str:
     return f"{body} {lock}"
 
 
+# Card back. The frame comes from the face prompt; the scene does not name a card.
+BACK = {
+    "editorial-luxury": "A white rose set in a round gold medallion on black silk, with a quiet repeat of small gold links. Ivory inside a thin gold frame. No model. Black, ivory, and metallic gold only.",
+    "minimal-geometric": "The rose is five circles and a few arcs at the center of a strict grid. Black, cream, and one red accent. Flat shapes, a faint paper grain, and a repeating empty module.",
+    "neo-deco": "A brass rose in a black-lacquer roundel. Stepped corners and chevrons repeat. One deep jewel tone sits in the center. The top circle and the bottom rectangle stay empty. Straight lines only.",
+    "cyber-mysticism": "A glass rose held in thin gold rings on dark glass, with a few holographic diamonds. The top box and the bottom line stay empty. Sparse, not cluttered.",
+    "brutalist-graphic": "Black, red, and cream blocks, with ink grain and misregistration. A red circle is the rose. No letters anywhere.",
+    "surreal-photography": "A real white rose on dark stone, photographed, the same spray repeated in quiet impossible architecture. Gallery light. No person.",
+    "glass-and-chrome": "A clear glass rose standing in a chrome ring on a mirrored floor. Smoked glass and soft light. The top break and the bottom plaque are empty metal. No figure.",
+    "japanese-contemporary-poster": "A flat black ink rose, a little gold leaf, large bare cream paper, and one red disc. Not ukiyo-e. No characters.",
+    "neo-symbolism": "One large white rose alone in a thin ring. Muted slate, bone, and dull gold. Worn paint and an almost empty ground.",
+    "luxury-ui": "A luminous rose mark on a dark glass panel, gold hairlines, and one soft glow. No labels. An instrument, not a painting.",
+    "wayang-kulit": "Punched leather, gold, crimson, and turquoise filigree forming a rose. Warm light behind the screen. Floral side panels. No puppet.",
+    "greek-sculpture": "A marble roundel carved with one rose, gold leaf on the petals, photographed among columns. Chisel marks and veins stay. No statue of a body.",
+    "cubism": "The rose broken into ochre, teal, brick, black, and cream planes. Canvas weave stays visible, and the paint runs to the double rule. No face.",
+    "plastic-model-diorama": "The reverse of the wooden base. A white rose built from painted plastic parts and tiny gears, glue seams visible, the metal plate blank. The same desk and the same shallow focus.",
+    "french-doll": "Silk, lace, and ribbon in a symmetrical pattern around a porcelain rose. Candlelight. Black, ivory, and burgundy. No doll.",
+    "botanical-art": "A botanical plate of one white rose, every vein and thorn drawn in fine ink and watercolor, with small leaves repeating in the margin. Cream paper and the hairline gold border. No figure.",
+    "gear-engine-robotics": "A rose assembled from gears and brass leaves, furnace light, and rivets. The top plaque and the bottom nameplate are blank metal. No skin, and no machine shaped like a person.",
+    "rorschach": "One ink rose, a mirrored blot, with the same blot repeated from top to bottom. Black ink on warm paper, a wide empty margin, and hairline corner marks. Almost no contour.",
+    "ruler-compass-pen": "A rose of compass arcs with the center mark left in, a ruled border, and the construction lines kept. No wash and no color fill.",
+    "suit-and-dress": "A white rose photographed on marble between black suiting cloth and ivory satin. The top circle and the lower panel are empty. No person.",
+    "unkei-kaikei": "A rose carved into the back of the wooden panel. Worn pigment, chisel marks, and cracks stay visible. No face and no inlaid eyes.",
+    "stained-glass": "A rose window. Lead lines divide every petal. Ruby, cobalt, gold, and emerald glow because the light comes through the glass. No figure.",
+    "tile-mosaic": "Small tiles and visible grout build a rose medallion. Gold, cream, black, and terracotta. Star medallions occupy the corners. No figure.",
+    "chess-pieces": "The black-and-white marble board alone, a white rose inlaid at the center, a gold frame, candlelight, and a reflective floor. No pieces.",
+    "art-nouveau": "One white rose under the arch. Whiplash lilies and vines stay in the border. Peacock green, cream, and gold. The cartouche and the banner are empty ornament. No figure, no stepped brass, and no sunburst.",
+    "classic-tarot": "A flat repeating flower woodcut in mineral color on foxed paper, one crude white rose in a circle, and a plain black rule. No scene.",
+    "ancient-egypt": "A flat pattern on aged papyrus. A white rose among lotus flowers, with a winged sun at both ends. Mineral red, turquoise, gold, and black. No profile figure and no readable signs.",
+    "engraving": "A rose in a roundel, dense burin line, corner roundels, and warm laid paper. No color and no figure. The banner is empty.",
+    "mezzotint": "A rose scraped out of velvety black, sepia on warm paper. The dark band is empty. No crosshatching and no figure.",
+    "colored-pencil": "A white rose in visible directional strokes, red, indigo, ochre, and gold, inside the double gold frame. The corner stars repeat. No figure.",
+    "watercolor": "A white rose in a thin wash, indigo, burnt sienna, and a little gold. The paper shows through, and a faint wreath repeats. No figure.",
+    "sumi-e": "One ink rose with a dry-brush edge. Most of the paper is blank. Two small red seals sit opposite each other and are not characters. No calligraphy.",
+}
+
+BACK_RULE = (
+    "This is the back of the card, one plate shared by the whole deck. "
+    "The reference supplies the frame, the proportion, and the materials only. Replace the whole inner scene. "
+    "Do not place a numeral, an English title, or any letter. "
+    "No words, no watermark, no signature."
+)
+
+BACK_END = (
+    "No people, no animals, no creatures, and no tarot scene. "
+    "Symmetrical from left to right, and the same picture after a half turn."
+)
+
+# Second-paragraph clauses that would pull a figure or a title back in.
+BACK_HEADER_FIX = {
+    "editorial-luxury": ("sculptural human figure, ", ""),
+    "surreal-photography": ("dreamlike human figure, ", ""),
+    "glass-and-chrome": (
+        "abstract human form, gallery installation aesthetic, minimal but highly symbolic. The figures are sculptures in a room, not painted people. No costume, no facial features beyond the silhouette.",
+        "gallery installation of glass objects, minimal but highly symbolic. No figure.",
+    ),
+    "french-doll": (
+        "Antique French bisque-doll photograph. Porcelain skin, glass eyes, blushed cheeks, ringlets, silk, lace, and ribbons. Candlelight. Black, ivory, and burgundy. Elegant and uncanny, with ball joints visible. No gore.",
+        "Antique French doll-maker's cloth and porcelain, without a doll. Silk, lace, and ribbons. Candlelight. Black, ivory, and burgundy.",
+    ),
+    "suit-and-dress": (
+        "Contemporary fashion photograph. The people wear a tailored black suit, a white shirt, a narrow tie, and a satin evening dress. No fantasy costume on the bodies. Studio light, marble, and a gold frame.",
+        "Contemporary fashion photograph of cloth and marble only. Black suiting, ivory satin, studio light, and a gold frame. No person.",
+    ),
+    "greek-sculpture": (
+        "Photographed classical marble sculpture in a temple interior. White stone bodies, gold leaf, dark green-black marble, Corinthian columns. Museum lighting, chisel marks, veins in the stone. A photograph of statues, not an illustration.",
+        "Photographed classical marble in a temple interior. Gold leaf, dark green-black marble, Corinthian columns. Museum lighting, chisel marks, veins in the stone. A carved panel, not a statue and not an illustration.",
+    ),
+    "wayang-kulit": (
+        "Indonesian wayang kulit shadow-puppet card. Black leather silhouettes pierced with dense gold, crimson, and turquoise filigree. Elongated arms, profile faces, white-and-red puppet masks, punched-hole patterns. Warm light behind a screen. Temple and cloud shapes in the side panels, floral puppet-theater frame.",
+        "Indonesian wayang kulit leather. Black leather pierced with dense gold, crimson, and turquoise filigree. Punched-hole flowers. Warm light behind a screen. A floral frame. No puppet and no face.",
+    ),
+    "brutalist-graphic": (
+        "Brutalist contemporary tarot poster, oversized typography, raw geometric blocks, stark contrast, rough print texture, asymmetrical composition, confrontational symbolism, experimental editorial design. Ink grain, misregistration, and cut-paper blocks.",
+        "Brutalist contemporary tarot poster, raw geometric blocks, stark contrast, rough print texture, experimental editorial design. Ink grain, misregistration, and cut-paper blocks. No typography.",
+    ),
+    "japanese-contemporary-poster": ("subtle asymmetry, ", ""),
+    "botanical-art": (
+        "Flowers and fruit are drawn with the same precision as the figures.",
+        "Flowers and leaves are drawn with scientific precision.",
+    ),
+    "neo-symbolism": (
+        "Contemporary symbolic painting, monumental central figure, sparse dreamlike landscape, psychologically charged objects, muted sophisticated palette, modern figurative art, poetic and enigmatic visual narrative. Few ornaments. Each object should read as one clear symbol. Worn paint, muted slate, bone, and dull gold.",
+        "Contemporary symbolic painting, one object, a sparse ground, muted sophisticated palette. Few ornaments. Worn paint, muted slate, bone, and dull gold.",
+    ),
+    "sumi-e": (
+        "Japanese sumi ink on paper. Black and gray only, plus two small red seals. Splatter, dry brush, and a large unpainted ground. Calligraphic, not a Western wash painting.",
+        "Japanese sumi ink on paper. Black and gray only, plus two small red seals. Splatter, dry brush, and a large unpainted ground. Not a Western wash painting. No calligraphy.",
+    ),
+}
+
+
+def back_header(style: str, header: str) -> str:
+    if style == "plastic-model-diorama":
+        return (
+            "Vertical photograph, the same proportion as the face cards. Shallow depth of field. "
+            "The reverse of the wooden base sits on the modeler's desk, with a cutting mat, brushes, and paint bottles in the foreground and workshop shelves behind. "
+            "Built from plastic model kits and paint, with glue seams. The metal nameplate is blank. "
+            + BACK_RULE
+        )
+    if style == "unkei-kaikei":
+        return (
+            "Vertical photograph of the reverse of a temple wood panel, presented as a tarot card. "
+            + BACK_RULE
+            + "\n\nJapanese wood carving in the Kamakura manner. Worn mineral pigment, chisel marks, cracks, and flaked paint stay visible. Photographed as a real panel."
+        )
+    header = header.replace(
+        "The border, the numeral, and the title banner are fully visible and are not cut off.",
+        "The border is fully visible and is not cut off.",
+    )
+    if style == "ancient-egypt":
+        header = header.replace(
+            "Hieroglyph columns and a lotus border are the edge of the card and reach all four sides. A winged sun sits at the top.",
+            "A lotus border is the edge of the card and reaches all four sides. A winged sun sits at both ends.",
+        )
+        header = header.replace(
+            "Ancient Egyptian tomb painting on aged papyrus. Flat profile figures, no perspective and no modeled shading. Mineral red, turquoise, gold, and black. Hieroglyph columns, wedjat eyes, and a lotus border.",
+            "Ancient Egyptian ornament on aged papyrus. No perspective and no modeled shading. Mineral red, turquoise, gold, and black. A lotus border. No readable signs.",
+        )
+    if style == "colored-pencil":
+        header = header.replace(
+            "Crescent moons and stars occupy the upper corners, and small marks sit on the side rails.",
+            "Crescent moons and stars occupy every corner, and the same small marks sit on every rail.",
+        )
+    fix = BACK_HEADER_FIX.get(style)
+    if fix:
+        old, new = fix
+        if old not in header:
+            raise SystemExit(f"back header fix missing in {style}")
+        header = header.replace(old, new, 1)
+    new_header, n = re.subn(
+        r"(?:Place the numeral|The numeral is carved|The numeral and the English title are printed).*?No extra words, no watermark, no signature\.",
+        BACK_RULE,
+        header,
+        count=1,
+        flags=re.S,
+    )
+    if n != 1:
+        raise SystemExit(f"numeral sentence not found in {style}")
+    return new_header
+
+
+def write_backs(style_headers: dict[str, str]) -> int:
+    missing = [sid for sid in style_headers if sid not in BACK]
+    extra = [sid for sid in BACK if sid not in style_headers]
+    if missing or extra:
+        raise SystemExit(f"back mismatch missing={missing} extra={extra}")
+    written = 0
+    for sid, header in style_headers.items():
+        text = f"{back_header(sid, header)}\n\nBack: {BACK[sid]} {BACK_END}\n"
+        (DESIGN / sid / "back.txt").write_text(text)
+        written += 1
+    return written
+
+
 def main() -> None:
     style_headers = headers()
+    print(f"backs {write_backs(style_headers)}")
     missing_styles = [sid for sid in list(WHO) + list(SPECIAL) if sid not in style_headers]
     extra = [sid for sid in style_headers if sid not in WHO and sid not in SPECIAL]
     if missing_styles or extra:
