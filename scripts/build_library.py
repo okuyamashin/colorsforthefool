@@ -196,7 +196,7 @@ def page(title, description, canonical, image, css, json_ld, body, icon, lang="j
 {body}
     <footer class="colophon">
       <p>© 2026 Engawa Inc.</p>
-      <p><a href="{"/contact/" if lang == "ja" else "/en/contact/"}">{"問い合わせ" if lang == "ja" else "Contact"}</a> <a href="https://github.com/okuyamashin/colorsforthefool">GitHub</a></p>
+      <p><a href="{"/contact/" if lang == "ja" else "/en/contact/"}">{"問い合わせ" if lang == "ja" else "Contact"}</a>{" <a href=\"/design/\">デザイン</a> <a href=\"/demo/cafe/\">カフェ・タロット</a>" if lang == "ja" else ""} <a href="/privacy/">{"プライバシーポリシー" if lang == "ja" else "Privacy policy"}</a> <a href="https://github.com/okuyamashin/colorsforthefool">GitHub</a></p>
     </footer>
   </body>
 </html>
@@ -563,7 +563,7 @@ def day_links():
 
 
 def write_sitemap(paths):
-    urls = [f"{ORIGIN}/", f"{ORIGIN}/en/"]
+    urls = [f"{ORIGIN}/", f"{ORIGIN}/en/", f"{ORIGIN}/design/"]
     urls.extend(f"{ORIGIN}/{path.relative_to(PUBLIC).as_posix()}" for path in paths)
     urls.extend(f"{ORIGIN}/days/{item['date']}/" for item in day_links())
     body = "\n".join(f"  <url><loc>{esc(url)}</loc></url>" for url in urls)
