@@ -108,6 +108,63 @@ function writeDrawn(ids) {
   document.cookie = `${COOKIE}=${value}; Path=/; Max-Age=31536000; SameSite=Lax`;
 }
 
+const DESIGN_COOKIE = "cftf-design";
+const DESIGNS = [
+  "ancient-egypt",
+  "botanical-art",
+  "brutalist-graphic",
+  "editorial-luxury",
+  "engraving",
+  "french-doll",
+  "gear-engine-robotics",
+  "greek-sculpture",
+  "rorschach",
+];
+
+function readDesign() {
+  const found = document.cookie.split("; ").find((part) => part.startsWith(`${DESIGN_COOKIE}=`));
+  if (!found) return "";
+  try {
+    const value = decodeURIComponent(found.slice(DESIGN_COOKIE.length + 1));
+    return DESIGNS.includes(value) ? value : "";
+  } catch {
+    return "";
+  }
+}
+
+function designAsset(name) {
+  const style = readDesign();
+  if (!style) return "";
+  const root = PACK.prefix ? "../" : "";
+  return `${root}design/${style}/${name}`;
+}
+
+function designFace(id) {
+  return designAsset(`${id}.jpg`);
+}
+
+function applyDesignBack() {
+  const image = document.querySelector(".card-face.back img");
+  if (!image) return;
+  const fallback = image.dataset.fallback || image.getAttribute("src");
+  image.dataset.fallback = fallback;
+  const styled = designAsset("back.jpg");
+  if (!styled) {
+    if (image.getAttribute("src") !== fallback) image.src = fallback;
+    return;
+  }
+  if (image.src.includes(`design/${readDesign()}/back.jpg`)) return;
+  image.onerror = () => {
+    image.onerror = null;
+    image.src = fallback;
+  };
+  image.src = styled;
+}
+
+function defaultFace(id) {
+  return `${DATA}/${id}/face.jpg`;
+}
+
 function saveSession() {
   if (!state) {
     sessionStorage.removeItem(SESSION);
@@ -268,11 +325,27 @@ function openFaceVideo(id, file) {
 
 function showFace(playVideo) {
   const drawnLabel = ORIENTATION[state.orientation];
-  const jpg = `${DATA}/${state.card.id}/face.jpg`;
+  const id = state.card.id;
+  const styled = designFace(id);
+  const custom = state.faceCustom !== false && Boolean(styled);
+  const jpg = custom ? styled : defaultFace(id);
   face.hidden = false;
-  if (!face.src.endsWith(`${state.card.id}/face.jpg`)) face.src = jpg;
+  face.onerror = () => {
+    if (!custom) return;
+    face.onerror = null;
+    state.faceCustom = false;
+    face.src = defaultFace(id);
+  };
+  const needle = custom ? `design/${readDesign()}/${id}.jpg` : `${id}/face.jpg`;
+  if (!face.src.includes(needle)) face.src = jpg;
   face.alt = `${cardTitle(state.card)}, ${drawnLabel}`;
   faceTurn.classList.toggle("reversed", state.orientation === "reversed");
+  if (custom) {
+    pendingVideo?.remove();
+    pendingVideo = null;
+    faceTurn.querySelector("video")?.remove();
+    return;
+  }
   const videoFile = state.card.video;
   const canPlay = playVideo && typeof videoFile === "string" && videoFile.toLowerCase().endsWith(".mp4") && !reduceMotion();
   const primed = pendingVideo
@@ -503,7 +576,9 @@ async function draw() {
     renewed = true;
   }
   const id = spec ? DECK[spec.card - 1] : pick(pool);
-  if (FACE_VIDEO[id] && !reduceMotion()) openFaceVideo(id, FACE_VIDEO[id]);
+  applyDesignBack();
+  const styled = designFace(id);
+  if (!styled && FACE_VIDEO[id] && !reduceMotion()) openFaceVideo(id, FACE_VIDEO[id]);
   cardButton.classList.add("is-waiting");
   try {
     const card = await fetchCard(id);
@@ -519,9 +594,18 @@ async function draw() {
       if (!Array.isArray(colors) || colors.length === 0) throw new Error("colors");
       color = pick(colors);
     }
-    const jpg = `${DATA}/${id}/face.jpg`;
-    await loadImage(jpg);
-    state = { card, orientation, color, phase: "reading", renewed, story: "" };
+    let jpg = styled || defaultFace(id);
+    let faceCustom = Boolean(styled);
+    try {
+      await loadImage(jpg);
+    } catch (error) {
+      if (!faceCustom) throw error;
+      faceCustom = false;
+      jpg = defaultFace(id);
+      if (FACE_VIDEO[id] && !reduceMotion()) openFaceVideo(id, FACE_VIDEO[id]);
+      await loadImage(jpg);
+    }
+    state = { card, orientation, color, phase: "reading", renewed, story: "", faceCustom };
     face.src = jpg;
     face.alt = `${cardTitle(card)}, ${ORIENTATION[orientation]}`;
     faceTurn.classList.toggle("reversed", orientation === "reversed");
@@ -635,6 +719,8 @@ async function restore() {
     returnToDeck();
   }
 }
+
+applyDesignBack();
 
 if (testQueue === null) {
   showError(TEST_ERROR);
