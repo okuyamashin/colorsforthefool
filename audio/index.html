@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>英語版・二十二枚</title>
+    <style>
+      :root {
+        --ink: #2a2118;
+        --muted: #6d5c48;
+        --gold: #a6843d;
+        --paper: #f7f1e4;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: radial-gradient(900px 480px at 50% -10%, #fbf6ec, #e7dcc8 70%);
+        font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+      }
+      main {
+        width: min(92vw, 40rem);
+        margin: 0 auto;
+        padding: 1.6rem 0 3rem;
+      }
+      h1 {
+        margin: 0;
+        font-size: 1.35rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+      }
+      .note {
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      .player {
+        position: sticky;
+        top: 0;
+        padding: 0.8rem 0 0.6rem;
+        background: linear-gradient(#f4ead8, #f4ead8 80%, transparent);
+      }
+      audio { width: 100%; }
+      .now { min-height: 1.4em; margin: 0.4rem 0 0; }
+      button, a.cue {
+        font: inherit;
+        color: #7a5c2e;
+        background: none;
+        border: 0;
+        cursor: pointer;
+      }
+      button { padding: 0; text-decoration: underline; text-decoration-color: var(--gold); }
+      ol { margin: 1rem 0 0; padding: 0; list-style: none; }
+      li {
+        display: grid;
+        grid-template-columns: 2.2rem 1fr auto;
+        gap: 0.35rem 0.8rem;
+        align-items: baseline;
+        padding: 0.7rem 0;
+        border-top: 1px solid rgba(166, 132, 61, 0.35);
+      }
+      li.is-current { background: rgba(166, 132, 61, 0.12); }
+      li { scroll-margin-top: 8.5rem; }
+      .num { color: var(--muted); font-variant-numeric: tabular-nums; }
+      .latin { color: var(--muted); font-size: 0.86rem; letter-spacing: 0.04em; }
+      .time {
+        font-variant-numeric: tabular-nums;
+        letter-spacing: 0.03em;
+        text-decoration: underline;
+        text-decoration-color: var(--gold);
+        text-underline-offset: 0.18em;
+      }
+      .line { grid-column: 2 / -1; margin: 0; color: var(--muted); font-size: 0.92rem; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>英語版・二十二枚</h1>
+      <p class="note">1本の曲です。各リンクは、そのカードの歌い出しから次のカードの直前まで再生して止まります。最初の15秒ほどは前奏で、愚者の歌はそのあとです。世界のあとに続く、愚者へ戻る終わりの歌は世界に含めています。</p>
+      <div class="player">
+        <audio id="player" controls preload="metadata" src="The%20Fool's%20Journey%20%E2%80%94%20Arcana%200%20to%20XXI.mp3"></audio>
+        <p class="now" id="now">カードを選んでください。</p>
+        <p><button type="button" id="next">次のカード</button></p>
+      </div>
+      <ol id="cues"></ol>
+    </main>
+    <script>
+      const CUES = [
+        ["the-fool", "0", "愚者", "The Fool", 15.5, 31.5, "The Fool walks out beneath the sky"],
+        ["the-magician", "I", "魔術師", "The Magician", 31.5, 54.5, "The Magician raises one hand high"],
+        ["the-high-priestess", "II", "女教皇", "The High Priestess", 54.5, 73.5, "The High Priestess waits between"],
+        ["the-empress", "III", "女帝", "The Empress", 73.5, 89.5, "The Empress walks through fields of grain"],
+        ["the-emperor", "IV", "皇帝", "The Emperor", 89.5, 107.5, "The Emperor sits upon the stone"],
+        ["the-hierophant", "V", "法王", "The Hierophant", 107.5, 122.5, "The Hierophant hears the ancient bell"],
+        ["the-lovers", "VI", "恋人", "The Lovers", 122.5, 136.5, "The Lovers stand where two roads part"],
+        ["the-chariot", "VII", "戦車", "The Chariot", 136.5, 155.5, "The Chariot leaves the city gates"],
+        ["strength", "VIII", "力", "Strength", 155.5, 169.5, "Strength stands softly by the lion"],
+        ["the-hermit", "IX", "隠者", "The Hermit", 169.5, 188.5, "The Hermit climbs the lonely height"],
+        ["wheel-of-fortune", "X", "運命の輪", "Wheel of Fortune", 188.5, 202.5, "Wheel of Fortune turns and turns"],
+        ["justice", "XI", "正義", "Justice", 202.5, 221.5, "Justice holds the sword upright"],
+        ["the-hanged-man", "XII", "吊るされた男", "The Hanged Man", 221.5, 236.5, "The Hanged Man sees the world reversed"],
+        ["death", "XIII", "死神", "Death", 236.5, 251.5, "Death rides quietly on a pale white horse"],
+        ["temperance", "XIV", "節制", "Temperance", 251.5, 265.5, "Temperance pours from cup to cup"],
+        ["the-devil", "XV", "悪魔", "The Devil", 265.5, 283.5, "The Devil smiles: “What do you want?”"],
+        ["the-tower", "XVI", "塔", "The Tower", 283.5, 298.5, "The Tower shatters under lightning"],
+        ["the-star", "XVII", "星", "The Star", 298.5, 313.5, "The Star shines over quiet water"],
+        ["the-moon", "XVIII", "月", "The Moon", 313.5, 331.5, "The Moon draws paths across the night"],
+        ["the-sun", "XIX", "太陽", "The Sun", 331.5, 350.5, "The Sun rises, warm and golden"],
+        ["judgement", "XX", "審判", "Judgement", 350.5, 366.5, "Judgement sounds the waking trumpet"],
+        ["the-world", "XXI", "世界", "The World", 366.5, 404.0, "The World, the World, the circle closes"],
+      ];
+
+      const player = document.querySelector("#player");
+      const now = document.querySelector("#now");
+      const list = document.querySelector("#cues");
+      let current = -1;
+      let loadToken = 0;
+
+      function clock(seconds) {
+        const whole = Math.floor(seconds);
+        const frac = Math.round((seconds - whole) * 10);
+        const minutes = Math.floor(whole / 60);
+        const rest = String(whole % 60).padStart(2, "0");
+        return `${minutes}:${rest}.${frac}`;
+      }
+
+      function label(cue) {
+        return `${cue[1]} ${cue[2]}　${clock(cue[4])}–${clock(cue[5])}`;
+      }
+
+      CUES.forEach((cue, index) => {
+        const item = document.createElement("li");
+        item.id = cue[0];
+        const num = document.createElement("span");
+        num.className = "num";
+        num.textContent = cue[1];
+        const link = document.createElement("a");
+        link.className = "cue";
+        link.href = `#${cue[0]}`;
+        link.innerHTML = `${cue[2]} <span class="latin">${cue[3]}</span>`;
+        const time = document.createElement("a");
+        time.className = "cue time";
+        time.href = `#${cue[0]}`;
+        time.textContent = `${clock(cue[4])}–${clock(cue[5])}`;
+        const line = document.createElement("p");
+        line.className = "line";
+        line.textContent = cue[6];
+        item.append(num, link, time, line);
+        item.addEventListener("click", (event) => {
+          if (event.target.closest("a")) event.preventDefault();
+          play(index);
+        });
+        list.append(item);
+      });
+
+      function play(index) {
+        const cue = CUES[index];
+        if (!cue) return;
+        current = index;
+        const token = ++loadToken;
+        const start = () => {
+          if (token !== loadToken) return;
+          player.pause();
+          const begin = () => {
+            if (token !== loadToken) return;
+            if (Math.abs(player.currentTime - cue[4]) > 0.35) {
+              player.addEventListener("seeked", begin, { once: true });
+              player.currentTime = cue[4];
+              return;
+            }
+            player.play();
+          };
+          begin();
+        };
+        if (player.readyState >= 1) start();
+        else player.addEventListener("loadedmetadata", start, { once: true });
+        now.textContent = label(cue);
+        history.replaceState(null, "", `#${cue[0]}`);
+        for (const item of list.children) item.classList.toggle("is-current", item.id === cue[0]);
+        list.children[index].scrollIntoView({ block: "nearest" });
+      }
+
+      player.addEventListener("timeupdate", () => {
+        const cue = CUES[current];
+        if (!cue) return;
+        if (player.currentTime >= cue[5]) {
+          player.pause();
+          player.currentTime = cue[5];
+        }
+      });
+
+      document.querySelector("#next").addEventListener("click", () => {
+        play(Math.min(current + 1, CUES.length - 1));
+      });
+
+      const opening = location.hash.slice(1);
+      const found = CUES.findIndex((cue) => cue[0] === opening);
+      if (found >= 0) play(found);
+    </script>
+  </body>
+</html>

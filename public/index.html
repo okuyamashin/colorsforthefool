@@ -15,9 +15,12 @@
     <title>タロットで占う、今日のラッキーカラー — Colors for the Fool</title>
     <meta name="description" content="大アルカナ二十二枚から一枚を引きます。正位置か逆位置の象徴を読んだあと、物語の終わりに今日のラッキーカラーが開きます。">
     <link rel="canonical" href="https://colorsofthefool.engawa5656.com/">
+    <!-- hreflang -->
     <link rel="alternate" hreflang="ja" href="https://colorsofthefool.engawa5656.com/">
     <link rel="alternate" hreflang="en" href="https://colorsofthefool.engawa5656.com/en/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://colorsofthefool.engawa5656.com/zh/">
     <link rel="alternate" hreflang="x-default" href="https://colorsofthefool.engawa5656.com/">
+    <!-- /hreflang -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ja_JP">
     <meta property="og:site_name" content="Colors for the Fool">
@@ -55,7 +58,13 @@
       <p class="brand">Colors for the Fool</p>
       <nav class="mast" aria-label="サイト">
         <a class="instagram" href="https://www.instagram.com/colors.for.the.fool/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.2" cy="6.8" r="1.05" fill="currentColor"/></svg></a>
-        <a class="lang" href="en/">English</a>
+        <div class="lang-menu">
+          <button type="button" class="lang" aria-expanded="false" aria-haspopup="true" aria-controls="lang-list">日本語<span class="lang-mark" aria-hidden="true"></span></button>
+          <ul class="lang-list" id="lang-list" hidden>
+            <li><a href="en/">English</a></li>
+            <li><a href="zh/">中文</a></li>
+          </ul>
+        </div>
       </nav>
       <h1 class="tagline">タロットで占う、今日のラッキーカラー</h1>
     </header>
@@ -286,6 +295,7 @@
       <p><a href="contact/">問い合わせ</a> <a href="/design/">デザイン</a> <a href="/demo/cafe/">カフェ・タロット</a> <a href="/privacy/">プライバシーポリシー</a> <a href="https://github.com/okuyamashin/colorsforthefool">GitHub</a></p>
     </footer>
     <script src="meanings.js"></script>
+    <script src="languages.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

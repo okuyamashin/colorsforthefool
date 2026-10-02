@@ -1,38 +1,14 @@
-const EN = document.documentElement.lang === "en";
-const DATA = EN ? "/data" : "../data";
-const COOKIE = EN ? "cftf-en" : "cftf";
-const SESSION = EN ? "cftf-reading-en" : "cftf-reading";
-const COPY = EN
-  ? {
-      upright: "Upright",
-      reversed: "Reversed",
-      meaningFallback: "The picture on this card is today's sign.",
-      renewed: "All twenty-two cards have been drawn, so the deck is whole again.",
-      hintReveal: "Tap again, and today's color opens",
-      hintDraw: "Tap to draw a card",
-      drawLabel: "Draw a card",
-      openLabel: "Tap again to open the color",
-      mirror: "A mirror holding the color",
-      scene: "A picture with a mirror holding the color",
-      cardError: "The card did not open. Tap once more.",
-      colorError: "Today's color did not open. Tap once more.",
-      testError: "test looks like 4-10. Cards run from 1 to 22. Colors 1 to 10 are upright, 11 to 20 reversed.",
-    }
-  : {
-      upright: "正位置",
-      reversed: "逆位置",
-      meaningFallback: "このカードの絵が、今日の象徴です。",
-      renewed: "二十二枚を引き終えたので、山を戻しました。",
-      hintReveal: "もう一度タップすると、今日の色が開きます",
-      hintDraw: "タップして、一枚引く",
-      drawLabel: "カードを引く",
-      openLabel: "もう一度タップして色を開く",
-      mirror: "中央に色を映す鏡",
-      scene: "中央に色を映す鏡の絵",
-      cardError: "カードを開けませんでした。もう一度タップしてください。",
-      colorError: "今日の色を開けませんでした。もう一度タップしてください。",
-      testError: "test は 4-10 の形です。カードは1から22、色は正位置が1から10、逆位置が11から20です。",
-    };
+const PACK = (window.LANG_PACKS || []).find((item) => item.htmlLang === document.documentElement.lang);
+if (!PACK) throw new Error("language");
+const DATA = PACK.data;
+const COOKIE = PACK.cookie;
+const SESSION = PACK.session;
+const PREFIX = PACK.prefix ? `/${PACK.prefix}` : "";
+const COPY = PACK.copy;
+
+function fillText(template, values) {
+  return String(template).replace(/\{(\w+)\}/g, (_, key) => values[key] ?? "");
+}
 const DECK = [
   "the-fool",
   "the-magician",
@@ -60,20 +36,18 @@ const DECK = [
 const ORIENTATION = { upright: COPY.upright, reversed: COPY.reversed };
 
 function colorFile(color) {
-  return EN ? color.textEn : color.text;
+  return color[PACK.textField];
 }
 
 function colorShare() {
-  const slug = String(colorFile(state.color) || "").replace(/\.en\.txt$/i, "").replace(/\.txt$/i, "");
-  const pageUrl = `${SITE}${EN ? "/en" : ""}/cards/${state.card.id}/${slug}/index.html`;
-  const shareText = EN
-    ? `Today's lucky color is ${state.color.name}.`
-    : `今日のラッキーカラーは、${state.color.nameJa}です。`;
+  const slug = String(colorFile(state.color) || "").replace(/\.[a-z]{2}\.txt$/i, "").replace(/\.txt$/i, "");
+  const pageUrl = `${SITE}${PREFIX}/cards/${state.card.id}/${slug}/index.html`;
+  const shareText = fillText(PACK.shareText, { color: state.color[PACK.colorName] });
   return { slug, pageUrl, shareText };
 }
 
 function cardTitle(card) {
-  return EN ? card.name : card.nameJa;
+  return card[PACK.cardName];
 }
 const FRESH = "v=3";
 const FACE_VIDEO = {
@@ -83,6 +57,9 @@ const FACE_VIDEO = {
   justice: "face.mp4",
   temperance: "face.mp4",
   judgement: "face.mp4",
+  "the-empress": "face.mp4",
+  "the-emperor": "face.mp4",
+  "the-devil": "face.mp4",
 };
 
 const cardButton = document.querySelector("#card");
@@ -171,7 +148,7 @@ function pick(list) {
 function fillProse(parent, text, dropTitle) {
   parent.replaceChildren();
   const lines = text.replace(/\r\n/g, "\n").split("\n");
-  if (dropTitle && /[―—-]\s*(正位置|逆位置|Upright|Reversed)\s*$/.test(lines[0] || "")) lines.shift();
+  if (dropTitle && new RegExp(PACK.titlePattern).test(lines[0] || "")) lines.shift();
   const blocks = [];
   let buffer = [];
   const flush = () => {
@@ -347,8 +324,8 @@ function paint(animated) {
   cardButton.classList.toggle("is-open", state.phase === "revealed");
   showFace(animated);
   title.textContent = cardTitle(state.card);
-  en.hidden = EN;
-  en.textContent = EN ? "" : state.card.name;
+  en.hidden = !PACK.latinSubtitle;
+  en.textContent = PACK.latinSubtitle ? state.card.name : "";
   orientationEl.textContent = drawnLabel;
   const text = window.MEANINGS?.[state.card.id]?.[state.orientation];
   fillProse(meaning, text || COPY.meaningFallback, false);
@@ -666,4 +643,30 @@ if (testQueue === null) {
   showGuide();
 } else {
   restore();
+}
+
+const langMenu = document.querySelector(".lang-menu");
+const langToggle = langMenu?.querySelector(".lang");
+const langList = langMenu?.querySelector(".lang-list");
+if (langMenu && langToggle && langList) {
+  const closeLanguages = () => {
+    langToggle.setAttribute("aria-expanded", "false");
+    langList.hidden = true;
+  };
+  langToggle.addEventListener("click", () => {
+    const open = langToggle.getAttribute("aria-expanded") === "true";
+    langToggle.setAttribute("aria-expanded", String(!open));
+    langList.hidden = open;
+  });
+  document.addEventListener("click", (event) => {
+    if (langToggle.getAttribute("aria-expanded") !== "true") return;
+    if (langMenu.contains(event.target)) return;
+    event.stopPropagation();
+    closeLanguages();
+  }, true);
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || langToggle.getAttribute("aria-expanded") !== "true") return;
+    closeLanguages();
+    langToggle.focus();
+  });
 }

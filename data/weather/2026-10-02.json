@@ -1,0 +1,25 @@
+{
+  "fetchedAt": "2026-10-02T09:45+09:00",
+  "place": "東京",
+  "latitude": 35.6762,
+  "longitude": 139.6503,
+  "source": "https://api.open-meteo.com/v1/forecast",
+  "current": {
+    "time": "2026-10-02T09:45",
+    "temperatureC": 21.2,
+    "humidityPercent": 78,
+    "precipitationMm": 0.0,
+    "windSpeedKmh": 4.3,
+    "weatherCode": 3,
+    "weather": "曇り"
+  },
+  "today": {
+    "date": "2026-10-02",
+    "weatherCode": 53,
+    "weather": "霧雨",
+    "temperatureMaxC": 21.7,
+    "temperatureMinC": 18.1,
+    "precipitationProbabilityMaxPercent": 96,
+    "precipitationSumMm": 0.9
+  }
+}

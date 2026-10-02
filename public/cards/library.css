@@ -1,3 +1,5 @@
+@import url("../lang.css");
+
 :root {
   --ink: #2a2118;
   --muted: #6d5c48;
@@ -113,6 +115,23 @@ h1 {
 
 .meaning p + p,
 .story p + p { margin-top: 1.15rem; }
+
+.film-frame {
+  position: relative;
+  width: 100%;
+  height: 0;
+  margin: 1.8rem 0 1.6rem;
+  padding-bottom: 56.25%;
+}
+
+.film-frame iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 
 .story .close {
   margin-top: 1.6rem;

@@ -2,86 +2,108 @@
   "id": "the-empress",
   "name": "THE EMPRESS",
   "nameJa": "女帝",
+  "nameZh": "皇后",
   "numeral": "III",
+  "video": "face.mp4",
   "upright": [
     {
       "name": "Wheat",
       "hex": "#F5DEB3",
       "nameJa": "ウィート",
+      "nameZh": "小麥色",
       "text": "wheat.txt",
       "image": "wheat.jpg",
-      "textEn": "wheat.en.txt"
+      "textEn": "wheat.en.txt",
+      "textZh": "wheat.zh.txt"
     },
     {
       "name": "Cornsilk",
       "hex": "#FFF8DC",
       "nameJa": "コーンシルク",
+      "nameZh": "玉米絲色",
       "text": "cornsilk.txt",
       "image": "cornsilk.jpg",
-      "textEn": "cornsilk.en.txt"
+      "textEn": "cornsilk.en.txt",
+      "textZh": "cornsilk.zh.txt"
     },
     {
       "name": "GoldenRod",
       "hex": "#DAA520",
       "nameJa": "ゴールデンロッド",
+      "nameZh": "金桿色",
       "text": "goldenrod.txt",
       "image": "goldenrod.jpg",
-      "textEn": "goldenrod.en.txt"
+      "textEn": "goldenrod.en.txt",
+      "textZh": "goldenrod.zh.txt"
     },
     {
       "name": "ForestGreen",
       "hex": "#228B22",
       "nameJa": "フォレストグリーン",
+      "nameZh": "森林綠",
       "text": "forestgreen.txt",
       "textEn": "forestgreen.en.txt",
+      "textZh": "forestgreen.zh.txt",
       "image": "forestgreen.jpg"
     },
     {
       "name": "Olive",
       "hex": "#808000",
       "nameJa": "オリーブ",
+      "nameZh": "橄欖色",
       "text": "olive.txt",
       "textEn": "olive.en.txt",
+      "textZh": "olive.zh.txt",
       "image": "olive.jpg"
     },
     {
       "name": "PeachPuff",
       "hex": "#FFDAB9",
       "nameJa": "ピーチパフ",
+      "nameZh": "蜜桃色",
       "text": "peachpuff.txt",
       "textEn": "peachpuff.en.txt",
+      "textZh": "peachpuff.zh.txt",
       "image": "peachpuff.jpg"
     },
     {
       "name": "PapayaWhip",
       "hex": "#FFEFD5",
       "nameJa": "パパイヤホイップ",
+      "nameZh": "木瓜奶油",
       "text": "papayawhip.txt",
       "textEn": "papayawhip.en.txt",
+      "textZh": "papayawhip.zh.txt",
       "image": "papayawhip.jpg"
     },
     {
       "name": "Pink",
       "hex": "#FFC0CB",
       "nameJa": "ピンク",
+      "nameZh": "粉紅",
       "text": "pink.txt",
       "textEn": "pink.en.txt",
+      "textZh": "pink.zh.txt",
       "image": "pink.jpg"
     },
     {
       "name": "LavenderBlush",
       "hex": "#FFF0F5",
       "nameJa": "ラベンダーブラッシュ",
+      "nameZh": "薰衣草紫紅",
       "text": "lavenderblush.txt",
       "textEn": "lavenderblush.en.txt",
+      "textZh": "lavenderblush.zh.txt",
       "image": "lavenderblush.jpg"
     },
     {
       "name": "HoneyDew",
       "hex": "#F0FFF0",
       "nameJa": "ハニーデュー",
+      "nameZh": "蜜露",
       "text": "honeydew.txt",
       "textEn": "honeydew.en.txt",
+      "textZh": "honeydew.zh.txt",
       "image": "honeydew.jpg"
     }
   ],
@@ -90,80 +112,100 @@
       "name": "DarkOliveGreen",
       "hex": "#556B2F",
       "nameJa": "ダークオリーブグリーン",
+      "nameZh": "暗橄欖綠",
       "text": "darkolivegreen.txt",
       "image": "darkolivegreen.jpg",
-      "textEn": "darkolivegreen.en.txt"
+      "textEn": "darkolivegreen.en.txt",
+      "textZh": "darkolivegreen.zh.txt"
     },
     {
       "name": "OliveDrab",
       "hex": "#6B8E23",
       "nameJa": "オリーブドラブ",
+      "nameZh": "橄欖褐",
       "text": "olivedrab.txt",
       "image": "olivedrab.jpg",
-      "textEn": "olivedrab.en.txt"
+      "textEn": "olivedrab.en.txt",
+      "textZh": "olivedrab.zh.txt"
     },
     {
       "name": "RosyBrown",
       "hex": "#BC8F8F",
       "nameJa": "ロージーブラウン",
+      "nameZh": "玫瑰棕",
       "text": "rosybrown.txt",
       "image": "rosybrown.jpg",
-      "textEn": "rosybrown.en.txt"
+      "textEn": "rosybrown.en.txt",
+      "textZh": "rosybrown.zh.txt"
     },
     {
       "name": "Sienna",
       "hex": "#A0522D",
       "nameJa": "シエナ",
+      "nameZh": "赭色",
       "text": "sienna.txt",
       "textEn": "sienna.en.txt",
+      "textZh": "sienna.zh.txt",
       "image": "sienna.jpg"
     },
     {
       "name": "Khaki",
       "hex": "#F0E68C",
       "nameJa": "カーキ",
+      "nameZh": "卡其",
       "text": "khaki.txt",
       "textEn": "khaki.en.txt",
+      "textZh": "khaki.zh.txt",
       "image": "khaki.jpg"
     },
     {
       "name": "DarkGoldenRod",
       "hex": "#B8860B",
       "nameJa": "ダークゴールデンロッド",
+      "nameZh": "暗金桿色",
       "text": "darkgoldenrod.txt",
       "textEn": "darkgoldenrod.en.txt",
+      "textZh": "darkgoldenrod.zh.txt",
       "image": "darkgoldenrod.jpg"
     },
     {
       "name": "Brown",
       "hex": "#A52A2A",
       "nameJa": "ブラウン",
+      "nameZh": "棕色",
       "text": "brown.txt",
       "textEn": "brown.en.txt",
+      "textZh": "brown.zh.txt",
       "image": "brown.jpg"
     },
     {
       "name": "Chocolate",
       "hex": "#D2691E",
       "nameJa": "チョコレート",
+      "nameZh": "巧克力色",
       "text": "chocolate.txt",
       "textEn": "chocolate.en.txt",
+      "textZh": "chocolate.zh.txt",
       "image": "chocolate.jpg"
     },
     {
       "name": "BurlyWood",
       "hex": "#DEB887",
       "nameJa": "バーリウッド",
+      "nameZh": "硬木色",
       "text": "burlywood.txt",
       "textEn": "burlywood.en.txt",
+      "textZh": "burlywood.zh.txt",
       "image": "burlywood.jpg"
     },
     {
       "name": "Peru",
       "hex": "#CD853F",
       "nameJa": "ペルー",
+      "nameZh": "秘魯色",
       "text": "peru.txt",
       "textEn": "peru.en.txt",
+      "textZh": "peru.zh.txt",
       "image": "peru.jpg"
     }
   ]

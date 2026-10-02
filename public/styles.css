@@ -1,3 +1,5 @@
+@import url("lang.css");
+
 :root {
   --ink: #2a2118;
   --muted: #6d5c48;
@@ -61,14 +63,80 @@ img { font: inherit; }
 
 .mast .instagram:hover { color: #5c4318; }
 
+.lang-menu {
+  position: relative;
+  z-index: 3;
+}
+
 .lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
   color: var(--gold);
   font-family: Cinzel, "Palatino Linotype", Palatino, serif;
   font-size: 0.72rem;
   letter-spacing: 0.16em;
+  line-height: 1;
   text-decoration: none;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+.lang:hover { color: #5c4318; }
+
+.lang:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+.lang-mark {
+  width: 0.32rem;
+  height: 0.32rem;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: translateY(-0.12rem) rotate(45deg);
+}
+
+.lang[aria-expanded="true"] .lang-mark {
+  transform: translateY(0.06rem) rotate(225deg);
+}
+
+.lang-list {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  right: 0;
+  z-index: 3;
+  min-width: 9.5rem;
+  max-height: 70vh;
+  margin: 0;
+  padding: 0.3rem 0;
+  overflow: auto;
+  list-style: none;
+  background: #fbf6ec;
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 28px rgba(62, 44, 22, 0.12);
+}
+
+.lang-list a {
+  display: block;
+  padding: 0.55rem 1rem;
+  color: var(--ink);
+  font-family: Cinzel, "Palatino Linotype", Palatino, serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.lang-list a:hover,
+.lang-list a:focus-visible {
+  color: #5c4318;
+  background: rgba(166, 132, 61, 0.12);
 }
 
 .tagline {

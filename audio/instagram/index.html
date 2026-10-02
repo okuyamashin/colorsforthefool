@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>切り出し位置の確認</title>
+    <style>
+      :root {
+        --ink: #2a2118;
+        --muted: #6d5c48;
+        --gold: #a6843d;
+        --paper: #f7f1e4;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: radial-gradient(900px 480px at 50% -10%, #fbf6ec, #e7dcc8 70%);
+        font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+      }
+      main {
+        width: min(92vw, 40rem);
+        margin: 0 auto;
+        padding: 1.6rem 0 3rem;
+      }
+      h1 {
+        margin: 0;
+        font-size: 1.35rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+      }
+      .note {
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      .player {
+        position: sticky;
+        top: 0;
+        padding: 0.8rem 0 0.6rem;
+        background: linear-gradient(#f4ead8, #f4ead8 80%, transparent);
+      }
+      audio { width: 100%; }
+      .now { min-height: 1.4em; margin: 0.4rem 0 0; }
+      button, a.cue {
+        font: inherit;
+        color: #7a5c2e;
+        background: none;
+        border: 0;
+        cursor: pointer;
+      }
+      button { padding: 0; text-decoration: underline; text-decoration-color: var(--gold); }
+      ol { margin: 1rem 0 0; padding: 0; list-style: none; }
+      li {
+        display: grid;
+        grid-template-columns: 2.2rem 1fr auto;
+        gap: 0.35rem 0.8rem;
+        align-items: baseline;
+        padding: 0.7rem 0;
+        border-top: 1px solid rgba(166, 132, 61, 0.35);
+      }
+      li.is-current { background: rgba(166, 132, 61, 0.12); }
+      li.aside { padding-top: 0.35rem; padding-bottom: 0.35rem; }
+      li.aside .cue { color: var(--muted); }
+      .num { color: var(--muted); font-variant-numeric: tabular-nums; }
+      .name { letter-spacing: 0.08em; }
+      .latin { color: var(--muted); font-size: 0.86rem; letter-spacing: 0.04em; }
+      .time {
+        font-variant-numeric: tabular-nums;
+        letter-spacing: 0.03em;
+        text-decoration: underline;
+        text-decoration-color: var(--gold);
+        text-underline-offset: 0.18em;
+      }
+      .line { grid-column: 2 / -1; margin: 0; color: var(--muted); font-size: 0.92rem; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>切り出し位置の確認</h1>
+      <p class="note">まだファイルは切っていません。各リンクは、そのカードの歌い出しへ飛んで、終わりの秒で止まります。愚者の前半にある長い前奏は範囲に入れていません。今日のカラー用に15秒切り出すとき、そのカードの歌が15秒に足りなければ、次のカードに入ってよい。</p>
+      <div class="player">
+        <audio id="player" controls preload="metadata"></audio>
+        <p class="now" id="now">カードを選んでください。</p>
+        <p><button type="button" id="next">次のカード</button></p>
+      </div>
+      <ol id="cues"></ol>
+    </main>
+    <script>
+      const FIRST = "../../data/The First Turn — Arcana 0 to X.mp3";
+      const SECOND = "../../data/The Second Turn — Arcana XI to XXI.mp3";
+      const CUES = [
+        ["the-fool", "0", "愚者", "The Fool", FIRST, 11.0, 31.4, "愚者は　名もない空へ"],
+        ["the-magician", "I", "魔術師", "The Magician", FIRST, 31.6, 50.6, "魔術師は　天と地をつなぐ"],
+        ["the-high-priestess", "II", "女教皇", "The High Priestess", FIRST, 50.8, 74.9, "女教皇　白と黒との柱のあいだ"],
+        ["the-empress", "III", "女帝", "The Empress", FIRST, 75.1, 91.2, "女帝の庭で"],
+        ["the-emperor", "IV", "皇帝", "The Emperor", FIRST, 91.4, 109.3, "皇帝は　石の玉座に"],
+        ["the-hierophant", "V", "法王", "The Hierophant", FIRST, 109.5, 135.6, "教皇のもと"],
+        ["the-lovers-bridge", "", "恋人の間奏", "THE LOVERS のあと", FIRST, 136.2, 146.0, "題名のあと、歌が止まる区間", "aside"],
+        ["the-lovers", "VI", "恋人", "The Lovers", FIRST, 146.0, 162.8, "恋人たち（間奏のあと）"],
+        ["the-chariot", "VII", "戦車", "The Chariot", FIRST, 163.0, 179.1, "戦車は走る"],
+        ["strength", "VIII", "力", "Strength", FIRST, 179.3, 199.1, "力は　獅子の前で"],
+        ["the-hermit", "IX", "隠者", "The Hermit", FIRST, 199.3, 216.5, "隠者はひとり"],
+        ["wheel-of-fortune", "X", "運命の輪", "Wheel of Fortune", FIRST, 216.7, 247.0, "運命の輪"],
+        ["justice", "XI", "正義", "Justice", SECOND, 16.6, 50.2, "正義は　剣を掲げ"],
+        ["the-hanged-man", "XII", "吊るされた男", "The Hanged Man", SECOND, 50.4, 67.2, "吊るされた男"],
+        ["death", "XIII", "死神", "Death", SECOND, 67.4, 81.8, "死神が　白馬で通る"],
+        ["temperance", "XIV", "節制", "Temperance", SECOND, 82.0, 96.6, "節制の天使"],
+        ["the-devil", "XV", "悪魔", "The Devil", SECOND, 96.8, 113.5, "悪魔は笑う"],
+        ["the-tower", "XVI", "塔", "The Tower", SECOND, 113.7, 131.4, "塔に雷"],
+        ["the-star", "XVII", "星", "The Star", SECOND, 131.6, 147.6, "星は静かに"],
+        ["the-moon", "XVIII", "月", "The Moon", SECOND, 147.8, 165.4, "月の道"],
+        ["the-sun", "XIX", "太陽", "The Sun", SECOND, 165.6, 182.4, "太陽が昇る"],
+        ["judgement", "XX", "審判", "Judgement", SECOND, 182.6, 198.6, "審判のラッパ"],
+        ["the-world", "XXI", "世界", "The World", SECOND, 198.8, 237.0, "世界はめぐる"],
+      ];
+
+      const player = document.querySelector("#player");
+      const now = document.querySelector("#now");
+      const list = document.querySelector("#cues");
+      let current = -1;
+      let loadToken = 0;
+
+      function clock(seconds) {
+        const whole = Math.floor(seconds);
+        const frac = Math.round((seconds - whole) * 10);
+        const minutes = Math.floor(whole / 60);
+        const rest = String(whole % 60).padStart(2, "0");
+        return `${minutes}:${rest}.${frac}`;
+      }
+
+      function label(cue) {
+        return `${cue[1]} ${cue[2]}　${clock(cue[5])}–${clock(cue[6])}`;
+      }
+
+      CUES.forEach((cue, index) => {
+        const item = document.createElement("li");
+        item.id = cue[0];
+        if (cue[8] === "aside") item.classList.add("aside");
+        const num = document.createElement("span");
+        num.className = "num";
+        num.textContent = cue[1];
+        const link = document.createElement("a");
+        link.className = "cue";
+        link.href = `#${cue[0]}`;
+        link.innerHTML = `${cue[2]} <span class="latin">${cue[3]}</span>`;
+        const time = document.createElement("a");
+        time.className = "cue time";
+        time.href = `#${cue[0]}`;
+        time.textContent = `${clock(cue[5])}–${clock(cue[6])}`;
+        const line = document.createElement("p");
+        line.className = "line";
+        line.textContent = cue[7];
+        item.append(num, link, time, line);
+        item.addEventListener("click", (event) => {
+          if (event.target.closest("a")) event.preventDefault();
+          play(index);
+        });
+        list.append(item);
+      });
+
+      function play(index) {
+        const cue = CUES[index];
+        if (!cue) return;
+        current = index;
+        const token = ++loadToken;
+        const start = () => {
+          if (token !== loadToken) return;
+          const begin = () => {
+            if (token !== loadToken) return;
+            player.play();
+          };
+          if (Math.abs(player.currentTime - cue[5]) < 0.25) {
+            begin();
+            return;
+          }
+          player.addEventListener("seeked", begin, { once: true });
+          player.currentTime = cue[5];
+        };
+        if (player.getAttribute("src") !== cue[4]) {
+          player.src = cue[4];
+          player.addEventListener("loadedmetadata", start, { once: true });
+        } else {
+          start();
+        }
+        now.textContent = label(cue);
+        history.replaceState(null, "", `#${cue[0]}`);
+        for (const item of list.children) item.classList.toggle("is-current", item.id === cue[0]);
+        list.children[index].scrollIntoView({ block: "nearest" });
+      }
+
+      player.addEventListener("timeupdate", () => {
+        const cue = CUES[current];
+        if (!cue) return;
+        if (player.currentTime >= cue[6]) {
+          player.pause();
+          player.currentTime = cue[6];
+        }
+      });
+
+      document.querySelector("#next").addEventListener("click", () => {
+        let index = current + 1;
+        while (CUES[index] && CUES[index][8] === "aside") index += 1;
+        play(Math.min(index, CUES.length - 1));
+      });
+
+      const opening = location.hash.slice(1);
+      const found = CUES.findIndex((cue) => cue[0] === opening);
+      if (found >= 0) play(found);
+    </script>
+  </body>
+</html>
