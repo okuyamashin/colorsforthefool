@@ -2,7 +2,7 @@
 
 A tarot reading for today's lucky color. Draw one card from the twenty-two major arcana, upright or reversed, read what it stands for, then tap again. A story ends on one color, and a picture shows that color in a mirror.
 
-The site is published at [colorsofthefool.engawa5656.com](https://colorsofthefool.engawa5656.com/).
+The site is published at [colorsforthefool.engawa5656.com](https://colorsforthefool.engawa5656.com/).
 
 Languages live in [`data/languages.json`](data/languages.json). Each one is its own set of pages. Nothing redirects you by browser language. Pictures and video are shared. A card drawn in one language does not leave the other deck.
 
@@ -69,10 +69,4 @@ That rewrites one library per language, `public/languages.js`, `public/lang.css`
 
 ## Adding a language
 
-1. Add one object to `data/languages.json`. Copy an existing object and change `id`, `htmlLang`, `hreflang`, `prefix`, `switchLabel`, `cookie`, `session`, names, story fields, and the `copy` and `pages` strings. Leave `prefix` empty only for the language at the site root. Set `days` only for Japanese. Set `default` on exactly one language.
-2. Write `public/meanings.<id>.js` with `window.MEANINGS`, one entry per card, `upright` and `reversed`.
-3. Add a story file and `card.json` fields for every color. The file stem is the color slug plus `textSuffix` (`white.ko.txt`). `textField` and `colorName` name the new keys (`textKo`, `nameKo`). `cardName` names the card (`nameKo`).
-4. Copy `public/en/index.html` to `public/<prefix>/index.html`. Translate the visible writing, set `html lang` to `htmlLang`, and point the meanings script at `../meanings.<id>.js`.
-5. Run `python3 scripts/build_library.py`.
-
-The build writes the libraries, the draw settings, the body font, the home switchers, and `hreflang`. A new language does not get its own contact, privacy, days, design, or cafe pages. Put those links, with labels in the new language, in the `footer` list. If the language needs a face different from Shippori Mincho, set `fontFamily` and put the Google font query in `fonts`. The home's font link is rewritten from `fonts`.
+Follow [docs/言語の増やし方.md](docs/言語の増やし方.md). Write the home page before `python3 scripts/build_library.py`. The build does not publish the site.

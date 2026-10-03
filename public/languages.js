@@ -88,5 +88,35 @@ window.LANG_PACKS = [
       "colorError": "今天的顏色沒有打開。請再點一次。",
       "testError": "test 的形式是 4-10。牌是 1 到 22，顏色正位是 1 到 10，逆位是 11 到 20。"
     }
+  },
+  {
+    "id": "es",
+    "htmlLang": "es",
+    "prefix": "es",
+    "cookie": "cftf-es",
+    "session": "cftf-reading-es",
+    "data": "/data",
+    "cardName": "nameEs",
+    "colorName": "nameEs",
+    "textField": "textEs",
+    "textSuffix": ".es",
+    "latinSubtitle": false,
+    "titlePattern": "[―—-]\\s*(Al derecho|Al revés)\\s*$",
+    "shareText": "El color de la suerte de hoy es {color}.",
+    "copy": {
+      "upright": "Al derecho",
+      "reversed": "Al revés",
+      "meaningFallback": "El dibujo de esta carta es el signo de hoy.",
+      "renewed": "Las veintidós cartas ya salieron, así que el mazo vuelve a estar completo.",
+      "hintReveal": "Toca otra vez, y se abre el color de hoy",
+      "hintDraw": "Toca para sacar una carta",
+      "drawLabel": "Sacar una carta",
+      "openLabel": "Toca otra vez para abrir el color",
+      "mirror": "Un espejo que guarda el color",
+      "scene": "Un dibujo con un espejo que guarda el color",
+      "cardError": "La carta no se abrió. Toca otra vez.",
+      "colorError": "El color de hoy no se abrió. Toca otra vez.",
+      "testError": "test tiene la forma 4-10. Las cartas van del 1 al 22. Los colores del 1 al 10 están al derecho, del 11 al 20 al revés."
+    }
   }
 ];

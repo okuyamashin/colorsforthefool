@@ -87,7 +87,7 @@ const shareX = document.querySelector("#share-x");
 const shareLine = document.querySelector("#share-line");
 const copied = document.querySelector("#copied");
 const error = document.querySelector("#error");
-const SITE = "https://colorsofthefool.engawa5656.com";
+const SITE = "https://colorsforthefool.engawa5656.com";
 let copiedTimer = 0;
 
 let state = null;

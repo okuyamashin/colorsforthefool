@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 PUBLIC = ROOT / "public"
 CARDS = PUBLIC / "cards"
-ORIGIN = "https://colorsofthefool.engawa5656.com"
+ORIGIN = "https://colorsforthefool.engawa5656.com"
 LANGUAGES = json.loads((DATA / "languages.json").read_text())
 REQUIRED = (
     "id", "htmlLang", "hreflang", "prefix", "switchLabel", "cookie", "session",
@@ -587,43 +587,57 @@ def day_links():
     return json.loads(path.read_text())
 
 
+DESIGN_STYLES = (
+    "ancient-egypt",
+    "art-nouveau",
+    "botanical-art",
+    "brutalist-graphic",
+    "chess-pieces",
+    "classic-tarot",
+    "colored-pencil",
+    "cubism",
+    "cyber-mysticism",
+    "editorial-luxury",
+    "engraving",
+    "french-doll",
+    "gear-engine-robotics",
+    "glass-and-chrome",
+    "greek-sculpture",
+    "japanese-contemporary-poster",
+    "luxury-ui",
+    "mezzotint",
+    "minimal-geometric",
+    "neo-deco",
+    "neo-symbolism",
+    "plastic-model-diorama",
+    "rorschach",
+    "ruler-compass-pen",
+    "stained-glass",
+    "suit-and-dress",
+    "sumi-e",
+    "surreal-photography",
+    "tile-mosaic",
+    "unkei-kaikei",
+    "watercolor",
+    "wayang-kulit",
+)
+
+
 def write_sitemap(paths):
     urls = [home_url(lang) for lang in LANGUAGES]
-    urls.extend([
-        f"{ORIGIN}/design/",
-        f"{ORIGIN}/design/ancient-egypt/",
-        f"{ORIGIN}/design/art-nouveau/",
-        f"{ORIGIN}/design/botanical-art/",
-        f"{ORIGIN}/design/brutalist-graphic/",
-        f"{ORIGIN}/design/chess-pieces/",
-        f"{ORIGIN}/design/classic-tarot/",
-        f"{ORIGIN}/design/colored-pencil/",
-        f"{ORIGIN}/design/cubism/",
-        f"{ORIGIN}/design/cyber-mysticism/",
-        f"{ORIGIN}/design/editorial-luxury/",
-        f"{ORIGIN}/design/engraving/",
-        f"{ORIGIN}/design/french-doll/",
-        f"{ORIGIN}/design/gear-engine-robotics/",
-        f"{ORIGIN}/design/glass-and-chrome/",
-        f"{ORIGIN}/design/greek-sculpture/",
-        f"{ORIGIN}/design/japanese-contemporary-poster/",
-        f"{ORIGIN}/design/luxury-ui/",
-        f"{ORIGIN}/design/mezzotint/",
-        f"{ORIGIN}/design/minimal-geometric/",
-        f"{ORIGIN}/design/neo-deco/",
-        f"{ORIGIN}/design/neo-symbolism/",
-        f"{ORIGIN}/design/plastic-model-diorama/",
-        f"{ORIGIN}/design/rorschach/",
-        f"{ORIGIN}/design/ruler-compass-pen/",
-        f"{ORIGIN}/design/stained-glass/",
-        f"{ORIGIN}/design/suit-and-dress/",
-        f"{ORIGIN}/design/sumi-e/",
-        f"{ORIGIN}/design/surreal-photography/",
-        f"{ORIGIN}/design/tile-mosaic/",
-        f"{ORIGIN}/design/unkei-kaikei/",
-        f"{ORIGIN}/design/watercolor/",
-        f"{ORIGIN}/design/wayang-kulit/",
-    ])
+    design_roots = [PUBLIC / "design"]
+    for lang in LANGUAGES:
+        if not lang["prefix"]:
+            continue
+        root = PUBLIC / lang["prefix"] / "design"
+        if (root / "index.html").is_file():
+            design_roots.append(root)
+    for root in design_roots:
+        rel = root.relative_to(PUBLIC).as_posix()
+        urls.append(f"{ORIGIN}/{rel}/")
+        for style in DESIGN_STYLES:
+            if (root / style / "index.html").is_file():
+                urls.append(f"{ORIGIN}/{rel}/{style}/")
     urls.extend(f"{ORIGIN}/{path.relative_to(PUBLIC).as_posix()}" for path in paths)
     urls.extend(f"{ORIGIN}/days/{item['date']}/" for item in day_links())
     body = "\n".join(f"  <url><loc>{esc(url)}</loc></url>" for url in urls)

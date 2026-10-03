@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://colorsofthefool.engawa5656.com/sitemap.xml
+Sitemap: https://colorsforthefool.engawa5656.com/sitemap.xml

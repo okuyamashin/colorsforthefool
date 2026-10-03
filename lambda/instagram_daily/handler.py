@@ -19,7 +19,7 @@ SCHEDULE_KEY = os.environ.get("SCHEDULE_KEY", "instagram/schedule.json")
 SECRET_ID = os.environ.get("SECRET_ID", "colorsofthefool/instagram")
 OPENAI_SECRET_ID = os.environ.get("OPENAI_SECRET_ID", "colorsofthefool/openai")
 PUBLIC_BASE = os.environ.get(
-    "PUBLIC_BASE", "https://colorsofthefool.engawa5656.com"
+    "PUBLIC_BASE", "https://colorsforthefool.engawa5656.com"
 ).rstrip("/")
 
 s3 = boto3.client("s3")

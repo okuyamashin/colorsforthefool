@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQ38VZSM7B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-NQ38VZSM7B');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>El color de la suerte de hoy, sacado del tarot — Colors for the Fool</title>
+    <meta name="description" content="Saca una carta de los veintidós arcanos mayores. Lee lo que representa, al derecho o al revés, y al final de la historia abre el color de la suerte de hoy.">
+    <link rel="canonical" href="https://colorsforthefool.engawa5656.com/es/">
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="ja" href="https://colorsforthefool.engawa5656.com/">
+    <link rel="alternate" hreflang="en" href="https://colorsforthefool.engawa5656.com/en/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://colorsforthefool.engawa5656.com/zh/">
+    <link rel="alternate" hreflang="es" href="https://colorsforthefool.engawa5656.com/es/">
+    <link rel="alternate" hreflang="x-default" href="https://colorsforthefool.engawa5656.com/">
+    <!-- /hreflang -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Colors for the Fool">
+    <meta property="og:title" content="El color de la suerte de hoy, sacado del tarot">
+    <meta property="og:description" content="Saca una carta de los veintidós arcanos mayores. Lee lo que representa, al derecho o al revés, y al final de la historia abre el color de la suerte de hoy.">
+    <meta property="og:url" content="https://colorsforthefool.engawa5656.com/es/">
+    <meta property="og:image" content="https://colorsforthefool.engawa5656.com/data/the-fool/face.jpg">
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+      .film-frame {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+      }
+      .film-frame iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+    </style>
+    <script>
+      try {
+        if (!new URLSearchParams(location.search).has("test") && sessionStorage.getItem("cftf-reading-es")) document.documentElement.classList.add("has-reading");
+      } catch (error) {}
+    </script>
+  </head>
+  <body>
+    <header class="top">
+      <p class="brand"><a href="./">Colors for the Fool</a></p>
+      <nav class="mast" aria-label="Idiomas">
+        <div class="lang-menu">
+          <button type="button" class="lang" aria-expanded="false" aria-haspopup="true" aria-controls="lang-list">Español<span class="lang-mark" aria-hidden="true"></span></button>
+          <ul class="lang-list" id="lang-list" hidden>
+            <li><a href="../">日本語</a></li>
+            <li><a href="../en/">English</a></li>
+            <li><a href="../zh/">中文</a></li>
+          </ul>
+        </div>
+      </nav>
+      <h1 class="tagline">El color de la suerte de hoy, sacado del tarot</h1>
+    </header>
+    <main>
+      <p class="notice" id="notice" hidden></p>
+      <div class="stage">
+        <button type="button" class="card" id="card" aria-label="Sacar una carta">
+          <span class="card-inner">
+            <span class="card-face back">
+              <img src="/data/cardback.jpg" alt="">
+            </span>
+            <span class="card-face front">
+              <span class="face-turn" id="face-turn">
+                <img id="face" alt="">
+              </span>
+            </span>
+          </span>
+        </button>
+      </div>
+      <div class="sheet" id="sheet">
+        <p class="hint-wrap">
+          <button type="button" class="hint" id="hint">Toca para sacar una carta</button>
+        </p>
+        <article class="reading" id="reading" hidden>
+          <h2 id="title"></h2>
+          <p class="en" id="en"></p>
+          <p class="orientation" id="orientation"></p>
+          <div id="meaning"></div>
+        </article>
+        <section class="color-panel" id="color" hidden>
+          <div class="story" id="story"></div>
+          <button type="button" class="scene" id="scene" aria-label="Toca para volver la carta boca abajo"></button>
+          <div class="library" id="library" hidden>
+            <a id="library-link" href="">Leer este color</a>
+            <p class="share">
+              <button type="button" id="share-copy" aria-label="Copiar el enlace">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="18" cy="5" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <circle cx="6" cy="12" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <circle cx="18" cy="19" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M8.2 13.1 15.7 17.4M15.7 6.6 8.2 10.9" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                </svg>
+              </button>
+              <a id="share-x" href="" target="_blank" rel="noopener noreferrer" aria-label="Compartir en X">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" d="M14.2 10.4 21.5 2h-1.7l-6.3 7.2L8.4 2H2.2l7.6 11L2.2 22h1.7l6.7-7.6L15.3 22h6.2l-7.3-11.6Zm-2.4 2.7-.8-1.1L4.7 3.5h2.7l5 7.1.8 1.1 6.5 9.2h-2.7l-5.2-7.8Z"/>
+                </svg>
+              </a>
+              <a id="share-line" href="" target="_blank" rel="noopener noreferrer" aria-label="Compartir en LINE">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#06C755" d="M12 3.2C6.8 3.2 2.6 6.7 2.6 11c0 3.8 3.4 7 8 7.7.3.1.7.2.8.5.1.3.1.7 0 1l-.3 1.6c-.1.4.3.7.7.5l2.2-1.3c.2-.1.4-.1.6-.1 4.8-.2 8.8-3.6 8.8-7.9 0-4.3-4.2-7.8-9.4-7.8Z"/>
+                </svg>
+              </a>
+            </p>
+            <p class="copied" id="copied" hidden role="status">Copiado en el portapapeles</p>
+          </div>
+        </section>
+      </div>
+      <div class="guide" id="guide">
+        <section>
+          <h2>Cómo sacar una carta</h2>
+          <ol>
+            <li>Saca una carta. Sale de los veintidós arcanos mayores, al derecho o al revés.</li>
+            <li>Lee lo que esa carta representa hoy.</li>
+            <li>Toca otra vez. El color de la suerte de hoy se abre al final de la historia. Toca el espejo de debajo, y el texto se pliega. La carta vuelve boca abajo.</li>
+          </ol>
+        </section>
+        <section>
+          <h2>Sobre este sitio</h2>
+          <p>Cada arcano mayor está unido a un color. La historia pasa por un mito, un relato, un lugar o una herramienta, y termina en el color de la suerte de hoy.</p>
+        </section>
+        <section class="film">
+          <h2>El viaje del Loco</h2>
+          <div class="film-frame">
+            <iframe src="https://www.youtube.com/embed/ngl1nN2qzkI?si=DT7xBR5A0CPZu1J3" title="El viaje del Loco" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </section>
+        <section>
+          <h2>Los veintidós arcanos mayores</h2>
+          <ul class="arcana">
+            <li>
+              <a href="cards/the-fool/index.html"><img class="arcana-thumb" src="/data/the-fool/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-fool/index.html">El Loco</a></h3>
+              <p><span class="side">Al derecho</span>Una figura solitaria está al borde mismo del acantilado, con el hatillo ligero, una rosa blanca en la mano y un perro fiel al lado.</p>
+              <p><span class="side">Al revés</span>La misma figura duda ahora en el acantilado, sin saber si el suelo aguanta.</p>
+            </li>
+            <li>
+              <a href="cards/the-magician/index.html"><img class="arcana-thumb" src="/data/the-magician/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-magician/index.html">El Mago</a></h3>
+              <p><span class="side">Al derecho</span>Sobre la mesa hay una vara, una copa, una espada y una moneda: cada una es una herramienta para dar forma al día.</p>
+              <p><span class="side">Al revés</span>Las herramientas de la mesa están puestas para que se vean, no para usarse.</p>
+            </li>
+            <li>
+              <a href="cards/the-high-priestess/index.html"><img class="arcana-thumb" src="/data/the-high-priestess/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-high-priestess/index.html">La Sacerdotisa</a></h3>
+              <p><span class="side">Al derecho</span>Una mujer está sentada en silencio entre dos columnas, con el rollo apenas entreabierto sobre las rodillas.</p>
+              <p><span class="side">Al revés</span>El rollo sigue cerrado, o se ha abierto de golpe y su contenido está esparcido y malentendido.</p>
+            </li>
+            <li>
+              <a href="cards/the-empress/index.html"><img class="arcana-thumb" src="/data/the-empress/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-empress/index.html">La Emperatriz</a></h3>
+              <p><span class="side">Al derecho</span>La Emperatriz es un lugar de abundancia: el grano madura, el bosque da cobijo y el agua corre clara.</p>
+              <p><span class="side">Al revés</span>La tierra puede estar cansada, o puedes estar cosechando antes de que el fruto esté listo.</p>
+            </li>
+            <li>
+              <a href="cards/the-emperor/index.html"><img class="arcana-thumb" src="/data/the-emperor/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-emperor/index.html">El Emperador</a></h3>
+              <p><span class="side">Al derecho</span>El Emperador está sentado en un trono de piedra, con la mirada puesta más allá del presente.</p>
+              <p><span class="side">Al revés</span>El trono ya no le cabe al Emperador.</p>
+            </li>
+            <li>
+              <a href="cards/the-hierophant/index.html"><img class="arcana-thumb" src="/data/the-hierophant/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-hierophant/index.html">El Hierofante</a></h3>
+              <p><span class="side">Al derecho</span>Una figura está sentada ante dos aprendices, y encarna el paso del saber por la tradición y por las formas ya hechas.</p>
+              <p><span class="side">Al revés</span>Las formas se han vuelto más pesadas que su propósito: el rito pesa más que el sentido.</p>
+            </li>
+            <li>
+              <a href="cards/the-lovers/index.html"><img class="arcana-thumb" src="/data/the-lovers/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-lovers/index.html">Los Enamorados</a></h3>
+              <p><span class="side">Al derecho</span>Los Enamorados son el momento en que dos fuerzas distintas se encuentran y te piden una elección consciente y de corazón.</p>
+              <p><span class="side">Al revés</span>Los Enamorados al revés señalan la indecisión y la incomodidad de dejar las elecciones a medias.</p>
+            </li>
+            <li>
+              <a href="cards/the-chariot/index.html"><img class="arcana-thumb" src="/data/the-chariot/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-chariot/index.html">El Carro</a></h3>
+              <p><span class="side">Al derecho</span>El auriga sujeta las riendas de un carro tirado por dos criaturas distintas.</p>
+              <p><span class="side">Al revés</span>El carro se mueve, pero no ha cruzado el umbral.</p>
+            </li>
+            <li>
+              <a href="cards/strength/index.html"><img class="arcana-thumb" src="/data/strength/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/strength/index.html">La Fuerza</a></h3>
+              <p><span class="side">Al derecho</span>La Fuerza no consiste en apretar más ni en cuánto puedes reprimir.</p>
+              <p><span class="side">Al revés</span>Al revés, La Fuerza muestra una mano rígida, con los dedos cerrados por miedo y no por maestría.</p>
+            </li>
+            <li>
+              <a href="cards/the-hermit/index.html"><img class="arcana-thumb" src="/data/the-hermit/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-hermit/index.html">El Ermitaño</a></h3>
+              <p><span class="side">Al derecho</span>El Ermitaño está solo en una montaña quieta, con el farol levantado lo justo para ver el siguiente paso.</p>
+              <p><span class="side">Al revés</span>El farol del Ermitaño ahora solo alumbra hacia dentro, y no ilumina el camino.</p>
+            </li>
+            <li>
+              <a href="cards/wheel-of-fortune/index.html"><img class="arcana-thumb" src="/data/wheel-of-fortune/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/wheel-of-fortune/index.html">La Rueda de la Fortuna</a></h3>
+              <p><span class="side">Al derecho</span>La Rueda de la Fortuna gira, y cambia de sitio a quien sube y a quien baja.</p>
+              <p><span class="side">Al revés</span>Puede parecer que la rueda gira en el sitio, con la ilusión de movimiento y sin avance.</p>
+            </li>
+            <li>
+              <a href="cards/justice/index.html"><img class="arcana-thumb" src="/data/justice/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/justice/index.html">La Justicia</a></h3>
+              <p><span class="side">Al derecho</span>La Justicia es el punto donde se encuentran la decisión y el discernimiento, guiados por la espada y por la balanza.</p>
+              <p><span class="side">Al revés</span>Al revés, La Justicia avisa de un desequilibrio o de una autojustificación.</p>
+            </li>
+            <li>
+              <a href="cards/the-hanged-man/index.html"><img class="arcana-thumb" src="/data/the-hanged-man/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-hanged-man/index.html">El Colgado</a></h3>
+              <p><span class="side">Al derecho</span>Un hombre cuelga cabeza abajo, con un pie atado y los brazos abiertos, y encarna la quietud en medio de la incomodidad.</p>
+              <p><span class="side">Al revés</span>Colgar cabeza abajo ha perdido su propósito, y la búsqueda de visión se ha vuelto costumbre de aplazar.</p>
+            </li>
+            <li>
+              <a href="cards/death/index.html"><img class="arcana-thumb" src="/data/death/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/death/index.html">La Muerte</a></h3>
+              <p><span class="side">Al derecho</span>La Muerte llega como el heraldo silencioso de lo que se completa.</p>
+              <p><span class="side">Al revés</span>Aunque el final se acerca, el esfuerzo se gasta en mantener la forma conocida.</p>
+            </li>
+            <li>
+              <a href="cards/temperance/index.html"><img class="arcana-thumb" src="/data/temperance/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/temperance/index.html">La Templanza</a></h3>
+              <p><span class="side">Al derecho</span>La Templanza te invita a mezclar elementos opuestos con cuidado, como el agua que pasa con suavidad de una copa a la otra.</p>
+              <p><span class="side">Al revés</span>La Templanza al revés muestra el agua derramada fuera de las copas: un desequilibrio, o un intento fallido de combinar.</p>
+            </li>
+            <li>
+              <a href="cards/the-devil/index.html"><img class="arcana-thumb" src="/data/the-devil/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-devil/index.html">El Diablo</a></h3>
+              <p><span class="side">Al derecho</span>Dos figuras están encadenadas.</p>
+              <p><span class="side">Al revés</span>Las cadenas, antes ocultas, se vuelven visibles.</p>
+            </li>
+            <li>
+              <a href="cards/the-tower/index.html"><img class="arcana-thumb" src="/data/the-tower/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-tower/index.html">La Torre</a></h3>
+              <p><span class="side">Al derecho</span>Una estructura alta, que parecía firme, recibe un golpe súbito y muestra sus puntos débiles.</p>
+              <p><span class="side">Al revés</span>Después del rayo, tienta reconstruir la torre exactamente como era, devolviendo cada piedra a su altura precaria.</p>
+            </li>
+            <li>
+              <a href="cards/the-star/index.html"><img class="arcana-thumb" src="/data/the-star/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-star/index.html">La Estrella</a></h3>
+              <p><span class="side">Al derecho</span>Junto a aguas tranquilas, una figura se arrodilla y vierte agua de dos jarras: una a la tierra, otra al arroyo.</p>
+              <p><span class="side">Al revés</span>Las jarras se inclinan, y el agua cae en un solo sitio: se estanca en lugar de correr.</p>
+            </li>
+            <li>
+              <a href="cards/the-moon/index.html"><img class="arcana-thumb" src="/data/the-moon/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-moon/index.html">La Luna</a></h3>
+              <p><span class="side">Al derecho</span>Bajo el resplandor incierto de la luna, solo se ve una parte del camino entre dos torres silenciosas.</p>
+              <p><span class="side">Al revés</span>El camino desaparece bajo la niebla, o cada sombra se siente amenazante, formada por una imaginación ansiosa.</p>
+            </li>
+            <li>
+              <a href="cards/the-sun/index.html"><img class="arcana-thumb" src="/data/the-sun/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-sun/index.html">El Sol</a></h3>
+              <p><span class="side">Al derecho</span>El Sol señala un tiempo en que la luz ilumina con suavidad lo que estaba oculto, y las cosas pueden verse sin vergüenza ni confusión.</p>
+              <p><span class="side">Al revés</span>El Sol al revés avisa de un brillo excesivo, en el que hasta las sombras son forzadas a la vista y nada puede descansar.</p>
+            </li>
+            <li>
+              <a href="cards/judgement/index.html"><img class="arcana-thumb" src="/data/judgement/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/judgement/index.html">El Juicio</a></h3>
+              <p><span class="side">Al derecho</span>Una llamada clara resuena y despierta a las figuras de su largo descanso.</p>
+              <p><span class="side">Al revés</span>Suena la trompeta, pero aprietas la tapa desde dentro de tu propio encierro.</p>
+            </li>
+            <li>
+              <a href="cards/the-world/index.html"><img class="arcana-thumb" src="/data/the-world/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-world/index.html">El Mundo</a></h3>
+              <p><span class="side">Al derecho</span>Una figura danza con gracia dentro de un anillo, vigilada desde las cuatro esquinas.</p>
+              <p><span class="side">Al revés</span>La danza se detiene justo antes de que el anillo se cierre.</p>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Preguntas</h2>
+          <h3>¿En qué se distinguen al derecho y al revés?</h3>
+          <p>El mismo dibujo cambia de signo al girar. Al derecho, la carta está abierta. Al revés, es demora, exceso, o el sentido dado la vuelta. Una figura al revés es la carta girada media vuelta.</p>
+          <h3>¿Puedo sacar una carta cada día?</h3>
+          <p>Una carta al día, o varias seguidas. Cuando el mazo se vacía, vuelve a estar completo.</p>
+        </section>
+      </div>
+      <p class="error" id="error" hidden></p>
+    </main>
+    <footer class="colophon">
+      <p>© 2026 Engawa Inc.</p>
+      <p><a href="../en/contact/">Contacto</a> <a href="../privacy/">Política de privacidad</a> <a href="https://github.com/okuyamashin/colorsforthefool">GitHub</a></p>
+    </footer>
+    <script src="../meanings.es.js"></script>
+    <script src="../languages.js?v=4"></script>
+    <script src="../app.js"></script>
+  </body>
+</html>
