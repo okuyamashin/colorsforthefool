@@ -632,6 +632,8 @@ DESIGN_STYLES = (
 
 def write_sitemap(paths):
     urls = [home_url(lang) for lang in LANGUAGES]
+    if (PUBLIC / "cafe" / "index.html").is_file():
+        urls.append(f"{ORIGIN}/cafe/")
     design_roots = [PUBLIC / "design"]
     for lang in LANGUAGES:
         if not lang["prefix"]:

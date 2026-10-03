@@ -29,7 +29,7 @@
     "footer": [
       {"href": "/contact/", "label": "問い合わせ"},
       {"href": "/design/", "label": "デザイン"},
-      {"href": "/demo/cafe/", "label": "カフェ・タロット"},
+      {"href": "/cafe/", "label": "カフェ・タロット"},
       {"href": "/privacy/", "label": "プライバシーポリシー"}
     ],
     "share": {

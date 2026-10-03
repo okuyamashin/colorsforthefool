@@ -40,7 +40,7 @@ The same twenty-two cards are drawn in many visual styles. The pictures live onc
 ## Also on the site
 
 - **Daily pages** exist for Japanese only, at `/days/YYYY-MM-DD/`.
-- **Café tarot** (`/demo/cafe/`) is a smaller, upright-only reading. Every card ends on the shop's one item. It is linked from the Japanese footer, and it is not in the sitemap.
+- **Café tarot** is a smaller, upright-only reading. Every card ends on the shop's one item. The Japanese footer links to the guide at `/cafe/`, and that page links to the sample at `/demo/cafe/`. The sample is not in the sitemap.
 
 ## Repository
 
@@ -96,4 +96,4 @@ That rewrites one library per language, `public/languages.js`, `public/lang.css`
 
 - [Adding a language](docs/言語の増やし方.md). Write the home page before `python3 scripts/build_library.py`.
 - [Adding a design](docs/デザインの増やし方.md). Pictures live once under `public/design/`. Write a page for every language that already has a design catalog. The build adds a style to the sitemap when its `index.html` exists.
-- [Adding a small tarot](docs/小さなタロットの足し方.md). Copy `public/demo/cafe/` and keep the draw upright, with every reading ending on the shop's one item. The link goes on the Japanese footer only.
+- [Adding a small tarot](docs/小さなタロットの足し方.md). Copy `public/demo/cafe/` and keep the draw upright, with every reading ending on the shop's one item. The Japanese footer links to the guide, and the guide links to the sample.
