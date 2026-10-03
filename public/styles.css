@@ -108,7 +108,7 @@ img { font: inherit; }
 .lang-list {
   position: absolute;
   top: calc(100% + 0.55rem);
-  right: 0;
+  inset-inline-end: 0;
   z-index: 3;
   min-width: 9.5rem;
   max-height: 70vh;
@@ -285,7 +285,7 @@ html.has-reading .guide {
 
 .guide ol {
   margin: 0;
-  padding-left: 1.4rem;
+  padding-inline-start: 1.4rem;
 }
 
 .guide li + li { margin-top: 0.45rem; }
@@ -455,7 +455,7 @@ html.has-reading .guide {
 .copied[hidden] { display: none; }
 
 .arcana .latin {
-  margin-left: 0.2rem;
+  margin-inline-start: 0.2rem;
   font-family: Cinzel, "Palatino Linotype", Palatino, serif;
   font-size: 0.72em;
   font-weight: 500;
@@ -465,7 +465,7 @@ html.has-reading .guide {
 .guide .arcana p + p { margin-top: 0.15rem; }
 
 .arcana .side {
-  margin-right: 0.4rem;
+  margin-inline-end: 0.4rem;
   color: var(--muted);
   letter-spacing: 0.08em;
 }
@@ -607,6 +607,8 @@ html.has-reading .guide {
 
 .colophon p { margin: 0.35rem 0; }
 
+.lang-links { margin-top: 0.7rem; }
+
 .colophon a,
 .colophon a:link,
 .colophon a:visited,
@@ -660,4 +662,35 @@ html.has-reading .guide {
   .card-inner,
   .sheet,
   .guide { transition: none; }
+}
+
+html[lang="ar"] :is(
+  .lang,
+  .tagline,
+  .hint,
+  .reading h2,
+  .orientation,
+  .guide h2,
+  .guide h3,
+  .arcana h3,
+  .arcana .side,
+  .copied,
+  .story .reveal,
+  .colophon,
+  .catalog h1,
+  .catalog .lead,
+  .catalog .use button,
+  .catalog .index,
+  .catalog figcaption,
+  .catalog .return
+) {
+  letter-spacing: 0;
+  text-indent: 0;
+}
+
+html[lang="ar"] .lang { text-transform: none; }
+
+html[lang="ar"] :is(.brand, .en, .latin, .lang-list a, .catalog figcaption em) {
+  direction: ltr;
+  unicode-bidi: isolate;
 }

@@ -40,7 +40,7 @@ function colorFile(color) {
 }
 
 function colorShare() {
-  const slug = String(colorFile(state.color) || "").replace(/\.[a-z]{2}\.txt$/i, "").replace(/\.txt$/i, "");
+  const slug = String(colorFile(state.color) || "").replace(/\.[a-z]{2}(?:-[a-z]+)?\.txt$/i, "").replace(/\.txt$/i, "");
   const pageUrl = `${SITE}${PREFIX}/cards/${state.card.id}/${slug}/index.html`;
   const shareText = fillText(PACK.shareText, { color: state.color[PACK.colorName] });
   return { slug, pageUrl, shareText };

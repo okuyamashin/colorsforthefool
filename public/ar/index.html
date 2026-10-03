@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQ38VZSM7B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-NQ38VZSM7B');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>لون الحظ اليوم، يُسحب من التاروت — Colors for the Fool</title>
+    <meta name="description" content="اسحب بطاقة من الأركانا الكبرى الاثنتين والعشرين. بعد قراءة رمز الوضع المستقيم أو المعكوس، يُفتح لون الحظ في ختام القصة.">
+    <link rel="canonical" href="https://colorsforthefool.engawa5656.com/ar/">
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="ja" href="https://colorsforthefool.engawa5656.com/">
+    <link rel="alternate" hreflang="en" href="https://colorsforthefool.engawa5656.com/en/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://colorsforthefool.engawa5656.com/zh/">
+    <link rel="alternate" hreflang="es" href="https://colorsforthefool.engawa5656.com/es/">
+    <link rel="alternate" hreflang="nl" href="https://colorsforthefool.engawa5656.com/nl/">
+    <link rel="alternate" hreflang="fr" href="https://colorsforthefool.engawa5656.com/fr/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://colorsforthefool.engawa5656.com/zh-hans/">
+    <link rel="alternate" hreflang="ar" href="https://colorsforthefool.engawa5656.com/ar/">
+    <link rel="alternate" hreflang="x-default" href="https://colorsforthefool.engawa5656.com/">
+    <!-- /hreflang -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:site_name" content="Colors for the Fool">
+    <meta property="og:title" content="لون الحظ اليوم، يُسحب من التاروت">
+    <meta property="og:description" content="اسحب بطاقة من الأركانا الكبرى الاثنتين والعشرين. بعد قراءة رمز الوضع المستقيم أو المعكوس، يُفتح لون الحظ في ختام القصة.">
+    <meta property="og:url" content="https://colorsforthefool.engawa5656.com/ar/">
+    <meta property="og:image" content="https://colorsforthefool.engawa5656.com/data/the-fool/face.jpg">
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Noto+Naskh+Arabic:wght@500;600&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css?v=2">
+    <style>
+      .film-frame {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+      }
+      .film-frame iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+    </style>
+    <script>
+      try {
+        if (!new URLSearchParams(location.search).has("test") && sessionStorage.getItem("cftf-reading-ar")) document.documentElement.classList.add("has-reading");
+      } catch (error) {}
+    </script>
+  </head>
+  <body>
+    <header class="top">
+      <p class="brand"><a href="./">Colors for the Fool</a></p>
+      <nav class="mast" aria-label="اللغة">
+        <div class="lang-menu">
+          <button type="button" class="lang" aria-expanded="false" aria-haspopup="true" aria-controls="lang-list">العربية<span class="lang-mark" aria-hidden="true"></span></button>
+          <ul class="lang-list" id="lang-list" hidden>
+            <li><a href="../">日本語</a></li>
+            <li><a href="../en/">English</a></li>
+            <li><a href="../zh/">繁體中文</a></li>
+            <li><a href="../es/">Español</a></li>
+            <li><a href="../nl/">Nederlands</a></li>
+            <li><a href="../fr/">Français</a></li>
+            <li><a href="../zh-hans/">简体中文</a></li>
+          </ul>
+        </div>
+      </nav>
+      <h1 class="tagline">لون الحظ اليوم، يُسحب من التاروت</h1>
+    </header>
+    <main>
+      <p class="notice" id="notice" hidden></p>
+      <div class="stage">
+        <button type="button" class="card" id="card" aria-label="اسحب بطاقة">
+          <span class="card-inner">
+            <span class="card-face back">
+              <img src="/data/cardback.jpg" alt="">
+            </span>
+            <span class="card-face front">
+              <span class="face-turn" id="face-turn">
+                <img id="face" alt="">
+              </span>
+            </span>
+          </span>
+        </button>
+      </div>
+      <div class="sheet" id="sheet">
+        <p class="hint-wrap">
+          <button type="button" class="hint" id="hint">المس لسحب بطاقة</button>
+        </p>
+        <article class="reading" id="reading" hidden>
+          <h2 id="title"></h2>
+          <p class="en" id="en"></p>
+          <p class="orientation" id="orientation"></p>
+          <div id="meaning"></div>
+        </article>
+        <section class="color-panel" id="color" hidden>
+          <div class="story" id="story"></div>
+          <button type="button" class="scene" id="scene" aria-label="المس مرة أخرى لقلب البطاقة إلى ظهرها"></button>
+          <div class="library" id="library" hidden>
+            <a id="library-link" href="">اقرأ هذا اللون</a>
+            <p class="share">
+              <button type="button" id="share-copy" aria-label="نسخ الرابط">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="18" cy="5" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <circle cx="6" cy="12" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <circle cx="18" cy="19" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M8.2 13.1 15.7 17.4M15.7 6.6 8.2 10.9" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                </svg>
+              </button>
+              <a id="share-x" href="" target="_blank" rel="noopener noreferrer" aria-label="المشاركة على X">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" d="M14.2 10.4 21.5 2h-1.7l-6.3 7.2L8.4 2H2.2l7.6 11L2.2 22h1.7l6.7-7.6L15.3 22h6.2l-7.3-11.6Zm-2.4 2.7-.8-1.1L4.7 3.5h2.7l5 7.1.8 1.1 6.5 9.2h-2.7l-5.2-7.8Z"/>
+                </svg>
+              </a>
+              <a id="share-line" href="" target="_blank" rel="noopener noreferrer" aria-label="المشاركة على LINE">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#06C755" d="M12 3.2C6.8 3.2 2.6 6.7 2.6 11c0 3.8 3.4 7 8 7.7.3.1.7.2.8.5.1.3.1.7 0 1l-.3 1.6c-.1.4.3.7.7.5l2.2-1.3c.2-.1.4-.1.6-.1 4.8-.2 8.8-3.6 8.8-7.9 0-4.3-4.2-7.8-9.4-7.8Z"/>
+                </svg>
+              </a>
+            </p>
+            <p class="copied" id="copied" hidden role="status">نُسخ إلى الحافظة</p>
+          </div>
+        </section>
+      </div>
+      <div class="guide" id="guide">
+        <section>
+          <h2>كيف تسحب</h2>
+          <ol>
+            <li>اسحب بطاقة. هي من الأركانا الكبرى الاثنتين والعشرين، مستقيمة أو معكوسة.</li>
+            <li>اقرأ ما ترمز إليه هذه البطاقة اليوم.</li>
+            <li>المس مرة أخرى. يُفتح لون الحظ في ختام القصة. المس المرآة في الأسفل، فيُطوى النص وتعود البطاقة إلى ظهرها.</li>
+          </ol>
+        </section>
+        <p class="designs"><a href="design/">انظر تصاميم التاروت</a></p>
+        <section>
+          <h2>عن هذا الموقع</h2>
+          <p>كل بطاقة من الأركانا الكبرى مربوطة بلون. تسير القصة عبر أسطورة أو تاريخ أو مكان أو أداة، ثم تحط على لون الحظ اليوم.</p>
+        </section>
+        <section class="film">
+          <h2>رحلة المجنون</h2>
+          <div class="film-frame">
+            <iframe src="https://www.youtube.com/embed/ngl1nN2qzkI?si=DT7xBR5A0CPZu1J3" title="رحلة المجنون" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </section>
+        <section>
+          <h2>الأركانا الكبرى، اثنتان وعشرون</h2>
+          <ul class="arcana">
+            <li>
+              <a href="cards/the-fool/index.html"><img class="arcana-thumb" src="/data/the-fool/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-fool/index.html">المجنون<span class="latin">(The Fool)</span></a></h3>
+              <p><span class="side">مستقيم</span>يقف شخص منفرد على حافة الجرف تماما، وحزمة سفره خفيفة، وفي يده وردة بيضاء، وإلى جانبه كلب وفي.</p>
+              <p><span class="side">معكوس</span>يتردد الشخص نفسه الآن عند الجرف، غير واثق من أمان الأرض تحته.</p>
+            </li>
+            <li>
+              <a href="cards/the-magician/index.html"><img class="arcana-thumb" src="/data/the-magician/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-magician/index.html">الساحر<span class="latin">(The Magician)</span></a></h3>
+              <p><span class="side">مستقيم</span>تقف طاولة مهيأة، عليها عصا وكأس وسيف وقطعة نقد، وكل منها أداة لتشكيل اليوم.</p>
+              <p><span class="side">معكوس</span>أدوات الطاولة مرتبة للعرض لا للاستعمال.</p>
+            </li>
+            <li>
+              <a href="cards/the-high-priestess/index.html"><img class="arcana-thumb" src="/data/the-high-priestess/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-high-priestess/index.html">الكاهنة العليا<span class="latin">(The High Priestess)</span></a></h3>
+              <p><span class="side">مستقيم</span>تجلس امرأة في هدوء بين عمودين، ولفافتها على حجرها غير منشورة إلا إلى نصفها.</p>
+              <p><span class="side">معكوس</span>اللفافة إما غير مفتوحة وأسرارها محجوبة، وإما منشورة على سعتها ومحتواها مبعثر قد أسيء فهمه.</p>
+            </li>
+            <li>
+              <a href="cards/the-empress/index.html"><img class="arcana-thumb" src="/data/the-empress/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-empress/index.html">الإمبراطورة<span class="latin">(The Empress)</span></a></h3>
+              <p><span class="side">مستقيم</span>الإمبراطورة موضع وفرة، حيث ينضج القمح، وتأوي الغابات، ويجري الماء الصافي.</p>
+              <p><span class="side">معكوس</span>قد تكون الأرض مجهدة، أو قد تستعجل الحصاد قبل أن يتهيأ الثمر حقا.</p>
+            </li>
+            <li>
+              <a href="cards/the-emperor/index.html"><img class="arcana-thumb" src="/data/the-emperor/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-emperor/index.html">الإمبراطور<span class="latin">(The Emperor)</span></a></h3>
+              <p><span class="side">مستقيم</span>يجلس الإمبراطور على عرش من حجر، وبصره مثبت بعيدا وراء الحاضر.</p>
+              <p><span class="side">معكوس</span>لم يعد العرش يلائم الإمبراطور.</p>
+            </li>
+            <li>
+              <a href="cards/the-hierophant/index.html"><img class="arcana-thumb" src="/data/the-hierophant/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-hierophant/index.html">الكاهن<span class="latin">(The Hierophant)</span></a></h3>
+              <p><span class="side">مستقيم</span>يجلس شخص أمام طالبين، مجسدا نقل المعرفة عبر التقليد والصيغ المقررة.</p>
+              <p><span class="side">معكوس</span>صارت الأشكال أثقل من غرضها، ورجح الطقس على المعنى.</p>
+            </li>
+            <li>
+              <a href="cards/the-lovers/index.html"><img class="arcana-thumb" src="/data/the-lovers/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-lovers/index.html">العشاق<span class="latin">(The Lovers)</span></a></h3>
+              <p><span class="side">مستقيم</span>تمثل بطاقة العشاق اللحظة التي تلتقي فيها قوتان متمايزتان، وتطلب منك اختيارا واعيا صادرا من القلب.</p>
+              <p><span class="side">معكوس</span>يشير العشاق في الوضع المعكوس إلى التردد، وإلى ضيق ترك الخيارات بلا إتمام.</p>
+            </li>
+            <li>
+              <a href="cards/the-chariot/index.html"><img class="arcana-thumb" src="/data/the-chariot/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-chariot/index.html">العربة<span class="latin">(The Chariot)</span></a></h3>
+              <p><span class="side">مستقيم</span>يقبض سائق العربة على الأعنة، ويوجه مركبة يجرها مخلوقان متمايزان.</p>
+              <p><span class="side">معكوس</span>العربة سائرة، لكنها لم تتجاوز العتبة.</p>
+            </li>
+            <li>
+              <a href="cards/strength/index.html"><img class="arcana-thumb" src="/data/strength/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/strength/index.html">القوة<span class="latin">(Strength)</span></a></h3>
+              <p><span class="side">مستقيم</span>ليست القوة شأنا في مدى إحكام إمساكك، ولا في مقدار ما تستطيع أن تكبت.</p>
+              <p><span class="side">معكوس</span>عندما تكون القوة معكوسة، تكشف يدا قد تصلبت، وأصابع انقبضت لا من التمكن بل من الخوف.</p>
+            </li>
+            <li>
+              <a href="cards/the-hermit/index.html"><img class="arcana-thumb" src="/data/the-hermit/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-hermit/index.html">الناسك<span class="latin">(The Hermit)</span></a></h3>
+              <p><span class="side">مستقيم</span>يقف الناسك وحده على جبل هادئ، وقد رفع الفانوس بما يكفي لإظهار خطواته التالية.</p>
+              <p><span class="side">معكوس</span>فانوس الناسك يضيء الآن إلى الداخل فحسب، ويعجز عن إنارة الطريق أمامه.</p>
+            </li>
+            <li>
+              <a href="cards/wheel-of-fortune/index.html"><img class="arcana-thumb" src="/data/wheel-of-fortune/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/wheel-of-fortune/index.html">عجلة الحظ<span class="latin">(Wheel of Fortune)</span></a></h3>
+              <p><span class="side">مستقيم</span>تدور عجلة الحظ، فتتبادل مواضع من يصعدون ومواضع من يهبطون.</p>
+              <p><span class="side">معكوس</span>قد يبدو أن العجلة تدور في مكانها، فتعطي وهم الحركة من غير تقدم.</p>
+            </li>
+            <li>
+              <a href="cards/justice/index.html"><img class="arcana-thumb" src="/data/justice/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/justice/index.html">العدالة<span class="latin">(Justice)</span></a></h3>
+              <p><span class="side">مستقيم</span>العدالة هي نقطة التقاء القرار والتمييز، يهديها السيف والميزان معا.</p>
+              <p><span class="side">معكوس</span>في الوضع المعكوس، تحذر العدالة من اختلال التوازن أو من تبرير الذات.</p>
+            </li>
+            <li>
+              <a href="cards/the-hanged-man/index.html"><img class="arcana-thumb" src="/data/the-hanged-man/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-hanged-man/index.html">المعلق<span class="latin">(The Hanged Man)</span></a></h3>
+              <p><span class="side">مستقيم</span>يتدلى رجل مقلوبا، وإحدى قدميه موثقة وذراعاه مفتوحتان، مجسدا السكون في قلب الانزعاج.</p>
+              <p><span class="side">معكوس</span>فقد التعليق مقلوبا غايته، وانقلب من بحث عن البصيرة إلى عادة إرجاء.</p>
+            </li>
+            <li>
+              <a href="cards/death/index.html"><img class="arcana-thumb" src="/data/death/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/death/index.html">الموت<span class="latin">(Death)</span></a></h3>
+              <p><span class="side">مستقيم</span>يصل الموت بوصفه النذير الصامت للاكتمال.</p>
+              <p><span class="side">معكوس</span>رغم اقتراب نهاية، يبذل الجهد في الإبقاء على الشكل المألوف.</p>
+            </li>
+            <li>
+              <a href="cards/temperance/index.html"><img class="arcana-thumb" src="/data/temperance/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/temperance/index.html">الاعتدال<span class="latin">(Temperance)</span></a></h3>
+              <p><span class="side">مستقيم</span>يدعوك الاعتدال إلى مزج العناصر المتقابلة بعناية، كالماء الذي يجري برفق بين كأسين.</p>
+              <p><span class="side">معكوس</span>يظهر الاعتدال المعكوس ماء ينسكب خارج الكأسين، علامة على اختلال أو على محاولة جمع فاشلة.</p>
+            </li>
+            <li>
+              <a href="cards/the-devil/index.html"><img class="arcana-thumb" src="/data/the-devil/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-devil/index.html">الشيطان<span class="latin">(The Devil)</span></a></h3>
+              <p><span class="side">مستقيم</span>يقف شخصان في الأصفاد، والحلقات تبدو غليظة ثقيلة للوهلة الأولى، غير أن الأطواق حول العنقين رخوة بما يكفي لنزعها.</p>
+              <p><span class="side">معكوس</span>السلاسل التي كانت خفية تخرج إلى النظر.</p>
+            </li>
+            <li>
+              <a href="cards/the-tower/index.html"><img class="arcana-thumb" src="/data/the-tower/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-tower/index.html">البرج<span class="latin">(The Tower)</span></a></h3>
+              <p><span class="side">مستقيم</span>بنية عالية كانت راسخة تصيبها قوة مفاجئة، فتكشف مواطن وهنها.</p>
+              <p><span class="side">معكوس</span>بعد البرق، ثمة إغراء لإعادة بناء البرج كما كان تماما، ورد كل حجر إلى ارتفاعه السابق المتزعزع.</p>
+            </li>
+            <li>
+              <a href="cards/the-star/index.html"><img class="arcana-thumb" src="/data/the-star/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-star/index.html">النجمة<span class="latin">(The Star)</span></a></h3>
+              <p><span class="side">مستقيم</span>عند مياه هادئة، يجثو شخص ويصب الماء من جرتين، واحدة في الأرض وواحدة في الجدول.</p>
+              <p><span class="side">معكوس</span>تميل الجرار، وينسكب الماء في بقعة واحدة، فيركد بدلا من أن يجري.</p>
+            </li>
+            <li>
+              <a href="cards/the-moon/index.html"><img class="arcana-thumb" src="/data/the-moon/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-moon/index.html">القمر<span class="latin">(The Moon)</span></a></h3>
+              <p><span class="side">مستقيم</span>تحت وهج القمر غير اليقيني، لا يظهر من الطريق إلا جزء بين برجين صامتين.</p>
+              <p><span class="side">معكوس</span>يختفي الطريق تحت الضباب، أو يشعر كل ظل بأنه تهديد، وقد صاغه خيال قلق.</p>
+            </li>
+            <li>
+              <a href="cards/the-sun/index.html"><img class="arcana-thumb" src="/data/the-sun/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-sun/index.html">الشمس<span class="latin">(The Sun)</span></a></h3>
+              <p><span class="side">مستقيم</span>تشير الشمس إلى وقت ينير فيه الضوء برفق ما كان خفيا، فيتيح أن ترى الأشياء بلا خجل ولا ارتباك.</p>
+              <p><span class="side">معكوس</span>تحذر الشمس المعكوسة من إفراط في الضياء، ترغم فيه حتى الظلال على الظهور، ولا يستطيع شيء أن يستريح.</p>
+            </li>
+            <li>
+              <a href="cards/judgement/index.html"><img class="arcana-thumb" src="/data/judgement/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/judgement/index.html">الحكم<span class="latin">(Judgement)</span></a></h3>
+              <p><span class="side">مستقيم</span>يتردد نداء واضح، فيوقظ الهيئات من راحتها الطويلة.</p>
+              <p><span class="side">معكوس</span>يصدح البوق، لكنك تضغط الغطاء من داخل سياجك أنت.</p>
+            </li>
+            <li>
+              <a href="cards/the-world/index.html"><img class="arcana-thumb" src="/data/the-world/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-world/index.html">العالم<span class="latin">(The World)</span></a></h3>
+              <p><span class="side">مستقيم</span>يرقص شخص في رشاقة داخل حلقة، وهو مرعي بالنظر من الأركان كلها.</p>
+              <p><span class="side">معكوس</span>يتوقف الرقص قبل أن تنغلق الحلقة بقليل.</p>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>أسئلة</h2>
+          <h3>ما الفرق بين المستقيم والمعكوس؟</h3>
+          <p>الرسم واحد، وإذا انقلب الاتجاه تغيّر الرمز. المستقيم هو المعنى الذي تفتحه البطاقة، والمعكوس هو التوقف أو الإفراط أو المعنى مقلوبًا. رسم المعكوس هو البطاقة بعد نصف دورة.</p>
+          <h3>هل يمكن السحب كل يوم؟</h3>
+          <p>بطاقة في اليوم، أو عدة بطاقات متتالية، كلاهما ممكن. إذا نفدت البطاقات، تُجمع المجموعة من جديد.</p>
+        </section>
+      </div>
+      <p class="error" id="error" hidden></p>
+    </main>
+    <footer class="colophon">
+      <p>© 2026 Engawa Inc.</p>
+      <p><a href="/en/contact/">تواصل</a> <a href="design/">تصاميم</a> <a href="/privacy/">سياسة الخصوصية</a> <a href="https://github.com/okuyamashin/colorsforthefool">GitHub</a></p>
+      <p class="lang-links"><a href="../">日本語</a> <a href="../en/">English</a> <a href="../zh/">繁體中文</a> <a href="../es/">Español</a> <a href="../nl/">Nederlands</a> <a href="../fr/">Français</a> <a href="../zh-hans/">简体中文</a> <a href="../ar/">العربية</a></p>
+    </footer>
+    <script src="../meanings.ar.js"></script>
+    <script src="../languages.js?v=6"></script>
+    <script src="../app.js"></script>
+  </body>
+</html>

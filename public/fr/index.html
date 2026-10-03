@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQ38VZSM7B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-NQ38VZSM7B');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>La couleur porte-bonheur d'aujourd'hui, tirée du tarot — Colors for the Fool</title>
+    <meta name="description" content="Tire une carte parmi les vingt-deux arcanes majeurs. Lis ce qu'elle représente, à l'endroit ou à l'envers, et au bout de l'histoire s'ouvre la couleur porte-bonheur d'aujourd'hui.">
+    <link rel="canonical" href="https://colorsforthefool.engawa5656.com/fr/">
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="ja" href="https://colorsforthefool.engawa5656.com/">
+    <link rel="alternate" hreflang="en" href="https://colorsforthefool.engawa5656.com/en/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://colorsforthefool.engawa5656.com/zh/">
+    <link rel="alternate" hreflang="es" href="https://colorsforthefool.engawa5656.com/es/">
+    <link rel="alternate" hreflang="nl" href="https://colorsforthefool.engawa5656.com/nl/">
+    <link rel="alternate" hreflang="fr" href="https://colorsforthefool.engawa5656.com/fr/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://colorsforthefool.engawa5656.com/zh-hans/">
+    <link rel="alternate" hreflang="ar" href="https://colorsforthefool.engawa5656.com/ar/">
+    <link rel="alternate" hreflang="x-default" href="https://colorsforthefool.engawa5656.com/">
+    <!-- /hreflang -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Colors for the Fool">
+    <meta property="og:title" content="La couleur porte-bonheur d'aujourd'hui, tirée du tarot">
+    <meta property="og:description" content="Tire une carte parmi les vingt-deux arcanes majeurs. Lis ce qu'elle représente, à l'endroit ou à l'envers, et au bout de l'histoire s'ouvre la couleur porte-bonheur d'aujourd'hui.">
+    <meta property="og:url" content="https://colorsforthefool.engawa5656.com/fr/">
+    <meta property="og:image" content="https://colorsforthefool.engawa5656.com/data/the-fool/face.jpg">
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css?v=2">
+    <style>
+      .film-frame {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+      }
+      .film-frame iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+    </style>
+    <script>
+      try {
+        if (!new URLSearchParams(location.search).has("test") && sessionStorage.getItem("cftf-reading-fr")) document.documentElement.classList.add("has-reading");
+      } catch (error) {}
+    </script>
+  </head>
+  <body>
+    <header class="top">
+      <p class="brand"><a href="./">Colors for the Fool</a></p>
+      <nav class="mast" aria-label="Langues">
+        <div class="lang-menu">
+          <button type="button" class="lang" aria-expanded="false" aria-haspopup="true" aria-controls="lang-list">Français<span class="lang-mark" aria-hidden="true"></span></button>
+          <ul class="lang-list" id="lang-list" hidden>
+            <li><a href="../">日本語</a></li>
+            <li><a href="../en/">English</a></li>
+            <li><a href="../zh/">繁體中文</a></li>
+            <li><a href="../es/">Español</a></li>
+            <li><a href="../nl/">Nederlands</a></li>
+            <li><a href="../zh-hans/">简体中文</a></li>
+            <li><a href="../ar/">العربية</a></li>
+          </ul>
+        </div>
+      </nav>
+      <h1 class="tagline">La couleur porte-bonheur d'aujourd'hui, tirée du tarot</h1>
+    </header>
+    <main>
+      <p class="notice" id="notice" hidden></p>
+      <div class="stage">
+        <button type="button" class="card" id="card" aria-label="Tirer une carte">
+          <span class="card-inner">
+            <span class="card-face back">
+              <img src="/data/cardback.jpg" alt="">
+            </span>
+            <span class="card-face front">
+              <span class="face-turn" id="face-turn">
+                <img id="face" alt="">
+              </span>
+            </span>
+          </span>
+        </button>
+      </div>
+      <div class="sheet" id="sheet">
+        <p class="hint-wrap">
+          <button type="button" class="hint" id="hint">Touche pour tirer une carte</button>
+        </p>
+        <article class="reading" id="reading" hidden>
+          <h2 id="title"></h2>
+          <p class="en" id="en"></p>
+          <p class="orientation" id="orientation"></p>
+          <div id="meaning"></div>
+        </article>
+        <section class="color-panel" id="color" hidden>
+          <div class="story" id="story"></div>
+          <button type="button" class="scene" id="scene" aria-label="Touche pour retourner la carte face cachée"></button>
+          <div class="library" id="library" hidden>
+            <a id="library-link" href="">Lire cette couleur</a>
+            <p class="share">
+              <button type="button" id="share-copy" aria-label="Copier le lien">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="18" cy="5" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <circle cx="6" cy="12" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <circle cx="18" cy="19" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M8.2 13.1 15.7 17.4M15.7 6.6 8.2 10.9" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                </svg>
+              </button>
+              <a id="share-x" href="" target="_blank" rel="noopener noreferrer" aria-label="Partager sur X">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" d="M14.2 10.4 21.5 2h-1.7l-6.3 7.2L8.4 2H2.2l7.6 11L2.2 22h1.7l6.7-7.6L15.3 22h6.2l-7.3-11.6Zm-2.4 2.7-.8-1.1L4.7 3.5h2.7l5 7.1.8 1.1 6.5 9.2h-2.7l-5.2-7.8Z"/>
+                </svg>
+              </a>
+              <a id="share-line" href="" target="_blank" rel="noopener noreferrer" aria-label="Partager sur LINE">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#06C755" d="M12 3.2C6.8 3.2 2.6 6.7 2.6 11c0 3.8 3.4 7 8 7.7.3.1.7.2.8.5.1.3.1.7 0 1l-.3 1.6c-.1.4.3.7.7.5l2.2-1.3c.2-.1.4-.1.6-.1 4.8-.2 8.8-3.6 8.8-7.9 0-4.3-4.2-7.8-9.4-7.8Z"/>
+                </svg>
+              </a>
+            </p>
+            <p class="copied" id="copied" hidden role="status">Copié dans le presse-papiers</p>
+          </div>
+        </section>
+      </div>
+      <div class="guide" id="guide">
+        <section>
+          <h2>Comment tirer une carte</h2>
+          <ol>
+            <li>Tire une carte. Elle sort des vingt-deux arcanes majeurs, à l'endroit ou à l'envers.</li>
+            <li>Lis ce que cette carte représente aujourd'hui.</li>
+            <li>Touche encore. La couleur porte-bonheur d'aujourd'hui s'ouvre à la fin de l'histoire. Touche le miroir en dessous, et le texte se replie. La carte revient face cachée.</li>
+          </ol>
+        </section>
+        <p class="designs"><a href="design/">Voir les dessins des cartes de tarot</a></p>
+        <section>
+          <h2>À propos de ce site</h2>
+          <p>Chaque arcane majeur est lié à une couleur. L'histoire passe par un mythe, un récit, un lieu ou un outil, et s'achève sur la couleur porte-bonheur d'aujourd'hui.</p>
+        </section>
+        <section class="film">
+          <h2>Le voyage du Fou</h2>
+          <div class="film-frame">
+            <iframe src="https://www.youtube.com/embed/ngl1nN2qzkI?si=DT7xBR5A0CPZu1J3" title="Le voyage du Fou" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </section>
+        <section>
+          <h2>Les vingt-deux arcanes majeurs</h2>
+          <ul class="arcana">
+            <li>
+              <a href="cards/the-fool/index.html"><img class="arcana-thumb" src="/data/the-fool/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-fool/index.html">Le Fou</a></h3>
+              <p><span class="side">À l'endroit</span>Une figure solitaire est au bord même de la falaise, le baluchon léger, une rose blanche à la main et un chien fidèle à côté.</p>
+              <p><span class="side">À l'envers</span>La même figure hésite maintenant sur la falaise, sans savoir si le sol tient.</p>
+            </li>
+            <li>
+              <a href="cards/the-magician/index.html"><img class="arcana-thumb" src="/data/the-magician/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-magician/index.html">Le Magicien</a></h3>
+              <p><span class="side">À l'endroit</span>Sur la table, il y a une baguette, une coupe, une épée et une pièce : chacune est un outil pour donner forme à la journée.</p>
+              <p><span class="side">À l'envers</span>Les outils de la table sont posés pour être vus, non pour servir.</p>
+            </li>
+            <li>
+              <a href="cards/the-high-priestess/index.html"><img class="arcana-thumb" src="/data/the-high-priestess/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-high-priestess/index.html">La Grande Prêtresse</a></h3>
+              <p><span class="side">À l'endroit</span>Une femme est assise en silence entre deux colonnes, le rouleau à peine entrouvert sur les genoux.</p>
+              <p><span class="side">À l'envers</span>Le rouleau reste fermé, ou il s&#x27;est ouvert d&#x27;un coup et son contenu est épars et mal compris.</p>
+            </li>
+            <li>
+              <a href="cards/the-empress/index.html"><img class="arcana-thumb" src="/data/the-empress/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-empress/index.html">L&#x27;Impératrice</a></h3>
+              <p><span class="side">À l'endroit</span>L&#x27;Impératrice est un lieu d&#x27;abondance : le grain mûrit, la forêt abrite et l&#x27;eau court claire.</p>
+              <p><span class="side">À l'envers</span>La terre peut être lasse, ou tu récoltes avant que le fruit soit prêt.</p>
+            </li>
+            <li>
+              <a href="cards/the-emperor/index.html"><img class="arcana-thumb" src="/data/the-emperor/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-emperor/index.html">L&#x27;Empereur</a></h3>
+              <p><span class="side">À l'endroit</span>L&#x27;Empereur est assis sur un trône de pierre, le regard porté bien au-delà du présent.</p>
+              <p><span class="side">À l'envers</span>Le trône ne va plus à l&#x27;Empereur.</p>
+            </li>
+            <li>
+              <a href="cards/the-hierophant/index.html"><img class="arcana-thumb" src="/data/the-hierophant/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-hierophant/index.html">Le Hiérophante</a></h3>
+              <p><span class="side">À l'endroit</span>Une figure est assise devant deux apprentis, et elle incarne le passage du savoir par la tradition et par les formes déjà faites.</p>
+              <p><span class="side">À l'envers</span>Les formes sont devenues plus lourdes que leur but : le rite pèse plus que le sens.</p>
+            </li>
+            <li>
+              <a href="cards/the-lovers/index.html"><img class="arcana-thumb" src="/data/the-lovers/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-lovers/index.html">Les Amoureux</a></h3>
+              <p><span class="side">À l'endroit</span>Les Amoureux sont le moment où deux forces distinctes se rencontrent et te demandent un choix conscient et de cœur.</p>
+              <p><span class="side">À l'envers</span>Les Amoureux à l&#x27;envers signalent l&#x27;indécision et l&#x27;inconfort de laisser les choix à moitié faits.</p>
+            </li>
+            <li>
+              <a href="cards/the-chariot/index.html"><img class="arcana-thumb" src="/data/the-chariot/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-chariot/index.html">Le Chariot</a></h3>
+              <p><span class="side">À l'endroit</span>Le conducteur tient les rênes d&#x27;un char tiré par deux créatures distinctes.</p>
+              <p><span class="side">À l'envers</span>Le char est en mouvement, mais il n&#x27;a pas franchi le seuil.</p>
+            </li>
+            <li>
+              <a href="cards/strength/index.html"><img class="arcana-thumb" src="/data/strength/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/strength/index.html">La Force</a></h3>
+              <p><span class="side">À l'endroit</span>La Force ne consiste pas à serrer plus fort, ni en ce que tu peux réprimer.</p>
+              <p><span class="side">À l'envers</span>À l&#x27;envers, La Force montre une main raidie, les doigts fermés par la peur et non par la maîtrise.</p>
+            </li>
+            <li>
+              <a href="cards/the-hermit/index.html"><img class="arcana-thumb" src="/data/the-hermit/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-hermit/index.html">L&#x27;Ermite</a></h3>
+              <p><span class="side">À l'endroit</span>L&#x27;Ermite est seul sur une montagne tranquille, la lanterne levée juste assez pour voir le pas suivant.</p>
+              <p><span class="side">À l'envers</span>La lanterne de l&#x27;Ermite n&#x27;éclaire plus que vers l&#x27;intérieur, et n&#x27;illumine pas le chemin.</p>
+            </li>
+            <li>
+              <a href="cards/wheel-of-fortune/index.html"><img class="arcana-thumb" src="/data/wheel-of-fortune/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/wheel-of-fortune/index.html">La Roue de Fortune</a></h3>
+              <p><span class="side">À l'endroit</span>La Roue de Fortune tourne, et change de place celui qui monte et celui qui descend.</p>
+              <p><span class="side">À l'envers</span>Il peut sembler que la roue tourne sur place, avec l&#x27;illusion du mouvement et sans avance.</p>
+            </li>
+            <li>
+              <a href="cards/justice/index.html"><img class="arcana-thumb" src="/data/justice/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/justice/index.html">La Justice</a></h3>
+              <p><span class="side">À l'endroit</span>La Justice est le point où se rencontrent la décision et le discernement, guidés par l&#x27;épée et par la balance.</p>
+              <p><span class="side">À l'envers</span>À l&#x27;envers, La Justice avertit d&#x27;un déséquilibre ou d&#x27;une autojustification.</p>
+            </li>
+            <li>
+              <a href="cards/the-hanged-man/index.html"><img class="arcana-thumb" src="/data/the-hanged-man/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-hanged-man/index.html">Le Pendu</a></h3>
+              <p><span class="side">À l'endroit</span>Un homme est suspendu la tête en bas, un pied attaché et les bras ouverts, et il incarne le calme au milieu de l&#x27;inconfort.</p>
+              <p><span class="side">À l'envers</span>Être suspendu la tête en bas a perdu son but, et la recherche de vision est devenue une habitude de remettre à plus tard.</p>
+            </li>
+            <li>
+              <a href="cards/death/index.html"><img class="arcana-thumb" src="/data/death/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/death/index.html">La Mort</a></h3>
+              <p><span class="side">À l'endroit</span>La Mort arrive comme le héraut silencieux de ce qui s&#x27;achève.</p>
+              <p><span class="side">À l'envers</span>Alors qu&#x27;une fin approche, l&#x27;effort se dépense à maintenir la forme familière.</p>
+            </li>
+            <li>
+              <a href="cards/temperance/index.html"><img class="arcana-thumb" src="/data/temperance/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/temperance/index.html">La Tempérance</a></h3>
+              <p><span class="side">À l'endroit</span>La Tempérance t&#x27;invite à mêler des éléments opposés avec soin, comme l&#x27;eau qui passe doucement d&#x27;une coupe à l&#x27;autre.</p>
+              <p><span class="side">À l'envers</span>La Tempérance à l&#x27;envers montre l&#x27;eau versée hors des coupes : un déséquilibre, ou une tentative manquée de combiner.</p>
+            </li>
+            <li>
+              <a href="cards/the-devil/index.html"><img class="arcana-thumb" src="/data/the-devil/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-devil/index.html">Le Diable</a></h3>
+              <p><span class="side">À l'endroit</span>Deux figures sont enchaînées.</p>
+              <p><span class="side">À l'envers</span>Les chaînes, autrefois cachées, deviennent visibles.</p>
+            </li>
+            <li>
+              <a href="cards/the-tower/index.html"><img class="arcana-thumb" src="/data/the-tower/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-tower/index.html">La Tour</a></h3>
+              <p><span class="side">À l'endroit</span>Une structure haute, qui semblait ferme, reçoit un coup soudain et montre ses points faibles.</p>
+              <p><span class="side">À l'envers</span>Après l&#x27;éclair, il tente de reconstruire la tour exactement comme elle était, en rendant chaque pierre à sa hauteur précaire.</p>
+            </li>
+            <li>
+              <a href="cards/the-star/index.html"><img class="arcana-thumb" src="/data/the-star/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-star/index.html">L&#x27;Étoile</a></h3>
+              <p><span class="side">À l'endroit</span>Près d&#x27;eaux calmes, une figure s&#x27;agenouille et verse l&#x27;eau de deux jarres : l&#x27;une vers la terre, l&#x27;autre vers le ruisseau.</p>
+              <p><span class="side">À l'envers</span>Les jarres s&#x27;inclinent, et l&#x27;eau tombe en un seul endroit : elle stagne au lieu de courir.</p>
+            </li>
+            <li>
+              <a href="cards/the-moon/index.html"><img class="arcana-thumb" src="/data/the-moon/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-moon/index.html">La Lune</a></h3>
+              <p><span class="side">À l'endroit</span>Sous la lueur incertaine de la lune, on ne voit qu&#x27;une part du chemin entre deux tours silencieuses.</p>
+              <p><span class="side">À l'envers</span>Le chemin disparaît sous le brouillard, ou chaque ombre se sent menaçante, formée par une imagination anxieuse.</p>
+            </li>
+            <li>
+              <a href="cards/the-sun/index.html"><img class="arcana-thumb" src="/data/the-sun/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-sun/index.html">Le Soleil</a></h3>
+              <p><span class="side">À l'endroit</span>Le Soleil signale un temps où la lumière éclaire avec douceur ce qui était caché, et où les choses peuvent se voir sans honte ni confusion.</p>
+              <p><span class="side">À l'envers</span>Le Soleil à l&#x27;envers avertit d&#x27;un éclat excessif, où même les ombres sont forcées à la vue et où rien ne peut se reposer.</p>
+            </li>
+            <li>
+              <a href="cards/judgement/index.html"><img class="arcana-thumb" src="/data/judgement/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/judgement/index.html">Le Jugement</a></h3>
+              <p><span class="side">À l'endroit</span>Un appel clair retentit et réveille les figures de leur long repos.</p>
+              <p><span class="side">À l'envers</span>La trompette sonne, mais tu retiens le couvercle de l&#x27;intérieur de ta propre clôture.</p>
+            </li>
+            <li>
+              <a href="cards/the-world/index.html"><img class="arcana-thumb" src="/data/the-world/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-world/index.html">Le Monde</a></h3>
+              <p><span class="side">À l'endroit</span>Une figure danse avec grâce à l&#x27;intérieur d&#x27;un anneau, veillée depuis les quatre coins.</p>
+              <p><span class="side">À l'envers</span>La danse s&#x27;arrête juste avant que l&#x27;anneau se ferme.</p>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Questions</h2>
+          <h3>Qu'est-ce qui distingue l'endroit et l'envers ?</h3>
+          <p>Le même dessin change de signe en tournant. À l'endroit, la carte est ouverte. À l'envers, c'est un retard, un excès, ou le sens retourné. Une figure à l'envers est la carte tournée d'un demi-tour.</p>
+          <h3>Puis-je tirer une carte chaque jour ?</h3>
+          <p>Une carte par jour, ou plusieurs à la suite. Quand le jeu se vide, il redevient complet.</p>
+        </section>
+      </div>
+      <p class="error" id="error" hidden></p>
+    </main>
+    <footer class="colophon">
+      <p>© 2026 Engawa Inc.</p>
+      <p><a href="../en/contact/">Contact</a> <a href="design/">Dessin</a> <a href="../privacy/">Politique de confidentialité</a> <a href="https://github.com/okuyamashin/colorsforthefool">GitHub</a></p>
+      <p class="lang-links"><a href="../">日本語</a> <a href="../en/">English</a> <a href="../zh/">繁體中文</a> <a href="../es/">Español</a> <a href="../nl/">Nederlands</a> <a href="../fr/">Français</a> <a href="../zh-hans/">简体中文</a> <a href="../ar/">العربية</a></p>
+    </footer>
+    <script src="../meanings.fr.js"></script>
+    <script src="../languages.js?v=6"></script>
+    <script src="../app.js"></script>
+  </body>
+</html>

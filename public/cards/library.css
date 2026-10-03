@@ -83,7 +83,7 @@ main {
 .lang-list {
   position: absolute;
   top: calc(100% + 0.55rem);
-  right: 0;
+  inset-inline-end: 0;
   z-index: 3;
   min-width: 9.5rem;
   max-height: 70vh;
@@ -280,7 +280,7 @@ h2 {
   display: inline-block;
   width: 0.95rem;
   height: 0.95rem;
-  margin-right: 0.45rem;
+  margin-inline-end: 0.45rem;
   border: 1px solid var(--gold);
   border-radius: 50%;
   vertical-align: -0.12rem;
@@ -372,6 +372,8 @@ h2 {
 
 .colophon p { margin: 0.35rem 0; }
 
+.lang-links { margin-top: 0.7rem; }
+
 .colophon a,
 .colophon a:link,
 .colophon a:visited,
@@ -383,3 +385,27 @@ h2 {
 }
 
 .colophon a:hover { color: #5c4318; }
+
+html[lang="ar"] :is(
+  .lang,
+  .tagline,
+  .crumb,
+  h1,
+  .orientation,
+  .day,
+  h2,
+  .colors .name,
+  .colophon,
+  .story .close,
+  .back
+) {
+  letter-spacing: 0;
+  text-indent: 0;
+}
+
+html[lang="ar"] .lang { text-transform: none; }
+
+html[lang="ar"] :is(.brand, .en, .lang-list a) {
+  direction: ltr;
+  unicode-bidi: isolate;
+}

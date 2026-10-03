@@ -2,3 +2,11 @@
 html[lang="zh-Hant"] body {
   font-family: "Noto Serif TC", "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
 }
+
+html[lang="zh-Hans"] body {
+  font-family: "Noto Serif SC", "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+html[lang="ar"] body {
+  font-family: "Noto Naskh Arabic", "Shippori Mincho", serif;
+}

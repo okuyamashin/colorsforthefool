@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQ38VZSM7B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-NQ38VZSM7B');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>用塔罗抽取今天的幸运色 — Colors for the Fool</title>
+    <meta name="description" content="从大阿卡纳二十二张里抽一张。读过正位或逆位的象征之后，在故事的结尾打开今天的幸运色。">
+    <link rel="canonical" href="https://colorsforthefool.engawa5656.com/zh-hans/">
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="ja" href="https://colorsforthefool.engawa5656.com/">
+    <link rel="alternate" hreflang="en" href="https://colorsforthefool.engawa5656.com/en/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://colorsforthefool.engawa5656.com/zh/">
+    <link rel="alternate" hreflang="es" href="https://colorsforthefool.engawa5656.com/es/">
+    <link rel="alternate" hreflang="nl" href="https://colorsforthefool.engawa5656.com/nl/">
+    <link rel="alternate" hreflang="fr" href="https://colorsforthefool.engawa5656.com/fr/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://colorsforthefool.engawa5656.com/zh-hans/">
+    <link rel="alternate" hreflang="ar" href="https://colorsforthefool.engawa5656.com/ar/">
+    <link rel="alternate" hreflang="x-default" href="https://colorsforthefool.engawa5656.com/">
+    <!-- /hreflang -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="Colors for the Fool">
+    <meta property="og:title" content="用塔罗抽取今天的幸运色">
+    <meta property="og:description" content="从大阿卡纳二十二张里抽一张。读过正位或逆位的象征之后，在故事的结尾打开今天的幸运色。">
+    <meta property="og:url" content="https://colorsforthefool.engawa5656.com/zh-hans/">
+    <meta property="og:image" content="https://colorsforthefool.engawa5656.com/data/the-fool/face.jpg">
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Noto+Serif+SC:wght@500;600&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css?v=2">
+    <style>
+      .film-frame {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+      }
+      .film-frame iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+    </style>
+    <script>
+      try {
+        if (!new URLSearchParams(location.search).has("test") && sessionStorage.getItem("cftf-reading-zh-hans")) document.documentElement.classList.add("has-reading");
+      } catch (error) {}
+    </script>
+  </head>
+  <body>
+    <header class="top">
+      <p class="brand"><a href="./">Colors for the Fool</a></p>
+      <nav class="mast" aria-label="语言">
+        <div class="lang-menu">
+          <button type="button" class="lang" aria-expanded="false" aria-haspopup="true" aria-controls="lang-list">简体中文<span class="lang-mark" aria-hidden="true"></span></button>
+          <ul class="lang-list" id="lang-list" hidden>
+            <li><a href="../">日本語</a></li>
+            <li><a href="../en/">English</a></li>
+            <li><a href="../zh/">繁體中文</a></li>
+            <li><a href="../es/">Español</a></li>
+            <li><a href="../nl/">Nederlands</a></li>
+            <li><a href="../fr/">Français</a></li>
+            <li><a href="../ar/">العربية</a></li>
+          </ul>
+        </div>
+      </nav>
+      <h1 class="tagline">用塔罗抽取今天的幸运色</h1>
+    </header>
+    <main>
+      <p class="notice" id="notice" hidden></p>
+      <div class="stage">
+        <button type="button" class="card" id="card" aria-label="抽一张牌">
+          <span class="card-inner">
+            <span class="card-face back">
+              <img src="/data/cardback.jpg" alt="">
+            </span>
+            <span class="card-face front">
+              <span class="face-turn" id="face-turn">
+                <img id="face" alt="">
+              </span>
+            </span>
+          </span>
+        </button>
+      </div>
+      <div class="sheet" id="sheet">
+        <p class="hint-wrap">
+          <button type="button" class="hint" id="hint">点一下，抽一张牌</button>
+        </p>
+        <article class="reading" id="reading" hidden>
+          <h2 id="title"></h2>
+          <p class="en" id="en"></p>
+          <p class="orientation" id="orientation"></p>
+          <div id="meaning"></div>
+        </article>
+        <section class="color-panel" id="color" hidden>
+          <div class="story" id="story"></div>
+          <button type="button" class="scene" id="scene" aria-label="点一下，把牌翻回背面"></button>
+          <div class="library" id="library" hidden>
+            <a id="library-link" href="">阅读这个颜色</a>
+            <p class="share">
+              <button type="button" id="share-copy" aria-label="复制链接">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="18" cy="5" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <circle cx="6" cy="12" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <circle cx="18" cy="19" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M8.2 13.1 15.7 17.4M15.7 6.6 8.2 10.9" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                </svg>
+              </button>
+              <a id="share-x" href="" target="_blank" rel="noopener noreferrer" aria-label="分享到 X">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" d="M14.2 10.4 21.5 2h-1.7l-6.3 7.2L8.4 2H2.2l7.6 11L2.2 22h1.7l6.7-7.6L15.3 22h6.2l-7.3-11.6Zm-2.4 2.7-.8-1.1L4.7 3.5h2.7l5 7.1.8 1.1 6.5 9.2h-2.7l-5.2-7.8Z"/>
+                </svg>
+              </a>
+              <a id="share-line" href="" target="_blank" rel="noopener noreferrer" aria-label="分享到 LINE">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#06C755" d="M12 3.2C6.8 3.2 2.6 6.7 2.6 11c0 3.8 3.4 7 8 7.7.3.1.7.2.8.5.1.3.1.7 0 1l-.3 1.6c-.1.4.3.7.7.5l2.2-1.3c.2-.1.4-.1.6-.1 4.8-.2 8.8-3.6 8.8-7.9 0-4.3-4.2-7.8-9.4-7.8Z"/>
+                </svg>
+              </a>
+            </p>
+            <p class="copied" id="copied" hidden role="status">已复制到剪贴板</p>
+          </div>
+        </section>
+      </div>
+      <div class="guide" id="guide">
+        <section>
+          <h2>怎么抽</h2>
+          <ol>
+            <li>抽一张牌。它来自大阿卡纳二十二张，正位或逆位。</li>
+            <li>读这张牌今天象征什么。</li>
+            <li>再点一次。故事的结尾会打开今天的幸运色。点下面的镜子，文字就收起来，牌翻回背面。</li>
+          </ol>
+        </section>
+        <p class="designs"><a href="design/">看塔罗牌的设计</a></p>
+        <section>
+          <h2>关于这个网站</h2>
+          <p>每张大阿卡纳都连着一个颜色。故事走过神话、历史、一个地方或一件工具，最后落在今天的幸运色。</p>
+        </section>
+        <section class="film">
+          <h2>愚者之旅</h2>
+          <div class="film-frame">
+            <iframe src="https://www.youtube.com/embed/ngl1nN2qzkI?si=DT7xBR5A0CPZu1J3" title="愚者之旅" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </section>
+        <section>
+          <h2>大阿卡纳二十二张</h2>
+          <ul class="arcana">
+            <li>
+              <a href="cards/the-fool/index.html"><img class="arcana-thumb" src="/data/the-fool/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-fool/index.html">愚者<span class="latin">(The Fool)</span></a></h3>
+              <p><span class="side">正位</span>崖边站着一个行李很少的人。脚边有狗。手里有一朵玫瑰。不看后面，只看下一步。</p>
+              <p><span class="side">逆位</span>还是同一座崖，可是脚不信任地面。不是头也不回地跌下去，就是在边缘站着不动。两种都没有看清这一步该放在哪里。</p>
+            </li>
+            <li>
+              <a href="cards/the-magician/index.html"><img class="arcana-thumb" src="/data/the-magician/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-magician/index.html">魔术师<span class="latin">(The Magician)</span></a></h3>
+              <p><span class="side">正位</span>桌上有杖、杯、剑、钱币。一只手向天，一只手向地。魔术师把已经在手边的东西，通向一个意图。</p>
+              <p><span class="side">逆位</span>桌上的工具只是为了给人看才排好。手在动，天和地却没有连上。话先跑了，材料赶不上。或者材料齐了，手却不碰。</p>
+            </li>
+            <li>
+              <a href="cards/the-high-priestess/index.html"><img class="arcana-thumb" src="/data/the-high-priestess/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-high-priestess/index.html">女祭司<span class="latin">(The High Priestess)</span></a></h3>
+              <p><span class="side">正位</span>坐在两根柱子之间的人。膝上的卷轴，只打开了一半。女祭司是一张不急着把知道的事交出去的牌。</p>
+              <p><span class="side">逆位</span>卷轴一直合着，或者打得太开，内容散了一地。沉默变成把秘密抱紧，直觉变成没有根据的断言。</p>
+            </li>
+            <li>
+              <a href="cards/the-empress/index.html"><img class="arcana-thumb" src="/data/the-empress/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-empress/index.html">皇后<span class="latin">(The Empress)</span></a></h3>
+              <p><span class="side">正位</span>丰盛的位子，麦子，森林，流动的水。皇后是给生长中的东西一个地方的牌。不是支配它去结果。是把土、时节和工夫备齐，让果实自己来。</p>
+              <p><span class="side">逆位</span>田累了，或者果实还没熟就摘得太急。照料不再是拥抱，变成围起来。给予变成用来遮住自己枯竭的工作。</p>
+            </li>
+            <li>
+              <a href="cards/the-emperor/index.html"><img class="arcana-thumb" src="/data/the-emperor/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-emperor/index.html">皇帝<span class="latin">(The Emperor)</span></a></h3>
+              <p><span class="side">正位</span>石制的王座，硬的靠背，望向远处的脸。皇帝是一张画出边界、让人能休息的牌。</p>
+              <p><span class="side">逆位</span>王座和身体不合。规则不再保护人，只为了把人缩小而留下来。或者边界消失了，该做决定的人空着位子。</p>
+            </li>
+            <li>
+              <a href="cards/the-hierophant/index.html"><img class="arcana-thumb" src="/data/the-hierophant/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-hierophant/index.html">教皇<span class="latin">(The Hierophant)</span></a></h3>
+              <p><span class="side">正位</span>坐在两个学习者面前的人。钥匙，惯例，从手交到手上的型。教皇是一张不必一个人发明的智慧的牌。</p>
+              <p><span class="side">逆位</span>型比内容还重。钥匙不是为了开门，是为了占住门。或者任何老师的话都到不了，只有自己一个人的做法坐在正确的位子上。</p>
+            </li>
+            <li>
+              <a href="cards/the-lovers/index.html"><img class="arcana-thumb" src="/data/the-lovers/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-lovers/index.html">恋人<span class="latin">(The Lovers)</span></a></h3>
+              <p><span class="side">正位</span>两个人，和他们上方的使者。恋人不是只画甜美一致的牌。是选择，并且承担这个选择会让自己成为谁。</p>
+              <p><span class="side">逆位</span>选择停在一半。想两边都要，结果哪边都没有约定。或者把已经决定的事，假装自己没决定过，又摇起来。</p>
+            </li>
+            <li>
+              <a href="cards/the-chariot/index.html"><img class="arcana-thumb" src="/data/the-chariot/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-chariot/index.html">战车<span class="latin">(The Chariot)</span></a></h3>
+              <p><span class="side">正位</span>两头生物拉着的车。御者握着缰绳，出了城门。战车是一张把散开的力量，运向同一个方向的牌。</p>
+              <p><span class="side">逆位</span>车在动，却没有出门。或者太快，轮子忘了路。两头往左右拉，御者握缰绳只是为了给人看。</p>
+            </li>
+            <li>
+              <a href="cards/strength/index.html"><img class="arcana-thumb" src="/data/strength/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/strength/index.html">力量<span class="latin">(Strength)</span></a></h3>
+              <p><span class="side">正位</span>把手放在狮子身上的人。力量不是压住了多少。是在张开嘴的兽旁边，把自己的手保持柔软。</p>
+              <p><span class="side">逆位</span>手是硬的。看起来像制服了狮子，其实是恐惧让指头合上。或者做出温柔的样子，却不相信自己的热，把眼睛从兽身上移开。</p>
+            </li>
+            <li>
+              <a href="cards/the-hermit/index.html"><img class="arcana-thumb" src="/data/the-hermit/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-hermit/index.html">隐者<span class="latin">(The Hermit)</span></a></h3>
+              <p><span class="side">正位</span>山上的一个人，举着灯。隐者不是舍弃了世间的人，是为了把灯举高，先从人群里下来一次的人。</p>
+              <p><span class="side">逆位</span>灯太朝向里面，没有照路。孤独不是智慧，变成了藏身处。或者该下山的时候，还占着峰上的位子。</p>
+            </li>
+            <li>
+              <a href="cards/wheel-of-fortune/index.html"><img class="arcana-thumb" src="/data/wheel-of-fortune/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/wheel-of-fortune/index.html">命运之轮<span class="latin">(Wheel of Fortune)</span></a></h3>
+              <p><span class="side">正位</span>转动的轮。在上面的，和正往下走的。命运之轮是一张牌，说的是在努力之外，世界会把位置对调。</p>
+              <p><span class="side">逆位</span>轮像在同一个地方空转。变化来了，却想回到前一个位置。或者只把不好的旋转叫作命运，眼睛离开自己的位置。</p>
+            </li>
+            <li>
+              <a href="cards/justice/index.html"><img class="arcana-thumb" src="/data/justice/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/justice/index.html">正义<span class="latin">(Justice)</span></a></h3>
+              <p><span class="side">正位</span>剑和秤。正义不是把感情消去的冷。是把同样的光照在两边，把偏斜看成可以衡量的量。</p>
+              <p><span class="side">逆位</span>秤歪着，却被说成没有歪。判决先在，事实事后才被重新排列。或者太想要公平，把决定的剑留在鞘里。</p>
+            </li>
+            <li>
+              <a href="cards/the-hanged-man/index.html"><img class="arcana-thumb" src="/data/the-hanged-man/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-hanged-man/index.html">倒吊人<span class="latin">(The Hanged Man)</span></a></h3>
+              <p><span class="side">正位</span>倒挂着的人。看起来苦，脸却安静。倒吊人是一张牌，说停下来的时间，其实是把看法反转的时间。</p>
+              <p><span class="side">逆位</span>倒挂的姿势不再是看法的转换，变成停滞的习惯。假装放手，其实自己把绑住的脚勒得更紧。或者把该等待的时间，用不动的美德盖住。</p>
+            </li>
+            <li>
+              <a href="cards/death/index.html"><img class="arcana-thumb" src="/data/death/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/death/index.html">死神<span class="latin">(Death)</span></a></h3>
+              <p><span class="side">正位</span>运送结束的人。田已经收割，旗朝向早晨。死神与其说是消灭本身，不如说是一张让结束了的形状把位子空出来的牌。</p>
+              <p><span class="side">逆位</span>结束已经来了，力气却用在维持同样的形状。把枯掉的枝，解释成季节还没过完。把变化当作以后再整理，放到架子上。</p>
+            </li>
+            <li>
+              <a href="cards/temperance/index.html"><img class="arcana-thumb" src="/data/temperance/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/temperance/index.html">节制<span class="latin">(Temperance)</span></a></h3>
+              <p><span class="side">正位</span>在两个杯子之间移水的人。节制不是忍耐的牌，是调配的牌。</p>
+              <p><span class="side">逆位</span>水洒到杯子外面。调配变成半途的保留。或者只把一种味道调浓，把另一个杯子藏到架子深处。</p>
+            </li>
+            <li>
+              <a href="cards/the-devil/index.html"><img class="arcana-thumb" src="/data/the-devil/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-devil/index.html">恶魔<span class="latin">(The Devil)</span></a></h3>
+              <p><span class="side">正位</span>被锁链拴着的两个人。链子看起来很粗，环却是松的。恶魔是一张牌，描写的是把自己能取下的环，相信成取不下的状态。</p>
+              <p><span class="side">逆位</span>锁链开始看得见。或者取下来的环，还以脖子的形状在走路。注意到束缚之后的混乱来了。自由忽然太宽，反而怀念笼子那边。</p>
+            </li>
+            <li>
+              <a href="cards/the-tower/index.html"><img class="arcana-thumb" src="/data/the-tower/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-tower/index.html">高塔<span class="latin">(The Tower)</span></a></h3>
+              <p><span class="side">正位</span>被雷打中的高楼。高塔是一张牌，说堆得太高的确定，会在一瞬间打开。</p>
+              <p><span class="side">逆位</span>落雷之后，想再堆一座同样高度的塔。或者太害怕崩塌，把必要的裂缝也涂上。</p>
+            </li>
+            <li>
+              <a href="cards/the-star/index.html"><img class="arcana-thumb" src="/data/the-star/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-star/index.html">星星<span class="latin">(The Star)</span></a></h3>
+              <p><span class="side">正位</span>跪在水边，从两个瓶子往外倒水的人。头顶一颗大星。星星是灾难之后留下来的安静希望的牌。</p>
+              <p><span class="side">逆位</span>瓶子倾斜，水只落在同一个地方。不是看不见星星，是为了看星星而拒绝夜本身。希望变成要求现在立刻全部变好。</p>
+            </li>
+            <li>
+              <a href="cards/the-moon/index.html"><img class="arcana-thumb" src="/data/the-moon/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-moon/index.html">月亮<span class="latin">(The Moon)</span></a></h3>
+              <p><span class="side">正位</span>两座塔，中间的路，狗和狼，从水里上来的东西。月亮是一张路只看得见一半的牌。</p>
+              <p><span class="side">逆位</span>雾把路整个藏起来，或者不安给每一个影子都起了名字。想像坐上了事实的位子。把狼的声音只听成危险，或者不理狗的声音就走进野地。</p>
+            </li>
+            <li>
+              <a href="cards/the-sun/index.html"><img class="arcana-thumb" src="/data/the-sun/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-sun/index.html">太阳<span class="latin">(The Sun)</span></a></h3>
+              <p><span class="side">正位</span>打开的光，花，坦率的孩子。太阳是一张把藏着的东西放在向阳处晾干的牌。</p>
+              <p><span class="side">逆位</span>光太强，连影子该做的工作也照到了。必须高兴的强制。或者无法信任光，晴天也把窗帘拉上。</p>
+            </li>
+            <li>
+              <a href="cards/judgement/index.html"><img class="arcana-thumb" src="/data/judgement/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/judgement/index.html">审判<span class="latin">(Judgement)</span></a></h3>
+              <p><span class="side">正位</span>号角，和从棺里起来的人们。审判不是被裁完就结束的牌，是被叫到旧日自己的名字、然后站起来的牌。</p>
+              <p><span class="side">逆位</span>号角在响，却从里面按住棺盖。把被叫到这件事，解释成时候还没到。或者只剩下审判过去的自己的声音，站起来的声音到不了。</p>
+            </li>
+            <li>
+              <a href="cards/the-world/index.html"><img class="arcana-thumb" src="/data/the-world/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-world/index.html">世界<span class="latin">(The World)</span></a></h3>
+              <p><span class="side">正位</span>在轮里跳舞的人。四个角落有守护。世界是一个周期结了果的牌。</p>
+              <p><span class="side">逆位</span>脚停在轮的前面。把完成所需的最后一步，以还不完美为理由保留下来。或者无法合上一个周期，继续在同一个圆周上转。</p>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>问题</h2>
+          <h3>正位和逆位有什么不同？</h3>
+          <p>同一张图，方向一变，象征就变了。正位是这张牌打开的意思，逆位是停滞、过度，或翻过来的意思。逆位的图，是把牌转半圈。</p>
+          <h3>可以每天抽吗？</h3>
+          <p>一天一张，或连续抽几张，都可以。牌抽完了，牌组会重新合上。</p>
+        </section>
+      </div>
+      <p class="error" id="error" hidden></p>
+    </main>
+    <footer class="colophon">
+      <p>© 2026 Engawa Inc.</p>
+      <p><a href="/en/contact/">联络</a> <a href="design/">设计</a> <a href="/privacy/">隐私政策</a> <a href="https://github.com/okuyamashin/colorsforthefool">GitHub</a></p>
+      <p class="lang-links"><a href="../">日本語</a> <a href="../en/">English</a> <a href="../zh/">繁體中文</a> <a href="../es/">Español</a> <a href="../nl/">Nederlands</a> <a href="../fr/">Français</a> <a href="../zh-hans/">简体中文</a> <a href="../ar/">العربية</a></p>
+    </footer>
+    <script src="../meanings.zh-hans.js"></script>
+    <script src="../languages.js?v=6"></script>
+    <script src="../app.js"></script>
+  </body>
+</html>

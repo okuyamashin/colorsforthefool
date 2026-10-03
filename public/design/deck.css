@@ -80,7 +80,7 @@ main.catalog {
 }
 
 .catalog figcaption span {
-  margin-right: 0.55rem;
+  margin-inline-end: 0.55rem;
   color: var(--muted);
   font-family: Cinzel, "Palatino Linotype", Palatino, serif;
   letter-spacing: 0.14em;

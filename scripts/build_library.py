@@ -151,14 +151,17 @@ def meaning_html(text):
     return "\n".join(f"        <p>{esc(part)}</p>" for part in parts)
 
 
-def close_paragraph(close):
+def close_paragraph(close, rtl=False):
     parts = []
     skip_break = False
     for index, line in enumerate(close):
         if index and not skip_break:
             parts.append("<br>")
         skip_break = False
-        parts.append(esc(line))
+        if rtl and line.startswith("Lucky Color:"):
+            parts.append(f'<bdi dir="ltr">{esc(line)}</bdi>')
+        else:
+            parts.append(esc(line))
         matched = re.match(r"^Lucky Color:\s*.*(#[0-9A-Fa-f]{6})\s*$", line)
         if matched:
             parts.append(
@@ -168,12 +171,12 @@ def close_paragraph(close):
     return '        <p class="close">' + "".join(parts) + "</p>"
 
 
-def story_html(body, close):
+def story_html(body, close, rtl=False):
     chunks = []
     for block in body:
         chunks.append("        <p>" + "<br>".join(esc(line) for line in block) + "</p>")
     if close:
-        chunks.append(close_paragraph(close))
+        chunks.append(close_paragraph(close, rtl))
     return "\n".join(chunks)
 
 
@@ -216,7 +219,22 @@ def footer_links(lang):
     return f"{links} {github}"
 
 
-def page(title, description, canonical, image, css, json_ld, body, icon, lang, alternates="", extra=""):
+def home_href(depth, lang):
+    up = "../" * depth
+    if lang["prefix"]:
+        return f"{up}{lang['prefix']}/"
+    return up or "./"
+
+
+def lang_links_paragraph(depth):
+    links = " ".join(
+        f'<a href="{esc(home_href(depth, lang))}">{esc(lang["switchLabel"])}</a>'
+        for lang in LANGUAGES
+    )
+    return f'      <p class="lang-links">{links}</p>'
+
+
+def page(title, description, canonical, image, css, json_ld, body, icon, lang, alternates="", extra="", depth=0):
     ld = ""
     if json_ld:
         ld = (
@@ -224,8 +242,9 @@ def page(title, description, canonical, image, css, json_ld, body, icon, lang, a
             + json.dumps(json_ld, ensure_ascii=False, indent=2)
             + "\n    </script>\n"
         )
+    direction = f' dir="{lang["dir"]}"' if lang.get("dir") else ""
     return f"""<!DOCTYPE html>
-<html lang="{lang['htmlLang']}">
+<html lang="{lang['htmlLang']}"{direction}>
   <head>
 {GA}
     <meta charset="utf-8">
@@ -252,6 +271,7 @@ def page(title, description, canonical, image, css, json_ld, body, icon, lang, a
     <footer class="colophon">
       <p>© 2026 Engawa Inc.</p>
       <p>{footer_links(lang)}</p>
+{lang_links_paragraph(depth)}
     </footer>
 {extra}  </body>
 </html>
@@ -416,7 +436,7 @@ def write_card(card, meanings, lang, root):
     reversed_label = lang["copy"]["reversed"]
     face_alt = fill(lang["pages"]["faceAlt"], card=card[lang["cardName"]], label=upright_label, labelLower=upright_label.lower())
     face_alt_reversed = fill(lang["pages"]["faceAlt"], card=card[lang["cardName"]], label=reversed_label, labelLower=reversed_label.lower())
-    css = ("../library.css" if not nested(lang) else "../../../cards/library.css") + "?v=3"
+    css = ("../library.css" if not nested(lang) else "../../../cards/library.css") + "?v=4"
     depth = library_depth(lang, False)
     nav = library_nav(lang, depth, f"cards/{card['id']}/")
     secondary = subtitle_html(text["cardSecondary"])
@@ -465,6 +485,7 @@ def write_card(card, meanings, lang, root):
             lang,
             hreflang(urls),
             library_script(depth),
+            depth,
         )
     )
     return target
@@ -503,7 +524,7 @@ def write_color(card, side, color, lang, root):
     opening = first_sentence(body[0][0], lang["introLimit"], lang) if body else ""
     text = fields(card, color, lang, label=label, opening=opening)
     description = clip(text["colorDescription"], lang["descriptionLimit"])
-    css = ("../../library.css" if not nested(lang) else "../../../../cards/library.css") + "?v=3"
+    css = ("../../library.css" if not nested(lang) else "../../../../cards/library.css") + "?v=4"
     depth = library_depth(lang, True)
     nav = library_nav(lang, depth, f"cards/{card['id']}/{color['_slug']}/")
     siblings = []
@@ -530,7 +551,7 @@ def write_color(card, side, color, lang, root):
       <h1>{esc(color[lang['colorName']])}</h1>
 {subtitle_html(text['colorSecondary'])}      <p class="orientation">{esc(label)} · {esc(color['hex'])}</p>
 {day_html}      <article class="story">
-{story_html(body, close)}
+{story_html(body, close, lang.get("dir") == "rtl")}
       </article>
 {share_html(card, color, lang)}
       <a class="back" href="../index.html">{esc(text['back'])}</a>
@@ -562,6 +583,7 @@ def write_color(card, side, color, lang, root):
             lang,
             hreflang(urls),
             library_script(depth),
+            depth,
         )
     )
     return target
@@ -710,6 +732,9 @@ NAV_LABEL = {
     "zh": "語言",
     "es": "Idiomas",
     "nl": "Talen",
+    "fr": "Langues",
+    "zh-hans": "语言",
+    "ar": "اللغة",
 }
 
 
@@ -827,6 +852,32 @@ def refresh_homes():
         path.write_text(text)
 
 
+def refresh_language_footers():
+    pattern = re.compile(r'\n[ \t]*<p class="lang-links">.*?</p>', re.S)
+    changed = 0
+    for path in PUBLIC.rglob("*.html"):
+        text = path.read_text()
+        if '<footer class="colophon">' not in text:
+            continue
+        depth = len(path.relative_to(PUBLIC).parts) - 1
+        block = "\n" + lang_links_paragraph(depth)
+        if pattern.search(text):
+            updated = pattern.sub(block, text, count=1)
+        else:
+            updated, count = re.subn(
+                r"(\n[ \t]*)</footer>",
+                block + r"\1</footer>",
+                text,
+                count=1,
+            )
+            if count != 1:
+                raise SystemExit(f"footer close not found in {path}")
+        if updated != text:
+            path.write_text(updated)
+            changed += 1
+    print(f"language footer links {changed}")
+
+
 def main():
     meanings = {lang["id"]: load_meanings(lang) for lang in LANGUAGES}
     cards = load_cards()
@@ -850,6 +901,7 @@ def main():
     write_client()
     write_fonts()
     refresh_homes()
+    refresh_language_footers()
     print(f"cards {len(cards)} pages {len(written)} languages {len(LANGUAGES)}")
 
 
