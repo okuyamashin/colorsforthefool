@@ -265,5 +265,71 @@
       "colorSecondary": "",
       "back": "Volver a {card}"
     }
+  },
+  {
+    "id": "nl",
+    "htmlLang": "nl",
+    "hreflang": "nl",
+    "prefix": "nl",
+    "switchLabel": "Nederlands",
+    "cookie": "cftf-nl",
+    "session": "cftf-reading-nl",
+    "ogLocale": "nl_NL",
+    "days": false,
+    "latinSubtitle": true,
+    "data": "/data",
+    "meanings": "meanings.nl.js",
+    "cardName": "nameNl",
+    "colorName": "nameNl",
+    "textField": "textNl",
+    "textSuffix": ".nl",
+    "punctuation": ". ",
+    "lineLimit": 90,
+    "introLimit": 110,
+    "descriptionLimit": 160,
+    "titlePattern": "[―—-]\\s*(Rechtop|Omgekeerd)\\s*$",
+    "revealPrefixes": ["De gelukskleur van vandaag", "Lucky Color:"],
+    "fonts": "family=Cinzel:wght@500;700&family=Shippori+Mincho:wght@400;500;600",
+    "fontFamily": "",
+    "shareText": "De gelukskleur van vandaag is {color}.",
+    "footer": [
+      {"href": "/en/contact/", "label": "Contact"},
+      {"href": "/privacy/", "label": "Privacybeleid"}
+    ],
+    "share": {
+      "copy": "Link kopiëren",
+      "x": "Delen op X",
+      "line": "Delen op LINE",
+      "notice": "Gekopieerd naar het klembord"
+    },
+    "copy": {
+      "upright": "Rechtop",
+      "reversed": "Omgekeerd",
+      "meaningFallback": "De afbeelding op deze kaart is het teken van vandaag.",
+      "renewed": "Alle tweeëntwintig kaarten zijn getrokken, dus de stapel is weer heel.",
+      "hintReveal": "Tik nog eens, en de kleur van vandaag gaat open",
+      "hintDraw": "Tik om een kaart te trekken",
+      "drawLabel": "Trek een kaart",
+      "openLabel": "Tik nog eens om de kleur te openen",
+      "mirror": "Een spiegel die de kleur bewaart",
+      "scene": "Een afbeelding met een spiegel die de kleur bewaart",
+      "cardError": "De kaart ging niet open. Tik nog eens.",
+      "colorError": "De kleur van vandaag ging niet open. Tik nog eens.",
+      "testError": "test heeft de vorm 4-10. De kaarten lopen van 1 tot 22. De kleuren 1 tot 10 staan rechtop, 11 tot 20 omgekeerd."
+    },
+    "pages": {
+      "tagline": "De gelukskleur van vandaag, getrokken uit de tarot",
+      "draw": "Trek een kaart",
+      "cardTitle": "Gelukskleuren van {card} — Colors for the Fool",
+      "cardDescription": "{card}. Tien gelukskleuren rechtop, en tien omgekeerd. {intro}",
+      "cardSecondary": "{latin} · {numeral}",
+      "faceAlt": "{card}, {labelLower}",
+      "colorAlt": "{card}, {color}. De kleur verschijnt in de spiegel in het midden.",
+      "colorMeta": "{latinColor} · {hex}",
+      "colorTitle": "Gelukskleur van {card}: {color}",
+      "colorDescription": "{card}, {labelLower}. {color}. {opening}",
+      "colorSecondary": "{latin} · {latinColor}",
+      "back": "Terug naar {card}"
+    }
   }
 ]

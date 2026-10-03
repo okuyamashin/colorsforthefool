@@ -17,7 +17,9 @@
       "textEn": "gold.en.txt",
       "textZh": "gold.zh.txt",
       "textEs": "gold.es.txt",
-      "image": "gold.jpg"
+      "image": "gold.jpg",
+      "nameNl": "Goud",
+      "textNl": "gold.nl.txt"
     },
     {
       "name": "LemonChiffon",
@@ -29,7 +31,9 @@
       "image": "lemonchiffon.jpg",
       "textEn": "lemonchiffon.en.txt",
       "textZh": "lemonchiffon.zh.txt",
-      "textEs": "lemonchiffon.es.txt"
+      "textEs": "lemonchiffon.es.txt",
+      "nameNl": "Citroenchiffon",
+      "textNl": "lemonchiffon.nl.txt"
     },
     {
       "name": "Khaki",
@@ -41,7 +45,9 @@
       "image": "khaki.jpg",
       "textEn": "khaki.en.txt",
       "textZh": "khaki.zh.txt",
-      "textEs": "khaki.es.txt"
+      "textEs": "khaki.es.txt",
+      "nameNl": "Kaki",
+      "textNl": "khaki.nl.txt"
     },
     {
       "name": "DarkKhaki",
@@ -53,7 +59,9 @@
       "image": "darkkhaki.jpg",
       "textEn": "darkkhaki.en.txt",
       "textZh": "darkkhaki.zh.txt",
-      "textEs": "darkkhaki.es.txt"
+      "textEs": "darkkhaki.es.txt",
+      "nameNl": "Donkerkaki",
+      "textNl": "darkkhaki.nl.txt"
     },
     {
       "name": "Tan",
@@ -65,7 +73,9 @@
       "textEn": "tan.en.txt",
       "textZh": "tan.zh.txt",
       "textEs": "tan.es.txt",
-      "image": "tan.jpg"
+      "image": "tan.jpg",
+      "nameNl": "Tan",
+      "textNl": "tan.nl.txt"
     },
     {
       "name": "BurlyWood",
@@ -77,7 +87,9 @@
       "textEn": "burlywood.en.txt",
       "textZh": "burlywood.zh.txt",
       "textEs": "burlywood.es.txt",
-      "image": "burlywood.jpg"
+      "image": "burlywood.jpg",
+      "nameNl": "Stevig hout",
+      "textNl": "burlywood.nl.txt"
     },
     {
       "name": "Sienna",
@@ -89,7 +101,9 @@
       "textEn": "sienna.en.txt",
       "textZh": "sienna.zh.txt",
       "textEs": "sienna.es.txt",
-      "image": "sienna.jpg"
+      "image": "sienna.jpg",
+      "nameNl": "Sienna",
+      "textNl": "sienna.nl.txt"
     },
     {
       "name": "AntiqueWhite",
@@ -101,7 +115,9 @@
       "textEn": "antiquewhite.en.txt",
       "textZh": "antiquewhite.zh.txt",
       "textEs": "antiquewhite.es.txt",
-      "image": "antiquewhite.jpg"
+      "image": "antiquewhite.jpg",
+      "nameNl": "Antiekwit",
+      "textNl": "antiquewhite.nl.txt"
     },
     {
       "name": "NavajoWhite",
@@ -113,7 +129,9 @@
       "textEn": "navajowhite.en.txt",
       "textZh": "navajowhite.zh.txt",
       "textEs": "navajowhite.es.txt",
-      "image": "navajowhite.jpg"
+      "image": "navajowhite.jpg",
+      "nameNl": "Navajowit",
+      "textNl": "navajowhite.nl.txt"
     },
     {
       "name": "Wheat",
@@ -125,7 +143,9 @@
       "textEn": "wheat.en.txt",
       "textZh": "wheat.zh.txt",
       "textEs": "wheat.es.txt",
-      "image": "wheat.jpg"
+      "image": "wheat.jpg",
+      "nameNl": "Tarwe",
+      "textNl": "wheat.nl.txt"
     }
   ],
   "reversed": [
@@ -139,7 +159,9 @@
       "textEn": "black.en.txt",
       "textZh": "black.zh.txt",
       "textEs": "black.es.txt",
-      "image": "black.jpg"
+      "image": "black.jpg",
+      "nameNl": "Zwart",
+      "textNl": "black.nl.txt"
     },
     {
       "name": "MidnightBlue",
@@ -151,7 +173,9 @@
       "image": "midnightblue.jpg",
       "textEn": "midnightblue.en.txt",
       "textZh": "midnightblue.zh.txt",
-      "textEs": "midnightblue.es.txt"
+      "textEs": "midnightblue.es.txt",
+      "nameNl": "Middernachtblauw",
+      "textNl": "midnightblue.nl.txt"
     },
     {
       "name": "Navy",
@@ -163,7 +187,9 @@
       "textEn": "navy.en.txt",
       "textZh": "navy.zh.txt",
       "textEs": "navy.es.txt",
-      "image": "navy.jpg"
+      "image": "navy.jpg",
+      "nameNl": "Marineblauw",
+      "textNl": "navy.nl.txt"
     },
     {
       "name": "DimGray",
@@ -175,7 +201,9 @@
       "image": "dimgray.jpg",
       "textEn": "dimgray.en.txt",
       "textZh": "dimgray.zh.txt",
-      "textEs": "dimgray.es.txt"
+      "textEs": "dimgray.es.txt",
+      "nameNl": "Gedimd grijs",
+      "textNl": "dimgray.nl.txt"
     },
     {
       "name": "SlateGray",
@@ -187,7 +215,9 @@
       "image": "slategray.jpg",
       "textEn": "slategray.en.txt",
       "textZh": "slategray.zh.txt",
-      "textEs": "slategray.es.txt"
+      "textEs": "slategray.es.txt",
+      "nameNl": "Leigrijs",
+      "textNl": "slategray.nl.txt"
     },
     {
       "name": "DarkSlateGray",
@@ -199,7 +229,9 @@
       "textEn": "darkslategray.en.txt",
       "textZh": "darkslategray.zh.txt",
       "textEs": "darkslategray.es.txt",
-      "image": "darkslategray.jpg"
+      "image": "darkslategray.jpg",
+      "nameNl": "Donker leigrijs",
+      "textNl": "darkslategray.nl.txt"
     },
     {
       "name": "Gray",
@@ -211,7 +243,9 @@
       "textEn": "gray.en.txt",
       "textZh": "gray.zh.txt",
       "textEs": "gray.es.txt",
-      "image": "gray.jpg"
+      "image": "gray.jpg",
+      "nameNl": "Grijs",
+      "textNl": "gray.nl.txt"
     },
     {
       "name": "Snow",
@@ -223,7 +257,9 @@
       "textEn": "snow.en.txt",
       "textZh": "snow.zh.txt",
       "textEs": "snow.es.txt",
-      "image": "snow.jpg"
+      "image": "snow.jpg",
+      "nameNl": "Sneeuw",
+      "textNl": "snow.nl.txt"
     },
     {
       "name": "WhiteSmoke",
@@ -235,7 +271,9 @@
       "textEn": "whitesmoke.en.txt",
       "textZh": "whitesmoke.zh.txt",
       "textEs": "whitesmoke.es.txt",
-      "image": "whitesmoke.jpg"
+      "image": "whitesmoke.jpg",
+      "nameNl": "Witte rook",
+      "textNl": "whitesmoke.nl.txt"
     },
     {
       "name": "Brown",
@@ -247,7 +285,10 @@
       "textEn": "brown.en.txt",
       "textZh": "brown.zh.txt",
       "textEs": "brown.es.txt",
-      "image": "brown.jpg"
+      "image": "brown.jpg",
+      "nameNl": "Bruin",
+      "textNl": "brown.nl.txt"
     }
-  ]
+  ],
+  "nameNl": "De Kluizenaar"
 }

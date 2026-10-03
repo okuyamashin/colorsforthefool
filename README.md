@@ -12,6 +12,7 @@ Each language is its own set of pages. The browser language does not switch them
 | English | [/en/](https://colorsforthefool.engawa5656.com/en/) |
 | 中文（繁體） | [/zh/](https://colorsforthefool.engawa5656.com/zh/) |
 | Español | [/es/](https://colorsforthefool.engawa5656.com/es/) |
+| Nederlands | [/nl/](https://colorsforthefool.engawa5656.com/nl/) |
 
 Japanese is the site root and `x-default`. The list of languages is [`data/languages.json`](data/languages.json).
 
@@ -32,7 +33,7 @@ The same paths exist under `/zh/` and `/es/`.
 
 ## Card designs
 
-The same twenty-two cards are drawn in many visual styles. The pictures live once under `public/design/`. Choosing a style on the [design catalog](https://colorsforthefool.engawa5656.com/design/) changes the deck on every language. The catalog itself is translated per language: `/design/`, `/en/design/`, `/zh/design/`, `/es/design/`.
+The same twenty-two cards are drawn in many visual styles. The pictures live once under `public/design/`. Choosing a style on the [design catalog](https://colorsforthefool.engawa5656.com/design/) changes the deck on every language. The catalog itself is translated per language: `/design/`, `/en/design/`, `/zh/design/`, `/es/design/`, `/nl/design/`.
 
 ## Also on the site
 
@@ -75,6 +76,7 @@ python3 -m http.server 8741
 - English: http://127.0.0.1:8741/public/en/
 - Traditional Chinese: http://127.0.0.1:8741/public/zh/
 - Spanish: http://127.0.0.1:8741/public/es/
+- Dutch: http://127.0.0.1:8741/public/nl/
 
 Add `?test=1-1` to draw a chosen card and color. The first number is the card, from 1 to 22 in major-arcana order. The second is the color: 1–10 upright, 11–20 reversed. Example: `?test=22-1` is The World, upright, first color.
 

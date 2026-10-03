@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQ38VZSM7B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-NQ38VZSM7B');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>De gelukskleur van vandaag, getrokken uit de tarot — Colors for the Fool</title>
+    <meta name="description" content="Trek een kaart uit de tweeëntwintig grote arcana. Lees wat zij betekent, rechtop of omgekeerd, en aan het eind van het verhaal opent de gelukskleur van vandaag.">
+    <link rel="canonical" href="https://colorsforthefool.engawa5656.com/nl/">
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="ja" href="https://colorsforthefool.engawa5656.com/">
+    <link rel="alternate" hreflang="en" href="https://colorsforthefool.engawa5656.com/en/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://colorsforthefool.engawa5656.com/zh/">
+    <link rel="alternate" hreflang="es" href="https://colorsforthefool.engawa5656.com/es/">
+    <link rel="alternate" hreflang="nl" href="https://colorsforthefool.engawa5656.com/nl/">
+    <link rel="alternate" hreflang="x-default" href="https://colorsforthefool.engawa5656.com/">
+    <!-- /hreflang -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:site_name" content="Colors for the Fool">
+    <meta property="og:title" content="De gelukskleur van vandaag, getrokken uit de tarot">
+    <meta property="og:description" content="Trek een kaart uit de tweeëntwintig grote arcana. Lees wat zij betekent, rechtop of omgekeerd, en aan het eind van het verhaal opent de gelukskleur van vandaag.">
+    <meta property="og:url" content="https://colorsforthefool.engawa5656.com/nl/">
+    <meta property="og:image" content="https://colorsforthefool.engawa5656.com/data/the-fool/face.jpg">
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+      .film-frame {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+      }
+      .film-frame iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+    </style>
+    <script>
+      try {
+        if (!new URLSearchParams(location.search).has("test") && sessionStorage.getItem("cftf-reading-nl")) document.documentElement.classList.add("has-reading");
+      } catch (error) {}
+    </script>
+  </head>
+  <body>
+    <header class="top">
+      <p class="brand"><a href="./">Colors for the Fool</a></p>
+      <nav class="mast" aria-label="Talen">
+        <div class="lang-menu">
+          <button type="button" class="lang" aria-expanded="false" aria-haspopup="true" aria-controls="lang-list">Nederlands<span class="lang-mark" aria-hidden="true"></span></button>
+          <ul class="lang-list" id="lang-list" hidden>
+            <li><a href="../">日本語</a></li>
+            <li><a href="../en/">English</a></li>
+            <li><a href="../zh/">中文</a></li>
+            <li><a href="../es/">Español</a></li>
+          </ul>
+        </div>
+      </nav>
+      <h1 class="tagline">De gelukskleur van vandaag, getrokken uit de tarot</h1>
+    </header>
+    <main>
+      <p class="notice" id="notice" hidden></p>
+      <div class="stage">
+        <button type="button" class="card" id="card" aria-label="Trek een kaart">
+          <span class="card-inner">
+            <span class="card-face back">
+              <img src="/data/cardback.jpg" alt="">
+            </span>
+            <span class="card-face front">
+              <span class="face-turn" id="face-turn">
+                <img id="face" alt="">
+              </span>
+            </span>
+          </span>
+        </button>
+      </div>
+      <div class="sheet" id="sheet">
+        <p class="hint-wrap">
+          <button type="button" class="hint" id="hint">Tik om een kaart te trekken</button>
+        </p>
+        <article class="reading" id="reading" hidden>
+          <h2 id="title"></h2>
+          <p class="en" id="en"></p>
+          <p class="orientation" id="orientation"></p>
+          <div id="meaning"></div>
+        </article>
+        <section class="color-panel" id="color" hidden>
+          <div class="story" id="story"></div>
+          <button type="button" class="scene" id="scene" aria-label="Tik om de kaart weer om te keren"></button>
+          <div class="library" id="library" hidden>
+            <a id="library-link" href="">Lees deze kleur</a>
+            <p class="share">
+              <button type="button" id="share-copy" aria-label="Link kopiëren">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="18" cy="5" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <circle cx="6" cy="12" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <circle cx="18" cy="19" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M8.2 13.1 15.7 17.4M15.7 6.6 8.2 10.9" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                </svg>
+              </button>
+              <a id="share-x" href="" target="_blank" rel="noopener noreferrer" aria-label="Delen op X">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" d="M14.2 10.4 21.5 2h-1.7l-6.3 7.2L8.4 2H2.2l7.6 11L2.2 22h1.7l6.7-7.6L15.3 22h6.2l-7.3-11.6Zm-2.4 2.7-.8-1.1L4.7 3.5h2.7l5 7.1.8 1.1 6.5 9.2h-2.7l-5.2-7.8Z"/>
+                </svg>
+              </a>
+              <a id="share-line" href="" target="_blank" rel="noopener noreferrer" aria-label="Delen op LINE">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#06C755" d="M12 3.2C6.8 3.2 2.6 6.7 2.6 11c0 3.8 3.4 7 8 7.7.3.1.7.2.8.5.1.3.1.7 0 1l-.3 1.6c-.1.4.3.7.7.5l2.2-1.3c.2-.1.4-.1.6-.1 4.8-.2 8.8-3.6 8.8-7.9 0-4.3-4.2-7.8-9.4-7.8Z"/>
+                </svg>
+              </a>
+            </p>
+            <p class="copied" id="copied" hidden role="status">Gekopieerd naar het klembord</p>
+          </div>
+        </section>
+      </div>
+      <div class="guide" id="guide">
+        <section>
+          <h2>Hoe je een kaart trekt</h2>
+          <ol>
+            <li>Trek een kaart. Zij komt uit de tweeëntwintig grote arcana, rechtop of omgekeerd.</li>
+            <li>Lees wat die kaart vandaag betekent.</li>
+            <li>Tik nog eens. De gelukskleur van vandaag opent aan het eind van het verhaal. Tik op de spiegel eronder, en de tekst vouwt dicht. De kaart keert weer om.</li>
+          </ol>
+        </section>
+        <p class="designs"><a href="design/">Bekijk de ontwerpen van de tarotkaarten</a></p>
+        <section>
+          <h2>Over deze site</h2>
+          <p>Elke grote arcana is met een kleur verbonden. Het verhaal gaat langs een mythe, een vertelling, een plaats of een werktuig, en eindigt bij de gelukskleur van vandaag.</p>
+        </section>
+        <section class="film">
+          <h2>De reis van de Dwaas</h2>
+          <div class="film-frame">
+            <iframe src="https://www.youtube.com/embed/ngl1nN2qzkI?si=DT7xBR5A0CPZu1J3" title="De reis van de Dwaas" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </section>
+        <section>
+          <h2>De tweeëntwintig grote arcana</h2>
+          <ul class="arcana">
+            <li>
+              <a href="cards/the-fool/index.html"><img class="arcana-thumb" src="/data/the-fool/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-fool/index.html">De Dwaas<span class="latin">(The Fool)</span></a></h3>
+              <p><span class="side">Rechtop</span>Een eenzame gestalte staat aan de uiterste rand van een klif, de reistas licht, een witte roos in de hand en een trouwe hond nabij.</p>
+              <p><span class="side">Omgekeerd</span>Dezelfde gestalte aarzelt nu aan de klif, onzeker of de grond eronder veilig is.</p>
+            </li>
+            <li>
+              <a href="cards/the-magician/index.html"><img class="arcana-thumb" src="/data/the-magician/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-magician/index.html">De Magiër<span class="latin">(The Magician)</span></a></h3>
+              <p><span class="side">Rechtop</span>Een tafel staat gereed met een staf, een beker, een zwaard en een munt, elk een werktuig om de dag vorm te geven.</p>
+              <p><span class="side">Omgekeerd</span>De werktuigen op de tafel zijn alleen geschikt om getoond te worden, niet om gebruikt te worden.</p>
+            </li>
+            <li>
+              <a href="cards/the-high-priestess/index.html"><img class="arcana-thumb" src="/data/the-high-priestess/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-high-priestess/index.html">De Hogepriesteres<span class="latin">(The High Priestess)</span></a></h3>
+              <p><span class="side">Rechtop</span>Een vrouw zit stil tussen twee zuilen, haar rol slechts half ontvouwd op haar schoot.</p>
+              <p><span class="side">Omgekeerd</span>De rol is ofwel ongeopend, haar geheimen achtergehouden, of wijd opengeworpen, haar inhoud verspreid en verkeerd begrepen.</p>
+            </li>
+            <li>
+              <a href="cards/the-empress/index.html"><img class="arcana-thumb" src="/data/the-empress/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-empress/index.html">De Keizerin<span class="latin">(The Empress)</span></a></h3>
+              <p><span class="side">Rechtop</span>De Keizerin is een plaats van overvloed, waar het graan rijpt, de bossen beschutting bieden en helder water stroomt.</p>
+              <p><span class="side">Omgekeerd</span>De grond kan vermoeid zijn, of je haast je om te oogsten voordat de vrucht werkelijk rijp is.</p>
+            </li>
+            <li>
+              <a href="cards/the-emperor/index.html"><img class="arcana-thumb" src="/data/the-emperor/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-emperor/index.html">De Keizer<span class="latin">(The Emperor)</span></a></h3>
+              <p><span class="side">Rechtop</span>De Keizer zit op een troon van steen, zijn blik ver voorbij het heden gevestigd.</p>
+              <p><span class="side">Omgekeerd</span>De troon past de Keizer niet langer.</p>
+            </li>
+            <li>
+              <a href="cards/the-hierophant/index.html"><img class="arcana-thumb" src="/data/the-hierophant/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-hierophant/index.html">De Hogepriester<span class="latin">(The Hierophant)</span></a></h3>
+              <p><span class="side">Rechtop</span>Een gestalte zit voor twee zoekenden en belichaamt de overdracht van kennis door traditie en gevestigde vormen.</p>
+              <p><span class="side">Omgekeerd</span>De vormen zijn zwaarder geworden dan hun doel; het ritueel weegt zwaarder dan de betekenis.</p>
+            </li>
+            <li>
+              <a href="cards/the-lovers/index.html"><img class="arcana-thumb" src="/data/the-lovers/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-lovers/index.html">De Geliefden<span class="latin">(The Lovers)</span></a></h3>
+              <p><span class="side">Rechtop</span>De kaart De Geliefden staat voor het ogenblik waarop twee onderscheiden krachten elkaar ontmoeten, en vraagt je een bewuste keuze uit het hart te maken.</p>
+              <p><span class="side">Omgekeerd</span>De Geliefden omgekeerd wijzen op besluiteloosheid en op het ongemak van keuzes die onafgemaakt blijven.</p>
+            </li>
+            <li>
+              <a href="cards/the-chariot/index.html"><img class="arcana-thumb" src="/data/the-chariot/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-chariot/index.html">De Zegewagen<span class="latin">(The Chariot)</span></a></h3>
+              <p><span class="side">Rechtop</span>Een wagenmenner grijpt de teugels en stuurt een voertuig dat door twee onderscheiden wezens wordt getrokken.</p>
+              <p><span class="side">Omgekeerd</span>De wagen is in beweging, maar heeft de drempel niet overschreden.</p>
+            </li>
+            <li>
+              <a href="cards/strength/index.html"><img class="arcana-thumb" src="/data/strength/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/strength/index.html">Kracht<span class="latin">(Strength)</span></a></h3>
+              <p><span class="side">Rechtop</span>Kracht gaat niet over hoe stevig je vasthoudt of hoeveel je kunt onderdrukken.</p>
+              <p><span class="side">Omgekeerd</span>Omgekeerd toont Kracht een hand die stijf is geworden, de vingers geklemd niet uit meesterschap maar uit vrees.</p>
+            </li>
+            <li>
+              <a href="cards/the-hermit/index.html"><img class="arcana-thumb" src="/data/the-hermit/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-hermit/index.html">De Kluizenaar<span class="latin">(The Hermit)</span></a></h3>
+              <p><span class="side">Rechtop</span>De Kluizenaar staat alleen op een stille berg, de lantaarn juist hoog genoeg geheven om zijn volgende stappen te tonen.</p>
+              <p><span class="side">Omgekeerd</span>De lantaarn van de Kluizenaar schijnt nu alleen naar binnen en verlicht het pad vooruit niet.</p>
+            </li>
+            <li>
+              <a href="cards/wheel-of-fortune/index.html"><img class="arcana-thumb" src="/data/wheel-of-fortune/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/wheel-of-fortune/index.html">Het Rad van Fortuin<span class="latin">(Wheel of Fortune)</span></a></h3>
+              <p><span class="side">Rechtop</span>Het Rad van Fortuin draait en wisselt de plaatsen van hen die stijgen met hen die dalen.</p>
+              <p><span class="side">Omgekeerd</span>Het kan lijken alsof het rad op zijn plaats draait en de illusie geeft van beweging zonder vooruitgang.</p>
+            </li>
+            <li>
+              <a href="cards/justice/index.html"><img class="arcana-thumb" src="/data/justice/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/justice/index.html">Gerechtigheid<span class="latin">(Justice)</span></a></h3>
+              <p><span class="side">Rechtop</span>Gerechtigheid is het trefpunt van besluit en onderscheid, geleid door zowel het zwaard als de weegschaal.</p>
+              <p><span class="side">Omgekeerd</span>Omgekeerd waarschuwt Gerechtigheid voor onevenwicht of zelfrechtvaardiging.</p>
+            </li>
+            <li>
+              <a href="cards/the-hanged-man/index.html"><img class="arcana-thumb" src="/data/the-hanged-man/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-hanged-man/index.html">De Gehangene<span class="latin">(The Hanged Man)</span></a></h3>
+              <p><span class="side">Rechtop</span>Een man hangt ondersteboven, één voet gebonden en de armen open, en belichaamt stilte te midden van ongemak.</p>
+              <p><span class="side">Omgekeerd</span>Het ondersteboven hangen heeft zijn doel verloren en is van een zoeken naar inzicht een gewoonte van uitstel geworden.</p>
+            </li>
+            <li>
+              <a href="cards/death/index.html"><img class="arcana-thumb" src="/data/death/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/death/index.html">De Dood<span class="latin">(Death)</span></a></h3>
+              <p><span class="side">Rechtop</span>De Dood komt als de stille bode van voltooiing.</p>
+              <p><span class="side">Omgekeerd</span>Ondanks de nadering van een einde wordt moeite besteed aan het in stand houden van de vertrouwde vorm.</p>
+            </li>
+            <li>
+              <a href="cards/temperance/index.html"><img class="arcana-thumb" src="/data/temperance/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/temperance/index.html">Matigheid<span class="latin">(Temperance)</span></a></h3>
+              <p><span class="side">Rechtop</span>Matigheid nodigt je uit tegengestelde elementen met zorg te vermengen, zoals water dat zacht tussen twee bekers stroomt.</p>
+              <p><span class="side">Omgekeerd</span>Matigheid omgekeerd toont water dat buiten de bekers vloeit, een teken van onevenwicht of van een mislukte poging tot vereniging.</p>
+            </li>
+            <li>
+              <a href="cards/the-devil/index.html"><img class="arcana-thumb" src="/data/the-devil/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-devil/index.html">De Duivel<span class="latin">(The Devil)</span></a></h3>
+              <p><span class="side">Rechtop</span>Twee gestalten staan geketend; de schakels lijken op het eerste gezicht dik en zwaar, en toch zitten de halsbanden los genoeg om te worden afgenomen.</p>
+              <p><span class="side">Omgekeerd</span>De ketenen, eens verborgen, komen in zicht.</p>
+            </li>
+            <li>
+              <a href="cards/the-tower/index.html"><img class="arcana-thumb" src="/data/the-tower/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-tower/index.html">De Toren<span class="latin">(The Tower)</span></a></h3>
+              <p><span class="side">Rechtop</span>Een hoog bouwwerk, eens standvastig, wordt door een plotselinge kracht getroffen en legt zijn kwetsbaarheden bloot.</p>
+              <p><span class="side">Omgekeerd</span>Na de bliksem is er de verleiding de toren precies te herbouwen zoals hij was, en elke steen naar zijn vorige, wankele hoogte terug te brengen.</p>
+            </li>
+            <li>
+              <a href="cards/the-star/index.html"><img class="arcana-thumb" src="/data/the-star/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-star/index.html">De Ster<span class="latin">(The Star)</span></a></h3>
+              <p><span class="side">Rechtop</span>Bij kalm water knielt een gestalte en giet water uit twee kruiken, de ene in de aarde, de andere in de stroom.</p>
+              <p><span class="side">Omgekeerd</span>De kruiken hellen over, en het water vloeit op slechts één plek uit, waar het stagneert in plaats van te stromen.</p>
+            </li>
+            <li>
+              <a href="cards/the-moon/index.html"><img class="arcana-thumb" src="/data/the-moon/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-moon/index.html">De Maan<span class="latin">(The Moon)</span></a></h3>
+              <p><span class="side">Rechtop</span>Onder de onzekere gloed van de maan is slechts een deel van het pad zichtbaar tussen twee stille torens.</p>
+              <p><span class="side">Omgekeerd</span>Het pad verdwijnt onder de mist, of elke schaduw voelt dreigend, gevormd door een angstige verbeelding.</p>
+            </li>
+            <li>
+              <a href="cards/the-sun/index.html"><img class="arcana-thumb" src="/data/the-sun/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-sun/index.html">De Zon<span class="latin">(The Sun)</span></a></h3>
+              <p><span class="side">Rechtop</span>De Zon wijst op een tijd waarin het licht zacht verlicht wat verborgen was, zodat de dingen kunnen worden gezien zonder schaamte of verwarring.</p>
+              <p><span class="side">Omgekeerd</span>De omgekeerde Zon waarschuwt voor te veel helderheid, waarin zelfs de schaduwen in het zicht worden gedwongen en niets kan rusten.</p>
+            </li>
+            <li>
+              <a href="cards/judgement/index.html"><img class="arcana-thumb" src="/data/judgement/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/judgement/index.html">Het Oordeel<span class="latin">(Judgement)</span></a></h3>
+              <p><span class="side">Rechtop</span>Een heldere roep weerklinkt en wekt gestalten uit hun lange rust.</p>
+              <p><span class="side">Omgekeerd</span>De bazuin klinkt, maar van binnenuit druk je het deksel van je eigen omsluiting omlaag.</p>
+            </li>
+            <li>
+              <a href="cards/the-world/index.html"><img class="arcana-thumb" src="/data/the-world/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-world/index.html">De Wereld<span class="latin">(The World)</span></a></h3>
+              <p><span class="side">Rechtop</span>Een gestalte danst sierlijk binnen een ring, gadegeslagen vanuit alle hoeken.</p>
+              <p><span class="side">Omgekeerd</span>De dans houdt juist in voordat de ring zich sluit.</p>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Vragen</h2>
+          <h3>Waarin verschillen rechtop en omgekeerd?</h3>
+          <p>Dezelfde afbeelding verandert van teken als zij draait. Rechtop staat de kaart open. Omgekeerd is zij uitstel, overmaat, of de zin omgedraaid. Een figuur omgekeerd is de kaart een halve slag gedraaid.</p>
+          <h3>Kan ik elke dag een kaart trekken?</h3>
+          <p>Eén kaart per dag, of meerdere achter elkaar. Als de stapel leeg is, is zij weer heel.</p>
+        </section>
+      </div>
+      <p class="error" id="error" hidden></p>
+    </main>
+    <footer class="colophon">
+      <p>© 2026 Engawa Inc.</p>
+      <p><a href="../en/contact/">Contact</a> <a href="design/">Ontwerp</a> <a href="../privacy/">Privacybeleid</a> <a href="https://github.com/okuyamashin/colorsforthefool">GitHub</a></p>
+    </footer>
+    <script src="../meanings.nl.js"></script>
+    <script src="../languages.js?v=4"></script>
+    <script src="../app.js"></script>
+  </body>
+</html>

@@ -17,7 +17,9 @@
       "textEn": "aqua.en.txt",
       "textZh": "aqua.zh.txt",
       "textEs": "aqua.es.txt",
-      "image": "aqua.jpg"
+      "image": "aqua.jpg",
+      "nameNl": "Aqua",
+      "textNl": "aqua.nl.txt"
     },
     {
       "name": "Aquamarine",
@@ -29,7 +31,9 @@
       "image": "aquamarine.jpg",
       "textEn": "aquamarine.en.txt",
       "textZh": "aquamarine.zh.txt",
-      "textEs": "aquamarine.es.txt"
+      "textEs": "aquamarine.es.txt",
+      "nameNl": "Aquamarijn",
+      "textNl": "aquamarine.nl.txt"
     },
     {
       "name": "MediumAquaMarine",
@@ -41,7 +45,9 @@
       "image": "mediumaquamarine.jpg",
       "textEn": "mediumaquamarine.en.txt",
       "textZh": "mediumaquamarine.zh.txt",
-      "textEs": "mediumaquamarine.es.txt"
+      "textEs": "mediumaquamarine.es.txt",
+      "nameNl": "Midden-aquamarijn",
+      "textNl": "mediumaquamarine.nl.txt"
     },
     {
       "name": "Turquoise",
@@ -53,7 +59,9 @@
       "image": "turquoise.jpg",
       "textEn": "turquoise.en.txt",
       "textZh": "turquoise.zh.txt",
-      "textEs": "turquoise.es.txt"
+      "textEs": "turquoise.es.txt",
+      "nameNl": "Turkoois",
+      "textNl": "turquoise.nl.txt"
     },
     {
       "name": "PaleTurquoise",
@@ -65,7 +73,9 @@
       "textEn": "paleturquoise.en.txt",
       "textZh": "paleturquoise.zh.txt",
       "textEs": "paleturquoise.es.txt",
-      "image": "paleturquoise.jpg"
+      "image": "paleturquoise.jpg",
+      "nameNl": "Bleek turkoois",
+      "textNl": "paleturquoise.nl.txt"
     },
     {
       "name": "SkyBlue",
@@ -77,7 +87,9 @@
       "textEn": "skyblue.en.txt",
       "textZh": "skyblue.zh.txt",
       "textEs": "skyblue.es.txt",
-      "image": "skyblue.jpg"
+      "image": "skyblue.jpg",
+      "nameNl": "Hemelsblauw",
+      "textNl": "skyblue.nl.txt"
     },
     {
       "name": "Gold",
@@ -89,7 +101,9 @@
       "textEn": "gold.en.txt",
       "textZh": "gold.zh.txt",
       "textEs": "gold.es.txt",
-      "image": "gold.jpg"
+      "image": "gold.jpg",
+      "nameNl": "Goud",
+      "textNl": "gold.nl.txt"
     },
     {
       "name": "Wheat",
@@ -101,7 +115,9 @@
       "textEn": "wheat.en.txt",
       "textZh": "wheat.zh.txt",
       "textEs": "wheat.es.txt",
-      "image": "wheat.jpg"
+      "image": "wheat.jpg",
+      "nameNl": "Tarwe",
+      "textNl": "wheat.nl.txt"
     },
     {
       "name": "SeaGreen",
@@ -113,7 +129,9 @@
       "textEn": "seagreen.en.txt",
       "textZh": "seagreen.zh.txt",
       "textEs": "seagreen.es.txt",
-      "image": "seagreen.jpg"
+      "image": "seagreen.jpg",
+      "nameNl": "Zeegroen",
+      "textNl": "seagreen.nl.txt"
     },
     {
       "name": "Beige",
@@ -125,7 +143,9 @@
       "textEn": "beige.en.txt",
       "textZh": "beige.zh.txt",
       "textEs": "beige.es.txt",
-      "image": "beige.jpg"
+      "image": "beige.jpg",
+      "nameNl": "Beige",
+      "textNl": "beige.nl.txt"
     }
   ],
   "reversed": [
@@ -139,7 +159,9 @@
       "textEn": "red.en.txt",
       "textZh": "red.zh.txt",
       "textEs": "red.es.txt",
-      "image": "red.jpg"
+      "image": "red.jpg",
+      "nameNl": "Rood",
+      "textNl": "red.nl.txt"
     },
     {
       "name": "OrangeRed",
@@ -151,7 +173,9 @@
       "image": "orangered.jpg",
       "textEn": "orangered.en.txt",
       "textZh": "orangered.zh.txt",
-      "textEs": "orangered.es.txt"
+      "textEs": "orangered.es.txt",
+      "nameNl": "Oranjerood",
+      "textNl": "orangered.nl.txt"
     },
     {
       "name": "Crimson",
@@ -163,7 +187,9 @@
       "image": "crimson.jpg",
       "textEn": "crimson.en.txt",
       "textZh": "crimson.zh.txt",
-      "textEs": "crimson.es.txt"
+      "textEs": "crimson.es.txt",
+      "nameNl": "Karmozijn",
+      "textNl": "crimson.nl.txt"
     },
     {
       "name": "DeepPink",
@@ -175,7 +201,9 @@
       "image": "deeppink.jpg",
       "textEn": "deeppink.en.txt",
       "textZh": "deeppink.zh.txt",
-      "textEs": "deeppink.es.txt"
+      "textEs": "deeppink.es.txt",
+      "nameNl": "Dieproze",
+      "textNl": "deeppink.nl.txt"
     },
     {
       "name": "HotPink",
@@ -187,7 +215,9 @@
       "textEn": "hotpink.en.txt",
       "textZh": "hotpink.zh.txt",
       "textEs": "hotpink.es.txt",
-      "image": "hotpink.jpg"
+      "image": "hotpink.jpg",
+      "nameNl": "Felroze",
+      "textNl": "hotpink.nl.txt"
     },
     {
       "name": "Chocolate",
@@ -199,7 +229,9 @@
       "textEn": "chocolate.en.txt",
       "textZh": "chocolate.zh.txt",
       "textEs": "chocolate.es.txt",
-      "image": "chocolate.jpg"
+      "image": "chocolate.jpg",
+      "nameNl": "Chocolade",
+      "textNl": "chocolate.nl.txt"
     },
     {
       "name": "Tomato",
@@ -211,7 +243,9 @@
       "textEn": "tomato.en.txt",
       "textZh": "tomato.zh.txt",
       "textEs": "tomato.es.txt",
-      "image": "tomato.jpg"
+      "image": "tomato.jpg",
+      "nameNl": "Tomaat",
+      "textNl": "tomato.nl.txt"
     },
     {
       "name": "Brown",
@@ -223,7 +257,9 @@
       "textEn": "brown.en.txt",
       "textZh": "brown.zh.txt",
       "textEs": "brown.es.txt",
-      "image": "brown.jpg"
+      "image": "brown.jpg",
+      "nameNl": "Bruin",
+      "textNl": "brown.nl.txt"
     },
     {
       "name": "FireBrick",
@@ -235,7 +271,9 @@
       "textEn": "firebrick.en.txt",
       "textZh": "firebrick.zh.txt",
       "textEs": "firebrick.es.txt",
-      "image": "firebrick.jpg"
+      "image": "firebrick.jpg",
+      "nameNl": "Baksteenrood",
+      "textNl": "firebrick.nl.txt"
     },
     {
       "name": "Black",
@@ -247,7 +285,10 @@
       "textEn": "black.en.txt",
       "textZh": "black.zh.txt",
       "textEs": "black.es.txt",
-      "image": "black.jpg"
+      "image": "black.jpg",
+      "nameNl": "Zwart",
+      "textNl": "black.nl.txt"
     }
-  ]
+  ],
+  "nameNl": "Matigheid"
 }

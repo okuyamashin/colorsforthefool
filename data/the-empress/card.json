@@ -17,7 +17,9 @@
       "image": "wheat.jpg",
       "textEn": "wheat.en.txt",
       "textZh": "wheat.zh.txt",
-      "textEs": "wheat.es.txt"
+      "textEs": "wheat.es.txt",
+      "nameNl": "Tarwe",
+      "textNl": "wheat.nl.txt"
     },
     {
       "name": "Cornsilk",
@@ -29,7 +31,9 @@
       "image": "cornsilk.jpg",
       "textEn": "cornsilk.en.txt",
       "textZh": "cornsilk.zh.txt",
-      "textEs": "cornsilk.es.txt"
+      "textEs": "cornsilk.es.txt",
+      "nameNl": "Maiszijde",
+      "textNl": "cornsilk.nl.txt"
     },
     {
       "name": "GoldenRod",
@@ -41,7 +45,9 @@
       "image": "goldenrod.jpg",
       "textEn": "goldenrod.en.txt",
       "textZh": "goldenrod.zh.txt",
-      "textEs": "goldenrod.es.txt"
+      "textEs": "goldenrod.es.txt",
+      "nameNl": "Guldenroede",
+      "textNl": "goldenrod.nl.txt"
     },
     {
       "name": "ForestGreen",
@@ -53,7 +59,9 @@
       "textEn": "forestgreen.en.txt",
       "textZh": "forestgreen.zh.txt",
       "textEs": "forestgreen.es.txt",
-      "image": "forestgreen.jpg"
+      "image": "forestgreen.jpg",
+      "nameNl": "Bosgroen",
+      "textNl": "forestgreen.nl.txt"
     },
     {
       "name": "Olive",
@@ -65,7 +73,9 @@
       "textEn": "olive.en.txt",
       "textZh": "olive.zh.txt",
       "textEs": "olive.es.txt",
-      "image": "olive.jpg"
+      "image": "olive.jpg",
+      "nameNl": "Olijf",
+      "textNl": "olive.nl.txt"
     },
     {
       "name": "PeachPuff",
@@ -77,7 +87,9 @@
       "textEn": "peachpuff.en.txt",
       "textZh": "peachpuff.zh.txt",
       "textEs": "peachpuff.es.txt",
-      "image": "peachpuff.jpg"
+      "image": "peachpuff.jpg",
+      "nameNl": "Perzik",
+      "textNl": "peachpuff.nl.txt"
     },
     {
       "name": "PapayaWhip",
@@ -89,7 +101,9 @@
       "textEn": "papayawhip.en.txt",
       "textZh": "papayawhip.zh.txt",
       "textEs": "papayawhip.es.txt",
-      "image": "papayawhip.jpg"
+      "image": "papayawhip.jpg",
+      "nameNl": "Papajaslagroom",
+      "textNl": "papayawhip.nl.txt"
     },
     {
       "name": "Pink",
@@ -101,7 +115,9 @@
       "textEn": "pink.en.txt",
       "textZh": "pink.zh.txt",
       "textEs": "pink.es.txt",
-      "image": "pink.jpg"
+      "image": "pink.jpg",
+      "nameNl": "Roze",
+      "textNl": "pink.nl.txt"
     },
     {
       "name": "LavenderBlush",
@@ -113,7 +129,9 @@
       "textEn": "lavenderblush.en.txt",
       "textZh": "lavenderblush.zh.txt",
       "textEs": "lavenderblush.es.txt",
-      "image": "lavenderblush.jpg"
+      "image": "lavenderblush.jpg",
+      "nameNl": "Lavendelblos",
+      "textNl": "lavenderblush.nl.txt"
     },
     {
       "name": "HoneyDew",
@@ -125,7 +143,9 @@
       "textEn": "honeydew.en.txt",
       "textZh": "honeydew.zh.txt",
       "textEs": "honeydew.es.txt",
-      "image": "honeydew.jpg"
+      "image": "honeydew.jpg",
+      "nameNl": "Honingdauw",
+      "textNl": "honeydew.nl.txt"
     }
   ],
   "reversed": [
@@ -139,7 +159,9 @@
       "image": "darkolivegreen.jpg",
       "textEn": "darkolivegreen.en.txt",
       "textZh": "darkolivegreen.zh.txt",
-      "textEs": "darkolivegreen.es.txt"
+      "textEs": "darkolivegreen.es.txt",
+      "nameNl": "Donker olijfgroen",
+      "textNl": "darkolivegreen.nl.txt"
     },
     {
       "name": "OliveDrab",
@@ -151,7 +173,9 @@
       "image": "olivedrab.jpg",
       "textEn": "olivedrab.en.txt",
       "textZh": "olivedrab.zh.txt",
-      "textEs": "olivedrab.es.txt"
+      "textEs": "olivedrab.es.txt",
+      "nameNl": "Olijfdrab",
+      "textNl": "olivedrab.nl.txt"
     },
     {
       "name": "RosyBrown",
@@ -163,7 +187,9 @@
       "image": "rosybrown.jpg",
       "textEn": "rosybrown.en.txt",
       "textZh": "rosybrown.zh.txt",
-      "textEs": "rosybrown.es.txt"
+      "textEs": "rosybrown.es.txt",
+      "nameNl": "Rozigbruin",
+      "textNl": "rosybrown.nl.txt"
     },
     {
       "name": "Sienna",
@@ -175,7 +201,9 @@
       "textEn": "sienna.en.txt",
       "textZh": "sienna.zh.txt",
       "textEs": "sienna.es.txt",
-      "image": "sienna.jpg"
+      "image": "sienna.jpg",
+      "nameNl": "Sienna",
+      "textNl": "sienna.nl.txt"
     },
     {
       "name": "Khaki",
@@ -187,7 +215,9 @@
       "textEn": "khaki.en.txt",
       "textZh": "khaki.zh.txt",
       "textEs": "khaki.es.txt",
-      "image": "khaki.jpg"
+      "image": "khaki.jpg",
+      "nameNl": "Kaki",
+      "textNl": "khaki.nl.txt"
     },
     {
       "name": "DarkGoldenRod",
@@ -199,7 +229,9 @@
       "textEn": "darkgoldenrod.en.txt",
       "textZh": "darkgoldenrod.zh.txt",
       "textEs": "darkgoldenrod.es.txt",
-      "image": "darkgoldenrod.jpg"
+      "image": "darkgoldenrod.jpg",
+      "nameNl": "Donkere guldenroede",
+      "textNl": "darkgoldenrod.nl.txt"
     },
     {
       "name": "Brown",
@@ -211,7 +243,9 @@
       "textEn": "brown.en.txt",
       "textZh": "brown.zh.txt",
       "textEs": "brown.es.txt",
-      "image": "brown.jpg"
+      "image": "brown.jpg",
+      "nameNl": "Bruin",
+      "textNl": "brown.nl.txt"
     },
     {
       "name": "Chocolate",
@@ -223,7 +257,9 @@
       "textEn": "chocolate.en.txt",
       "textZh": "chocolate.zh.txt",
       "textEs": "chocolate.es.txt",
-      "image": "chocolate.jpg"
+      "image": "chocolate.jpg",
+      "nameNl": "Chocolade",
+      "textNl": "chocolate.nl.txt"
     },
     {
       "name": "BurlyWood",
@@ -235,7 +271,9 @@
       "textEn": "burlywood.en.txt",
       "textZh": "burlywood.zh.txt",
       "textEs": "burlywood.es.txt",
-      "image": "burlywood.jpg"
+      "image": "burlywood.jpg",
+      "nameNl": "Stevig hout",
+      "textNl": "burlywood.nl.txt"
     },
     {
       "name": "Peru",
@@ -247,7 +285,10 @@
       "textEn": "peru.en.txt",
       "textZh": "peru.zh.txt",
       "textEs": "peru.es.txt",
-      "image": "peru.jpg"
+      "image": "peru.jpg",
+      "nameNl": "Peru",
+      "textNl": "peru.nl.txt"
     }
-  ]
+  ],
+  "nameNl": "De Keizerin"
 }

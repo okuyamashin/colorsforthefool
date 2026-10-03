@@ -118,5 +118,35 @@ window.LANG_PACKS = [
       "colorError": "El color de hoy no se abrió. Toca otra vez.",
       "testError": "test tiene la forma 4-10. Las cartas van del 1 al 22. Los colores del 1 al 10 están al derecho, del 11 al 20 al revés."
     }
+  },
+  {
+    "id": "nl",
+    "htmlLang": "nl",
+    "prefix": "nl",
+    "cookie": "cftf-nl",
+    "session": "cftf-reading-nl",
+    "data": "/data",
+    "cardName": "nameNl",
+    "colorName": "nameNl",
+    "textField": "textNl",
+    "textSuffix": ".nl",
+    "latinSubtitle": true,
+    "titlePattern": "[―—-]\\s*(Rechtop|Omgekeerd)\\s*$",
+    "shareText": "De gelukskleur van vandaag is {color}.",
+    "copy": {
+      "upright": "Rechtop",
+      "reversed": "Omgekeerd",
+      "meaningFallback": "De afbeelding op deze kaart is het teken van vandaag.",
+      "renewed": "Alle tweeëntwintig kaarten zijn getrokken, dus de stapel is weer heel.",
+      "hintReveal": "Tik nog eens, en de kleur van vandaag gaat open",
+      "hintDraw": "Tik om een kaart te trekken",
+      "drawLabel": "Trek een kaart",
+      "openLabel": "Tik nog eens om de kleur te openen",
+      "mirror": "Een spiegel die de kleur bewaart",
+      "scene": "Een afbeelding met een spiegel die de kleur bewaart",
+      "cardError": "De kaart ging niet open. Tik nog eens.",
+      "colorError": "De kleur van vandaag ging niet open. Tik nog eens.",
+      "testError": "test heeft de vorm 4-10. De kaarten lopen van 1 tot 22. De kleuren 1 tot 10 staan rechtop, 11 tot 20 omgekeerd."
+    }
   }
 ];

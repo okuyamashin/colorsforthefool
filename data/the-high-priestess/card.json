@@ -17,7 +17,9 @@
       "image": "lavender.jpg",
       "textEn": "lavender.en.txt",
       "textZh": "lavender.zh.txt",
-      "textEs": "lavender.es.txt"
+      "textEs": "lavender.es.txt",
+      "nameNl": "Lavendel",
+      "textNl": "lavender.nl.txt"
     },
     {
       "name": "MidnightBlue",
@@ -29,7 +31,9 @@
       "image": "midnightblue.jpg",
       "textEn": "midnightblue.en.txt",
       "textZh": "midnightblue.zh.txt",
-      "textEs": "midnightblue.es.txt"
+      "textEs": "midnightblue.es.txt",
+      "nameNl": "Middernachtblauw",
+      "textNl": "midnightblue.nl.txt"
     },
     {
       "name": "Indigo",
@@ -41,7 +45,9 @@
       "textEn": "indigo.en.txt",
       "textZh": "indigo.zh.txt",
       "textEs": "indigo.es.txt",
-      "image": "indigo.jpg"
+      "image": "indigo.jpg",
+      "nameNl": "Indigo",
+      "textNl": "indigo.nl.txt"
     },
     {
       "name": "Silver",
@@ -53,7 +59,9 @@
       "textEn": "silver.en.txt",
       "textZh": "silver.zh.txt",
       "textEs": "silver.es.txt",
-      "image": "silver.jpg"
+      "image": "silver.jpg",
+      "nameNl": "Zilver",
+      "textNl": "silver.nl.txt"
     },
     {
       "name": "AliceBlue",
@@ -65,7 +73,9 @@
       "image": "aliceblue.jpg",
       "textEn": "aliceblue.en.txt",
       "textZh": "aliceblue.zh.txt",
-      "textEs": "aliceblue.es.txt"
+      "textEs": "aliceblue.es.txt",
+      "nameNl": "Aliceblauw",
+      "textNl": "aliceblue.nl.txt"
     },
     {
       "name": "Plum",
@@ -77,7 +87,9 @@
       "textEn": "plum.en.txt",
       "textZh": "plum.zh.txt",
       "textEs": "plum.es.txt",
-      "image": "plum.jpg"
+      "image": "plum.jpg",
+      "nameNl": "Pruim",
+      "textNl": "plum.nl.txt"
     },
     {
       "name": "Navy",
@@ -89,7 +101,9 @@
       "textEn": "navy.en.txt",
       "textZh": "navy.zh.txt",
       "textEs": "navy.es.txt",
-      "image": "navy.jpg"
+      "image": "navy.jpg",
+      "nameNl": "Marineblauw",
+      "textNl": "navy.nl.txt"
     },
     {
       "name": "GhostWhite",
@@ -101,7 +115,9 @@
       "textEn": "ghostwhite.en.txt",
       "textZh": "ghostwhite.zh.txt",
       "textEs": "ghostwhite.es.txt",
-      "image": "ghostwhite.jpg"
+      "image": "ghostwhite.jpg",
+      "nameNl": "Spookwit",
+      "textNl": "ghostwhite.nl.txt"
     },
     {
       "name": "SlateBlue",
@@ -113,7 +129,9 @@
       "textEn": "slateblue.en.txt",
       "textZh": "slateblue.zh.txt",
       "textEs": "slateblue.es.txt",
-      "image": "slateblue.jpg"
+      "image": "slateblue.jpg",
+      "nameNl": "Leiblauw",
+      "textNl": "slateblue.nl.txt"
     },
     {
       "name": "PaleTurquoise",
@@ -125,7 +143,9 @@
       "textEn": "paleturquoise.en.txt",
       "textZh": "paleturquoise.zh.txt",
       "textEs": "paleturquoise.es.txt",
-      "image": "paleturquoise.jpg"
+      "image": "paleturquoise.jpg",
+      "nameNl": "Bleek turkoois",
+      "textNl": "paleturquoise.nl.txt"
     }
   ],
   "reversed": [
@@ -139,7 +159,9 @@
       "image": "darkslateblue.jpg",
       "textEn": "darkslateblue.en.txt",
       "textZh": "darkslateblue.zh.txt",
-      "textEs": "darkslateblue.es.txt"
+      "textEs": "darkslateblue.es.txt",
+      "nameNl": "Donker leiblauw",
+      "textNl": "darkslateblue.nl.txt"
     },
     {
       "name": "Purple",
@@ -151,7 +173,9 @@
       "textEn": "purple.en.txt",
       "textZh": "purple.zh.txt",
       "textEs": "purple.es.txt",
-      "image": "purple.jpg"
+      "image": "purple.jpg",
+      "nameNl": "Paars",
+      "textNl": "purple.nl.txt"
     },
     {
       "name": "RebeccaPurple",
@@ -163,7 +187,9 @@
       "image": "rebeccapurple.jpg",
       "textEn": "rebeccapurple.en.txt",
       "textZh": "rebeccapurple.zh.txt",
-      "textEs": "rebeccapurple.es.txt"
+      "textEs": "rebeccapurple.es.txt",
+      "nameNl": "Rebeccapaars",
+      "textNl": "rebeccapurple.nl.txt"
     },
     {
       "name": "Thistle",
@@ -175,7 +201,9 @@
       "image": "thistle.jpg",
       "textEn": "thistle.en.txt",
       "textZh": "thistle.zh.txt",
-      "textEs": "thistle.es.txt"
+      "textEs": "thistle.es.txt",
+      "nameNl": "Distel",
+      "textNl": "thistle.nl.txt"
     },
     {
       "name": "SlateGray",
@@ -187,7 +215,9 @@
       "textEn": "slategray.en.txt",
       "textZh": "slategray.zh.txt",
       "textEs": "slategray.es.txt",
-      "image": "slategray.jpg"
+      "image": "slategray.jpg",
+      "nameNl": "Leigrijs",
+      "textNl": "slategray.nl.txt"
     },
     {
       "name": "Black",
@@ -199,7 +229,9 @@
       "textEn": "black.en.txt",
       "textZh": "black.zh.txt",
       "textEs": "black.es.txt",
-      "image": "black.jpg"
+      "image": "black.jpg",
+      "nameNl": "Zwart",
+      "textNl": "black.nl.txt"
     },
     {
       "name": "DimGray",
@@ -211,7 +243,9 @@
       "textEn": "dimgray.en.txt",
       "textZh": "dimgray.zh.txt",
       "textEs": "dimgray.es.txt",
-      "image": "dimgray.jpg"
+      "image": "dimgray.jpg",
+      "nameNl": "Gedimd grijs",
+      "textNl": "dimgray.nl.txt"
     },
     {
       "name": "DarkMagenta",
@@ -223,7 +257,9 @@
       "textEn": "darkmagenta.en.txt",
       "textZh": "darkmagenta.zh.txt",
       "textEs": "darkmagenta.es.txt",
-      "image": "darkmagenta.jpg"
+      "image": "darkmagenta.jpg",
+      "nameNl": "Donkermagenta",
+      "textNl": "darkmagenta.nl.txt"
     },
     {
       "name": "BlueViolet",
@@ -235,7 +271,9 @@
       "textEn": "blueviolet.en.txt",
       "textZh": "blueviolet.zh.txt",
       "textEs": "blueviolet.es.txt",
-      "image": "blueviolet.jpg"
+      "image": "blueviolet.jpg",
+      "nameNl": "Blauwviolet",
+      "textNl": "blueviolet.nl.txt"
     },
     {
       "name": "LightSlateGray",
@@ -247,7 +285,10 @@
       "textEn": "lightslategray.en.txt",
       "textZh": "lightslategray.zh.txt",
       "textEs": "lightslategray.es.txt",
-      "image": "lightslategray.jpg"
+      "image": "lightslategray.jpg",
+      "nameNl": "Licht leigrijs",
+      "textNl": "lightslategray.nl.txt"
     }
-  ]
+  ],
+  "nameNl": "De Hogepriesteres"
 }

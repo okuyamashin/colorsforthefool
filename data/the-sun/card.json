@@ -16,7 +16,9 @@
       "textEn": "gold.en.txt",
       "textZh": "gold.zh.txt",
       "textEs": "gold.es.txt",
-      "image": "gold.jpg"
+      "image": "gold.jpg",
+      "nameNl": "Goud",
+      "textNl": "gold.nl.txt"
     },
     {
       "name": "GoldenRod",
@@ -28,7 +30,9 @@
       "image": "goldenrod.jpg",
       "textEn": "goldenrod.en.txt",
       "textZh": "goldenrod.zh.txt",
-      "textEs": "goldenrod.es.txt"
+      "textEs": "goldenrod.es.txt",
+      "nameNl": "Guldenroede",
+      "textNl": "goldenrod.nl.txt"
     },
     {
       "name": "Orange",
@@ -40,7 +44,9 @@
       "textEn": "orange.en.txt",
       "textZh": "orange.zh.txt",
       "textEs": "orange.es.txt",
-      "image": "orange.jpg"
+      "image": "orange.jpg",
+      "nameNl": "Oranje",
+      "textNl": "orange.nl.txt"
     },
     {
       "name": "Cornsilk",
@@ -52,7 +58,9 @@
       "image": "cornsilk.jpg",
       "textEn": "cornsilk.en.txt",
       "textZh": "cornsilk.zh.txt",
-      "textEs": "cornsilk.es.txt"
+      "textEs": "cornsilk.es.txt",
+      "nameNl": "Maiszijde",
+      "textNl": "cornsilk.nl.txt"
     },
     {
       "name": "Wheat",
@@ -64,7 +72,9 @@
       "image": "wheat.jpg",
       "textEn": "wheat.en.txt",
       "textZh": "wheat.zh.txt",
-      "textEs": "wheat.es.txt"
+      "textEs": "wheat.es.txt",
+      "nameNl": "Tarwe",
+      "textNl": "wheat.nl.txt"
     },
     {
       "name": "Khaki",
@@ -76,7 +86,9 @@
       "textEn": "khaki.en.txt",
       "textZh": "khaki.zh.txt",
       "textEs": "khaki.es.txt",
-      "image": "khaki.jpg"
+      "image": "khaki.jpg",
+      "nameNl": "Kaki",
+      "textNl": "khaki.nl.txt"
     },
     {
       "name": "DarkKhaki",
@@ -88,7 +100,9 @@
       "textEn": "darkkhaki.en.txt",
       "textZh": "darkkhaki.zh.txt",
       "textEs": "darkkhaki.es.txt",
-      "image": "darkkhaki.jpg"
+      "image": "darkkhaki.jpg",
+      "nameNl": "Donkerkaki",
+      "textNl": "darkkhaki.nl.txt"
     },
     {
       "name": "Olive",
@@ -100,7 +114,9 @@
       "textEn": "olive.en.txt",
       "textZh": "olive.zh.txt",
       "textEs": "olive.es.txt",
-      "image": "olive.jpg"
+      "image": "olive.jpg",
+      "nameNl": "Olijf",
+      "textNl": "olive.nl.txt"
     },
     {
       "name": "Sienna",
@@ -112,7 +128,9 @@
       "textEn": "sienna.en.txt",
       "textZh": "sienna.zh.txt",
       "textEs": "sienna.es.txt",
-      "image": "sienna.jpg"
+      "image": "sienna.jpg",
+      "nameNl": "Sienna",
+      "textNl": "sienna.nl.txt"
     },
     {
       "name": "LemonChiffon",
@@ -124,7 +142,9 @@
       "textEn": "lemonchiffon.en.txt",
       "textZh": "lemonchiffon.zh.txt",
       "textEs": "lemonchiffon.es.txt",
-      "image": "lemonchiffon.jpg"
+      "image": "lemonchiffon.jpg",
+      "nameNl": "Citroenchiffon",
+      "textNl": "lemonchiffon.nl.txt"
     }
   ],
   "reversed": [
@@ -138,7 +158,9 @@
       "textEn": "tan.en.txt",
       "textZh": "tan.zh.txt",
       "textEs": "tan.es.txt",
-      "image": "tan.jpg"
+      "image": "tan.jpg",
+      "nameNl": "Tan",
+      "textNl": "tan.nl.txt"
     },
     {
       "name": "SandyBrown",
@@ -150,7 +172,9 @@
       "image": "sandybrown.jpg",
       "textEn": "sandybrown.en.txt",
       "textZh": "sandybrown.zh.txt",
-      "textEs": "sandybrown.es.txt"
+      "textEs": "sandybrown.es.txt",
+      "nameNl": "Zandbruin",
+      "textNl": "sandybrown.nl.txt"
     },
     {
       "name": "BlanchedAlmond",
@@ -162,7 +186,9 @@
       "image": "blanchedalmond.jpg",
       "textEn": "blanchedalmond.en.txt",
       "textZh": "blanchedalmond.zh.txt",
-      "textEs": "blanchedalmond.es.txt"
+      "textEs": "blanchedalmond.es.txt",
+      "nameNl": "Geblancheerde amandel",
+      "textNl": "blanchedalmond.nl.txt"
     },
     {
       "name": "Bisque",
@@ -174,7 +200,9 @@
       "image": "bisque.jpg",
       "textEn": "bisque.en.txt",
       "textZh": "bisque.zh.txt",
-      "textEs": "bisque.es.txt"
+      "textEs": "bisque.es.txt",
+      "nameNl": "Bisque",
+      "textNl": "bisque.nl.txt"
     },
     {
       "name": "FireBrick",
@@ -186,7 +214,9 @@
       "textEn": "firebrick.en.txt",
       "textZh": "firebrick.zh.txt",
       "textEs": "firebrick.es.txt",
-      "image": "firebrick.jpg"
+      "image": "firebrick.jpg",
+      "nameNl": "Baksteenrood",
+      "textNl": "firebrick.nl.txt"
     },
     {
       "name": "OldLace",
@@ -198,7 +228,9 @@
       "textEn": "oldlace.en.txt",
       "textZh": "oldlace.zh.txt",
       "textEs": "oldlace.es.txt",
-      "image": "oldlace.jpg"
+      "image": "oldlace.jpg",
+      "nameNl": "Oud kant",
+      "textNl": "oldlace.nl.txt"
     },
     {
       "name": "AntiqueWhite",
@@ -210,7 +242,9 @@
       "textEn": "antiquewhite.en.txt",
       "textZh": "antiquewhite.zh.txt",
       "textEs": "antiquewhite.es.txt",
-      "image": "antiquewhite.jpg"
+      "image": "antiquewhite.jpg",
+      "nameNl": "Antiekwit",
+      "textNl": "antiquewhite.nl.txt"
     },
     {
       "name": "Moccasin",
@@ -222,7 +256,9 @@
       "textEn": "moccasin.en.txt",
       "textZh": "moccasin.zh.txt",
       "textEs": "moccasin.es.txt",
-      "image": "moccasin.jpg"
+      "image": "moccasin.jpg",
+      "nameNl": "Mocassin",
+      "textNl": "moccasin.nl.txt"
     },
     {
       "name": "BurlyWood",
@@ -234,7 +270,9 @@
       "textEn": "burlywood.en.txt",
       "textZh": "burlywood.zh.txt",
       "textEs": "burlywood.es.txt",
-      "image": "burlywood.jpg"
+      "image": "burlywood.jpg",
+      "nameNl": "Stevig hout",
+      "textNl": "burlywood.nl.txt"
     },
     {
       "name": "Peru",
@@ -246,7 +284,10 @@
       "textEn": "peru.en.txt",
       "textZh": "peru.zh.txt",
       "textEs": "peru.es.txt",
-      "image": "peru.jpg"
+      "image": "peru.jpg",
+      "nameNl": "Peru",
+      "textNl": "peru.nl.txt"
     }
-  ]
+  ],
+  "nameNl": "De Zon"
 }
