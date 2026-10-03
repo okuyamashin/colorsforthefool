@@ -70,3 +70,11 @@ That rewrites one library per language, `public/languages.js`, `public/lang.css`
 ## Adding a language
 
 Follow [docs/言語の増やし方.md](docs/言語の増やし方.md). Write the home page before `python3 scripts/build_library.py`. The build does not publish the site.
+
+## Adding a design
+
+Follow [docs/デザインの増やし方.md](docs/デザインの増やし方.md). Pictures live once under `public/design/`. Write a page for every language that already has a design catalog. The build only adds a style to the sitemap when its `index.html` exists, and it does not publish the site.
+
+## Adding a small tarot
+
+Follow [docs/小さなタロットの足し方.md](docs/小さなタロットの足し方.md). Copy `public/demo/cafe/` and keep the draw upright, with every reading ending on the shop's one item. The link goes on the Japanese footer only. The build does not publish the site.
