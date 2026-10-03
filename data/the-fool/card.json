@@ -28,7 +28,9 @@
       "textFr": "white.fr.txt",
       "textAr": "white.ar.txt",
       "namePt": "Branco",
-      "textPt": "white.pt.txt"
+      "textPt": "white.pt.txt",
+      "nameId": "Putih",
+      "textId": "white.id.txt"
     },
     {
       "name": "Snow",
@@ -50,7 +52,9 @@
       "textFr": "snow.fr.txt",
       "textAr": "snow.ar.txt",
       "namePt": "Neve",
-      "textPt": "snow.pt.txt"
+      "textPt": "snow.pt.txt",
+      "nameId": "Salju",
+      "textId": "snow.id.txt"
     },
     {
       "name": "MintCream",
@@ -72,7 +76,9 @@
       "textFr": "mintcream.fr.txt",
       "textAr": "mintcream.ar.txt",
       "namePt": "Creme de menta",
-      "textPt": "mintcream.pt.txt"
+      "textPt": "mintcream.pt.txt",
+      "nameId": "Krim mint",
+      "textId": "mintcream.id.txt"
     },
     {
       "name": "HoneyDew",
@@ -94,7 +100,9 @@
       "textFr": "honeydew.fr.txt",
       "textAr": "honeydew.ar.txt",
       "namePt": "Melão",
-      "textPt": "honeydew.pt.txt"
+      "textPt": "honeydew.pt.txt",
+      "nameId": "Embun madu",
+      "textId": "honeydew.id.txt"
     },
     {
       "name": "SpringGreen",
@@ -116,7 +124,9 @@
       "textFr": "springgreen.fr.txt",
       "textAr": "springgreen.ar.txt",
       "namePt": "Verde-primavera",
-      "textPt": "springgreen.pt.txt"
+      "textPt": "springgreen.pt.txt",
+      "nameId": "Hijau musim semi",
+      "textId": "springgreen.id.txt"
     },
     {
       "name": "Azure",
@@ -138,7 +148,9 @@
       "textFr": "azure.fr.txt",
       "textAr": "azure.ar.txt",
       "namePt": "Azul",
-      "textPt": "azure.pt.txt"
+      "textPt": "azure.pt.txt",
+      "nameId": "Azur",
+      "textId": "azure.id.txt"
     },
     {
       "name": "SkyBlue",
@@ -160,7 +172,9 @@
       "textFr": "skyblue.fr.txt",
       "textAr": "skyblue.ar.txt",
       "namePt": "Azul-céu",
-      "textPt": "skyblue.pt.txt"
+      "textPt": "skyblue.pt.txt",
+      "nameId": "Biru langit",
+      "textId": "skyblue.id.txt"
     },
     {
       "name": "LawnGreen",
@@ -182,7 +196,9 @@
       "textFr": "lawngreen.fr.txt",
       "textAr": "lawngreen.ar.txt",
       "namePt": "Verde-grama",
-      "textPt": "lawngreen.pt.txt"
+      "textPt": "lawngreen.pt.txt",
+      "nameId": "Hijau rumput",
+      "textId": "lawngreen.id.txt"
     },
     {
       "name": "Cornsilk",
@@ -204,7 +220,9 @@
       "textFr": "cornsilk.fr.txt",
       "textAr": "cornsilk.ar.txt",
       "namePt": "Barba-de-milho",
-      "textPt": "cornsilk.pt.txt"
+      "textPt": "cornsilk.pt.txt",
+      "nameId": "Sutra jagung",
+      "textId": "cornsilk.id.txt"
     },
     {
       "name": "LemonChiffon",
@@ -226,7 +244,9 @@
       "textFr": "lemonchiffon.fr.txt",
       "textAr": "lemonchiffon.ar.txt",
       "namePt": "Chiffon de limão",
-      "textPt": "lemonchiffon.pt.txt"
+      "textPt": "lemonchiffon.pt.txt",
+      "nameId": "Sifon lemon",
+      "textId": "lemonchiffon.id.txt"
     }
   ],
   "reversed": [
@@ -250,7 +270,9 @@
       "textFr": "ghostwhite.fr.txt",
       "textAr": "ghostwhite.ar.txt",
       "namePt": "Branco fantasma",
-      "textPt": "ghostwhite.pt.txt"
+      "textPt": "ghostwhite.pt.txt",
+      "nameId": "Putih hantu",
+      "textId": "ghostwhite.id.txt"
     },
     {
       "name": "WhiteSmoke",
@@ -272,7 +294,9 @@
       "textFr": "whitesmoke.fr.txt",
       "textAr": "whitesmoke.ar.txt",
       "namePt": "Fumaça branca",
-      "textPt": "whitesmoke.pt.txt"
+      "textPt": "whitesmoke.pt.txt",
+      "nameId": "Asap putih",
+      "textId": "whitesmoke.id.txt"
     },
     {
       "name": "MistyRose",
@@ -294,7 +318,9 @@
       "textFr": "mistyrose.fr.txt",
       "textAr": "mistyrose.ar.txt",
       "namePt": "Rosa enevoado",
-      "textPt": "mistyrose.pt.txt"
+      "textPt": "mistyrose.pt.txt",
+      "nameId": "Mawar kabut",
+      "textId": "mistyrose.id.txt"
     },
     {
       "name": "SlateGray",
@@ -316,7 +342,9 @@
       "textFr": "slategray.fr.txt",
       "textAr": "slategray.ar.txt",
       "namePt": "Cinza-ardósia",
-      "textPt": "slategray.pt.txt"
+      "textPt": "slategray.pt.txt",
+      "nameId": "Abu-abu sabak",
+      "textId": "slategray.id.txt"
     },
     {
       "name": "DimGray",
@@ -338,7 +366,9 @@
       "textFr": "dimgray.fr.txt",
       "textAr": "dimgray.ar.txt",
       "namePt": "Cinza fosco",
-      "textPt": "dimgray.pt.txt"
+      "textPt": "dimgray.pt.txt",
+      "nameId": "Abu-abu redup",
+      "textId": "dimgray.id.txt"
     },
     {
       "name": "Black",
@@ -360,7 +390,9 @@
       "textFr": "black.fr.txt",
       "textAr": "black.ar.txt",
       "namePt": "Preto",
-      "textPt": "black.pt.txt"
+      "textPt": "black.pt.txt",
+      "nameId": "Hitam",
+      "textId": "black.id.txt"
     },
     {
       "name": "Maroon",
@@ -382,7 +414,9 @@
       "textFr": "maroon.fr.txt",
       "textAr": "maroon.ar.txt",
       "namePt": "Bordô",
-      "textPt": "maroon.pt.txt"
+      "textPt": "maroon.pt.txt",
+      "nameId": "Marun",
+      "textId": "maroon.id.txt"
     },
     {
       "name": "FireBrick",
@@ -404,7 +438,9 @@
       "textFr": "firebrick.fr.txt",
       "textAr": "firebrick.ar.txt",
       "namePt": "Tijolo",
-      "textPt": "firebrick.pt.txt"
+      "textPt": "firebrick.pt.txt",
+      "nameId": "Bata",
+      "textId": "firebrick.id.txt"
     },
     {
       "name": "Crimson",
@@ -426,7 +462,9 @@
       "textFr": "crimson.fr.txt",
       "textAr": "crimson.ar.txt",
       "namePt": "Carmesim",
-      "textPt": "crimson.pt.txt"
+      "textPt": "crimson.pt.txt",
+      "nameId": "Krimson",
+      "textId": "crimson.id.txt"
     },
     {
       "name": "Tomato",
@@ -448,11 +486,14 @@
       "textFr": "tomato.fr.txt",
       "textAr": "tomato.ar.txt",
       "namePt": "Tomate",
-      "textPt": "tomato.pt.txt"
+      "textPt": "tomato.pt.txt",
+      "nameId": "Tomat",
+      "textId": "tomato.id.txt"
     }
   ],
   "nameNl": "De Dwaas",
   "nameFr": "Le Fou",
   "nameAr": "المجنون",
-  "namePt": "O Louco"
+  "namePt": "O Louco",
+  "nameId": "Si Bodoh"
 }

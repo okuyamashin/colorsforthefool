@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQ38VZSM7B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-NQ38VZSM7B');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Warna keberuntungan hari ini, ditarik dari tarot — Colors for the Fool</title>
+    <meta name="description" content="Tarik satu kartu dari dua puluh dua arkana mayor. Baca apa yang diwakilinya, tegak atau terbalik, dan di akhir cerita buka warna keberuntungan hari ini.">
+    <link rel="canonical" href="https://colorsforthefool.engawa5656.com/id/">
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="ja" href="https://colorsforthefool.engawa5656.com/">
+    <link rel="alternate" hreflang="en" href="https://colorsforthefool.engawa5656.com/en/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://colorsforthefool.engawa5656.com/zh/">
+    <link rel="alternate" hreflang="es" href="https://colorsforthefool.engawa5656.com/es/">
+    <link rel="alternate" hreflang="nl" href="https://colorsforthefool.engawa5656.com/nl/">
+    <link rel="alternate" hreflang="fr" href="https://colorsforthefool.engawa5656.com/fr/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://colorsforthefool.engawa5656.com/zh-hans/">
+    <link rel="alternate" hreflang="ar" href="https://colorsforthefool.engawa5656.com/ar/">
+    <link rel="alternate" hreflang="pt-BR" href="https://colorsforthefool.engawa5656.com/pt/">
+    <link rel="alternate" hreflang="id" href="https://colorsforthefool.engawa5656.com/id/">
+    <link rel="alternate" hreflang="x-default" href="https://colorsforthefool.engawa5656.com/">
+    <!-- /hreflang -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:site_name" content="Colors for the Fool">
+    <meta property="og:title" content="Warna keberuntungan hari ini, ditarik dari tarot">
+    <meta property="og:description" content="Tarik satu kartu dari dua puluh dua arkana mayor. Baca apa yang diwakilinya, tegak atau terbalik, dan di akhir cerita buka warna keberuntungan hari ini.">
+    <meta property="og:url" content="https://colorsforthefool.engawa5656.com/id/">
+    <meta property="og:image" content="https://colorsforthefool.engawa5656.com/data/the-fool/face.jpg">
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css?v=2">
+    <style>
+      .film-frame {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+      }
+      .film-frame iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+    </style>
+    <script>
+      try {
+        if (!new URLSearchParams(location.search).has("test") && sessionStorage.getItem("cftf-reading-id")) document.documentElement.classList.add("has-reading");
+      } catch (error) {}
+    </script>
+  </head>
+  <body>
+    <header class="top">
+      <p class="brand"><a href="./">Colors for the Fool</a></p>
+      <nav class="mast" aria-label="Bahasa">
+        <div class="lang-menu">
+          <button type="button" class="lang" aria-expanded="false" aria-haspopup="true" aria-controls="lang-list">Indonesia<span class="lang-mark" aria-hidden="true"></span></button>
+          <ul class="lang-list" id="lang-list" hidden>
+            <li><a href="../">日本語</a></li>
+            <li><a href="../en/">English</a></li>
+            <li><a href="../zh/">繁體中文</a></li>
+            <li><a href="../es/">Español</a></li>
+            <li><a href="../nl/">Nederlands</a></li>
+            <li><a href="../fr/">Français</a></li>
+            <li><a href="../zh-hans/">简体中文</a></li>
+            <li><a href="../ar/">العربية</a></li>
+            <li><a href="../pt/">Português</a></li>
+          </ul>
+        </div>
+      </nav>
+      <h1 class="tagline">Warna keberuntungan hari ini, ditarik dari tarot</h1>
+    </header>
+    <main>
+      <p class="notice" id="notice" hidden></p>
+      <div class="stage">
+        <button type="button" class="card" id="card" aria-label="Tarik satu kartu">
+          <span class="card-inner">
+            <span class="card-face back">
+              <img src="/data/cardback.jpg" alt="">
+            </span>
+            <span class="card-face front">
+              <span class="face-turn" id="face-turn">
+                <img id="face" alt="">
+              </span>
+            </span>
+          </span>
+        </button>
+      </div>
+      <div class="sheet" id="sheet">
+        <p class="hint-wrap">
+          <button type="button" class="hint" id="hint">Sentuh untuk menarik satu kartu</button>
+        </p>
+        <article class="reading" id="reading" hidden>
+          <h2 id="title"></h2>
+          <p class="en" id="en"></p>
+          <p class="orientation" id="orientation"></p>
+          <div id="meaning"></div>
+        </article>
+        <section class="color-panel" id="color" hidden>
+          <div class="story" id="story"></div>
+          <button type="button" class="scene" id="scene" aria-label="Sentuh untuk membalik kartu menghadap ke bawah"></button>
+          <div class="library" id="library" hidden>
+            <a id="library-link" href="">Baca warna ini</a>
+            <p class="share">
+              <button type="button" id="share-copy" aria-label="Salin tautan">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="18" cy="5" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <circle cx="6" cy="12" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <circle cx="18" cy="19" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M8.2 13.1 15.7 17.4M15.7 6.6 8.2 10.9" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                </svg>
+              </button>
+              <a id="share-x" href="" target="_blank" rel="noopener noreferrer" aria-label="Bagikan di X">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" d="M14.2 10.4 21.5 2h-1.7l-6.3 7.2L8.4 2H2.2l7.6 11L2.2 22h1.7l6.7-7.6L15.3 22h6.2l-7.3-11.6Zm-2.4 2.7-.8-1.1L4.7 3.5h2.7l5 7.1.8 1.1 6.5 9.2h-2.7l-5.2-7.8Z"/>
+                </svg>
+              </a>
+              <a id="share-line" href="" target="_blank" rel="noopener noreferrer" aria-label="Bagikan di LINE">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#06C755" d="M12 3.2C6.8 3.2 2.6 6.7 2.6 11c0 3.8 3.4 7 8 7.7.3.1.7.2.8.5.1.3.1.7 0 1l-.3 1.6c-.1.4.3.7.7.5l2.2-1.3c.2-.1.4-.1.6-.1 4.8-.2 8.8-3.6 8.8-7.9 0-4.3-4.2-7.8-9.4-7.8Z"/>
+                </svg>
+              </a>
+            </p>
+            <p class="copied" id="copied" hidden role="status">Disalin ke papan klip</p>
+          </div>
+        </section>
+      </div>
+      <div class="guide" id="guide">
+        <section>
+          <h2>Cara menarik kartu</h2>
+          <ol>
+            <li>Tarik satu kartu. Kartu itu keluar dari dua puluh dua arkana mayor, tegak atau terbalik.</li>
+            <li>Baca apa yang diwakili kartu itu hari ini.</li>
+            <li>Sentuh sekali lagi. Warna keberuntungan hari ini terbuka di akhir cerita. Sentuh cermin di bawahnya, dan tulisan terlipat. Kartu kembali menghadap ke bawah.</li>
+          </ol>
+        </section>
+        <p class="designs"><a href="design/">Lihat desain kartu tarot</a></p>
+        <section>
+          <h2>Tentang situs ini</h2>
+          <p>Setiap arkana mayor terikat pada satu warna. Cerita bergerak melalui mitos, sejarah, suatu tempat, atau suatu alat, dan berhenti pada warna keberuntungan hari ini.</p>
+        </section>
+        <section class="film">
+          <h2>Perjalanan Si Bodoh</h2>
+          <div class="film-frame">
+            <iframe src="https://www.youtube.com/embed/ngl1nN2qzkI?si=DT7xBR5A0CPZu1J3" title="Perjalanan Si Bodoh" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </section>
+        <section>
+          <h2>Dua puluh dua arkana mayor</h2>
+          <ul class="arcana">
+            <li>
+              <a href="cards/the-fool/index.html"><img class="arcana-thumb" src="/data/the-fool/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-fool/index.html">Si Bodoh</a></h3>
+              <p><span class="side">Tegak</span>Seorang sosok sendirian berdiri di tepi jurang, dengan bekal perjalanan yang ringan, mawar putih di tangan, dan anjing yang setia di dekatnya.</p>
+              <p><span class="side">Terbalik</span>Sosok yang sama kini ragu di tepi jurang, tidak yakin apakah tanah di bawah aman.</p>
+            </li>
+            <li>
+              <a href="cards/the-magician/index.html"><img class="arcana-thumb" src="/data/the-magician/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-magician/index.html">Sang Pesulap</a></h3>
+              <p><span class="side">Tegak</span>Sebuah meja telah siap dengan tongkat, cawan, pedang, dan sekeping uang, masing-masing alat untuk membentuk hari.</p>
+              <p><span class="side">Terbalik</span>Alat di atas meja disusun hanya untuk dipamerkan, bukan untuk dipakai.</p>
+            </li>
+            <li>
+              <a href="cards/the-high-priestess/index.html"><img class="arcana-thumb" src="/data/the-high-priestess/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-high-priestess/index.html">Sang Imam Perempuan</a></h3>
+              <p><span class="side">Tegak</span>Seorang perempuan duduk dengan tenang di antara dua pilar, gulungan di pangkuannya hanya terbuka separuh.</p>
+              <p><span class="side">Terbalik</span>Gulungan itu entah belum terbuka dan rahasianya ditahan, atau dibentangkan lebar sehingga isinya tercerai dan disalahpahami.</p>
+            </li>
+            <li>
+              <a href="cards/the-empress/index.html"><img class="arcana-thumb" src="/data/the-empress/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-empress/index.html">Sang Permaisuri</a></h3>
+              <p><span class="side">Tegak</span>Sang Permaisuri adalah tempat kelimpahan, tempat biji-bijian matang, hutan memberi perlindungan, dan air jernih mengalir.</p>
+              <p><span class="side">Terbalik</span>Tanah mungkin lelah, atau Anda mungkin tergesa memanen sebelum buah benar-benar matang.</p>
+            </li>
+            <li>
+              <a href="cards/the-emperor/index.html"><img class="arcana-thumb" src="/data/the-emperor/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-emperor/index.html">Sang Kaisar</a></h3>
+              <p><span class="side">Tegak</span>Sang Kaisar duduk di atas takhta batu, pandangannya tertuju jauh melampaui masa kini.</p>
+              <p><span class="side">Terbalik</span>Takhta itu tidak lagi sesuai bagi Sang Kaisar.</p>
+            </li>
+            <li>
+              <a href="cards/the-hierophant/index.html"><img class="arcana-thumb" src="/data/the-hierophant/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-hierophant/index.html">Sang Hierofant</a></h3>
+              <p><span class="side">Tegak</span>Seorang sosok duduk di hadapan dua pencari, mewujudkan pemindahan pengetahuan melalui tradisi dan bentuk yang sudah mapan.</p>
+              <p><span class="side">Terbalik</span>Bentuk telah menjadi lebih berat daripada tujuannya.</p>
+            </li>
+            <li>
+              <a href="cards/the-lovers/index.html"><img class="arcana-thumb" src="/data/the-lovers/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-lovers/index.html">Sang Pecinta</a></h3>
+              <p><span class="side">Tegak</span>Kartu Sang Pecinta mewakili saat dua kekuatan yang berbeda bertemu, meminta Anda membuat pilihan yang sadar dan tulus.</p>
+              <p><span class="side">Terbalik</span>Sang Pecinta terbalik menunjuk pada keragu-raguan dan ketidaknyamanan karena membiarkan pilihan tidak selesai.</p>
+            </li>
+            <li>
+              <a href="cards/the-chariot/index.html"><img class="arcana-thumb" src="/data/the-chariot/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-chariot/index.html">Sang Kereta</a></h3>
+              <p><span class="side">Tegak</span>Seorang kusir menggenggam kendali, menuntun kendaraan yang ditarik oleh dua makhluk yang berbeda.</p>
+              <p><span class="side">Terbalik</span>Sang Kereta sedang bergerak, tetapi belum melewati ambang.</p>
+            </li>
+            <li>
+              <a href="cards/strength/index.html"><img class="arcana-thumb" src="/data/strength/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/strength/index.html">Kekuatan</a></h3>
+              <p><span class="side">Tegak</span>Kekuatan bukan tentang seberapa erat Anda menggenggam atau seberapa banyak Anda dapat menekan.</p>
+              <p><span class="side">Terbalik</span>Ketika terbalik, Kekuatan menyingkap tangan yang menjadi kaku, dengan jari terkepal bukan karena penguasaan melainkan karena takut.</p>
+            </li>
+            <li>
+              <a href="cards/the-hermit/index.html"><img class="arcana-thumb" src="/data/the-hermit/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-hermit/index.html">Sang Pertapa</a></h3>
+              <p><span class="side">Tegak</span>Sang Pertapa berdiri sendiri di gunung yang sunyi, lentera diangkat hanya cukup untuk menunjukkan langkah berikutnya.</p>
+              <p><span class="side">Terbalik</span>Lentera Sang Pertapa kini hanya bersinar ke dalam, gagal menerangi jalan di depan.</p>
+            </li>
+            <li>
+              <a href="cards/wheel-of-fortune/index.html"><img class="arcana-thumb" src="/data/wheel-of-fortune/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/wheel-of-fortune/index.html">Roda Keberuntungan</a></h3>
+              <p><span class="side">Tegak</span>Roda Keberuntungan berputar, menukar posisi antara mereka yang naik dan mereka yang turun.</p>
+              <p><span class="side">Terbalik</span>Bisa tampak seolah roda berputar di tempat, memberi ilusi gerakan tanpa kemajuan.</p>
+            </li>
+            <li>
+              <a href="cards/justice/index.html"><img class="arcana-thumb" src="/data/justice/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/justice/index.html">Keadilan</a></h3>
+              <p><span class="side">Tegak</span>Keadilan adalah titik temu keputusan dan ketajaman membedakan, yang dituntun oleh pedang dan neraca sekaligus.</p>
+              <p><span class="side">Terbalik</span>Terbalik, Keadilan memperingatkan tentang ketidakseimbangan atau pembenaran diri.</p>
+            </li>
+            <li>
+              <a href="cards/the-hanged-man/index.html"><img class="arcana-thumb" src="/data/the-hanged-man/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-hanged-man/index.html">Orang Tergantung</a></h3>
+              <p><span class="side">Tegak</span>Seorang laki-laki tergantung dengan kepala di bawah, satu kaki terikat dan lengannya terbuka, mewujudkan keheningan di tengah ketidaknyamanan.</p>
+              <p><span class="side">Terbalik</span>Tergantung dengan kepala di bawah telah kehilangan tujuannya, berubah dari pencarian wawasan menjadi kebiasaan menunda.</p>
+            </li>
+            <li>
+              <a href="cards/death/index.html"><img class="arcana-thumb" src="/data/death/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/death/index.html">Kematian</a></h3>
+              <p><span class="side">Tegak</span>Kematian tiba sebagai pertanda sunyi dari suatu penyelesaian.</p>
+              <p><span class="side">Terbalik</span>Meski suatu akhir mendekat, usaha dihabiskan untuk mempertahankan bentuk yang sudah akrab.</p>
+            </li>
+            <li>
+              <a href="cards/temperance/index.html"><img class="arcana-thumb" src="/data/temperance/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/temperance/index.html">Kesederhanaan</a></h3>
+              <p><span class="side">Tegak</span>Kesederhanaan mengundang Anda untuk memadukan unsur yang berlawanan dengan hati-hati, seperti air yang mengalir lembut di antara dua cawan.</p>
+              <p><span class="side">Terbalik</span>Kesederhanaan terbalik menunjukkan air yang tumpah di luar cawan, menandai ketidakseimbangan atau upaya memadukan yang gagal.</p>
+            </li>
+            <li>
+              <a href="cards/the-devil/index.html"><img class="arcana-thumb" src="/data/the-devil/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-devil/index.html">Sang Iblis</a></h3>
+              <p><span class="side">Tegak</span>Dua sosok berdiri terantai, mata rantainya tebal dan berat pada pandangan pertama, tetapi kalung di leher mereka cukup longgar untuk dilepas.</p>
+              <p><span class="side">Terbalik</span>Rantai yang dahulu tersembunyi kini tampak.</p>
+            </li>
+            <li>
+              <a href="cards/the-tower/index.html"><img class="arcana-thumb" src="/data/the-tower/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-tower/index.html">Sang Menara</a></h3>
+              <p><span class="side">Tegak</span>Sebuah bangunan tinggi, yang dahulu kokoh, dihantam kekuatan yang tiba-tiba, menyingkap kerentanannya.</p>
+              <p><span class="side">Terbalik</span>Setelah kilat, ada godaan untuk membangun kembali menara itu persis seperti semula, mengembalikan setiap batu ke ketinggiannya yang dahulu dan rawan.</p>
+            </li>
+            <li>
+              <a href="cards/the-star/index.html"><img class="arcana-thumb" src="/data/the-star/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-star/index.html">Sang Bintang</a></h3>
+              <p><span class="side">Tegak</span>Di tepi air yang tenang, seorang sosok berlutut dan menuang air dari dua kendi, satu ke bumi dan satu ke aliran.</p>
+              <p><span class="side">Terbalik</span>Kendi miring, dan air tumpah hanya ke satu titik, menggenang alih-alih mengalir.</p>
+            </li>
+            <li>
+              <a href="cards/the-moon/index.html"><img class="arcana-thumb" src="/data/the-moon/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-moon/index.html">Sang Bulan</a></h3>
+              <p><span class="side">Tegak</span>Di bawah cahaya bulan yang tidak pasti, hanya sebagian jalan yang terlihat di antara dua menara yang sunyi.</p>
+              <p><span class="side">Terbalik</span>Jalan menghilang di bawah kabut, atau setiap bayang terasa mengancam, dibentuk oleh khayalan yang cemas.</p>
+            </li>
+            <li>
+              <a href="cards/the-sun/index.html"><img class="arcana-thumb" src="/data/the-sun/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-sun/index.html">Sang Matahari</a></h3>
+              <p><span class="side">Tegak</span>Sang Matahari menandai waktu ketika cahaya dengan lembut menerangi apa yang tersembunyi, memungkinkan segala sesuatu dilihat tanpa rasa malu atau kebingungan.</p>
+              <p><span class="side">Terbalik</span>Sang Matahari terbalik memperingatkan tentang cahaya yang terlalu banyak, tempat bahkan bayang dipaksa tampak dan tidak ada yang dapat beristirahat.</p>
+            </li>
+            <li>
+              <a href="cards/judgement/index.html"><img class="arcana-thumb" src="/data/judgement/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/judgement/index.html">Penghakiman</a></h3>
+              <p><span class="side">Tegak</span>Panggilan yang jelas bergema, membangunkan sosok-sosok dari istirahat panjang mereka.</p>
+              <p><span class="side">Terbalik</span>Terompet berbunyi, tetapi Anda menekan tutup dari dalam kurungan Anda sendiri.</p>
+            </li>
+            <li>
+              <a href="cards/the-world/index.html"><img class="arcana-thumb" src="/data/the-world/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-world/index.html">Sang Dunia</a></h3>
+              <p><span class="side">Tegak</span>Seorang sosok menari dengan anggun di dalam lingkaran, diawasi dari segala sudut.</p>
+              <p><span class="side">Terbalik</span>Tarian terhenti tepat sebelum lingkaran tertutup.</p>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Pertanyaan</h2>
+          <h3>Apa bedanya tegak dan terbalik?</h3>
+          <p>Gambar yang sama berubah tanda saat diputar. Tegak, kartu itu terbuka. Terbalik, itu adalah penundaan, kelebihan, atau makna yang terbalik. Sosok terbalik adalah kartu yang diputar setengah putaran.</p>
+          <h3>Bolehkah saya menarik satu kartu setiap hari?</h3>
+          <p>Satu kartu sehari, atau beberapa berturut-turut. Ketika dek kosong, dek itu kembali utuh.</p>
+        </section>
+      </div>
+      <p class="error" id="error" hidden></p>
+    </main>
+    <footer class="colophon">
+      <p>© 2026 Engawa Inc.</p>
+      <p><a href="../en/contact/">Kontak</a> <a href="design/">Desain</a> <a href="../privacy/">Kebijakan privasi</a> <a href="https://github.com/okuyamashin/colorsforthefool">GitHub</a></p>
+      <p class="lang-links"><a href="../">日本語</a> <a href="../en/">English</a> <a href="../zh/">繁體中文</a> <a href="../es/">Español</a> <a href="../nl/">Nederlands</a> <a href="../fr/">Français</a> <a href="../zh-hans/">简体中文</a> <a href="../ar/">العربية</a> <a href="../pt/">Português</a> <a href="../id/">Indonesia</a></p>
+    </footer>
+    <script src="../meanings.id.js"></script>
+    <script src="../languages.js?v=8"></script>
+    <script src="../app.js"></script>
+  </body>
+</html>

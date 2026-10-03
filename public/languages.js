@@ -268,5 +268,35 @@ window.LANG_PACKS = [
       "colorError": "A cor de hoje não abriu. Toque de novo.",
       "testError": "test tem a forma 4-10. As cartas vão de 1 a 22. As cores de 1 a 10 estão de pé, de 11 a 20 invertidas."
     }
+  },
+  {
+    "id": "id",
+    "htmlLang": "id",
+    "prefix": "id",
+    "cookie": "cftf-id",
+    "session": "cftf-reading-id",
+    "data": "/data",
+    "cardName": "nameId",
+    "colorName": "nameId",
+    "textField": "textId",
+    "textSuffix": ".id",
+    "latinSubtitle": false,
+    "titlePattern": "[―—-]\\s*(Tegak|Terbalik)\\s*$",
+    "shareText": "Warna keberuntungan hari ini adalah {color}.",
+    "copy": {
+      "upright": "Tegak",
+      "reversed": "Terbalik",
+      "meaningFallback": "Gambar pada kartu ini adalah tanda hari ini.",
+      "renewed": "Dua puluh dua kartu sudah keluar, dan dek kembali utuh.",
+      "hintReveal": "Sentuh sekali lagi, dan warna hari ini terbuka",
+      "hintDraw": "Sentuh untuk menarik satu kartu",
+      "drawLabel": "Tarik satu kartu",
+      "openLabel": "Sentuh sekali lagi untuk membuka warna",
+      "mirror": "Cermin yang menyimpan warna",
+      "scene": "Gambar cermin yang menyimpan warna",
+      "cardError": "Kartu tidak terbuka. Sentuh sekali lagi.",
+      "colorError": "Warna hari ini tidak terbuka. Sentuh sekali lagi.",
+      "testError": "test berbentuk 4-10. Kartu dari 1 sampai 22. Warna 1 sampai 10 tegak, 11 sampai 20 terbalik."
+    }
   }
 ];

@@ -28,7 +28,9 @@
       "textFr": "wheat.fr.txt",
       "textAr": "wheat.ar.txt",
       "namePt": "Trigo",
-      "textPt": "wheat.pt.txt"
+      "textPt": "wheat.pt.txt",
+      "nameId": "Gandum",
+      "textId": "wheat.id.txt"
     },
     {
       "name": "Cornsilk",
@@ -50,7 +52,9 @@
       "textFr": "cornsilk.fr.txt",
       "textAr": "cornsilk.ar.txt",
       "namePt": "Barba-de-milho",
-      "textPt": "cornsilk.pt.txt"
+      "textPt": "cornsilk.pt.txt",
+      "nameId": "Sutra jagung",
+      "textId": "cornsilk.id.txt"
     },
     {
       "name": "GoldenRod",
@@ -72,7 +76,9 @@
       "textFr": "goldenrod.fr.txt",
       "textAr": "goldenrod.ar.txt",
       "namePt": "Vara-de-ouro",
-      "textPt": "goldenrod.pt.txt"
+      "textPt": "goldenrod.pt.txt",
+      "nameId": "Goldenrod",
+      "textId": "goldenrod.id.txt"
     },
     {
       "name": "ForestGreen",
@@ -94,7 +100,9 @@
       "textFr": "forestgreen.fr.txt",
       "textAr": "forestgreen.ar.txt",
       "namePt": "Verde-floresta",
-      "textPt": "forestgreen.pt.txt"
+      "textPt": "forestgreen.pt.txt",
+      "nameId": "Hijau hutan",
+      "textId": "forestgreen.id.txt"
     },
     {
       "name": "Olive",
@@ -116,7 +124,9 @@
       "textFr": "olive.fr.txt",
       "textAr": "olive.ar.txt",
       "namePt": "Oliva",
-      "textPt": "olive.pt.txt"
+      "textPt": "olive.pt.txt",
+      "nameId": "Zaitun",
+      "textId": "olive.id.txt"
     },
     {
       "name": "PeachPuff",
@@ -138,7 +148,9 @@
       "textFr": "peachpuff.fr.txt",
       "textAr": "peachpuff.ar.txt",
       "namePt": "Pêssego",
-      "textPt": "peachpuff.pt.txt"
+      "textPt": "peachpuff.pt.txt",
+      "nameId": "Persik",
+      "textId": "peachpuff.id.txt"
     },
     {
       "name": "PapayaWhip",
@@ -160,7 +172,9 @@
       "textFr": "papayawhip.fr.txt",
       "textAr": "papayawhip.ar.txt",
       "namePt": "Creme de mamão",
-      "textPt": "papayawhip.pt.txt"
+      "textPt": "papayawhip.pt.txt",
+      "nameId": "Krim pepaya",
+      "textId": "papayawhip.id.txt"
     },
     {
       "name": "Pink",
@@ -182,7 +196,9 @@
       "textFr": "pink.fr.txt",
       "textAr": "pink.ar.txt",
       "namePt": "Rosa",
-      "textPt": "pink.pt.txt"
+      "textPt": "pink.pt.txt",
+      "nameId": "Merah muda",
+      "textId": "pink.id.txt"
     },
     {
       "name": "LavenderBlush",
@@ -204,7 +220,9 @@
       "textFr": "lavenderblush.fr.txt",
       "textAr": "lavenderblush.ar.txt",
       "namePt": "Rubor de lavanda",
-      "textPt": "lavenderblush.pt.txt"
+      "textPt": "lavenderblush.pt.txt",
+      "nameId": "Merah lavender",
+      "textId": "lavenderblush.id.txt"
     },
     {
       "name": "HoneyDew",
@@ -226,7 +244,9 @@
       "textFr": "honeydew.fr.txt",
       "textAr": "honeydew.ar.txt",
       "namePt": "Melão",
-      "textPt": "honeydew.pt.txt"
+      "textPt": "honeydew.pt.txt",
+      "nameId": "Embun madu",
+      "textId": "honeydew.id.txt"
     }
   ],
   "reversed": [
@@ -250,7 +270,9 @@
       "textFr": "darkolivegreen.fr.txt",
       "textAr": "darkolivegreen.ar.txt",
       "namePt": "Verde-oliva escuro",
-      "textPt": "darkolivegreen.pt.txt"
+      "textPt": "darkolivegreen.pt.txt",
+      "nameId": "Hijau zaitun gelap",
+      "textId": "darkolivegreen.id.txt"
     },
     {
       "name": "OliveDrab",
@@ -272,7 +294,9 @@
       "textFr": "olivedrab.fr.txt",
       "textAr": "olivedrab.ar.txt",
       "namePt": "Oliva fosco",
-      "textPt": "olivedrab.pt.txt"
+      "textPt": "olivedrab.pt.txt",
+      "nameId": "Zaitun kusam",
+      "textId": "olivedrab.id.txt"
     },
     {
       "name": "RosyBrown",
@@ -294,7 +318,9 @@
       "textFr": "rosybrown.fr.txt",
       "textAr": "rosybrown.ar.txt",
       "namePt": "Marrom rosado",
-      "textPt": "rosybrown.pt.txt"
+      "textPt": "rosybrown.pt.txt",
+      "nameId": "Cokelat kemerahan",
+      "textId": "rosybrown.id.txt"
     },
     {
       "name": "Sienna",
@@ -316,7 +342,9 @@
       "textFr": "sienna.fr.txt",
       "textAr": "sienna.ar.txt",
       "namePt": "Siena",
-      "textPt": "sienna.pt.txt"
+      "textPt": "sienna.pt.txt",
+      "nameId": "Siena",
+      "textId": "sienna.id.txt"
     },
     {
       "name": "Khaki",
@@ -338,7 +366,9 @@
       "textFr": "khaki.fr.txt",
       "textAr": "khaki.ar.txt",
       "namePt": "Cáqui",
-      "textPt": "khaki.pt.txt"
+      "textPt": "khaki.pt.txt",
+      "nameId": "Khaki",
+      "textId": "khaki.id.txt"
     },
     {
       "name": "DarkGoldenRod",
@@ -360,7 +390,9 @@
       "textFr": "darkgoldenrod.fr.txt",
       "textAr": "darkgoldenrod.ar.txt",
       "namePt": "Vara-de-ouro escura",
-      "textPt": "darkgoldenrod.pt.txt"
+      "textPt": "darkgoldenrod.pt.txt",
+      "nameId": "Goldenrod gelap",
+      "textId": "darkgoldenrod.id.txt"
     },
     {
       "name": "Brown",
@@ -382,7 +414,9 @@
       "textFr": "brown.fr.txt",
       "textAr": "brown.ar.txt",
       "namePt": "Marrom",
-      "textPt": "brown.pt.txt"
+      "textPt": "brown.pt.txt",
+      "nameId": "Cokelat",
+      "textId": "brown.id.txt"
     },
     {
       "name": "Chocolate",
@@ -404,7 +438,9 @@
       "textFr": "chocolate.fr.txt",
       "textAr": "chocolate.ar.txt",
       "namePt": "Chocolate",
-      "textPt": "chocolate.pt.txt"
+      "textPt": "chocolate.pt.txt",
+      "nameId": "Cokelat pekat",
+      "textId": "chocolate.id.txt"
     },
     {
       "name": "BurlyWood",
@@ -426,7 +462,9 @@
       "textFr": "burlywood.fr.txt",
       "textAr": "burlywood.ar.txt",
       "namePt": "Madeira robusta",
-      "textPt": "burlywood.pt.txt"
+      "textPt": "burlywood.pt.txt",
+      "nameId": "Kayu kokoh",
+      "textId": "burlywood.id.txt"
     },
     {
       "name": "Peru",
@@ -448,11 +486,14 @@
       "textFr": "peru.fr.txt",
       "textAr": "peru.ar.txt",
       "namePt": "Peru",
-      "textPt": "peru.pt.txt"
+      "textPt": "peru.pt.txt",
+      "nameId": "Peru",
+      "textId": "peru.id.txt"
     }
   ],
   "nameNl": "De Keizerin",
   "nameFr": "L'Impératrice",
   "nameAr": "الإمبراطورة",
-  "namePt": "A Imperatriz"
+  "namePt": "A Imperatriz",
+  "nameId": "Sang Permaisuri"
 }

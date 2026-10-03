@@ -27,7 +27,9 @@
       "textFr": "silver.fr.txt",
       "textAr": "silver.ar.txt",
       "namePt": "Prata",
-      "textPt": "silver.pt.txt"
+      "textPt": "silver.pt.txt",
+      "nameId": "Perak",
+      "textId": "silver.id.txt"
     },
     {
       "name": "Lavender",
@@ -49,7 +51,9 @@
       "textFr": "lavender.fr.txt",
       "textAr": "lavender.ar.txt",
       "namePt": "Lavanda",
-      "textPt": "lavender.pt.txt"
+      "textPt": "lavender.pt.txt",
+      "nameId": "Lavender",
+      "textId": "lavender.id.txt"
     },
     {
       "name": "MidnightBlue",
@@ -71,7 +75,9 @@
       "textFr": "midnightblue.fr.txt",
       "textAr": "midnightblue.ar.txt",
       "namePt": "Azul-meia-noite",
-      "textPt": "midnightblue.pt.txt"
+      "textPt": "midnightblue.pt.txt",
+      "nameId": "Biru tengah malam",
+      "textId": "midnightblue.id.txt"
     },
     {
       "name": "AliceBlue",
@@ -93,7 +99,9 @@
       "textFr": "aliceblue.fr.txt",
       "textAr": "aliceblue.ar.txt",
       "namePt": "Azul Alice",
-      "textPt": "aliceblue.pt.txt"
+      "textPt": "aliceblue.pt.txt",
+      "nameId": "Biru Alice",
+      "textId": "aliceblue.id.txt"
     },
     {
       "name": "PaleTurquoise",
@@ -115,7 +123,9 @@
       "textFr": "paleturquoise.fr.txt",
       "textAr": "paleturquoise.ar.txt",
       "namePt": "Turquesa pálido",
-      "textPt": "paleturquoise.pt.txt"
+      "textPt": "paleturquoise.pt.txt",
+      "nameId": "Turkuois pucat",
+      "textId": "paleturquoise.id.txt"
     },
     {
       "name": "GhostWhite",
@@ -137,7 +147,9 @@
       "textFr": "ghostwhite.fr.txt",
       "textAr": "ghostwhite.ar.txt",
       "namePt": "Branco fantasma",
-      "textPt": "ghostwhite.pt.txt"
+      "textPt": "ghostwhite.pt.txt",
+      "nameId": "Putih hantu",
+      "textId": "ghostwhite.id.txt"
     },
     {
       "name": "PowderBlue",
@@ -159,7 +171,9 @@
       "textFr": "powderblue.fr.txt",
       "textAr": "powderblue.ar.txt",
       "namePt": "Azul-pó",
-      "textPt": "powderblue.pt.txt"
+      "textPt": "powderblue.pt.txt",
+      "nameId": "Biru bubuk",
+      "textId": "powderblue.id.txt"
     },
     {
       "name": "SlateBlue",
@@ -181,7 +195,9 @@
       "textFr": "slateblue.fr.txt",
       "textAr": "slateblue.ar.txt",
       "namePt": "Azul-ardósia",
-      "textPt": "slateblue.pt.txt"
+      "textPt": "slateblue.pt.txt",
+      "nameId": "Biru sabak",
+      "textId": "slateblue.id.txt"
     },
     {
       "name": "Wheat",
@@ -203,7 +219,9 @@
       "textFr": "wheat.fr.txt",
       "textAr": "wheat.ar.txt",
       "namePt": "Trigo",
-      "textPt": "wheat.pt.txt"
+      "textPt": "wheat.pt.txt",
+      "nameId": "Gandum",
+      "textId": "wheat.id.txt"
     },
     {
       "name": "Linen",
@@ -225,7 +243,9 @@
       "textFr": "linen.fr.txt",
       "textAr": "linen.ar.txt",
       "namePt": "Linho",
-      "textPt": "linen.pt.txt"
+      "textPt": "linen.pt.txt",
+      "nameId": "Linen",
+      "textId": "linen.id.txt"
     }
   ],
   "reversed": [
@@ -249,7 +269,9 @@
       "textFr": "mistyrose.fr.txt",
       "textAr": "mistyrose.ar.txt",
       "namePt": "Rosa enevoado",
-      "textPt": "mistyrose.pt.txt"
+      "textPt": "mistyrose.pt.txt",
+      "nameId": "Mawar kabut",
+      "textId": "mistyrose.id.txt"
     },
     {
       "name": "WhiteSmoke",
@@ -271,7 +293,9 @@
       "textFr": "whitesmoke.fr.txt",
       "textAr": "whitesmoke.ar.txt",
       "namePt": "Fumaça branca",
-      "textPt": "whitesmoke.pt.txt"
+      "textPt": "whitesmoke.pt.txt",
+      "nameId": "Asap putih",
+      "textId": "whitesmoke.id.txt"
     },
     {
       "name": "DimGray",
@@ -293,7 +317,9 @@
       "textFr": "dimgray.fr.txt",
       "textAr": "dimgray.ar.txt",
       "namePt": "Cinza fosco",
-      "textPt": "dimgray.pt.txt"
+      "textPt": "dimgray.pt.txt",
+      "nameId": "Abu-abu redup",
+      "textId": "dimgray.id.txt"
     },
     {
       "name": "SlateGray",
@@ -315,7 +341,9 @@
       "textFr": "slategray.fr.txt",
       "textAr": "slategray.ar.txt",
       "namePt": "Cinza-ardósia",
-      "textPt": "slategray.pt.txt"
+      "textPt": "slategray.pt.txt",
+      "nameId": "Abu-abu sabak",
+      "textId": "slategray.id.txt"
     },
     {
       "name": "DarkSlateGray",
@@ -337,7 +365,9 @@
       "textFr": "darkslategray.fr.txt",
       "textAr": "darkslategray.ar.txt",
       "namePt": "Cinza-ardósia escuro",
-      "textPt": "darkslategray.pt.txt"
+      "textPt": "darkslategray.pt.txt",
+      "nameId": "Abu-abu sabak gelap",
+      "textId": "darkslategray.id.txt"
     },
     {
       "name": "LightSlateGray",
@@ -359,7 +389,9 @@
       "textFr": "lightslategray.fr.txt",
       "textAr": "lightslategray.ar.txt",
       "namePt": "Cinza-ardósia claro",
-      "textPt": "lightslategray.pt.txt"
+      "textPt": "lightslategray.pt.txt",
+      "nameId": "Abu-abu sabak muda",
+      "textId": "lightslategray.id.txt"
     },
     {
       "name": "DarkSlateBlue",
@@ -381,7 +413,9 @@
       "textFr": "darkslateblue.fr.txt",
       "textAr": "darkslateblue.ar.txt",
       "namePt": "Azul-ardósia escuro",
-      "textPt": "darkslateblue.pt.txt"
+      "textPt": "darkslateblue.pt.txt",
+      "nameId": "Biru sabak gelap",
+      "textId": "darkslateblue.id.txt"
     },
     {
       "name": "Indigo",
@@ -403,7 +437,9 @@
       "textFr": "indigo.fr.txt",
       "textAr": "indigo.ar.txt",
       "namePt": "Índigo",
-      "textPt": "indigo.pt.txt"
+      "textPt": "indigo.pt.txt",
+      "nameId": "Nila",
+      "textId": "indigo.id.txt"
     },
     {
       "name": "Black",
@@ -425,7 +461,9 @@
       "textFr": "black.fr.txt",
       "textAr": "black.ar.txt",
       "namePt": "Preto",
-      "textPt": "black.pt.txt"
+      "textPt": "black.pt.txt",
+      "nameId": "Hitam",
+      "textId": "black.id.txt"
     },
     {
       "name": "Thistle",
@@ -447,11 +485,14 @@
       "textFr": "thistle.fr.txt",
       "textAr": "thistle.ar.txt",
       "namePt": "Cardo",
-      "textPt": "thistle.pt.txt"
+      "textPt": "thistle.pt.txt",
+      "nameId": "Thistle",
+      "textId": "thistle.id.txt"
     }
   ],
   "nameNl": "De Maan",
   "nameFr": "La Lune",
   "nameAr": "القمر",
-  "namePt": "A Lua"
+  "namePt": "A Lua",
+  "nameId": "Sang Bulan"
 }

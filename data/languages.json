@@ -683,5 +683,80 @@
       "colorSecondary": "",
       "back": "Voltar a {card}"
     }
+  },
+  {
+    "id": "id",
+    "htmlLang": "id",
+    "hreflang": "id",
+    "prefix": "id",
+    "switchLabel": "Indonesia",
+    "cookie": "cftf-id",
+    "session": "cftf-reading-id",
+    "ogLocale": "id_ID",
+    "days": false,
+    "latinSubtitle": false,
+    "data": "/data",
+    "meanings": "meanings.id.js",
+    "cardName": "nameId",
+    "colorName": "nameId",
+    "textField": "textId",
+    "textSuffix": ".id",
+    "punctuation": ". ",
+    "lineLimit": 90,
+    "introLimit": 110,
+    "descriptionLimit": 160,
+    "titlePattern": "[―—-]\\s*(Tegak|Terbalik)\\s*$",
+    "revealPrefixes": [
+      "Warna keberuntungan hari ini",
+      "Lucky Color:"
+    ],
+    "fonts": "family=Cinzel:wght@500;700&family=Shippori+Mincho:wght@400;500;600",
+    "fontFamily": "",
+    "shareText": "Warna keberuntungan hari ini adalah {color}.",
+    "footer": [
+      {
+        "href": "/en/contact/",
+        "label": "Kontak"
+      },
+      {
+        "href": "/privacy/",
+        "label": "Kebijakan privasi"
+      }
+    ],
+    "share": {
+      "copy": "Salin tautan",
+      "x": "Bagikan di X",
+      "line": "Bagikan di LINE",
+      "notice": "Disalin ke papan klip"
+    },
+    "copy": {
+      "upright": "Tegak",
+      "reversed": "Terbalik",
+      "meaningFallback": "Gambar pada kartu ini adalah tanda hari ini.",
+      "renewed": "Dua puluh dua kartu sudah keluar, dan dek kembali utuh.",
+      "hintReveal": "Sentuh sekali lagi, dan warna hari ini terbuka",
+      "hintDraw": "Sentuh untuk menarik satu kartu",
+      "drawLabel": "Tarik satu kartu",
+      "openLabel": "Sentuh sekali lagi untuk membuka warna",
+      "mirror": "Cermin yang menyimpan warna",
+      "scene": "Gambar cermin yang menyimpan warna",
+      "cardError": "Kartu tidak terbuka. Sentuh sekali lagi.",
+      "colorError": "Warna hari ini tidak terbuka. Sentuh sekali lagi.",
+      "testError": "test berbentuk 4-10. Kartu dari 1 sampai 22. Warna 1 sampai 10 tegak, 11 sampai 20 terbalik."
+    },
+    "pages": {
+      "tagline": "Warna keberuntungan hari ini, ditarik dari tarot",
+      "draw": "Tarik satu kartu",
+      "cardTitle": "Warna keberuntungan {card} — Colors for the Fool",
+      "cardDescription": "{card}. Sepuluh warna keberuntungan tegak, dan sepuluh terbalik. {intro}",
+      "cardSecondary": "{numeral}",
+      "faceAlt": "{card}, {labelLower}",
+      "colorAlt": "{card}, {color}. Warna muncul di cermin di tengah.",
+      "colorMeta": "{hex}",
+      "colorTitle": "Warna keberuntungan {card}: {color}",
+      "colorDescription": "{card}, {labelLower}. {color}. {opening}",
+      "colorSecondary": "",
+      "back": "Kembali ke {card}"
+    }
   }
 ]

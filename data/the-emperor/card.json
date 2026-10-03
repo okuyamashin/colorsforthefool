@@ -28,7 +28,9 @@
       "textFr": "firebrick.fr.txt",
       "textAr": "firebrick.ar.txt",
       "namePt": "Tijolo",
-      "textPt": "firebrick.pt.txt"
+      "textPt": "firebrick.pt.txt",
+      "nameId": "Bata",
+      "textId": "firebrick.id.txt"
     },
     {
       "name": "Crimson",
@@ -50,7 +52,9 @@
       "textFr": "crimson.fr.txt",
       "textAr": "crimson.ar.txt",
       "namePt": "Carmesim",
-      "textPt": "crimson.pt.txt"
+      "textPt": "crimson.pt.txt",
+      "nameId": "Krimson",
+      "textId": "crimson.id.txt"
     },
     {
       "name": "Red",
@@ -72,7 +76,9 @@
       "textFr": "red.fr.txt",
       "textAr": "red.ar.txt",
       "namePt": "Vermelho",
-      "textPt": "red.pt.txt"
+      "textPt": "red.pt.txt",
+      "nameId": "Merah",
+      "textId": "red.id.txt"
     },
     {
       "name": "Sienna",
@@ -94,7 +100,9 @@
       "textFr": "sienna.fr.txt",
       "textAr": "sienna.ar.txt",
       "namePt": "Siena",
-      "textPt": "sienna.pt.txt"
+      "textPt": "sienna.pt.txt",
+      "nameId": "Siena",
+      "textId": "sienna.id.txt"
     },
     {
       "name": "SaddleBrown",
@@ -116,7 +124,9 @@
       "textFr": "saddlebrown.fr.txt",
       "textAr": "saddlebrown.ar.txt",
       "namePt": "Marrom sela",
-      "textPt": "saddlebrown.pt.txt"
+      "textPt": "saddlebrown.pt.txt",
+      "nameId": "Cokelat pelana",
+      "textId": "saddlebrown.id.txt"
     },
     {
       "name": "SteelBlue",
@@ -138,7 +148,9 @@
       "textFr": "steelblue.fr.txt",
       "textAr": "steelblue.ar.txt",
       "namePt": "Azul-aço",
-      "textPt": "steelblue.pt.txt"
+      "textPt": "steelblue.pt.txt",
+      "nameId": "Biru baja",
+      "textId": "steelblue.id.txt"
     },
     {
       "name": "SlateGray",
@@ -160,7 +172,9 @@
       "textFr": "slategray.fr.txt",
       "textAr": "slategray.ar.txt",
       "namePt": "Cinza-ardósia",
-      "textPt": "slategray.pt.txt"
+      "textPt": "slategray.pt.txt",
+      "nameId": "Abu-abu sabak",
+      "textId": "slategray.id.txt"
     },
     {
       "name": "Gray",
@@ -182,7 +196,9 @@
       "textFr": "gray.fr.txt",
       "textAr": "gray.ar.txt",
       "namePt": "Cinza",
-      "textPt": "gray.pt.txt"
+      "textPt": "gray.pt.txt",
+      "nameId": "Abu-abu",
+      "textId": "gray.id.txt"
     },
     {
       "name": "Silver",
@@ -204,7 +220,9 @@
       "textFr": "silver.fr.txt",
       "textAr": "silver.ar.txt",
       "namePt": "Prata",
-      "textPt": "silver.pt.txt"
+      "textPt": "silver.pt.txt",
+      "nameId": "Perak",
+      "textId": "silver.id.txt"
     },
     {
       "name": "Maroon",
@@ -226,7 +244,9 @@
       "textFr": "maroon.fr.txt",
       "textAr": "maroon.ar.txt",
       "namePt": "Bordô",
-      "textPt": "maroon.pt.txt"
+      "textPt": "maroon.pt.txt",
+      "nameId": "Marun",
+      "textId": "maroon.id.txt"
     }
   ],
   "reversed": [
@@ -250,7 +270,9 @@
       "textFr": "darkred.fr.txt",
       "textAr": "darkred.ar.txt",
       "namePt": "Vermelho escuro",
-      "textPt": "darkred.pt.txt"
+      "textPt": "darkred.pt.txt",
+      "nameId": "Merah gelap",
+      "textId": "darkred.id.txt"
     },
     {
       "name": "Black",
@@ -272,7 +294,9 @@
       "textFr": "black.fr.txt",
       "textAr": "black.ar.txt",
       "namePt": "Preto",
-      "textPt": "black.pt.txt"
+      "textPt": "black.pt.txt",
+      "nameId": "Hitam",
+      "textId": "black.id.txt"
     },
     {
       "name": "DimGray",
@@ -294,7 +318,9 @@
       "textFr": "dimgray.fr.txt",
       "textAr": "dimgray.ar.txt",
       "namePt": "Cinza fosco",
-      "textPt": "dimgray.pt.txt"
+      "textPt": "dimgray.pt.txt",
+      "nameId": "Abu-abu redup",
+      "textId": "dimgray.id.txt"
     },
     {
       "name": "DarkSlateGray",
@@ -316,7 +342,9 @@
       "textFr": "darkslategray.fr.txt",
       "textAr": "darkslategray.ar.txt",
       "namePt": "Cinza-ardósia escuro",
-      "textPt": "darkslategray.pt.txt"
+      "textPt": "darkslategray.pt.txt",
+      "nameId": "Abu-abu sabak gelap",
+      "textId": "darkslategray.id.txt"
     },
     {
       "name": "IndianRed",
@@ -338,7 +366,9 @@
       "textFr": "indianred.fr.txt",
       "textAr": "indianred.ar.txt",
       "namePt": "Vermelho indiano",
-      "textPt": "indianred.pt.txt"
+      "textPt": "indianred.pt.txt",
+      "nameId": "Merah India",
+      "textId": "indianred.id.txt"
     },
     {
       "name": "Peru",
@@ -360,7 +390,9 @@
       "textFr": "peru.fr.txt",
       "textAr": "peru.ar.txt",
       "namePt": "Peru",
-      "textPt": "peru.pt.txt"
+      "textPt": "peru.pt.txt",
+      "nameId": "Peru",
+      "textId": "peru.id.txt"
     },
     {
       "name": "LightSlateGray",
@@ -382,7 +414,9 @@
       "textFr": "lightslategray.fr.txt",
       "textAr": "lightslategray.ar.txt",
       "namePt": "Cinza-ardósia claro",
-      "textPt": "lightslategray.pt.txt"
+      "textPt": "lightslategray.pt.txt",
+      "nameId": "Abu-abu sabak muda",
+      "textId": "lightslategray.id.txt"
     },
     {
       "name": "Brown",
@@ -404,7 +438,9 @@
       "textFr": "brown.fr.txt",
       "textAr": "brown.ar.txt",
       "namePt": "Marrom",
-      "textPt": "brown.pt.txt"
+      "textPt": "brown.pt.txt",
+      "nameId": "Cokelat",
+      "textId": "brown.id.txt"
     },
     {
       "name": "WhiteSmoke",
@@ -426,7 +462,9 @@
       "textFr": "whitesmoke.fr.txt",
       "textAr": "whitesmoke.ar.txt",
       "namePt": "Fumaça branca",
-      "textPt": "whitesmoke.pt.txt"
+      "textPt": "whitesmoke.pt.txt",
+      "nameId": "Asap putih",
+      "textId": "whitesmoke.id.txt"
     },
     {
       "name": "Snow",
@@ -448,11 +486,14 @@
       "textFr": "snow.fr.txt",
       "textAr": "snow.ar.txt",
       "namePt": "Neve",
-      "textPt": "snow.pt.txt"
+      "textPt": "snow.pt.txt",
+      "nameId": "Salju",
+      "textId": "snow.id.txt"
     }
   ],
   "nameNl": "De Keizer",
   "nameFr": "L'Empereur",
   "nameAr": "الإمبراطور",
-  "namePt": "O Imperador"
+  "namePt": "O Imperador",
+  "nameId": "Sang Kaisar"
 }

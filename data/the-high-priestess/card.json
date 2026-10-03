@@ -28,7 +28,9 @@
       "textFr": "lavender.fr.txt",
       "textAr": "lavender.ar.txt",
       "namePt": "Lavanda",
-      "textPt": "lavender.pt.txt"
+      "textPt": "lavender.pt.txt",
+      "nameId": "Lavender",
+      "textId": "lavender.id.txt"
     },
     {
       "name": "MidnightBlue",
@@ -50,7 +52,9 @@
       "textFr": "midnightblue.fr.txt",
       "textAr": "midnightblue.ar.txt",
       "namePt": "Azul-meia-noite",
-      "textPt": "midnightblue.pt.txt"
+      "textPt": "midnightblue.pt.txt",
+      "nameId": "Biru tengah malam",
+      "textId": "midnightblue.id.txt"
     },
     {
       "name": "Indigo",
@@ -72,7 +76,9 @@
       "textFr": "indigo.fr.txt",
       "textAr": "indigo.ar.txt",
       "namePt": "Índigo",
-      "textPt": "indigo.pt.txt"
+      "textPt": "indigo.pt.txt",
+      "nameId": "Nila",
+      "textId": "indigo.id.txt"
     },
     {
       "name": "Silver",
@@ -94,7 +100,9 @@
       "textFr": "silver.fr.txt",
       "textAr": "silver.ar.txt",
       "namePt": "Prata",
-      "textPt": "silver.pt.txt"
+      "textPt": "silver.pt.txt",
+      "nameId": "Perak",
+      "textId": "silver.id.txt"
     },
     {
       "name": "AliceBlue",
@@ -116,7 +124,9 @@
       "textFr": "aliceblue.fr.txt",
       "textAr": "aliceblue.ar.txt",
       "namePt": "Azul Alice",
-      "textPt": "aliceblue.pt.txt"
+      "textPt": "aliceblue.pt.txt",
+      "nameId": "Biru Alice",
+      "textId": "aliceblue.id.txt"
     },
     {
       "name": "Plum",
@@ -138,7 +148,9 @@
       "textFr": "plum.fr.txt",
       "textAr": "plum.ar.txt",
       "namePt": "Ameixa",
-      "textPt": "plum.pt.txt"
+      "textPt": "plum.pt.txt",
+      "nameId": "Prem",
+      "textId": "plum.id.txt"
     },
     {
       "name": "Navy",
@@ -160,7 +172,9 @@
       "textFr": "navy.fr.txt",
       "textAr": "navy.ar.txt",
       "namePt": "Azul-marinho",
-      "textPt": "navy.pt.txt"
+      "textPt": "navy.pt.txt",
+      "nameId": "Biru laut",
+      "textId": "navy.id.txt"
     },
     {
       "name": "GhostWhite",
@@ -182,7 +196,9 @@
       "textFr": "ghostwhite.fr.txt",
       "textAr": "ghostwhite.ar.txt",
       "namePt": "Branco fantasma",
-      "textPt": "ghostwhite.pt.txt"
+      "textPt": "ghostwhite.pt.txt",
+      "nameId": "Putih hantu",
+      "textId": "ghostwhite.id.txt"
     },
     {
       "name": "SlateBlue",
@@ -204,7 +220,9 @@
       "textFr": "slateblue.fr.txt",
       "textAr": "slateblue.ar.txt",
       "namePt": "Azul-ardósia",
-      "textPt": "slateblue.pt.txt"
+      "textPt": "slateblue.pt.txt",
+      "nameId": "Biru sabak",
+      "textId": "slateblue.id.txt"
     },
     {
       "name": "PaleTurquoise",
@@ -226,7 +244,9 @@
       "textFr": "paleturquoise.fr.txt",
       "textAr": "paleturquoise.ar.txt",
       "namePt": "Turquesa pálido",
-      "textPt": "paleturquoise.pt.txt"
+      "textPt": "paleturquoise.pt.txt",
+      "nameId": "Turkuois pucat",
+      "textId": "paleturquoise.id.txt"
     }
   ],
   "reversed": [
@@ -250,7 +270,9 @@
       "textFr": "darkslateblue.fr.txt",
       "textAr": "darkslateblue.ar.txt",
       "namePt": "Azul-ardósia escuro",
-      "textPt": "darkslateblue.pt.txt"
+      "textPt": "darkslateblue.pt.txt",
+      "nameId": "Biru sabak gelap",
+      "textId": "darkslateblue.id.txt"
     },
     {
       "name": "Purple",
@@ -272,7 +294,9 @@
       "textFr": "purple.fr.txt",
       "textAr": "purple.ar.txt",
       "namePt": "Púrpura",
-      "textPt": "purple.pt.txt"
+      "textPt": "purple.pt.txt",
+      "nameId": "Ungu",
+      "textId": "purple.id.txt"
     },
     {
       "name": "RebeccaPurple",
@@ -294,7 +318,9 @@
       "textFr": "rebeccapurple.fr.txt",
       "textAr": "rebeccapurple.ar.txt",
       "namePt": "Púrpura Rebeca",
-      "textPt": "rebeccapurple.pt.txt"
+      "textPt": "rebeccapurple.pt.txt",
+      "nameId": "Ungu Rebecca",
+      "textId": "rebeccapurple.id.txt"
     },
     {
       "name": "Thistle",
@@ -316,7 +342,9 @@
       "textFr": "thistle.fr.txt",
       "textAr": "thistle.ar.txt",
       "namePt": "Cardo",
-      "textPt": "thistle.pt.txt"
+      "textPt": "thistle.pt.txt",
+      "nameId": "Thistle",
+      "textId": "thistle.id.txt"
     },
     {
       "name": "SlateGray",
@@ -338,7 +366,9 @@
       "textFr": "slategray.fr.txt",
       "textAr": "slategray.ar.txt",
       "namePt": "Cinza-ardósia",
-      "textPt": "slategray.pt.txt"
+      "textPt": "slategray.pt.txt",
+      "nameId": "Abu-abu sabak",
+      "textId": "slategray.id.txt"
     },
     {
       "name": "Black",
@@ -360,7 +390,9 @@
       "textFr": "black.fr.txt",
       "textAr": "black.ar.txt",
       "namePt": "Preto",
-      "textPt": "black.pt.txt"
+      "textPt": "black.pt.txt",
+      "nameId": "Hitam",
+      "textId": "black.id.txt"
     },
     {
       "name": "DimGray",
@@ -382,7 +414,9 @@
       "textFr": "dimgray.fr.txt",
       "textAr": "dimgray.ar.txt",
       "namePt": "Cinza fosco",
-      "textPt": "dimgray.pt.txt"
+      "textPt": "dimgray.pt.txt",
+      "nameId": "Abu-abu redup",
+      "textId": "dimgray.id.txt"
     },
     {
       "name": "DarkMagenta",
@@ -404,7 +438,9 @@
       "textFr": "darkmagenta.fr.txt",
       "textAr": "darkmagenta.ar.txt",
       "namePt": "Magenta escuro",
-      "textPt": "darkmagenta.pt.txt"
+      "textPt": "darkmagenta.pt.txt",
+      "nameId": "Magenta gelap",
+      "textId": "darkmagenta.id.txt"
     },
     {
       "name": "BlueViolet",
@@ -426,7 +462,9 @@
       "textFr": "blueviolet.fr.txt",
       "textAr": "blueviolet.ar.txt",
       "namePt": "Azul-violeta",
-      "textPt": "blueviolet.pt.txt"
+      "textPt": "blueviolet.pt.txt",
+      "nameId": "Biru-ungu",
+      "textId": "blueviolet.id.txt"
     },
     {
       "name": "LightSlateGray",
@@ -448,11 +486,14 @@
       "textFr": "lightslategray.fr.txt",
       "textAr": "lightslategray.ar.txt",
       "namePt": "Cinza-ardósia claro",
-      "textPt": "lightslategray.pt.txt"
+      "textPt": "lightslategray.pt.txt",
+      "nameId": "Abu-abu sabak muda",
+      "textId": "lightslategray.id.txt"
     }
   ],
   "nameNl": "De Hogepriesteres",
   "nameFr": "La Grande Prêtresse",
   "nameAr": "الكاهنة العليا",
-  "namePt": "A Sacerdotisa"
+  "namePt": "A Sacerdotisa",
+  "nameId": "Sang Imam Perempuan"
 }
