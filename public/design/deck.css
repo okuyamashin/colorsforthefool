@@ -97,7 +97,26 @@ main.catalog {
 .catalog .deck figure {
   width: auto;
   margin: 0;
+  scroll-margin-top: 1.4rem;
 }
+
+.catalog .return {
+  margin: 1.6rem 0 0.4rem;
+  text-align: center;
+  letter-spacing: 0.08em;
+}
+
+.catalog .return a,
+.catalog .return a:link,
+.catalog .return a:visited,
+.catalog .return a:hover,
+.catalog .return a:active {
+  color: #7a5c2e;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 0.18em;
+}
+
+.catalog .return a:hover { color: #5c4318; }
 
 .catalog .deck figcaption em {
   display: block;

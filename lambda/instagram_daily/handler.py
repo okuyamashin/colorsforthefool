@@ -3,6 +3,7 @@
 import html
 import json
 import os
+import re
 import time
 import urllib.error
 import urllib.parse
@@ -60,8 +61,13 @@ def handler(event, context):
         return {"posted": False, "reason": "outside the 440-day schedule", "date": iso(day)}
 
     item = schedule["items"][index]
+    start = datetime.fromisoformat(schedule["start"]).date()
+    if event.get("refreshHome"):
+        page = ensure_day_page(day, item, start)
+        home = rewrite_home(day)
+        return {"posted": False, "reason": "home refreshed", "date": iso(day), "page": page, "home": home}
     if event.get("pageOnly"):
-        page = ensure_day_page(day, item, datetime.fromisoformat(schedule["start"]).date())
+        page = ensure_day_page(day, item, start)
         return {"posted": False, "reason": "page only", "date": iso(day), "page": page}
 
     marker = f"instagram/posted/{iso(day)}.json"
@@ -215,6 +221,30 @@ def ensure_day_page(day, item, start):
 
 def dated(day):
     return f"西暦{day.year}年{day.month}月{day.day}日"
+
+
+TODAY_LINK = re.compile(
+    r'<p class="today"><a href="days/\d{4}-\d{2}-\d{2}/">西暦\d+年\d+月\d+日。東京のラッキーカラー</a></p>'
+)
+
+
+def rewrite_home(day):
+    key = "index.html"
+    body = s3.get_object(Bucket=BUCKET, Key=key)["Body"].read().decode()
+    line = f'<p class="today"><a href="days/{iso(day)}/">{dated(day)}。東京のラッキーカラー</a></p>'
+    updated, count = TODAY_LINK.subn(line, body, count=1)
+    if count != 1:
+        raise RuntimeError("today link was not found on the homepage")
+    changed = updated != body
+    if changed:
+        s3.put_object(
+            Bucket=BUCKET,
+            Key=key,
+            Body=updated.encode(),
+            ContentType="text/html; charset=utf-8",
+            CacheControl="public, max-age=300",
+        )
+    return {"key": key, "href": f"days/{iso(day)}/", "changed": changed}
 
 
 def stitch_forward(day):

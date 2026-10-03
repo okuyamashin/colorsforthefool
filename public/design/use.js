@@ -1,17 +1,46 @@
 const DESIGN_COOKIE = "cftf-design";
 const DESIGNS = [
   "ancient-egypt",
+  "art-nouveau",
   "botanical-art",
   "brutalist-graphic",
+  "chess-pieces",
+  "classic-tarot",
+  "colored-pencil",
+  "cubism",
+  "cyber-mysticism",
   "editorial-luxury",
   "engraving",
   "french-doll",
   "gear-engine-robotics",
+  "glass-and-chrome",
   "greek-sculpture",
+  "japanese-contemporary-poster",
+  "luxury-ui",
+  "mezzotint",
+  "minimal-geometric",
+  "neo-deco",
+  "neo-symbolism",
+  "plastic-model-diorama",
   "rorschach",
+  "ruler-compass-pen",
+  "stained-glass",
+  "suit-and-dress",
+  "sumi-e",
+  "surreal-photography",
+  "tile-mosaic",
+  "unkei-kaikei",
+  "watercolor",
+  "wayang-kulit",
 ];
-const USE_LABEL = "これを使う";
-const STOP_LABEL = "使用をやめる";
+const USE_LABEL = designButtonLabel("use", "これを使う");
+const STOP_LABEL = designButtonLabel("stop", "使用をやめる");
+
+function designButtonLabel(key, fallback) {
+  const button = document.querySelector("#design-use");
+  const value = button?.dataset[key];
+  return value || fallback;
+}
 
 function readDesign() {
   const found = document.cookie.split("; ").find((part) => part.startsWith(`${DESIGN_COOKIE}=`));

@@ -11,13 +11,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ロールシャッハテスト — Colors for the Fool</title>
-    <meta name="description" content="ロールシャッハテストの大アルカナ22枚。">
+    <meta name="description" content="墨を半分に折った跡が、牌の中央に残っています。角は左右で同じ形に滲み、鎖はしみの端から首へ垂れ、点々が余白に散ります。何に見えるかを尋ねられているうちは、まだ外側にいます。折り目の右側と左側で、点の数が一つだけ違います。答えを口にした瞬間、その形が貴方の答えの輪郭で固まります。">
     <link rel="canonical" href="https://colorsofthefool.engawa5656.com/design/rorschach/">
+    <link rel="alternate" hreflang="ja" href="https://colorsofthefool.engawa5656.com/design/rorschach/">
+    <link rel="alternate" hreflang="en" href="https://colorsofthefool.engawa5656.com/en/design/rorschach/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://colorsofthefool.engawa5656.com/zh/design/rorschach/">
+    <link rel="alternate" hreflang="x-default" href="https://colorsofthefool.engawa5656.com/design/rorschach/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ja_JP">
     <meta property="og:site_name" content="Colors for the Fool">
     <meta property="og:title" content="ロールシャッハテスト">
-    <meta property="og:description" content="ロールシャッハテストの大アルカナ22枚。">
+    <meta property="og:description" content="墨を半分に折った跡が、牌の中央に残っています。角は左右で同じ形に滲み、鎖はしみの端から首へ垂れ、点々が余白に散ります。何に見えるかを尋ねられているうちは、まだ外側にいます。折り目の右側と左側で、点の数が一つだけ違います。答えを口にした瞬間、その形が貴方の答えの輪郭で固まります。">
     <meta property="og:url" content="https://colorsofthefool.engawa5656.com/design/rorschach/">
     <meta property="og:image" content="https://colorsofthefool.engawa5656.com/design/rorschach/the-fool.jpg">
     <link rel="icon" href="../../favicon.png" type="image/png">
@@ -25,16 +29,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../styles.css">
-    <link rel="stylesheet" href="../deck.css">
+    <link rel="stylesheet" href="../deck.css?v=2">
   </head>
   <body>
     <header class="top">
       <p class="brand"><a href="../../">Colors for the Fool</a></p>
-      <p class="lang"><a href="../">デザイン</a></p>
+      <nav class="mast" aria-label="言語">
+        <a class="lang" href="../">デザイン</a>
+        <div class="lang-menu">
+          <button type="button" class="lang" aria-expanded="false" aria-haspopup="true" aria-controls="lang-list">日本語<span class="lang-mark" aria-hidden="true"></span></button>
+          <ul class="lang-list" id="lang-list" hidden>
+            <li><a href="../../en/design/rorschach/">English</a></li>
+            <li><a href="../../zh/design/rorschach/">中文</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
     <main class="catalog">
       <h1>ロールシャッハテスト</h1>
-      <p class="lead">大アルカナ22枚です。</p>
+      <p class="lead">墨を半分に折った跡が、牌の中央に残っています。角は左右で同じ形に滲み、鎖はしみの端から首へ垂れ、点々が余白に散ります。何に見えるかを尋ねられているうちは、まだ外側にいます。折り目の右側と左側で、点の数が一つだけ違います。答えを口にした瞬間、その形が貴方の答えの輪郭で固まります。</p>
       <p class="use"><button type="button" id="design-use" data-design="rorschach">これを使う</button></p>
       <ol class="index">
         <li><a href="#the-fool">愚者</a></li>
@@ -150,11 +163,13 @@
         <figcaption><span>XXI</span> 世界<em>THE WORLD</em></figcaption>
       </figure>
       </div>
+      <p class="return"><a href="../#rorschach">デザインへ戻る</a></p>
     </main>
     <footer class="colophon">
       <p>© 2026 Engawa Inc.</p>
       <p><a href="/design/">デザイン</a> <a href="/">ホーム</a> <a href="/contact/">問い合わせ</a> <a href="/demo/cafe/">カフェ・タロット</a> <a href="/privacy/">プライバシーポリシー</a> <a href="https://github.com/okuyamashin/colorsforthefool">GitHub</a></p>
     </footer>
+    <script src="../lang.js"></script>
     <script src="../use.js"></script>
   </body>
 </html>

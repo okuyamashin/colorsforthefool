@@ -3,6 +3,7 @@
   "name": "THE EMPEROR",
   "nameJa": "皇帝",
   "nameZh": "皇帝",
+  "nameEs": "El Emperador",
   "numeral": "IV",
   "video": "face.mp4",
   "upright": [
@@ -11,29 +12,35 @@
       "hex": "#B22222",
       "nameJa": "ファイアブリック",
       "nameZh": "磚紅",
+      "nameEs": "Ladrillo",
       "text": "firebrick.txt",
       "image": "firebrick.jpg",
       "textEn": "firebrick.en.txt",
-      "textZh": "firebrick.zh.txt"
+      "textZh": "firebrick.zh.txt",
+      "textEs": "firebrick.es.txt"
     },
     {
       "name": "Crimson",
       "hex": "#DC143C",
       "nameJa": "クリムゾン",
       "nameZh": "緋紅",
+      "nameEs": "Carmesí",
       "text": "crimson.txt",
       "image": "crimson.jpg",
       "textEn": "crimson.en.txt",
-      "textZh": "crimson.zh.txt"
+      "textZh": "crimson.zh.txt",
+      "textEs": "crimson.es.txt"
     },
     {
       "name": "Red",
       "hex": "#FF0000",
       "nameJa": "レッド",
       "nameZh": "紅色",
+      "nameEs": "Rojo",
       "text": "red.txt",
       "textEn": "red.en.txt",
       "textZh": "red.zh.txt",
+      "textEs": "red.es.txt",
       "image": "red.jpg"
     },
     {
@@ -41,19 +48,23 @@
       "hex": "#A0522D",
       "nameJa": "シエナ",
       "nameZh": "赭色",
+      "nameEs": "Siena",
       "text": "sienna.txt",
       "image": "sienna.jpg",
       "textEn": "sienna.en.txt",
-      "textZh": "sienna.zh.txt"
+      "textZh": "sienna.zh.txt",
+      "textEs": "sienna.es.txt"
     },
     {
       "name": "SaddleBrown",
       "hex": "#8B4513",
       "nameJa": "サドルブラウン",
       "nameZh": "鞍褐",
+      "nameEs": "Marrón silla",
       "text": "saddlebrown.txt",
       "textEn": "saddlebrown.en.txt",
       "textZh": "saddlebrown.zh.txt",
+      "textEs": "saddlebrown.es.txt",
       "image": "saddlebrown.jpg"
     },
     {
@@ -61,9 +72,11 @@
       "hex": "#4682B4",
       "nameJa": "スティールブルー",
       "nameZh": "鋼藍",
+      "nameEs": "Azul acero",
       "text": "steelblue.txt",
       "textEn": "steelblue.en.txt",
       "textZh": "steelblue.zh.txt",
+      "textEs": "steelblue.es.txt",
       "image": "steelblue.jpg"
     },
     {
@@ -71,9 +84,11 @@
       "hex": "#708090",
       "nameJa": "スレートグレイ",
       "nameZh": "石板灰",
+      "nameEs": "Gris pizarra",
       "text": "slategray.txt",
       "textEn": "slategray.en.txt",
       "textZh": "slategray.zh.txt",
+      "textEs": "slategray.es.txt",
       "image": "slategray.jpg"
     },
     {
@@ -81,9 +96,11 @@
       "hex": "#808080",
       "nameJa": "グレイ",
       "nameZh": "灰色",
+      "nameEs": "Gris",
       "text": "gray.txt",
       "textEn": "gray.en.txt",
       "textZh": "gray.zh.txt",
+      "textEs": "gray.es.txt",
       "image": "gray.jpg"
     },
     {
@@ -91,9 +108,11 @@
       "hex": "#C0C0C0",
       "nameJa": "シルバー",
       "nameZh": "銀色",
+      "nameEs": "Plata",
       "text": "silver.txt",
       "textEn": "silver.en.txt",
       "textZh": "silver.zh.txt",
+      "textEs": "silver.es.txt",
       "image": "silver.jpg"
     },
     {
@@ -101,9 +120,11 @@
       "hex": "#800000",
       "nameJa": "マルーン",
       "nameZh": "栗色",
+      "nameEs": "Granate",
       "text": "maroon.txt",
       "textEn": "maroon.en.txt",
       "textZh": "maroon.zh.txt",
+      "textEs": "maroon.es.txt",
       "image": "maroon.jpg"
     }
   ],
@@ -113,19 +134,23 @@
       "hex": "#8B0000",
       "nameJa": "ダークレッド",
       "nameZh": "深紅",
+      "nameEs": "Rojo oscuro",
       "text": "darkred.txt",
       "image": "darkred.jpg",
       "textEn": "darkred.en.txt",
-      "textZh": "darkred.zh.txt"
+      "textZh": "darkred.zh.txt",
+      "textEs": "darkred.es.txt"
     },
     {
       "name": "Black",
       "hex": "#000000",
       "nameJa": "ブラック",
       "nameZh": "黑色",
+      "nameEs": "Negro",
       "text": "black.txt",
       "textEn": "black.en.txt",
       "textZh": "black.zh.txt",
+      "textEs": "black.es.txt",
       "image": "black.jpg"
     },
     {
@@ -133,29 +158,35 @@
       "hex": "#696969",
       "nameJa": "ディムグレイ",
       "nameZh": "暗灰",
+      "nameEs": "Gris tenue",
       "text": "dimgray.txt",
       "image": "dimgray.jpg",
       "textEn": "dimgray.en.txt",
-      "textZh": "dimgray.zh.txt"
+      "textZh": "dimgray.zh.txt",
+      "textEs": "dimgray.es.txt"
     },
     {
       "name": "DarkSlateGray",
       "hex": "#2F4F4F",
       "nameJa": "ダークスレートグレイ",
       "nameZh": "暗石板灰",
+      "nameEs": "Gris pizarra oscuro",
       "text": "darkslategray.txt",
       "image": "darkslategray.jpg",
       "textEn": "darkslategray.en.txt",
-      "textZh": "darkslategray.zh.txt"
+      "textZh": "darkslategray.zh.txt",
+      "textEs": "darkslategray.es.txt"
     },
     {
       "name": "IndianRed",
       "hex": "#CD5C5C",
       "nameJa": "インディアンレッド",
       "nameZh": "印度紅",
+      "nameEs": "Rojo indio",
       "text": "indianred.txt",
       "textEn": "indianred.en.txt",
       "textZh": "indianred.zh.txt",
+      "textEs": "indianred.es.txt",
       "image": "indianred.jpg"
     },
     {
@@ -163,9 +194,11 @@
       "hex": "#CD853F",
       "nameJa": "ペルー",
       "nameZh": "秘魯色",
+      "nameEs": "Perú",
       "text": "peru.txt",
       "textEn": "peru.en.txt",
       "textZh": "peru.zh.txt",
+      "textEs": "peru.es.txt",
       "image": "peru.jpg"
     },
     {
@@ -173,9 +206,11 @@
       "hex": "#778899",
       "nameJa": "ライトスレートグレイ",
       "nameZh": "淺石板灰",
+      "nameEs": "Gris pizarra claro",
       "text": "lightslategray.txt",
       "textEn": "lightslategray.en.txt",
       "textZh": "lightslategray.zh.txt",
+      "textEs": "lightslategray.es.txt",
       "image": "lightslategray.jpg"
     },
     {
@@ -183,9 +218,11 @@
       "hex": "#A52A2A",
       "nameJa": "ブラウン",
       "nameZh": "棕色",
+      "nameEs": "Marrón",
       "text": "brown.txt",
       "textEn": "brown.en.txt",
       "textZh": "brown.zh.txt",
+      "textEs": "brown.es.txt",
       "image": "brown.jpg"
     },
     {
@@ -193,9 +230,11 @@
       "hex": "#F5F5F5",
       "nameJa": "ホワイトスモーク",
       "nameZh": "白煙色",
+      "nameEs": "Humo blanco",
       "text": "whitesmoke.txt",
       "textEn": "whitesmoke.en.txt",
       "textZh": "whitesmoke.zh.txt",
+      "textEs": "whitesmoke.es.txt",
       "image": "whitesmoke.jpg"
     },
     {
@@ -203,9 +242,11 @@
       "hex": "#FFFAFA",
       "nameJa": "スノー",
       "nameZh": "雪白",
+      "nameEs": "Nieve",
       "text": "snow.txt",
       "textEn": "snow.en.txt",
       "textZh": "snow.zh.txt",
+      "textEs": "snow.es.txt",
       "image": "snow.jpg"
     }
   ]

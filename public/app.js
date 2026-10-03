@@ -60,6 +60,9 @@ const FACE_VIDEO = {
   "the-empress": "face.mp4",
   "the-emperor": "face.mp4",
   "the-devil": "face.mp4",
+  "the-high-priestess": "face.mp4",
+  "the-hierophant": "face.mp4",
+  "the-hermit": "face.mp4",
 };
 
 const cardButton = document.querySelector("#card");
@@ -111,14 +114,37 @@ function writeDrawn(ids) {
 const DESIGN_COOKIE = "cftf-design";
 const DESIGNS = [
   "ancient-egypt",
+  "art-nouveau",
   "botanical-art",
   "brutalist-graphic",
+  "chess-pieces",
+  "classic-tarot",
+  "colored-pencil",
+  "cubism",
+  "cyber-mysticism",
   "editorial-luxury",
   "engraving",
   "french-doll",
   "gear-engine-robotics",
+  "glass-and-chrome",
   "greek-sculpture",
+  "japanese-contemporary-poster",
+  "luxury-ui",
+  "mezzotint",
+  "minimal-geometric",
+  "neo-deco",
+  "neo-symbolism",
+  "plastic-model-diorama",
   "rorschach",
+  "ruler-compass-pen",
+  "stained-glass",
+  "suit-and-dress",
+  "sumi-e",
+  "surreal-photography",
+  "tile-mosaic",
+  "unkei-kaikei",
+  "watercolor",
+  "wayang-kulit",
 ];
 
 function readDesign() {
