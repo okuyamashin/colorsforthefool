@@ -216,7 +216,7 @@ def footer_links(lang):
     return f"{links} {github}"
 
 
-def page(title, description, canonical, image, css, json_ld, body, icon, lang, alternates=""):
+def page(title, description, canonical, image, css, json_ld, body, icon, lang, alternates="", extra=""):
     ld = ""
     if json_ld:
         ld = (
@@ -253,7 +253,7 @@ def page(title, description, canonical, image, css, json_ld, body, icon, lang, a
       <p>© 2026 Engawa Inc.</p>
       <p>{footer_links(lang)}</p>
     </footer>
-  </body>
+{extra}  </body>
 </html>
 """
 
@@ -416,12 +416,13 @@ def write_card(card, meanings, lang, root):
     reversed_label = lang["copy"]["reversed"]
     face_alt = fill(lang["pages"]["faceAlt"], card=card[lang["cardName"]], label=upright_label, labelLower=upright_label.lower())
     face_alt_reversed = fill(lang["pages"]["faceAlt"], card=card[lang["cardName"]], label=reversed_label, labelLower=reversed_label.lower())
-    css = "../library.css" if not nested(lang) else "../../../cards/library.css"
-    if card["id"] in films:
-        css += "?v=2"
+    css = ("../library.css" if not nested(lang) else "../../../cards/library.css") + "?v=3"
+    depth = library_depth(lang, False)
+    nav = library_nav(lang, depth, f"cards/{card['id']}/")
     secondary = subtitle_html(text["cardSecondary"])
     body = f"""    <header class="top">
       <p class="brand"><a href="../../">Colors for the Fool</a></p>
+{nav}
       <p class="tagline">{esc(text['tagline'])}</p>
     </header>
     <main>
@@ -463,6 +464,7 @@ def write_card(card, meanings, lang, root):
             f"/data/{card['id']}/circle.jpg",
             lang,
             hreflang(urls),
+            library_script(depth),
         )
     )
     return target
@@ -501,7 +503,9 @@ def write_color(card, side, color, lang, root):
     opening = first_sentence(body[0][0], lang["introLimit"], lang) if body else ""
     text = fields(card, color, lang, label=label, opening=opening)
     description = clip(text["colorDescription"], lang["descriptionLimit"])
-    css = "../../library.css" if not nested(lang) else "../../../../cards/library.css"
+    css = ("../../library.css" if not nested(lang) else "../../../../cards/library.css") + "?v=3"
+    depth = library_depth(lang, True)
+    nav = library_nav(lang, depth, f"cards/{card['id']}/{color['_slug']}/")
     siblings = []
     for other_color in card[side]:
         if other_color is color:
@@ -517,6 +521,7 @@ def write_color(card, side, color, lang, root):
                 day_html += f'      <p class="day"><a href="../../../days/{item["date"]}/">西暦{item["label"]}</a></p>\n'
     body_html = f"""    <header class="top">
       <p class="brand"><a href="../../../">Colors for the Fool</a></p>
+{nav}
       <p class="tagline">{esc(text['tagline'])}</p>
     </header>
     <main>
@@ -556,6 +561,7 @@ def write_color(card, side, color, lang, root):
             f"/data/{card['id']}/circle.jpg",
             lang,
             hreflang(urls),
+            library_script(depth),
         )
     )
     return target
@@ -693,6 +699,48 @@ def write_fonts():
     (PUBLIC / "lang.css").write_text(
         "/* Generated from data/languages.json. */\n" + "\n\n".join(rules) + ("\n" if rules else "")
     )
+
+
+NAV_LABEL = {
+    "ja": "言語",
+    "en": "Languages",
+    "zh": "語言",
+    "es": "Idiomas",
+    "nl": "Talen",
+}
+
+
+def library_depth(lang, color):
+    return (1 if nested(lang) else 0) + (3 if color else 2)
+
+
+def library_href(other, depth, tail):
+    prefix = f"{other['prefix']}/" if nested(other) else ""
+    return f"{'../' * depth}{prefix}{tail}"
+
+
+def library_nav(lang, depth, tail):
+    items = "\n".join(
+        f'            <li><a href="{library_href(other, depth, tail)}">{esc(other["switchLabel"])}</a></li>'
+        for other in LANGUAGES
+        if other["id"] != lang["id"]
+    )
+    label = esc(lang["switchLabel"])
+    nav = esc(NAV_LABEL.get(lang["id"], lang["switchLabel"]))
+    return (
+        f'      <nav class="mast" aria-label="{nav}">\n'
+        '        <div class="lang-menu">\n'
+        f'          <button type="button" class="lang" aria-expanded="false" aria-haspopup="true" aria-controls="lang-list">{label}<span class="lang-mark" aria-hidden="true"></span></button>\n'
+        '          <ul class="lang-list" id="lang-list" hidden>\n'
+        f"{items}\n"
+        "          </ul>\n"
+        "        </div>\n"
+        "      </nav>"
+    )
+
+
+def library_script(depth):
+    return f'    <script src="{"../" * depth}design/lang.js"></script>\n'
 
 
 def switch_href(here, other):

@@ -34,7 +34,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../library.css">
+    <link rel="stylesheet" href="../../library.css?v=3">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -54,6 +54,17 @@
   <body>
     <header class="top">
       <p class="brand"><a href="../../../">Colors for the Fool</a></p>
+      <nav class="mast" aria-label="言語">
+        <div class="lang-menu">
+          <button type="button" class="lang" aria-expanded="false" aria-haspopup="true" aria-controls="lang-list">日本語<span class="lang-mark" aria-hidden="true"></span></button>
+          <ul class="lang-list" id="lang-list" hidden>
+            <li><a href="../../../en/cards/judgement/crimson/">English</a></li>
+            <li><a href="../../../zh/cards/judgement/crimson/">中文</a></li>
+            <li><a href="../../../es/cards/judgement/crimson/">Español</a></li>
+            <li><a href="../../../nl/cards/judgement/crimson/">Nederlands</a></li>
+          </ul>
+        </div>
+      </nav>
       <p class="tagline">タロットで占う、今日のラッキーカラー</p>
     </header>
     <main>
@@ -108,5 +119,6 @@
       <p>© 2026 Engawa Inc.</p>
       <p><a href="/contact/">問い合わせ</a> <a href="/design/">デザイン</a> <a href="/demo/cafe/">カフェ・タロット</a> <a href="/privacy/">プライバシーポリシー</a> <a href="https://github.com/okuyamashin/colorsforthefool">GitHub</a></p>
     </footer>
+    <script src="../../../design/lang.js"></script>
   </body>
 </html>

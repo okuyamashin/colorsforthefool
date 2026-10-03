@@ -34,7 +34,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Noto+Serif+TC:wght@500;600&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../../../cards/library.css">
+    <link rel="stylesheet" href="../../../../cards/library.css?v=3">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -54,6 +54,17 @@
   <body>
     <header class="top">
       <p class="brand"><a href="../../../">Colors for the Fool</a></p>
+      <nav class="mast" aria-label="語言">
+        <div class="lang-menu">
+          <button type="button" class="lang" aria-expanded="false" aria-haspopup="true" aria-controls="lang-list">中文<span class="lang-mark" aria-hidden="true"></span></button>
+          <ul class="lang-list" id="lang-list" hidden>
+            <li><a href="../../../../cards/the-moon/black/">日本語</a></li>
+            <li><a href="../../../../en/cards/the-moon/black/">English</a></li>
+            <li><a href="../../../../es/cards/the-moon/black/">Español</a></li>
+            <li><a href="../../../../nl/cards/the-moon/black/">Nederlands</a></li>
+          </ul>
+        </div>
+      </nav>
       <p class="tagline">用塔羅抽取今天的幸運色</p>
     </header>
     <main>
@@ -110,5 +121,6 @@
       <p>© 2026 Engawa Inc.</p>
       <p><a href="/en/contact/">聯絡</a> <a href="/privacy/">隱私權政策</a> <a href="https://github.com/okuyamashin/colorsforthefool">GitHub</a></p>
     </footer>
+    <script src="../../../../design/lang.js"></script>
   </body>
 </html>
