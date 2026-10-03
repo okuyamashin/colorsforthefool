@@ -115,6 +115,7 @@ const DESIGN_COOKIE = "cftf-design";
 const DESIGNS = [
   "ancient-egypt",
   "art-nouveau",
+  "belgian-lace",
   "botanical-art",
   "brutalist-graphic",
   "chess-pieces",

@@ -42,6 +42,7 @@ THE DEVIL（XV）で試したスタイルの一覧。フォルダ名がスタイ
 | [colored-pencil](#colored-pencil) | 色鉛筆 |
 | [watercolor](#watercolor) | 水彩画 |
 | [sumi-e](#sumi-e) | 水墨画 |
+| [belgian-lace](#belgian-lace) | ベルギーのレース編み |
 
 ## design.txt の方向
 
@@ -513,4 +514,18 @@ Vertical tarot card. Place the numeral at the top center and the English title a
 Japanese sumi ink on paper. Black and gray only, plus two small red seals. Splatter, dry brush, and a large unpainted ground. Calligraphic, not a Western wash painting.
 
 Scene for XV, THE DEVIL: A horned, bearded figure in heavy robes sits in mist, one finger raised, chains falling. Two kneeling figures with topknots bow. A pine and a pale moon. Most of the sky is blank paper.
+```
+
+### belgian-lace
+
+ベルギーのレース編み。
+
+![belgian-lace](belgian-lace/the-devil.png)
+
+```
+Vertical tarot card. Place the numeral at the top center and the English title on a banner at the bottom center. No extra words, no watermark, no signature.
+
+Belgian bobbin lace, ivory thread on a black ground. A dense border of roses, scrolls, and fleur-de-lis. Openwork holes stay black. No painted skin and no second color.
+
+Scene for XV, THE DEVIL: A goat-headed figure of ivory lace sits facing forward on a pedestal, horns curling, bat wings spread, one hand raised. A lace chain drops from a ring on the pedestal to two kneeling figures, one at each side, both looking up. A torch of lace flame stands beside each figure. Roses, scrolls, and fleur-de-lis fill the border. Black shows through every hole.
 ```

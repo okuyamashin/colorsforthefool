@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Write paste-ready image prompts for the 32 design directions.
 
-Skips a card when that style already has the image, and skips THE DEVIL,
-whose prompt already lives in design/design.md.
+Skips a card when that style already has the image. Skips THE DEVIL,
+whose prompt already lives in design/design.md, and THE HANGED MAN,
+whose plate is supplied with the devil.
 """
 
 from __future__ import annotations
@@ -171,6 +172,7 @@ WHO = {
     "colored-pencil": "A figure of layered pencil strokes",
     "watercolor": "A figure blooming from a thin wash",
     "sumi-e": "An ink figure with a dry-brush edge",
+    "belgian-lace": "A figure of ivory Belgian bobbin lace",
 }
 
 LOCK = {
@@ -199,6 +201,7 @@ LOCK = {
     "colored-pencil": "Directional strokes on toothy paper. Red, indigo, ochre, and gold. No airbrush smoothness.",
     "watercolor": "Blooms, backruns, and granulation. Indigo, burnt sienna, and a little gold. The paper shows through at the edges.",
     "sumi-e": "Black and gray only, plus two small red seals. Splatter and dry brush. Most of the ground is blank paper.",
+    "belgian-lace": "Ivory thread on black only. Roses, scrolls, and fleur-de-lis fill the lace border. Openwork holes stay black. No painted skin.",
 }
 
 # Full scene paragraphs for styles that cannot share a human figure.
@@ -387,6 +390,7 @@ FRAME_OPENING = {
     "neo-deco": "Vertical 2:3 tarot card. A heavy gold geometric border of stepped corners and chevrons reaches all four edges. No black margin outside the gold. Place the numeral in a circle at the top center and the English title in a black rectangle with stepped gold ends at the bottom center. No extra words, no watermark, no signature.",
     "suit-and-dress": "Vertical 2:3 tarot card. A thin gold line with corner ornaments is the edge of the card, and the photograph fills it. No black margin outside the gold line. Place the numeral in a circle at the top center and the English title in the lower gold panel. No extra words, no watermark, no signature.",
     "ancient-egypt": "Vertical 2:3 tarot card. Hieroglyph columns and a lotus border are the edge of the card and reach all four sides. A winged sun sits at the top. No black margin outside the border. Place the numeral at the top center under the winged sun and the English title on the bottom band between lotus flowers. No extra words, no watermark, no signature.",
+    "belgian-lace": "Vertical 2:3 tarot card. A Belgian bobbin-lace border of roses, scrolls, and fleur-de-lis is the edge of the card and reaches all four sides. Black shows through every openwork hole. No margin outside the lace. Place the numeral in a small lace cartouche at the top center and the English title on a lace banner at the bottom center. No extra words, no watermark, no signature.",
 }
 
 
@@ -476,6 +480,7 @@ BACK = {
     "colored-pencil": "A white rose in visible directional strokes, red, indigo, ochre, and gold, inside the double gold frame. The corner stars repeat. No figure.",
     "watercolor": "A white rose in a thin wash, indigo, burnt sienna, and a little gold. The paper shows through, and a faint wreath repeats. No figure.",
     "sumi-e": "One ink rose with a dry-brush edge. Most of the paper is blank. Two small red seals sit opposite each other and are not characters. No calligraphy.",
+    "belgian-lace": "One rose of ivory bobbin lace at the center, with the same roses, scrolls, and fleur-de-lis repeating in the border. The top cartouche and the bottom banner are empty lace. Black shows through the holes. No figure.",
 }
 
 BACK_RULE = (
@@ -611,7 +616,7 @@ def main() -> None:
         folder = DESIGN / sid
         have = existing_images(folder)
         for card_id, numeral, title, template in CARDS:
-            if card_id in have or card_id == "the-devil":
+            if card_id in have or card_id in {"the-devil", "the-hanged-man"}:
                 skipped.append(f"{sid}/{card_id}")
                 continue
             text = f"{header}\n\nScene for {numeral}, {title}: {scene_for(sid, card_id, template, title)}\n"

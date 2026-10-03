@@ -596,6 +596,7 @@ def day_links():
 DESIGN_STYLES = (
     "ancient-egypt",
     "art-nouveau",
+    "belgian-lace",
     "botanical-art",
     "brutalist-graphic",
     "chess-pieces",
