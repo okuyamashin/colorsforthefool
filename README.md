@@ -4,6 +4,8 @@ A tarot reading for today's lucky color. Draw one of the twenty-two major arcana
 
 The site is published at [colorsforthefool.engawa5656.com](https://colorsforthefool.engawa5656.com/).
 
+[![Colors for the Fool](docs/explainer.jpg)](https://www.youtube.com/watch?v=SqdnCbeXQAA)
+
 Each language is its own set of pages. The browser language does not switch them. Pictures and video are shared. A card drawn in one language stays in that language's deck.
 
 | Language | Path |
