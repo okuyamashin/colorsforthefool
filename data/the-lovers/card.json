@@ -25,7 +25,9 @@
       "nameFr": "Rose",
       "nameAr": "وردي",
       "textFr": "pink.fr.txt",
-      "textAr": "pink.ar.txt"
+      "textAr": "pink.ar.txt",
+      "namePt": "Rosa",
+      "textPt": "pink.pt.txt"
     },
     {
       "name": "LightPink",
@@ -45,7 +47,9 @@
       "nameFr": "Rose clair",
       "nameAr": "وردي فاتح",
       "textFr": "lightpink.fr.txt",
-      "textAr": "lightpink.ar.txt"
+      "textAr": "lightpink.ar.txt",
+      "namePt": "Rosa claro",
+      "textPt": "lightpink.pt.txt"
     },
     {
       "name": "LavenderBlush",
@@ -65,7 +69,9 @@
       "nameFr": "Fard lavande",
       "nameAr": "أحمر خدود خزامي",
       "textFr": "lavenderblush.fr.txt",
-      "textAr": "lavenderblush.ar.txt"
+      "textAr": "lavenderblush.ar.txt",
+      "namePt": "Rubor de lavanda",
+      "textPt": "lavenderblush.pt.txt"
     },
     {
       "name": "Coral",
@@ -85,7 +91,9 @@
       "nameFr": "Corail",
       "nameAr": "مرجان",
       "textFr": "coral.fr.txt",
-      "textAr": "coral.ar.txt"
+      "textAr": "coral.ar.txt",
+      "namePt": "Coral",
+      "textPt": "coral.pt.txt"
     },
     {
       "name": "PeachPuff",
@@ -105,7 +113,9 @@
       "nameFr": "Pêche",
       "nameAr": "خوخ",
       "textFr": "peachpuff.fr.txt",
-      "textAr": "peachpuff.ar.txt"
+      "textAr": "peachpuff.ar.txt",
+      "namePt": "Pêssego",
+      "textPt": "peachpuff.pt.txt"
     },
     {
       "name": "HoneyDew",
@@ -125,7 +135,9 @@
       "nameFr": "Melon miel",
       "nameAr": "شمام العسل",
       "textFr": "honeydew.fr.txt",
-      "textAr": "honeydew.ar.txt"
+      "textAr": "honeydew.ar.txt",
+      "namePt": "Melão",
+      "textPt": "honeydew.pt.txt"
     },
     {
       "name": "Orchid",
@@ -145,7 +157,9 @@
       "nameFr": "Orchidée",
       "nameAr": "أوركيد",
       "textFr": "orchid.fr.txt",
-      "textAr": "orchid.ar.txt"
+      "textAr": "orchid.ar.txt",
+      "namePt": "Orquídea",
+      "textPt": "orchid.pt.txt"
     },
     {
       "name": "Violet",
@@ -165,7 +179,9 @@
       "nameFr": "Violet",
       "nameAr": "بنفسجي",
       "textFr": "violet.fr.txt",
-      "textAr": "violet.ar.txt"
+      "textAr": "violet.ar.txt",
+      "namePt": "Violeta",
+      "textPt": "violet.pt.txt"
     },
     {
       "name": "BlanchedAlmond",
@@ -185,7 +201,9 @@
       "nameFr": "Amande blanchie",
       "nameAr": "لوز مقشّر",
       "textFr": "blanchedalmond.fr.txt",
-      "textAr": "blanchedalmond.ar.txt"
+      "textAr": "blanchedalmond.ar.txt",
+      "namePt": "Amêndoa branqueada",
+      "textPt": "blanchedalmond.pt.txt"
     },
     {
       "name": "Gold",
@@ -205,7 +223,9 @@
       "nameFr": "Or",
       "nameAr": "ذهبي",
       "textFr": "gold.fr.txt",
-      "textAr": "gold.ar.txt"
+      "textAr": "gold.ar.txt",
+      "namePt": "Ouro",
+      "textPt": "gold.pt.txt"
     }
   ],
   "reversed": [
@@ -227,7 +247,9 @@
       "nameFr": "Brun rosé",
       "nameAr": "بنّي وردي",
       "textFr": "rosybrown.fr.txt",
-      "textAr": "rosybrown.ar.txt"
+      "textAr": "rosybrown.ar.txt",
+      "namePt": "Marrom rosado",
+      "textPt": "rosybrown.pt.txt"
     },
     {
       "name": "Thistle",
@@ -247,7 +269,9 @@
       "nameFr": "Chardon",
       "nameAr": "شوك",
       "textFr": "thistle.fr.txt",
-      "textAr": "thistle.ar.txt"
+      "textAr": "thistle.ar.txt",
+      "namePt": "Cardo",
+      "textPt": "thistle.pt.txt"
     },
     {
       "name": "Maroon",
@@ -267,7 +291,9 @@
       "nameFr": "Bordeaux",
       "nameAr": "خمري",
       "textFr": "maroon.fr.txt",
-      "textAr": "maroon.ar.txt"
+      "textAr": "maroon.ar.txt",
+      "namePt": "Bordô",
+      "textPt": "maroon.pt.txt"
     },
     {
       "name": "MidnightBlue",
@@ -287,7 +313,9 @@
       "nameFr": "Bleu minuit",
       "nameAr": "أزرق منتصف الليل",
       "textFr": "midnightblue.fr.txt",
-      "textAr": "midnightblue.ar.txt"
+      "textAr": "midnightblue.ar.txt",
+      "namePt": "Azul-meia-noite",
+      "textPt": "midnightblue.pt.txt"
     },
     {
       "name": "DimGray",
@@ -307,7 +335,9 @@
       "nameFr": "Gris atténué",
       "nameAr": "رمادي خافت",
       "textFr": "dimgray.fr.txt",
-      "textAr": "dimgray.ar.txt"
+      "textAr": "dimgray.ar.txt",
+      "namePt": "Cinza fosco",
+      "textPt": "dimgray.pt.txt"
     },
     {
       "name": "DarkRed",
@@ -327,7 +357,9 @@
       "nameFr": "Rouge foncé",
       "nameAr": "أحمر داكن",
       "textFr": "darkred.fr.txt",
-      "textAr": "darkred.ar.txt"
+      "textAr": "darkred.ar.txt",
+      "namePt": "Vermelho escuro",
+      "textPt": "darkred.pt.txt"
     },
     {
       "name": "Gray",
@@ -347,7 +379,9 @@
       "nameFr": "Gris",
       "nameAr": "رمادي",
       "textFr": "gray.fr.txt",
-      "textAr": "gray.ar.txt"
+      "textAr": "gray.ar.txt",
+      "namePt": "Cinza",
+      "textPt": "gray.pt.txt"
     },
     {
       "name": "Brown",
@@ -367,7 +401,9 @@
       "nameFr": "Brun",
       "nameAr": "بنّي",
       "textFr": "brown.fr.txt",
-      "textAr": "brown.ar.txt"
+      "textAr": "brown.ar.txt",
+      "namePt": "Marrom",
+      "textPt": "brown.pt.txt"
     },
     {
       "name": "FireBrick",
@@ -387,7 +423,9 @@
       "nameFr": "Brique",
       "nameAr": "آجر",
       "textFr": "firebrick.fr.txt",
-      "textAr": "firebrick.ar.txt"
+      "textAr": "firebrick.ar.txt",
+      "namePt": "Tijolo",
+      "textPt": "firebrick.pt.txt"
     },
     {
       "name": "Black",
@@ -407,10 +445,13 @@
       "nameFr": "Noir",
       "nameAr": "أسود",
       "textFr": "black.fr.txt",
-      "textAr": "black.ar.txt"
+      "textAr": "black.ar.txt",
+      "namePt": "Preto",
+      "textPt": "black.pt.txt"
     }
   ],
   "nameNl": "De Geliefden",
   "nameFr": "Les Amoureux",
-  "nameAr": "العشاق"
+  "nameAr": "العشاق",
+  "namePt": "Os Enamorados"
 }

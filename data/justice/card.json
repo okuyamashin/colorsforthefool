@@ -26,7 +26,9 @@
       "nameFr": "Blanc",
       "nameAr": "أبيض",
       "textFr": "white.fr.txt",
-      "textAr": "white.ar.txt"
+      "textAr": "white.ar.txt",
+      "namePt": "Branco",
+      "textPt": "white.pt.txt"
     },
     {
       "name": "Silver",
@@ -46,7 +48,9 @@
       "nameFr": "Argent",
       "nameAr": "فضي",
       "textFr": "silver.fr.txt",
-      "textAr": "silver.ar.txt"
+      "textAr": "silver.ar.txt",
+      "namePt": "Prata",
+      "textPt": "silver.pt.txt"
     },
     {
       "name": "SteelBlue",
@@ -66,7 +70,9 @@
       "nameFr": "Bleu acier",
       "nameAr": "أزرق فولاذي",
       "textFr": "steelblue.fr.txt",
-      "textAr": "steelblue.ar.txt"
+      "textAr": "steelblue.ar.txt",
+      "namePt": "Azul-aço",
+      "textPt": "steelblue.pt.txt"
     },
     {
       "name": "Gold",
@@ -86,7 +92,9 @@
       "nameFr": "Or",
       "nameAr": "ذهبي",
       "textFr": "gold.fr.txt",
-      "textAr": "gold.ar.txt"
+      "textAr": "gold.ar.txt",
+      "namePt": "Ouro",
+      "textPt": "gold.pt.txt"
     },
     {
       "name": "Crimson",
@@ -106,7 +114,9 @@
       "nameFr": "Cramoisi",
       "nameAr": "قرمزي",
       "textFr": "crimson.fr.txt",
-      "textAr": "crimson.ar.txt"
+      "textAr": "crimson.ar.txt",
+      "namePt": "Carmesim",
+      "textPt": "crimson.pt.txt"
     },
     {
       "name": "Ivory",
@@ -126,7 +136,9 @@
       "nameFr": "Ivoire",
       "nameAr": "عاجي",
       "textFr": "ivory.fr.txt",
-      "textAr": "ivory.ar.txt"
+      "textAr": "ivory.ar.txt",
+      "namePt": "Marfim",
+      "textPt": "ivory.pt.txt"
     },
     {
       "name": "Linen",
@@ -146,7 +158,9 @@
       "nameFr": "Lin",
       "nameAr": "كتّان",
       "textFr": "linen.fr.txt",
-      "textAr": "linen.ar.txt"
+      "textAr": "linen.ar.txt",
+      "namePt": "Linho",
+      "textPt": "linen.pt.txt"
     },
     {
       "name": "RoyalBlue",
@@ -166,7 +180,9 @@
       "nameFr": "Bleu roi",
       "nameAr": "أزرق ملكي",
       "textFr": "royalblue.fr.txt",
-      "textAr": "royalblue.ar.txt"
+      "textAr": "royalblue.ar.txt",
+      "namePt": "Azul-real",
+      "textPt": "royalblue.pt.txt"
     },
     {
       "name": "Snow",
@@ -186,7 +202,9 @@
       "nameFr": "Neige",
       "nameAr": "ثلج",
       "textFr": "snow.fr.txt",
-      "textAr": "snow.ar.txt"
+      "textAr": "snow.ar.txt",
+      "namePt": "Neve",
+      "textPt": "snow.pt.txt"
     },
     {
       "name": "LightSteelBlue",
@@ -206,7 +224,9 @@
       "nameFr": "Bleu acier clair",
       "nameAr": "أزرق فولاذي فاتح",
       "textFr": "lightsteelblue.fr.txt",
-      "textAr": "lightsteelblue.ar.txt"
+      "textAr": "lightsteelblue.ar.txt",
+      "namePt": "Azul-aço claro",
+      "textPt": "lightsteelblue.pt.txt"
     }
   ],
   "reversed": [
@@ -228,7 +248,9 @@
       "nameFr": "Gris atténué",
       "nameAr": "رمادي خافت",
       "textFr": "dimgray.fr.txt",
-      "textAr": "dimgray.ar.txt"
+      "textAr": "dimgray.ar.txt",
+      "namePt": "Cinza fosco",
+      "textPt": "dimgray.pt.txt"
     },
     {
       "name": "Gray",
@@ -248,7 +270,9 @@
       "nameFr": "Gris",
       "nameAr": "رمادي",
       "textFr": "gray.fr.txt",
-      "textAr": "gray.ar.txt"
+      "textAr": "gray.ar.txt",
+      "namePt": "Cinza",
+      "textPt": "gray.pt.txt"
     },
     {
       "name": "Black",
@@ -268,7 +292,9 @@
       "nameFr": "Noir",
       "nameAr": "أسود",
       "textFr": "black.fr.txt",
-      "textAr": "black.ar.txt"
+      "textAr": "black.ar.txt",
+      "namePt": "Preto",
+      "textPt": "black.pt.txt"
     },
     {
       "name": "DarkSlateGray",
@@ -288,7 +314,9 @@
       "nameFr": "Gris ardoise foncé",
       "nameAr": "رمادي أردوازي داكن",
       "textFr": "darkslategray.fr.txt",
-      "textAr": "darkslategray.ar.txt"
+      "textAr": "darkslategray.ar.txt",
+      "namePt": "Cinza-ardósia escuro",
+      "textPt": "darkslategray.pt.txt"
     },
     {
       "name": "Maroon",
@@ -308,7 +336,9 @@
       "nameFr": "Bordeaux",
       "nameAr": "خمري",
       "textFr": "maroon.fr.txt",
-      "textAr": "maroon.ar.txt"
+      "textAr": "maroon.ar.txt",
+      "namePt": "Bordô",
+      "textPt": "maroon.pt.txt"
     },
     {
       "name": "DarkRed",
@@ -328,7 +358,9 @@
       "nameFr": "Rouge foncé",
       "nameAr": "أحمر داكن",
       "textFr": "darkred.fr.txt",
-      "textAr": "darkred.ar.txt"
+      "textAr": "darkred.ar.txt",
+      "namePt": "Vermelho escuro",
+      "textPt": "darkred.pt.txt"
     },
     {
       "name": "SlateGray",
@@ -348,7 +380,9 @@
       "nameFr": "Gris ardoise",
       "nameAr": "رمادي أردوازي",
       "textFr": "slategray.fr.txt",
-      "textAr": "slategray.ar.txt"
+      "textAr": "slategray.ar.txt",
+      "namePt": "Cinza-ardósia",
+      "textPt": "slategray.pt.txt"
     },
     {
       "name": "Brown",
@@ -368,7 +402,9 @@
       "nameFr": "Brun",
       "nameAr": "بنّي",
       "textFr": "brown.fr.txt",
-      "textAr": "brown.ar.txt"
+      "textAr": "brown.ar.txt",
+      "namePt": "Marrom",
+      "textPt": "brown.pt.txt"
     },
     {
       "name": "FireBrick",
@@ -388,7 +424,9 @@
       "nameFr": "Brique",
       "nameAr": "آجر",
       "textFr": "firebrick.fr.txt",
-      "textAr": "firebrick.ar.txt"
+      "textAr": "firebrick.ar.txt",
+      "namePt": "Tijolo",
+      "textPt": "firebrick.pt.txt"
     },
     {
       "name": "IndianRed",
@@ -408,10 +446,13 @@
       "nameFr": "Rouge indien",
       "nameAr": "أحمر هندي",
       "textFr": "indianred.fr.txt",
-      "textAr": "indianred.ar.txt"
+      "textAr": "indianred.ar.txt",
+      "namePt": "Vermelho indiano",
+      "textPt": "indianred.pt.txt"
     }
   ],
   "nameNl": "Gerechtigheid",
   "nameFr": "La Justice",
-  "nameAr": "العدالة"
+  "nameAr": "العدالة",
+  "namePt": "A Justiça"
 }

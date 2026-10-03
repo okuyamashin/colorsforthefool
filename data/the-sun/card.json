@@ -25,7 +25,9 @@
       "nameFr": "Or",
       "nameAr": "ذهبي",
       "textFr": "gold.fr.txt",
-      "textAr": "gold.ar.txt"
+      "textAr": "gold.ar.txt",
+      "namePt": "Ouro",
+      "textPt": "gold.pt.txt"
     },
     {
       "name": "GoldenRod",
@@ -45,7 +47,9 @@
       "nameFr": "Verge d'or",
       "nameAr": "عصا ذهبية",
       "textFr": "goldenrod.fr.txt",
-      "textAr": "goldenrod.ar.txt"
+      "textAr": "goldenrod.ar.txt",
+      "namePt": "Vara-de-ouro",
+      "textPt": "goldenrod.pt.txt"
     },
     {
       "name": "Orange",
@@ -65,7 +69,9 @@
       "nameFr": "Orange",
       "nameAr": "برتقالي",
       "textFr": "orange.fr.txt",
-      "textAr": "orange.ar.txt"
+      "textAr": "orange.ar.txt",
+      "namePt": "Laranja",
+      "textPt": "orange.pt.txt"
     },
     {
       "name": "Cornsilk",
@@ -85,7 +91,9 @@
       "nameFr": "Soie de maïs",
       "nameAr": "حرير الذرة",
       "textFr": "cornsilk.fr.txt",
-      "textAr": "cornsilk.ar.txt"
+      "textAr": "cornsilk.ar.txt",
+      "namePt": "Barba-de-milho",
+      "textPt": "cornsilk.pt.txt"
     },
     {
       "name": "Wheat",
@@ -105,7 +113,9 @@
       "nameFr": "Blé",
       "nameAr": "قمح",
       "textFr": "wheat.fr.txt",
-      "textAr": "wheat.ar.txt"
+      "textAr": "wheat.ar.txt",
+      "namePt": "Trigo",
+      "textPt": "wheat.pt.txt"
     },
     {
       "name": "Khaki",
@@ -125,7 +135,9 @@
       "nameFr": "Kaki",
       "nameAr": "كاكي",
       "textFr": "khaki.fr.txt",
-      "textAr": "khaki.ar.txt"
+      "textAr": "khaki.ar.txt",
+      "namePt": "Cáqui",
+      "textPt": "khaki.pt.txt"
     },
     {
       "name": "DarkKhaki",
@@ -145,7 +157,9 @@
       "nameFr": "Kaki foncé",
       "nameAr": "كاكي داكن",
       "textFr": "darkkhaki.fr.txt",
-      "textAr": "darkkhaki.ar.txt"
+      "textAr": "darkkhaki.ar.txt",
+      "namePt": "Cáqui escuro",
+      "textPt": "darkkhaki.pt.txt"
     },
     {
       "name": "Olive",
@@ -165,7 +179,9 @@
       "nameFr": "Olive",
       "nameAr": "زيتوني",
       "textFr": "olive.fr.txt",
-      "textAr": "olive.ar.txt"
+      "textAr": "olive.ar.txt",
+      "namePt": "Oliva",
+      "textPt": "olive.pt.txt"
     },
     {
       "name": "Sienna",
@@ -185,7 +201,9 @@
       "nameFr": "Sienne",
       "nameAr": "سيينا",
       "textFr": "sienna.fr.txt",
-      "textAr": "sienna.ar.txt"
+      "textAr": "sienna.ar.txt",
+      "namePt": "Siena",
+      "textPt": "sienna.pt.txt"
     },
     {
       "name": "LemonChiffon",
@@ -205,7 +223,9 @@
       "nameFr": "Mousseline citron",
       "nameAr": "شيفون الليمون",
       "textFr": "lemonchiffon.fr.txt",
-      "textAr": "lemonchiffon.ar.txt"
+      "textAr": "lemonchiffon.ar.txt",
+      "namePt": "Chiffon de limão",
+      "textPt": "lemonchiffon.pt.txt"
     }
   ],
   "reversed": [
@@ -227,7 +247,9 @@
       "nameFr": "Havane",
       "nameAr": "أسمر",
       "textFr": "tan.fr.txt",
-      "textAr": "tan.ar.txt"
+      "textAr": "tan.ar.txt",
+      "namePt": "Canela",
+      "textPt": "tan.pt.txt"
     },
     {
       "name": "SandyBrown",
@@ -247,7 +269,9 @@
       "nameFr": "Brun sable",
       "nameAr": "بنّي رملي",
       "textFr": "sandybrown.fr.txt",
-      "textAr": "sandybrown.ar.txt"
+      "textAr": "sandybrown.ar.txt",
+      "namePt": "Marrom areia",
+      "textPt": "sandybrown.pt.txt"
     },
     {
       "name": "BlanchedAlmond",
@@ -267,7 +291,9 @@
       "nameFr": "Amande blanchie",
       "nameAr": "لوز مقشّر",
       "textFr": "blanchedalmond.fr.txt",
-      "textAr": "blanchedalmond.ar.txt"
+      "textAr": "blanchedalmond.ar.txt",
+      "namePt": "Amêndoa branqueada",
+      "textPt": "blanchedalmond.pt.txt"
     },
     {
       "name": "Bisque",
@@ -287,7 +313,9 @@
       "nameFr": "Bisque",
       "nameAr": "بيسك",
       "textFr": "bisque.fr.txt",
-      "textAr": "bisque.ar.txt"
+      "textAr": "bisque.ar.txt",
+      "namePt": "Bisque",
+      "textPt": "bisque.pt.txt"
     },
     {
       "name": "FireBrick",
@@ -307,7 +335,9 @@
       "nameFr": "Brique",
       "nameAr": "آجر",
       "textFr": "firebrick.fr.txt",
-      "textAr": "firebrick.ar.txt"
+      "textAr": "firebrick.ar.txt",
+      "namePt": "Tijolo",
+      "textPt": "firebrick.pt.txt"
     },
     {
       "name": "OldLace",
@@ -327,7 +357,9 @@
       "nameFr": "Vieille dentelle",
       "nameAr": "دانتيل قديم",
       "textFr": "oldlace.fr.txt",
-      "textAr": "oldlace.ar.txt"
+      "textAr": "oldlace.ar.txt",
+      "namePt": "Renda antiga",
+      "textPt": "oldlace.pt.txt"
     },
     {
       "name": "AntiqueWhite",
@@ -347,7 +379,9 @@
       "nameFr": "Blanc antique",
       "nameAr": "أبيض عتيق",
       "textFr": "antiquewhite.fr.txt",
-      "textAr": "antiquewhite.ar.txt"
+      "textAr": "antiquewhite.ar.txt",
+      "namePt": "Branco antigo",
+      "textPt": "antiquewhite.pt.txt"
     },
     {
       "name": "Moccasin",
@@ -367,7 +401,9 @@
       "nameFr": "Mocassin",
       "nameAr": "موكاسين",
       "textFr": "moccasin.fr.txt",
-      "textAr": "moccasin.ar.txt"
+      "textAr": "moccasin.ar.txt",
+      "namePt": "Mocassim",
+      "textPt": "moccasin.pt.txt"
     },
     {
       "name": "BurlyWood",
@@ -387,7 +423,9 @@
       "nameFr": "Bois robuste",
       "nameAr": "خشب متين",
       "textFr": "burlywood.fr.txt",
-      "textAr": "burlywood.ar.txt"
+      "textAr": "burlywood.ar.txt",
+      "namePt": "Madeira robusta",
+      "textPt": "burlywood.pt.txt"
     },
     {
       "name": "Peru",
@@ -407,10 +445,13 @@
       "nameFr": "Pérou",
       "nameAr": "بيرو",
       "textFr": "peru.fr.txt",
-      "textAr": "peru.ar.txt"
+      "textAr": "peru.ar.txt",
+      "namePt": "Peru",
+      "textPt": "peru.pt.txt"
     }
   ],
   "nameNl": "De Zon",
   "nameFr": "Le Soleil",
-  "nameAr": "الشمس"
+  "nameAr": "الشمس",
+  "namePt": "O Sol"
 }

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQ38VZSM7B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-NQ38VZSM7B');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A cor da sorte de hoje, tirada do tarô — Colors for the Fool</title>
+    <meta name="description" content="Tire uma carta dos vinte e dois arcanos maiores. Leia o que ela representa, de pé ou invertida, e no fim da história abra a cor da sorte de hoje.">
+    <link rel="canonical" href="https://colorsforthefool.engawa5656.com/pt/">
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="ja" href="https://colorsforthefool.engawa5656.com/">
+    <link rel="alternate" hreflang="en" href="https://colorsforthefool.engawa5656.com/en/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://colorsforthefool.engawa5656.com/zh/">
+    <link rel="alternate" hreflang="es" href="https://colorsforthefool.engawa5656.com/es/">
+    <link rel="alternate" hreflang="nl" href="https://colorsforthefool.engawa5656.com/nl/">
+    <link rel="alternate" hreflang="fr" href="https://colorsforthefool.engawa5656.com/fr/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://colorsforthefool.engawa5656.com/zh-hans/">
+    <link rel="alternate" hreflang="ar" href="https://colorsforthefool.engawa5656.com/ar/">
+    <link rel="alternate" hreflang="pt-BR" href="https://colorsforthefool.engawa5656.com/pt/">
+    <link rel="alternate" hreflang="x-default" href="https://colorsforthefool.engawa5656.com/">
+    <!-- /hreflang -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Colors for the Fool">
+    <meta property="og:title" content="A cor da sorte de hoje, tirada do tarô">
+    <meta property="og:description" content="Tire uma carta dos vinte e dois arcanos maiores. Leia o que ela representa, de pé ou invertida, e no fim da história abra a cor da sorte de hoje.">
+    <meta property="og:url" content="https://colorsforthefool.engawa5656.com/pt/">
+    <meta property="og:image" content="https://colorsforthefool.engawa5656.com/data/the-fool/face.jpg">
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css?v=2">
+    <style>
+      .film-frame {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+      }
+      .film-frame iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+    </style>
+    <script>
+      try {
+        if (!new URLSearchParams(location.search).has("test") && sessionStorage.getItem("cftf-reading-pt")) document.documentElement.classList.add("has-reading");
+      } catch (error) {}
+    </script>
+  </head>
+  <body>
+    <header class="top">
+      <p class="brand"><a href="./">Colors for the Fool</a></p>
+      <nav class="mast" aria-label="Línguas">
+        <div class="lang-menu">
+          <button type="button" class="lang" aria-expanded="false" aria-haspopup="true" aria-controls="lang-list">Português<span class="lang-mark" aria-hidden="true"></span></button>
+          <ul class="lang-list" id="lang-list" hidden>
+            <li><a href="../">日本語</a></li>
+            <li><a href="../en/">English</a></li>
+            <li><a href="../zh/">繁體中文</a></li>
+            <li><a href="../es/">Español</a></li>
+            <li><a href="../nl/">Nederlands</a></li>
+            <li><a href="../fr/">Français</a></li>
+            <li><a href="../zh-hans/">简体中文</a></li>
+            <li><a href="../ar/">العربية</a></li>
+          </ul>
+        </div>
+      </nav>
+      <h1 class="tagline">A cor da sorte de hoje, tirada do tarô</h1>
+    </header>
+    <main>
+      <p class="notice" id="notice" hidden></p>
+      <div class="stage">
+        <button type="button" class="card" id="card" aria-label="Tirar uma carta">
+          <span class="card-inner">
+            <span class="card-face back">
+              <img src="/data/cardback.jpg" alt="">
+            </span>
+            <span class="card-face front">
+              <span class="face-turn" id="face-turn">
+                <img id="face" alt="">
+              </span>
+            </span>
+          </span>
+        </button>
+      </div>
+      <div class="sheet" id="sheet">
+        <p class="hint-wrap">
+          <button type="button" class="hint" id="hint">Toque para tirar uma carta</button>
+        </p>
+        <article class="reading" id="reading" hidden>
+          <h2 id="title"></h2>
+          <p class="en" id="en"></p>
+          <p class="orientation" id="orientation"></p>
+          <div id="meaning"></div>
+        </article>
+        <section class="color-panel" id="color" hidden>
+          <div class="story" id="story"></div>
+          <button type="button" class="scene" id="scene" aria-label="Toque para virar a carta para baixo"></button>
+          <div class="library" id="library" hidden>
+            <a id="library-link" href="">Ler esta cor</a>
+            <p class="share">
+              <button type="button" id="share-copy" aria-label="Copiar o link">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="18" cy="5" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <circle cx="6" cy="12" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <circle cx="18" cy="19" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M8.2 13.1 15.7 17.4M15.7 6.6 8.2 10.9" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                </svg>
+              </button>
+              <a id="share-x" href="" target="_blank" rel="noopener noreferrer" aria-label="Compartilhar no X">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" d="M14.2 10.4 21.5 2h-1.7l-6.3 7.2L8.4 2H2.2l7.6 11L2.2 22h1.7l6.7-7.6L15.3 22h6.2l-7.3-11.6Zm-2.4 2.7-.8-1.1L4.7 3.5h2.7l5 7.1.8 1.1 6.5 9.2h-2.7l-5.2-7.8Z"/>
+                </svg>
+              </a>
+              <a id="share-line" href="" target="_blank" rel="noopener noreferrer" aria-label="Compartilhar no LINE">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#06C755" d="M12 3.2C6.8 3.2 2.6 6.7 2.6 11c0 3.8 3.4 7 8 7.7.3.1.7.2.8.5.1.3.1.7 0 1l-.3 1.6c-.1.4.3.7.7.5l2.2-1.3c.2-.1.4-.1.6-.1 4.8-.2 8.8-3.6 8.8-7.9 0-4.3-4.2-7.8-9.4-7.8Z"/>
+                </svg>
+              </a>
+            </p>
+            <p class="copied" id="copied" hidden role="status">Copiado para a área de transferência</p>
+          </div>
+        </section>
+      </div>
+      <div class="guide" id="guide">
+        <section>
+          <h2>Como tirar uma carta</h2>
+          <ol>
+            <li>Tire uma carta. Ela sai dos vinte e dois arcanos maiores, de pé ou invertida.</li>
+            <li>Leia o que essa carta representa hoje.</li>
+            <li>Toque de novo. A cor da sorte de hoje se abre no fim da história. Toque o espelho abaixo, e o texto se dobra. A carta volta para baixo.</li>
+          </ol>
+        </section>
+        <p class="designs"><a href="design/">Ver os designs das cartas de tarô</a></p>
+        <section>
+          <h2>Sobre este site</h2>
+          <p>Cada arcano maior está ligado a uma cor. A história passa por um mito, um relato, um lugar ou uma ferramenta, e termina na cor da sorte de hoje.</p>
+        </section>
+        <section class="film">
+          <h2>A jornada do Louco</h2>
+          <div class="film-frame">
+            <iframe src="https://www.youtube.com/embed/ngl1nN2qzkI?si=DT7xBR5A0CPZu1J3" title="A jornada do Louco" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </section>
+        <section>
+          <h2>Os vinte e dois arcanos maiores</h2>
+          <ul class="arcana">
+            <li>
+              <a href="cards/the-fool/index.html"><img class="arcana-thumb" src="/data/the-fool/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-fool/index.html">O Louco</a></h3>
+              <p><span class="side">De pé</span>Uma figura solitária está na beira mesma de um penhasco, com a trouxa de viagem leve, uma rosa branca na mão e um cão leal por perto.</p>
+              <p><span class="side">Invertida</span>A mesma figura agora hesita no penhasco, sem saber se o chão abaixo é seguro.</p>
+            </li>
+            <li>
+              <a href="cards/the-magician/index.html"><img class="arcana-thumb" src="/data/the-magician/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-magician/index.html">O Mago</a></h3>
+              <p><span class="side">De pé</span>Uma mesa está pronta, com um bastão, uma taça, uma espada e uma moeda, cada qual uma ferramenta para dar forma ao dia.</p>
+              <p><span class="side">Invertida</span>As ferramentas sobre a mesa estão arranjadas apenas para exibição, não para uso.</p>
+            </li>
+            <li>
+              <a href="cards/the-high-priestess/index.html"><img class="arcana-thumb" src="/data/the-high-priestess/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-high-priestess/index.html">A Sacerdotisa</a></h3>
+              <p><span class="side">De pé</span>Uma mulher senta-se em silêncio entre dois pilares, com o pergaminho apenas meio aberto no colo.</p>
+              <p><span class="side">Invertida</span>O pergaminho ou permanece fechado, com os segredos retidos, ou foi aberto de todo, com o conteúdo espalhado e mal compreendido.</p>
+            </li>
+            <li>
+              <a href="cards/the-empress/index.html"><img class="arcana-thumb" src="/data/the-empress/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-empress/index.html">A Imperatriz</a></h3>
+              <p><span class="side">De pé</span>A Imperatriz é um lugar de abundância, onde o grão amadurece, as florestas abrigam e a água clara corre.</p>
+              <p><span class="side">Invertida</span>O chão pode estar cansado, ou você pode estar apressando a colheita antes de o fruto estar de fato pronto.</p>
+            </li>
+            <li>
+              <a href="cards/the-emperor/index.html"><img class="arcana-thumb" src="/data/the-emperor/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-emperor/index.html">O Imperador</a></h3>
+              <p><span class="side">De pé</span>O Imperador senta-se num trono de pedra, com o olhar fixo muito além do presente.</p>
+              <p><span class="side">Invertida</span>O trono já não cabe ao Imperador.</p>
+            </li>
+            <li>
+              <a href="cards/the-hierophant/index.html"><img class="arcana-thumb" src="/data/the-hierophant/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-hierophant/index.html">O Hierofante</a></h3>
+              <p><span class="side">De pé</span>Uma figura senta-se diante de dois buscadores, encarnando a transmissão do conhecimento pela tradição e pelas formas estabelecidas.</p>
+              <p><span class="side">Invertida</span>As formas ficaram mais pesadas do que o propósito delas, e o ritual pesa mais do que o sentido.</p>
+            </li>
+            <li>
+              <a href="cards/the-lovers/index.html"><img class="arcana-thumb" src="/data/the-lovers/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-lovers/index.html">Os Enamorados</a></h3>
+              <p><span class="side">De pé</span>Os Enamorados representam o momento em que duas forças distintas se encontram e pedem a você uma escolha consciente e sentida.</p>
+              <p><span class="side">Invertida</span>Na posição invertida, Os Enamorados apontam para a indecisão e para o desconforto de deixar escolhas inacabadas.</p>
+            </li>
+            <li>
+              <a href="cards/the-chariot/index.html"><img class="arcana-thumb" src="/data/the-chariot/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-chariot/index.html">O Carro</a></h3>
+              <p><span class="side">De pé</span>Um condutor segura as rédeas e guia um veículo puxado por duas criaturas distintas.</p>
+              <p><span class="side">Invertida</span>O carro está em movimento, mas não cruzou o limiar.</p>
+            </li>
+            <li>
+              <a href="cards/strength/index.html"><img class="arcana-thumb" src="/data/strength/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/strength/index.html">A Força</a></h3>
+              <p><span class="side">De pé</span>A Força não está em quão forte você aperta, nem em quanto você consegue reprimir.</p>
+              <p><span class="side">Invertida</span>Quando invertida, A Força revela uma mão que ficou rígida, os dedos cerrados não pelo domínio, mas pelo medo.</p>
+            </li>
+            <li>
+              <a href="cards/the-hermit/index.html"><img class="arcana-thumb" src="/data/the-hermit/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-hermit/index.html">O Eremita</a></h3>
+              <p><span class="side">De pé</span>O Eremita está só numa montanha quieta, com a lanterna erguida apenas o bastante para mostrar os próximos passos.</p>
+              <p><span class="side">Invertida</span>A lanterna do Eremita agora brilha apenas para dentro e não ilumina o caminho à frente.</p>
+            </li>
+            <li>
+              <a href="cards/wheel-of-fortune/index.html"><img class="arcana-thumb" src="/data/wheel-of-fortune/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/wheel-of-fortune/index.html">A Roda da Fortuna</a></h3>
+              <p><span class="side">De pé</span>A Roda da Fortuna gira, trocando de lugar quem sobe e quem desce.</p>
+              <p><span class="side">Invertida</span>Pode parecer que a roda gira no mesmo lugar, dando a ilusão de movimento sem avanço.</p>
+            </li>
+            <li>
+              <a href="cards/justice/index.html"><img class="arcana-thumb" src="/data/justice/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/justice/index.html">A Justiça</a></h3>
+              <p><span class="side">De pé</span>A Justiça é o ponto de encontro da decisão e do discernimento, guiada ao mesmo tempo pela espada e pela balança.</p>
+              <p><span class="side">Invertida</span>Invertida, A Justiça adverte sobre o desequilíbrio ou a autojustificação.</p>
+            </li>
+            <li>
+              <a href="cards/the-hanged-man/index.html"><img class="arcana-thumb" src="/data/the-hanged-man/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-hanged-man/index.html">O Enforcado</a></h3>
+              <p><span class="side">De pé</span>Um homem está pendurado de cabeça para baixo, com um pé atado e os braços abertos, encarnando a quietude no meio do desconforto.</p>
+              <p><span class="side">Invertida</span>Ficar pendurado de cabeça para baixo perdeu o propósito e deixou de ser uma busca de percepção para virar um hábito de adiamento.</p>
+            </li>
+            <li>
+              <a href="cards/death/index.html"><img class="arcana-thumb" src="/data/death/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/death/index.html">A Morte</a></h3>
+              <p><span class="side">De pé</span>A Morte chega como o arauto silencioso da conclusão.</p>
+              <p><span class="side">Invertida</span>Apesar da aproximação de um final, o esforço se gasta em manter a forma familiar.</p>
+            </li>
+            <li>
+              <a href="cards/temperance/index.html"><img class="arcana-thumb" src="/data/temperance/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/temperance/index.html">A Temperança</a></h3>
+              <p><span class="side">De pé</span>A Temperança convida você a misturar elementos opostos com cuidado, como a água que flui com suavidade entre duas taças.</p>
+              <p><span class="side">Invertida</span>A Temperança invertida mostra a água derramada fora das taças, sinal de desequilíbrio ou de uma tentativa falha de combinar.</p>
+            </li>
+            <li>
+              <a href="cards/the-devil/index.html"><img class="arcana-thumb" src="/data/the-devil/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-devil/index.html">O Diabo</a></h3>
+              <p><span class="side">De pé</span>Duas figuras eretas permanecem acorrentadas, os elos grossos e pesados à primeira vista, mas as coleiras ao redor do pescoço estão folgadas o bastante para serem retiradas.</p>
+              <p><span class="side">Invertida</span>As correntes, antes escondidas, entram no campo de visão.</p>
+            </li>
+            <li>
+              <a href="cards/the-tower/index.html"><img class="arcana-thumb" src="/data/the-tower/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-tower/index.html">A Torre</a></h3>
+              <p><span class="side">De pé</span>Uma estrutura alta, antes firme, é atingida por uma força súbita, expondo as suas vulnerabilidades.</p>
+              <p><span class="side">Invertida</span>Depois do relâmpago, há a tentação de reconstruir a torre exatamente como era, restaurando cada pedra à altura anterior e precária.</p>
+            </li>
+            <li>
+              <a href="cards/the-star/index.html"><img class="arcana-thumb" src="/data/the-star/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-star/index.html">A Estrela</a></h3>
+              <p><span class="side">De pé</span>Junto a águas calmas, uma figura se ajoelha e derrama água de dois jarros, um na terra e outro no riacho.</p>
+              <p><span class="side">Invertida</span>Os jarros se inclinam, e a água se derrama num único ponto, estagnando em vez de fluir.</p>
+            </li>
+            <li>
+              <a href="cards/the-moon/index.html"><img class="arcana-thumb" src="/data/the-moon/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-moon/index.html">A Lua</a></h3>
+              <p><span class="side">De pé</span>Sob o brilho incerto da lua, só uma parte do caminho é visível entre duas torres silenciosas.</p>
+              <p><span class="side">Invertida</span>O caminho desaparece sob o nevoeiro, ou então cada sombra parece ameaçadora, moldada pela imaginação ansiosa.</p>
+            </li>
+            <li>
+              <a href="cards/the-sun/index.html"><img class="arcana-thumb" src="/data/the-sun/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-sun/index.html">O Sol</a></h3>
+              <p><span class="side">De pé</span>O Sol sinaliza um tempo em que a luz ilumina com suavidade o que estava oculto, permitindo que as coisas sejam vistas sem vergonha nem confusão.</p>
+              <p><span class="side">Invertida</span>O Sol na posição invertida adverte contra o excesso de brilho, em que até as sombras são forçadas à vista e nada pode descansar.</p>
+            </li>
+            <li>
+              <a href="cards/judgement/index.html"><img class="arcana-thumb" src="/data/judgement/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/judgement/index.html">O Julgamento</a></h3>
+              <p><span class="side">De pé</span>Um chamado claro ecoa e tira as figuras do longo descanso.</p>
+              <p><span class="side">Invertida</span>A trombeta soa, mas você empurra a tampa para baixo, de dentro do próprio recinto.</p>
+            </li>
+            <li>
+              <a href="cards/the-world/index.html"><img class="arcana-thumb" src="/data/the-world/circle.jpg" alt="" width="72" height="72"></a>
+              <h3><a href="cards/the-world/index.html">O Mundo</a></h3>
+              <p><span class="side">De pé</span>Uma figura dança com graça dentro de um aro, observada de todos os cantos.</p>
+              <p><span class="side">Invertida</span>A dança pausa pouco antes de o aro se fechar.</p>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Perguntas</h2>
+          <h3>Em que se distinguem de pé e invertida?</h3>
+          <p>O mesmo desenho muda de sinal ao girar. De pé, a carta está aberta. Invertida, é demora, excesso, ou o sentido virado. Uma figura invertida é a carta girada meia volta.</p>
+          <h3>Posso tirar uma carta por dia?</h3>
+          <p>Uma carta por dia, ou várias seguidas. Quando o baralho esvazia, volta a ficar completo.</p>
+        </section>
+      </div>
+      <p class="error" id="error" hidden></p>
+    </main>
+    <footer class="colophon">
+      <p>© 2026 Engawa Inc.</p>
+      <p><a href="../en/contact/">Contato</a> <a href="design/">Design</a> <a href="../privacy/">Política de privacidade</a> <a href="https://github.com/okuyamashin/colorsforthefool">GitHub</a></p>
+      <p class="lang-links"><a href="../">日本語</a> <a href="../en/">English</a> <a href="../zh/">繁體中文</a> <a href="../es/">Español</a> <a href="../nl/">Nederlands</a> <a href="../fr/">Français</a> <a href="../zh-hans/">简体中文</a> <a href="../ar/">العربية</a> <a href="../pt/">Português</a></p>
+    </footer>
+    <script src="../meanings.pt.js"></script>
+    <script src="../languages.js?v=7"></script>
+    <script src="../app.js"></script>
+  </body>
+</html>

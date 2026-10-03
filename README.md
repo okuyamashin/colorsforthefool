@@ -18,6 +18,7 @@ Each language is its own set of pages. The browser language does not switch them
 | Français | [/fr/](https://colorsforthefool.engawa5656.com/fr/) |
 | 简体中文 | [/zh-hans/](https://colorsforthefool.engawa5656.com/zh-hans/) |
 | العربية | [/ar/](https://colorsforthefool.engawa5656.com/ar/) |
+| Português | [/pt/](https://colorsforthefool.engawa5656.com/pt/) |
 
 Japanese is the site root and `x-default`. The list of languages is [`data/languages.json`](data/languages.json).
 
@@ -34,11 +35,11 @@ Every card and every color also has a fixed page, so a reading can be opened aga
 - `/cards/the-fool/` and `/en/cards/the-fool/`
 - `/cards/the-fool/white/` and `/en/cards/the-fool/white/`
 
-The same paths exist under `/zh/`, `/es/`, `/nl/`, `/fr/`, `/zh-hans/`, and `/ar/`.
+The same paths exist under `/zh/`, `/es/`, `/nl/`, `/fr/`, `/zh-hans/`, `/ar/`, and `/pt/`.
 
 ## Card designs
 
-The same twenty-two cards are drawn in many visual styles. The pictures live once under `public/design/`. Choosing a style on the [design catalog](https://colorsforthefool.engawa5656.com/design/) changes the deck on every language. The catalog itself is translated per language: `/design/`, `/en/design/`, `/zh/design/`, `/es/design/`, `/nl/design/`, `/fr/design/`, `/zh-hans/design/`, `/ar/design/`.
+The same twenty-two cards are drawn in many visual styles. The pictures live once under `public/design/`. Choosing a style on the [design catalog](https://colorsforthefool.engawa5656.com/design/) changes the deck on every language. The catalog itself is translated per language: `/design/`, `/en/design/`, `/zh/design/`, `/es/design/`, `/nl/design/`, `/fr/design/`, `/zh-hans/design/`, `/ar/design/`, `/pt/design/`.
 
 ## Also on the site
 
@@ -67,7 +68,7 @@ data/<card>/<color>.<id>.txt   Color story for every other language
 data/<card>/<color>.jpg        The scene, with the color in a mirror
 ```
 
-The draw reads the story file named by that language's `textField` in `card.json`. Japanese uses `text` (`white.txt`). English uses `textEn` (`white.en.txt`). Traditional Chinese uses `textZh` (`white.zh.txt`). Spanish uses `textEs` (`white.es.txt`). Dutch uses `textNl` (`white.nl.txt`). French uses `textFr` (`white.fr.txt`). Simplified Chinese uses `textZhHans` (`white.zh-hans.txt`). Arabic uses `textAr` (`white.ar.txt`).
+The draw reads the story file named by that language's `textField` in `card.json`. Japanese uses `text` (`white.txt`). English uses `textEn` (`white.en.txt`). Traditional Chinese uses `textZh` (`white.zh.txt`). Spanish uses `textEs` (`white.es.txt`). Dutch uses `textNl` (`white.nl.txt`). French uses `textFr` (`white.fr.txt`). Simplified Chinese uses `textZhHans` (`white.zh-hans.txt`). Arabic uses `textAr` (`white.ar.txt`). Portuguese uses `textPt` (`white.pt.txt`).
 
 ## Preview
 
@@ -85,6 +86,7 @@ python3 -m http.server 8741
 - French: http://127.0.0.1:8741/public/fr/
 - Simplified Chinese: http://127.0.0.1:8741/public/zh-hans/
 - Arabic: http://127.0.0.1:8741/public/ar/
+- Portuguese: http://127.0.0.1:8741/public/pt/
 
 Add `?test=1-1` to draw a chosen card and color. The first number is the card, from 1 to 22 in major-arcana order. The second is the color: 1–10 upright, 11–20 reversed. Example: `?test=22-1` is The World, upright, first color.
 

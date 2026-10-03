@@ -26,7 +26,9 @@
       "nameFr": "Blanc",
       "nameAr": "أبيض",
       "textFr": "white.fr.txt",
-      "textAr": "white.ar.txt"
+      "textAr": "white.ar.txt",
+      "namePt": "Branco",
+      "textPt": "white.pt.txt"
     },
     {
       "name": "Snow",
@@ -46,7 +48,9 @@
       "nameFr": "Neige",
       "nameAr": "ثلج",
       "textFr": "snow.fr.txt",
-      "textAr": "snow.ar.txt"
+      "textAr": "snow.ar.txt",
+      "namePt": "Neve",
+      "textPt": "snow.pt.txt"
     },
     {
       "name": "MintCream",
@@ -66,7 +70,9 @@
       "nameFr": "Crème de menthe",
       "nameAr": "كريمة النعناع",
       "textFr": "mintcream.fr.txt",
-      "textAr": "mintcream.ar.txt"
+      "textAr": "mintcream.ar.txt",
+      "namePt": "Creme de menta",
+      "textPt": "mintcream.pt.txt"
     },
     {
       "name": "HoneyDew",
@@ -86,7 +92,9 @@
       "nameFr": "Melon miel",
       "nameAr": "شمام العسل",
       "textFr": "honeydew.fr.txt",
-      "textAr": "honeydew.ar.txt"
+      "textAr": "honeydew.ar.txt",
+      "namePt": "Melão",
+      "textPt": "honeydew.pt.txt"
     },
     {
       "name": "SpringGreen",
@@ -106,7 +114,9 @@
       "nameFr": "Vert printemps",
       "nameAr": "أخضر الربيع",
       "textFr": "springgreen.fr.txt",
-      "textAr": "springgreen.ar.txt"
+      "textAr": "springgreen.ar.txt",
+      "namePt": "Verde-primavera",
+      "textPt": "springgreen.pt.txt"
     },
     {
       "name": "Azure",
@@ -126,7 +136,9 @@
       "nameFr": "Azur",
       "nameAr": "لازوردي",
       "textFr": "azure.fr.txt",
-      "textAr": "azure.ar.txt"
+      "textAr": "azure.ar.txt",
+      "namePt": "Azul",
+      "textPt": "azure.pt.txt"
     },
     {
       "name": "SkyBlue",
@@ -146,7 +158,9 @@
       "nameFr": "Bleu ciel",
       "nameAr": "أزرق سماوي",
       "textFr": "skyblue.fr.txt",
-      "textAr": "skyblue.ar.txt"
+      "textAr": "skyblue.ar.txt",
+      "namePt": "Azul-céu",
+      "textPt": "skyblue.pt.txt"
     },
     {
       "name": "LawnGreen",
@@ -166,7 +180,9 @@
       "nameFr": "Vert gazon",
       "nameAr": "أخضر العشب",
       "textFr": "lawngreen.fr.txt",
-      "textAr": "lawngreen.ar.txt"
+      "textAr": "lawngreen.ar.txt",
+      "namePt": "Verde-grama",
+      "textPt": "lawngreen.pt.txt"
     },
     {
       "name": "Cornsilk",
@@ -186,7 +202,9 @@
       "nameFr": "Soie de maïs",
       "nameAr": "حرير الذرة",
       "textFr": "cornsilk.fr.txt",
-      "textAr": "cornsilk.ar.txt"
+      "textAr": "cornsilk.ar.txt",
+      "namePt": "Barba-de-milho",
+      "textPt": "cornsilk.pt.txt"
     },
     {
       "name": "LemonChiffon",
@@ -206,7 +224,9 @@
       "nameFr": "Mousseline citron",
       "nameAr": "شيفون الليمون",
       "textFr": "lemonchiffon.fr.txt",
-      "textAr": "lemonchiffon.ar.txt"
+      "textAr": "lemonchiffon.ar.txt",
+      "namePt": "Chiffon de limão",
+      "textPt": "lemonchiffon.pt.txt"
     }
   ],
   "reversed": [
@@ -228,7 +248,9 @@
       "nameFr": "Blanc fantôme",
       "nameAr": "أبيض شبحي",
       "textFr": "ghostwhite.fr.txt",
-      "textAr": "ghostwhite.ar.txt"
+      "textAr": "ghostwhite.ar.txt",
+      "namePt": "Branco fantasma",
+      "textPt": "ghostwhite.pt.txt"
     },
     {
       "name": "WhiteSmoke",
@@ -248,7 +270,9 @@
       "nameFr": "Fumée blanche",
       "nameAr": "دخان أبيض",
       "textFr": "whitesmoke.fr.txt",
-      "textAr": "whitesmoke.ar.txt"
+      "textAr": "whitesmoke.ar.txt",
+      "namePt": "Fumaça branca",
+      "textPt": "whitesmoke.pt.txt"
     },
     {
       "name": "MistyRose",
@@ -268,7 +292,9 @@
       "nameFr": "Rose brumeuse",
       "nameAr": "وردي ضبابي",
       "textFr": "mistyrose.fr.txt",
-      "textAr": "mistyrose.ar.txt"
+      "textAr": "mistyrose.ar.txt",
+      "namePt": "Rosa enevoado",
+      "textPt": "mistyrose.pt.txt"
     },
     {
       "name": "SlateGray",
@@ -288,7 +314,9 @@
       "nameFr": "Gris ardoise",
       "nameAr": "رمادي أردوازي",
       "textFr": "slategray.fr.txt",
-      "textAr": "slategray.ar.txt"
+      "textAr": "slategray.ar.txt",
+      "namePt": "Cinza-ardósia",
+      "textPt": "slategray.pt.txt"
     },
     {
       "name": "DimGray",
@@ -308,7 +336,9 @@
       "nameFr": "Gris atténué",
       "nameAr": "رمادي خافت",
       "textFr": "dimgray.fr.txt",
-      "textAr": "dimgray.ar.txt"
+      "textAr": "dimgray.ar.txt",
+      "namePt": "Cinza fosco",
+      "textPt": "dimgray.pt.txt"
     },
     {
       "name": "Black",
@@ -328,7 +358,9 @@
       "nameFr": "Noir",
       "nameAr": "أسود",
       "textFr": "black.fr.txt",
-      "textAr": "black.ar.txt"
+      "textAr": "black.ar.txt",
+      "namePt": "Preto",
+      "textPt": "black.pt.txt"
     },
     {
       "name": "Maroon",
@@ -348,7 +380,9 @@
       "nameFr": "Bordeaux",
       "nameAr": "خمري",
       "textFr": "maroon.fr.txt",
-      "textAr": "maroon.ar.txt"
+      "textAr": "maroon.ar.txt",
+      "namePt": "Bordô",
+      "textPt": "maroon.pt.txt"
     },
     {
       "name": "FireBrick",
@@ -368,7 +402,9 @@
       "nameFr": "Brique",
       "nameAr": "آجر",
       "textFr": "firebrick.fr.txt",
-      "textAr": "firebrick.ar.txt"
+      "textAr": "firebrick.ar.txt",
+      "namePt": "Tijolo",
+      "textPt": "firebrick.pt.txt"
     },
     {
       "name": "Crimson",
@@ -388,7 +424,9 @@
       "nameFr": "Cramoisi",
       "nameAr": "قرمزي",
       "textFr": "crimson.fr.txt",
-      "textAr": "crimson.ar.txt"
+      "textAr": "crimson.ar.txt",
+      "namePt": "Carmesim",
+      "textPt": "crimson.pt.txt"
     },
     {
       "name": "Tomato",
@@ -408,10 +446,13 @@
       "nameFr": "Tomate",
       "nameAr": "طماطم",
       "textFr": "tomato.fr.txt",
-      "textAr": "tomato.ar.txt"
+      "textAr": "tomato.ar.txt",
+      "namePt": "Tomate",
+      "textPt": "tomato.pt.txt"
     }
   ],
   "nameNl": "De Dwaas",
   "nameFr": "Le Fou",
-  "nameAr": "المجنون"
+  "nameAr": "المجنون",
+  "namePt": "O Louco"
 }

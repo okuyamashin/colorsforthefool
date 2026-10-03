@@ -25,7 +25,9 @@
       "nameFr": "Argent",
       "nameAr": "فضي",
       "textFr": "silver.fr.txt",
-      "textAr": "silver.ar.txt"
+      "textAr": "silver.ar.txt",
+      "namePt": "Prata",
+      "textPt": "silver.pt.txt"
     },
     {
       "name": "Lavender",
@@ -45,7 +47,9 @@
       "nameFr": "Lavande",
       "nameAr": "خزامى",
       "textFr": "lavender.fr.txt",
-      "textAr": "lavender.ar.txt"
+      "textAr": "lavender.ar.txt",
+      "namePt": "Lavanda",
+      "textPt": "lavender.pt.txt"
     },
     {
       "name": "MidnightBlue",
@@ -65,7 +69,9 @@
       "nameFr": "Bleu minuit",
       "nameAr": "أزرق منتصف الليل",
       "textFr": "midnightblue.fr.txt",
-      "textAr": "midnightblue.ar.txt"
+      "textAr": "midnightblue.ar.txt",
+      "namePt": "Azul-meia-noite",
+      "textPt": "midnightblue.pt.txt"
     },
     {
       "name": "AliceBlue",
@@ -85,7 +91,9 @@
       "nameFr": "Bleu Alice",
       "nameAr": "أزرق أليس",
       "textFr": "aliceblue.fr.txt",
-      "textAr": "aliceblue.ar.txt"
+      "textAr": "aliceblue.ar.txt",
+      "namePt": "Azul Alice",
+      "textPt": "aliceblue.pt.txt"
     },
     {
       "name": "PaleTurquoise",
@@ -105,7 +113,9 @@
       "nameFr": "Turquoise pâle",
       "nameAr": "فيروزي شاحب",
       "textFr": "paleturquoise.fr.txt",
-      "textAr": "paleturquoise.ar.txt"
+      "textAr": "paleturquoise.ar.txt",
+      "namePt": "Turquesa pálido",
+      "textPt": "paleturquoise.pt.txt"
     },
     {
       "name": "GhostWhite",
@@ -125,7 +135,9 @@
       "nameFr": "Blanc fantôme",
       "nameAr": "أبيض شبحي",
       "textFr": "ghostwhite.fr.txt",
-      "textAr": "ghostwhite.ar.txt"
+      "textAr": "ghostwhite.ar.txt",
+      "namePt": "Branco fantasma",
+      "textPt": "ghostwhite.pt.txt"
     },
     {
       "name": "PowderBlue",
@@ -145,7 +157,9 @@
       "nameFr": "Bleu poudre",
       "nameAr": "أزرق مسحوق",
       "textFr": "powderblue.fr.txt",
-      "textAr": "powderblue.ar.txt"
+      "textAr": "powderblue.ar.txt",
+      "namePt": "Azul-pó",
+      "textPt": "powderblue.pt.txt"
     },
     {
       "name": "SlateBlue",
@@ -165,7 +179,9 @@
       "nameFr": "Bleu ardoise",
       "nameAr": "أزرق أردوازي",
       "textFr": "slateblue.fr.txt",
-      "textAr": "slateblue.ar.txt"
+      "textAr": "slateblue.ar.txt",
+      "namePt": "Azul-ardósia",
+      "textPt": "slateblue.pt.txt"
     },
     {
       "name": "Wheat",
@@ -185,7 +201,9 @@
       "nameFr": "Blé",
       "nameAr": "قمح",
       "textFr": "wheat.fr.txt",
-      "textAr": "wheat.ar.txt"
+      "textAr": "wheat.ar.txt",
+      "namePt": "Trigo",
+      "textPt": "wheat.pt.txt"
     },
     {
       "name": "Linen",
@@ -205,7 +223,9 @@
       "nameFr": "Lin",
       "nameAr": "كتّان",
       "textFr": "linen.fr.txt",
-      "textAr": "linen.ar.txt"
+      "textAr": "linen.ar.txt",
+      "namePt": "Linho",
+      "textPt": "linen.pt.txt"
     }
   ],
   "reversed": [
@@ -227,7 +247,9 @@
       "nameFr": "Rose brumeuse",
       "nameAr": "وردي ضبابي",
       "textFr": "mistyrose.fr.txt",
-      "textAr": "mistyrose.ar.txt"
+      "textAr": "mistyrose.ar.txt",
+      "namePt": "Rosa enevoado",
+      "textPt": "mistyrose.pt.txt"
     },
     {
       "name": "WhiteSmoke",
@@ -247,7 +269,9 @@
       "nameFr": "Fumée blanche",
       "nameAr": "دخان أبيض",
       "textFr": "whitesmoke.fr.txt",
-      "textAr": "whitesmoke.ar.txt"
+      "textAr": "whitesmoke.ar.txt",
+      "namePt": "Fumaça branca",
+      "textPt": "whitesmoke.pt.txt"
     },
     {
       "name": "DimGray",
@@ -267,7 +291,9 @@
       "nameFr": "Gris atténué",
       "nameAr": "رمادي خافت",
       "textFr": "dimgray.fr.txt",
-      "textAr": "dimgray.ar.txt"
+      "textAr": "dimgray.ar.txt",
+      "namePt": "Cinza fosco",
+      "textPt": "dimgray.pt.txt"
     },
     {
       "name": "SlateGray",
@@ -287,7 +313,9 @@
       "nameFr": "Gris ardoise",
       "nameAr": "رمادي أردوازي",
       "textFr": "slategray.fr.txt",
-      "textAr": "slategray.ar.txt"
+      "textAr": "slategray.ar.txt",
+      "namePt": "Cinza-ardósia",
+      "textPt": "slategray.pt.txt"
     },
     {
       "name": "DarkSlateGray",
@@ -307,7 +335,9 @@
       "nameFr": "Gris ardoise foncé",
       "nameAr": "رمادي أردوازي داكن",
       "textFr": "darkslategray.fr.txt",
-      "textAr": "darkslategray.ar.txt"
+      "textAr": "darkslategray.ar.txt",
+      "namePt": "Cinza-ardósia escuro",
+      "textPt": "darkslategray.pt.txt"
     },
     {
       "name": "LightSlateGray",
@@ -327,7 +357,9 @@
       "nameFr": "Gris ardoise clair",
       "nameAr": "رمادي أردوازي فاتح",
       "textFr": "lightslategray.fr.txt",
-      "textAr": "lightslategray.ar.txt"
+      "textAr": "lightslategray.ar.txt",
+      "namePt": "Cinza-ardósia claro",
+      "textPt": "lightslategray.pt.txt"
     },
     {
       "name": "DarkSlateBlue",
@@ -347,7 +379,9 @@
       "nameFr": "Bleu ardoise foncé",
       "nameAr": "أزرق أردوازي داكن",
       "textFr": "darkslateblue.fr.txt",
-      "textAr": "darkslateblue.ar.txt"
+      "textAr": "darkslateblue.ar.txt",
+      "namePt": "Azul-ardósia escuro",
+      "textPt": "darkslateblue.pt.txt"
     },
     {
       "name": "Indigo",
@@ -367,7 +401,9 @@
       "nameFr": "Indigo",
       "nameAr": "نيلي",
       "textFr": "indigo.fr.txt",
-      "textAr": "indigo.ar.txt"
+      "textAr": "indigo.ar.txt",
+      "namePt": "Índigo",
+      "textPt": "indigo.pt.txt"
     },
     {
       "name": "Black",
@@ -387,7 +423,9 @@
       "nameFr": "Noir",
       "nameAr": "أسود",
       "textFr": "black.fr.txt",
-      "textAr": "black.ar.txt"
+      "textAr": "black.ar.txt",
+      "namePt": "Preto",
+      "textPt": "black.pt.txt"
     },
     {
       "name": "Thistle",
@@ -407,10 +445,13 @@
       "nameFr": "Chardon",
       "nameAr": "شوك",
       "textFr": "thistle.fr.txt",
-      "textAr": "thistle.ar.txt"
+      "textAr": "thistle.ar.txt",
+      "namePt": "Cardo",
+      "textPt": "thistle.pt.txt"
     }
   ],
   "nameNl": "De Maan",
   "nameFr": "La Lune",
-  "nameAr": "القمر"
+  "nameAr": "القمر",
+  "namePt": "A Lua"
 }

@@ -735,6 +735,7 @@ NAV_LABEL = {
     "fr": "Langues",
     "zh-hans": "语言",
     "ar": "اللغة",
+    "pt": "Línguas",
 }
 
 

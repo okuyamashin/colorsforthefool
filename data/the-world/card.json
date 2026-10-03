@@ -25,7 +25,9 @@
       "nameFr": "Vert forêt",
       "nameAr": "أخضر الغابة",
       "textFr": "forestgreen.fr.txt",
-      "textAr": "forestgreen.ar.txt"
+      "textAr": "forestgreen.ar.txt",
+      "namePt": "Verde-floresta",
+      "textPt": "forestgreen.pt.txt"
     },
     {
       "name": "Olive",
@@ -45,7 +47,9 @@
       "nameFr": "Olive",
       "nameAr": "زيتوني",
       "textFr": "olive.fr.txt",
-      "textAr": "olive.ar.txt"
+      "textAr": "olive.ar.txt",
+      "namePt": "Oliva",
+      "textPt": "olive.pt.txt"
     },
     {
       "name": "Gold",
@@ -65,7 +69,9 @@
       "nameFr": "Or",
       "nameAr": "ذهبي",
       "textFr": "gold.fr.txt",
-      "textAr": "gold.ar.txt"
+      "textAr": "gold.ar.txt",
+      "namePt": "Ouro",
+      "textPt": "gold.pt.txt"
     },
     {
       "name": "Purple",
@@ -85,7 +91,9 @@
       "nameFr": "Pourpre",
       "nameAr": "أرجواني",
       "textFr": "purple.fr.txt",
-      "textAr": "purple.ar.txt"
+      "textAr": "purple.ar.txt",
+      "namePt": "Púrpura",
+      "textPt": "purple.pt.txt"
     },
     {
       "name": "Violet",
@@ -105,7 +113,9 @@
       "nameFr": "Violet",
       "nameAr": "بنفسجي",
       "textFr": "violet.fr.txt",
-      "textAr": "violet.ar.txt"
+      "textAr": "violet.ar.txt",
+      "namePt": "Violeta",
+      "textPt": "violet.pt.txt"
     },
     {
       "name": "Red",
@@ -125,7 +135,9 @@
       "nameFr": "Rouge",
       "nameAr": "أحمر",
       "textFr": "red.fr.txt",
-      "textAr": "red.ar.txt"
+      "textAr": "red.ar.txt",
+      "namePt": "Vermelho",
+      "textPt": "red.pt.txt"
     },
     {
       "name": "White",
@@ -145,7 +157,9 @@
       "nameFr": "Blanc",
       "nameAr": "أبيض",
       "textFr": "white.fr.txt",
-      "textAr": "white.ar.txt"
+      "textAr": "white.ar.txt",
+      "namePt": "Branco",
+      "textPt": "white.pt.txt"
     },
     {
       "name": "Wheat",
@@ -165,7 +179,9 @@
       "nameFr": "Blé",
       "nameAr": "قمح",
       "textFr": "wheat.fr.txt",
-      "textAr": "wheat.ar.txt"
+      "textAr": "wheat.ar.txt",
+      "namePt": "Trigo",
+      "textPt": "wheat.pt.txt"
     },
     {
       "name": "Cornsilk",
@@ -185,7 +201,9 @@
       "nameFr": "Soie de maïs",
       "nameAr": "حرير الذرة",
       "textFr": "cornsilk.fr.txt",
-      "textAr": "cornsilk.ar.txt"
+      "textAr": "cornsilk.ar.txt",
+      "namePt": "Barba-de-milho",
+      "textPt": "cornsilk.pt.txt"
     },
     {
       "name": "SkyBlue",
@@ -205,7 +223,9 @@
       "nameFr": "Bleu ciel",
       "nameAr": "أزرق سماوي",
       "textFr": "skyblue.fr.txt",
-      "textAr": "skyblue.ar.txt"
+      "textAr": "skyblue.ar.txt",
+      "namePt": "Azul-céu",
+      "textPt": "skyblue.pt.txt"
     }
   ],
   "reversed": [
@@ -227,7 +247,9 @@
       "nameFr": "Olive terne",
       "nameAr": "زيتوني باهت",
       "textFr": "olivedrab.fr.txt",
-      "textAr": "olivedrab.ar.txt"
+      "textAr": "olivedrab.ar.txt",
+      "namePt": "Oliva fosco",
+      "textPt": "olivedrab.pt.txt"
     },
     {
       "name": "DarkOliveGreen",
@@ -247,7 +269,9 @@
       "nameFr": "Vert olive foncé",
       "nameAr": "أخضر زيتوني داكن",
       "textFr": "darkolivegreen.fr.txt",
-      "textAr": "darkolivegreen.ar.txt"
+      "textAr": "darkolivegreen.ar.txt",
+      "namePt": "Verde-oliva escuro",
+      "textPt": "darkolivegreen.pt.txt"
     },
     {
       "name": "DarkKhaki",
@@ -267,7 +291,9 @@
       "nameFr": "Kaki foncé",
       "nameAr": "كاكي داكن",
       "textFr": "darkkhaki.fr.txt",
-      "textAr": "darkkhaki.ar.txt"
+      "textAr": "darkkhaki.ar.txt",
+      "namePt": "Cáqui escuro",
+      "textPt": "darkkhaki.pt.txt"
     },
     {
       "name": "Khaki",
@@ -287,7 +313,9 @@
       "nameFr": "Kaki",
       "nameAr": "كاكي",
       "textFr": "khaki.fr.txt",
-      "textAr": "khaki.ar.txt"
+      "textAr": "khaki.ar.txt",
+      "namePt": "Cáqui",
+      "textPt": "khaki.pt.txt"
     },
     {
       "name": "Tan",
@@ -307,7 +335,9 @@
       "nameFr": "Havane",
       "nameAr": "أسمر",
       "textFr": "tan.fr.txt",
-      "textAr": "tan.ar.txt"
+      "textAr": "tan.ar.txt",
+      "namePt": "Canela",
+      "textPt": "tan.pt.txt"
     },
     {
       "name": "Sienna",
@@ -327,7 +357,9 @@
       "nameFr": "Sienne",
       "nameAr": "سيينا",
       "textFr": "sienna.fr.txt",
-      "textAr": "sienna.ar.txt"
+      "textAr": "sienna.ar.txt",
+      "namePt": "Siena",
+      "textPt": "sienna.pt.txt"
     },
     {
       "name": "Brown",
@@ -347,7 +379,9 @@
       "nameFr": "Brun",
       "nameAr": "بنّي",
       "textFr": "brown.fr.txt",
-      "textAr": "brown.ar.txt"
+      "textAr": "brown.ar.txt",
+      "namePt": "Marrom",
+      "textPt": "brown.pt.txt"
     },
     {
       "name": "Gray",
@@ -367,7 +401,9 @@
       "nameFr": "Gris",
       "nameAr": "رمادي",
       "textFr": "gray.fr.txt",
-      "textAr": "gray.ar.txt"
+      "textAr": "gray.ar.txt",
+      "namePt": "Cinza",
+      "textPt": "gray.pt.txt"
     },
     {
       "name": "DimGray",
@@ -387,7 +423,9 @@
       "nameFr": "Gris atténué",
       "nameAr": "رمادي خافت",
       "textFr": "dimgray.fr.txt",
-      "textAr": "dimgray.ar.txt"
+      "textAr": "dimgray.ar.txt",
+      "namePt": "Cinza fosco",
+      "textPt": "dimgray.pt.txt"
     },
     {
       "name": "SlateGray",
@@ -407,10 +445,13 @@
       "nameFr": "Gris ardoise",
       "nameAr": "رمادي أردوازي",
       "textFr": "slategray.fr.txt",
-      "textAr": "slategray.ar.txt"
+      "textAr": "slategray.ar.txt",
+      "namePt": "Cinza-ardósia",
+      "textPt": "slategray.pt.txt"
     }
   ],
   "nameNl": "De Wereld",
   "nameFr": "Le Monde",
-  "nameAr": "العالم"
+  "nameAr": "العالم",
+  "namePt": "O Mundo"
 }

@@ -22,15 +22,30 @@
     "introLimit": 70,
     "descriptionLimit": 120,
     "titlePattern": "[―—-]\\s*(正位置|逆位置)\\s*$",
-    "revealPrefixes": ["今日のラッキーカラー", "Lucky Color:"],
+    "revealPrefixes": [
+      "今日のラッキーカラー",
+      "Lucky Color:"
+    ],
     "fonts": "family=Cinzel:wght@500;700&family=Shippori+Mincho:wght@400;500;600",
     "fontFamily": "",
     "shareText": "今日のラッキーカラーは、{color}です。",
     "footer": [
-      {"href": "/contact/", "label": "問い合わせ"},
-      {"href": "/design/", "label": "デザイン"},
-      {"href": "/cafe/", "label": "カフェ・タロット"},
-      {"href": "/privacy/", "label": "プライバシーポリシー"}
+      {
+        "href": "/contact/",
+        "label": "問い合わせ"
+      },
+      {
+        "href": "/design/",
+        "label": "デザイン"
+      },
+      {
+        "href": "/cafe/",
+        "label": "カフェ・タロット"
+      },
+      {
+        "href": "/privacy/",
+        "label": "プライバシーポリシー"
+      }
     ],
     "share": {
       "copy": "リンクをコピー",
@@ -90,13 +105,22 @@
     "introLimit": 110,
     "descriptionLimit": 160,
     "titlePattern": "[―—-]\\s*(Upright|Reversed)\\s*$",
-    "revealPrefixes": ["Today's lucky color", "Lucky Color:"],
+    "revealPrefixes": [
+      "Today's lucky color",
+      "Lucky Color:"
+    ],
     "fonts": "family=Cinzel:wght@500;700&family=Shippori+Mincho:wght@400;500;600",
     "fontFamily": "",
     "shareText": "Today's lucky color is {color}.",
     "footer": [
-      {"href": "/en/contact/", "label": "Contact"},
-      {"href": "/privacy/", "label": "Privacy policy"}
+      {
+        "href": "/en/contact/",
+        "label": "Contact"
+      },
+      {
+        "href": "/privacy/",
+        "label": "Privacy policy"
+      }
     ],
     "share": {
       "copy": "Copy link",
@@ -156,13 +180,22 @@
     "introLimit": 70,
     "descriptionLimit": 120,
     "titlePattern": "[―—-]\\s*(正位|逆位)\\s*$",
-    "revealPrefixes": ["今日的幸運色", "Lucky Color:"],
+    "revealPrefixes": [
+      "今日的幸運色",
+      "Lucky Color:"
+    ],
     "fonts": "family=Cinzel:wght@500;700&family=Noto+Serif+TC:wght@500;600&family=Shippori+Mincho:wght@400;500;600",
     "fontFamily": "\"Noto Serif TC\", \"Shippori Mincho\", \"Hiragino Mincho ProN\", \"Yu Mincho\", serif",
     "shareText": "今日的幸運色是{color}。",
     "footer": [
-      {"href": "/en/contact/", "label": "聯絡"},
-      {"href": "/privacy/", "label": "隱私權政策"}
+      {
+        "href": "/en/contact/",
+        "label": "聯絡"
+      },
+      {
+        "href": "/privacy/",
+        "label": "隱私權政策"
+      }
     ],
     "share": {
       "copy": "複製連結",
@@ -222,13 +255,22 @@
     "introLimit": 110,
     "descriptionLimit": 160,
     "titlePattern": "[―—-]\\s*(Al derecho|Al revés)\\s*$",
-    "revealPrefixes": ["El color de la suerte de hoy", "Lucky Color:"],
+    "revealPrefixes": [
+      "El color de la suerte de hoy",
+      "Lucky Color:"
+    ],
     "fonts": "family=Cinzel:wght@500;700&family=Shippori+Mincho:wght@400;500;600",
     "fontFamily": "",
     "shareText": "El color de la suerte de hoy es {color}.",
     "footer": [
-      {"href": "/en/contact/", "label": "Contacto"},
-      {"href": "/privacy/", "label": "Política de privacidad"}
+      {
+        "href": "/en/contact/",
+        "label": "Contacto"
+      },
+      {
+        "href": "/privacy/",
+        "label": "Política de privacidad"
+      }
     ],
     "share": {
       "copy": "Copiar el enlace",
@@ -288,13 +330,22 @@
     "introLimit": 110,
     "descriptionLimit": 160,
     "titlePattern": "[―—-]\\s*(Rechtop|Omgekeerd)\\s*$",
-    "revealPrefixes": ["De gelukskleur van vandaag", "Lucky Color:"],
+    "revealPrefixes": [
+      "De gelukskleur van vandaag",
+      "Lucky Color:"
+    ],
     "fonts": "family=Cinzel:wght@500;700&family=Shippori+Mincho:wght@400;500;600",
     "fontFamily": "",
     "shareText": "De gelukskleur van vandaag is {color}.",
     "footer": [
-      {"href": "/en/contact/", "label": "Contact"},
-      {"href": "/privacy/", "label": "Privacybeleid"}
+      {
+        "href": "/en/contact/",
+        "label": "Contact"
+      },
+      {
+        "href": "/privacy/",
+        "label": "Privacybeleid"
+      }
     ],
     "share": {
       "copy": "Link kopiëren",
@@ -354,13 +405,22 @@
     "introLimit": 110,
     "descriptionLimit": 160,
     "titlePattern": "[―—-]\\s*(À l'endroit|À l'envers)\\s*$",
-    "revealPrefixes": ["La couleur porte-bonheur d'aujourd'hui", "Lucky Color:"],
+    "revealPrefixes": [
+      "La couleur porte-bonheur d'aujourd'hui",
+      "Lucky Color:"
+    ],
     "fonts": "family=Cinzel:wght@500;700&family=Shippori+Mincho:wght@400;500;600",
     "fontFamily": "",
     "shareText": "La couleur porte-bonheur d'aujourd'hui est {color}.",
     "footer": [
-      {"href": "/en/contact/", "label": "Contact"},
-      {"href": "/privacy/", "label": "Politique de confidentialité"}
+      {
+        "href": "/en/contact/",
+        "label": "Contact"
+      },
+      {
+        "href": "/privacy/",
+        "label": "Politique de confidentialité"
+      }
     ],
     "share": {
       "copy": "Copier le lien",
@@ -420,13 +480,22 @@
     "introLimit": 70,
     "descriptionLimit": 120,
     "titlePattern": "[―—-]\\s*(正位|逆位)\\s*$",
-    "revealPrefixes": ["今日的幸运色", "Lucky Color:"],
+    "revealPrefixes": [
+      "今日的幸运色",
+      "Lucky Color:"
+    ],
     "fonts": "family=Cinzel:wght@500;700&family=Noto+Serif+SC:wght@500;600&family=Shippori+Mincho:wght@400;500;600",
     "fontFamily": "\"Noto Serif SC\", \"Shippori Mincho\", \"Hiragino Mincho ProN\", \"Yu Mincho\", serif",
     "shareText": "今日的幸运色是{color}。",
     "footer": [
-      {"href": "/en/contact/", "label": "联系"},
-      {"href": "/privacy/", "label": "隐私政策"}
+      {
+        "href": "/en/contact/",
+        "label": "联系"
+      },
+      {
+        "href": "/privacy/",
+        "label": "隐私政策"
+      }
     ],
     "share": {
       "copy": "复制链接",
@@ -487,13 +556,22 @@
     "introLimit": 110,
     "descriptionLimit": 160,
     "titlePattern": "[―—-]\\s*(مستقيم|معكوس)\\s*$",
-    "revealPrefixes": ["لون الحظ اليوم", "Lucky Color:"],
+    "revealPrefixes": [
+      "لون الحظ اليوم",
+      "Lucky Color:"
+    ],
     "fonts": "family=Cinzel:wght@500;700&family=Noto+Naskh+Arabic:wght@500;600&family=Shippori+Mincho:wght@400;500;600",
     "fontFamily": "\"Noto Naskh Arabic\", \"Shippori Mincho\", serif",
     "shareText": "لون الحظ اليوم هو {color}.",
     "footer": [
-      {"href": "/en/contact/", "label": "تواصل"},
-      {"href": "/privacy/", "label": "سياسة الخصوصية"}
+      {
+        "href": "/en/contact/",
+        "label": "تواصل"
+      },
+      {
+        "href": "/privacy/",
+        "label": "سياسة الخصوصية"
+      }
     ],
     "share": {
       "copy": "نسخ الرابط",
@@ -529,6 +607,81 @@
       "colorDescription": "{card}، {label}. {color}. {opening}",
       "colorSecondary": "{latin} · {latinColor}",
       "back": "العودة إلى {card}"
+    }
+  },
+  {
+    "id": "pt",
+    "htmlLang": "pt-BR",
+    "hreflang": "pt-BR",
+    "prefix": "pt",
+    "switchLabel": "Português",
+    "cookie": "cftf-pt",
+    "session": "cftf-reading-pt",
+    "ogLocale": "pt_BR",
+    "days": false,
+    "latinSubtitle": false,
+    "data": "/data",
+    "meanings": "meanings.pt.js",
+    "cardName": "namePt",
+    "colorName": "namePt",
+    "textField": "textPt",
+    "textSuffix": ".pt",
+    "punctuation": ". ",
+    "lineLimit": 90,
+    "introLimit": 110,
+    "descriptionLimit": 160,
+    "titlePattern": "[―—-]\\s*(De pé|Invertida)\\s*$",
+    "revealPrefixes": [
+      "A cor da sorte de hoje",
+      "Lucky Color:"
+    ],
+    "fonts": "family=Cinzel:wght@500;700&family=Shippori+Mincho:wght@400;500;600",
+    "fontFamily": "",
+    "shareText": "A cor da sorte de hoje é {color}.",
+    "footer": [
+      {
+        "href": "/en/contact/",
+        "label": "Contato"
+      },
+      {
+        "href": "/privacy/",
+        "label": "Política de privacidade"
+      }
+    ],
+    "share": {
+      "copy": "Copiar o link",
+      "x": "Compartilhar no X",
+      "line": "Compartilhar no LINE",
+      "notice": "Copiado para a área de transferência"
+    },
+    "copy": {
+      "upright": "De pé",
+      "reversed": "Invertida",
+      "meaningFallback": "O desenho desta carta é o sinal de hoje.",
+      "renewed": "As vinte e duas cartas já saíram, e o baralho volta a ficar completo.",
+      "hintReveal": "Toque de novo, e a cor de hoje se abre",
+      "hintDraw": "Toque para tirar uma carta",
+      "drawLabel": "Tirar uma carta",
+      "openLabel": "Toque de novo para abrir a cor",
+      "mirror": "Um espelho que guarda a cor",
+      "scene": "Um desenho com um espelho que guarda a cor",
+      "cardError": "A carta não abriu. Toque de novo.",
+      "colorError": "A cor de hoje não abriu. Toque de novo.",
+      "testError": "test tem a forma 4-10. As cartas vão de 1 a 22. As cores de 1 a 10 estão de pé, de 11 a 20 invertidas."
+    },
+    "pages": {
+      "tagline": "A cor da sorte de hoje, tirada do tarô",
+      "draw": "Tirar uma carta",
+      "cardTitle": "Cores da sorte de {card} — Colors for the Fool",
+      "cardDescription": "{card}. Dez cores da sorte de pé, e dez invertidas. {intro}",
+      "cardSecondary": "{numeral}",
+      "faceAlt": "{card}, {labelLower}",
+      "colorAlt": "{card}, {color}. A cor aparece no espelho do centro.",
+      "colorMeta": "{hex}",
+      "colorTitle": "Cor da sorte de {card}: {color}",
+      "colorDescription": "{card}, {labelLower}. {color}. {opening}",
+      "colorSecondary": "",
+      "back": "Voltar a {card}"
     }
   }
 ]

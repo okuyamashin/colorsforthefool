@@ -238,5 +238,35 @@ window.LANG_PACKS = [
       "colorError": "لم يُفتح لون اليوم. المس مرة أخرى.",
       "testError": "شكل test هو 4-10. البطاقات من 1 إلى 22. الألوان من 1 إلى 10 مستقيمة، ومن 11 إلى 20 معكوسة."
     }
+  },
+  {
+    "id": "pt",
+    "htmlLang": "pt-BR",
+    "prefix": "pt",
+    "cookie": "cftf-pt",
+    "session": "cftf-reading-pt",
+    "data": "/data",
+    "cardName": "namePt",
+    "colorName": "namePt",
+    "textField": "textPt",
+    "textSuffix": ".pt",
+    "latinSubtitle": false,
+    "titlePattern": "[―—-]\\s*(De pé|Invertida)\\s*$",
+    "shareText": "A cor da sorte de hoje é {color}.",
+    "copy": {
+      "upright": "De pé",
+      "reversed": "Invertida",
+      "meaningFallback": "O desenho desta carta é o sinal de hoje.",
+      "renewed": "As vinte e duas cartas já saíram, e o baralho volta a ficar completo.",
+      "hintReveal": "Toque de novo, e a cor de hoje se abre",
+      "hintDraw": "Toque para tirar uma carta",
+      "drawLabel": "Tirar uma carta",
+      "openLabel": "Toque de novo para abrir a cor",
+      "mirror": "Um espelho que guarda a cor",
+      "scene": "Um desenho com um espelho que guarda a cor",
+      "cardError": "A carta não abriu. Toque de novo.",
+      "colorError": "A cor de hoje não abriu. Toque de novo.",
+      "testError": "test tem a forma 4-10. As cartas vão de 1 a 22. As cores de 1 a 10 estão de pé, de 11 a 20 invertidas."
+    }
   }
 ];
